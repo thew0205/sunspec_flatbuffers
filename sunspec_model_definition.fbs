@@ -1,0 +1,100 @@
+enum SunspecPointAccessType :uint8
+{
+    kR,  /**< Only access Read supported */
+    kRW, /**< Read and Write access supported */
+}
+
+/**
+ * @brief Enumeration of SunspecPoint mandatory types.
+ */
+enum SunspecPointMandatoryType: uint8
+{
+    kM, /**< Point must be implemented */
+    kO, /**< Point can be omitted */
+}
+
+
+enum SunspecPointDataType : uint8
+{
+    kUndefinedType = 0, /**< Undefined type */
+    kInt16,             /**< Signed 16-bit integer */
+    kInt32,             /**< Signed 32-bit integer */
+    kInt64,             /**< Signed 64-bit integer */
+    kRaw16,             /**< 16-bit raw value */
+    kUint16,            /**< Unsigned 16-bit integer */
+    kUint32,            /**< Unsigned 32-bit integer */
+    kUint64,            /**< Unsigned 64-bit integer */
+    kAcc16,             /**< Unsigned 16-bit accumulator(deprecated, in favor of uint16) */
+    KAcc32,             /**< Unsigned 32-bit accumulator (deprecated in favor of uint32) */
+    kAcc64,             /**< Unsigned 64-bit accumulator (deprecated in favor of uint64) */
+    kBitField16,        /**< 16-bit bitfield */
+    kBitField32,        /**< 32-bit bitfield */
+    kBitField64,        /**< 64-bit bitfield */
+    kEnum16,            /**< 16-bit enumeration */
+    kEnum32,            /**< 32-bit enumeration */
+    kFloat32,           /**< 32-bit floating-point */
+    kFloat64,           /**< 64-bit floating-point */
+    kString,            /**< String (UTF-8 encoded) */
+    kSunsSf,            /**< Scale factor – Signed power of 10 multiplier (+) or divider (-) */
+    kPad,               /**< 16-bit pad used for alignment */
+    kIpAddr,            /**< IP Address as an unsigned 32-bit. */
+    kIpv6Addr,          /**< 16-byte IP V6 address */
+    kEui48,             /**< 48-bit MAC address */
+}
+table SunspecPointDef{
+    id : string;
+    type:SunspecPointDataType = kUndefinedType;
+    // This is need because it can be specified as a constant in the model definition or in another point.
+    count:uint16= 1;
+    count_point_id : string;
+    size: uint16;
+    // This is need because it can be specified as a constant in the model definition or in another point.
+    sf : int16;
+    sf_id : string;
+    units : string;
+    access:SunspecPointAccessType = kR;
+    mandatory:SunspecPointMandatoryType = kO;
+    label : string;
+}
+
+
+enum SunspecGroupType:uint8
+{
+    kGroup,
+    kSync,
+}
+
+table SunspecGroupPointDef{
+    id: string;
+    type:SunspecGroupType = kGroup;
+    count:uint16= 1;
+    count_point_id:string;
+    points: [SunspecPointDef];
+    groups: [SunspecGroupPointDef];
+    label:string;
+}
+
+enum SunspecModelList : uint16
+{
+    KModelInvalid = 0, /**< Invalid Model Id */
+
+    kModel1 = 1,     /**< Definition for model1 */
+    kModel101 = 101, /**< Definition for model101 */
+    kModel102 = 102, /**< Definition for model102 */
+    kModel103 = 103, /**< Definition for model103 */
+    kModel111 = 111, /**< Definition for model111 */
+    kModel112 = 112, /**< Definition for model112 */
+    kModel113 = 113, /**< Definition for model113 */
+    kModel120 = 120, /**< Definition for model120 */
+    kModel126 = 126, /**< Definition for model126 */
+    kModel160 = 160, /**< Definition for model160 */
+
+    kModelEnd = 0xFFFF, /**< Definition for end model Id */
+
+}
+
+table SunspecModelDef{
+    id: SunspecModelList = KModelInvalid;
+    group:SunspecGroupPointDef;
+}
+root_type SunspecModelDef;
