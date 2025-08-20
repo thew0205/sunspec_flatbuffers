@@ -45,8 +45,8 @@
 
 build
 builds
-.vscode/*
-.vscode
+# .vscode/*
+# .vscode
 temp.json
 cpputest
 

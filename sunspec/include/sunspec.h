@@ -4,6 +4,8 @@
  * The union allows the class to store any of the defined SunspecPointDataType types
  * in the same memory space.
  */
+
+ #pragma once
 // typedef uint16_t raw16_t;
 // typedef uint16_t acc16_t;
 // typedef uint32_t acc32_t;
@@ -78,3 +80,9 @@ constexpr int32_t kSint32UnimplementedValue = 0x80000000;
 constexpr uint32_t kUint32UnimplementedValue = 0xFFFFFFFF;
 constexpr int64_t kSint64UnimplementedValue = 0x8000000000000000;
 constexpr uint64_t kUint64UnimplementedValue = 0xFFFFFFFFFFFFFFFF;
+
+
+inline std::string FlatbufferStringToString(const flatbuffers::String *flatbufferSTring)
+{
+    return {flatbufferSTring == nullptr ? "" : flatbufferSTring->c_str()};
+}

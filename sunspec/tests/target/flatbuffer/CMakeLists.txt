@@ -1,7 +1,11 @@
 
 set(TEST_NAME flatbuffer_test)
 
-set(FLATBUFFER_TEST_SRC model_1_test.cpp model_160_test.cpp)
+set(FLATBUFFER_TEST_SRC 
+                        flatbuffer_test_utils.cpp
+                        model_1_test.cpp
+                        model_160_test.cpp
+                        )
 
 add_executable(${TEST_NAME}
         ${TEST_MAIN_SRC}
