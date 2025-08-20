@@ -5,13 +5,13 @@
 
 using std::to_string;
 
-SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, uint16_t address, SunspecDeviceWriter &device) : def_{def}, address_{address}, device_{device}, topLevelGroupPoint_{*def.group(), address, this, nullptr}, registerLength_{0}
+SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, uint16_t address, SunspecDeviceWriter &device) : def_{def}, relativeAddress_{address}, device_{device}, topLevelGroupPoint_{*def.group(), address, this, nullptr}, registerLength_{0}
 {
 }
 
 uint16_t SunspecModelWriter::init(uint16_t address)
 {
-    registerLength_ = topLevelGroupPoint_.init(address_);
+    registerLength_ = topLevelGroupPoint_.init(relativeAddress_);
     return registerLength_;
 }
 void SunspecModelWriter::setConstantIdentifiersInBuffer(uint16_t *buffer)
@@ -43,7 +43,7 @@ const SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &g
 void SunspecModelWriter::setToDeviceBuffer(uint16_t *buffer)
 {
 
-    topLevelGroupPoint_.setAllToBuffer(buffer + 2);
+    topLevelGroupPoint_.setAllToBuffer(buffer);
 }
 std::string SunspecModelWriter::toJson(bool includeSf, bool includeUnits) const
 {

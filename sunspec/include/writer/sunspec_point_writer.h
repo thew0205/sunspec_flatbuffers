@@ -36,6 +36,10 @@ public:
         return def_.size();
     }
 
+void setValueFunction(SunspecValueFunction valueFunction){
+    valueFunction_ = valueFunction;
+}
+
     /**
      * @brief Returns the definition of the point.
      * @return A const reference to the SunspecPointDef object.
@@ -85,7 +89,7 @@ public:
 private:
     const SunspecPointDef &def_;
     SunspecValueFunction valueFunction_;
-    uint16_t address_;
+    uint16_t relativeAddress_;
     SunspecGroupWriter &groupPoint_;
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;
     SunspecPointWriter &operator=(SunspecPointWriter &&_point) = delete;

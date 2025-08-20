@@ -150,7 +150,7 @@ public:
     ~SunspecGroupWriter() = default;
 
 private:
-    uint16_t address_;
+    uint16_t relativeAddress_;
     uint16_t registerLength_;
 
     /** Const pointer was used here rather than reference because the we are using the logic that if the group is not null, the it is not a top level point else the model will be not null and it is a toplevel point */

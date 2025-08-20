@@ -134,6 +134,6 @@ private:
 
     SunspecGroupWriter topLevelGroupPoint_;
     const SunspecModelDef &def_;
-    uint16_t address_;
+    uint16_t relativeAddress_;
     uint16_t registerLength_;
 };

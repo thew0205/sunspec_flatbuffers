@@ -111,8 +111,8 @@ SunspecDeviceWriter::SunspecDeviceWriter(uint8_t slaveId, ModbusRTUSlave &client
 {
 }
 
-extern const unsigned char modelDef112[];
-extern const unsigned char modelDef113[];
+extern const unsigned char modelDefinition112[];
+extern const unsigned char modelDefinition113[];
 const SunspecModelDef *SunspecDeviceWriter::getModelDefinition(SunspecModelList id)
 {
 
@@ -120,10 +120,10 @@ const SunspecModelDef *SunspecDeviceWriter::getModelDefinition(SunspecModelList 
     {
     case SunspecModelList_kModel112:
 
-        return GetSunspecModelDef(modelDef112);
+        return GetSunspecModelDef(modelDefinition112);
     case SunspecModelList_kModel113:
 
-        return GetSunspecModelDef(modelDef113);
+        return GetSunspecModelDef(modelDefinition113);
 
     default:
         return nullptr;

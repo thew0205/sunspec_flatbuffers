@@ -49,3 +49,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/modbus/inc    
         ${CMAKE_CURRENT_SOURCE_DIR}/modbus_writer    
 )
+
+
+
+add_subdirectory(tests)

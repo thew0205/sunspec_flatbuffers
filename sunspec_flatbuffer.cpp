@@ -367,7 +367,6 @@ int main()
 {
 
     stdio_init_all();
-  
 
     gpio_init(MAX485_CTRL);
     gpio_set_dir(MAX485_CTRL, GPIO_OUT);
@@ -378,7 +377,14 @@ int main()
     ModbusRTUSlave slave{Serial1, 0};
     SunspecDeviceWriter writer{
         1, slave, 0};
-        writer.initAllModels({SunspecModelList_kModel113});
+    writer.initAllModels({SunspecModelList_kModel113});
+    SunspecValueFunction funct;
+    funct.uint16 = []() -> uint16_t
+    { return 0xabcd; };
+    {
+        return 0xabcd;
+    };
+    writer.getModel(SunspecModelList_kModel113)->getPoint("L")->setValueFunction(funct);
     while (1)
     {
         writer.poll();

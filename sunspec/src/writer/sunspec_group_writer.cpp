@@ -65,13 +65,13 @@ std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, uint16_t address, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, address_{address}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, uint16_t address, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, relativeAddress_{address}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}
 {
 }
 
 uint16_t SunspecGroupWriter::init(uint16_t address)
 {
-    address_ = address;
+    relativeAddress_ = address;
     for (const auto &pointDef : *def_.points())
     {
         uint16_t count = pointDef->count();
@@ -84,7 +84,7 @@ uint16_t SunspecGroupWriter::init(uint16_t address)
         }
         for (size_t i = 0; i < count; i++)
         {
-            points_.emplace_back(*pointDef, address_ + registerLength_, *this);
+            points_.emplace_back(*pointDef, relativeAddress_ + registerLength_, *this);
             registerLength_ += pointDef->size();
         }
     }
@@ -99,7 +99,7 @@ uint16_t SunspecGroupWriter::init(uint16_t address)
         }
         for (size_t i = 0; i < count; i++)
         {
-            groupPoints_.emplace_back(*groupDef, address_ + registerLength_, nullptr, this);
+            groupPoints_.emplace_back(*groupDef, relativeAddress_ + registerLength_, nullptr, this);
             registerLength_ += groupPoints_.back().registerLength_;
         }
     }
