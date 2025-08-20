@@ -2,6 +2,7 @@
 set(TEST_NAME flatbuffer_test)
 
 set(FLATBUFFER_TEST_SRC 
+                        test_main.cpp
                         flatbuffer_test_utils.cpp
                         model_1_test.cpp
                         model_160_test.cpp
@@ -16,7 +17,7 @@ target_link_libraries(${TEST_NAME}
         CppUTest
         CppUTestExt
         pico_stdlib
-        sunspec
+        sunspec_src
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE

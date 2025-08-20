@@ -2,6 +2,46 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "(Target) Dual Target Test Build",
+            "type": "shell",
+            "command": "${workspaceFolder}/dual_target_test_build.sh",
+            "args": [
+                "target",
+                "${workspaceFolder}"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "(Host) Dual Target Test Build",
+            "type": "shell",
+            "command": "${workspaceFolder}/dual_target_test_build.sh",
+            "args": [
+                "host",
+                "${workspaceFolder}"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
             "label": "Run Models to Flatbuffer Bin",
             "type": "shell",
             "command": "${workspaceFolder}/models/json_to_bin.sh",

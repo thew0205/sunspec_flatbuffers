@@ -5,6 +5,18 @@
             "task": "Run Models to Flatbuffer Bin",
             "tooltip": "Run Models to Flatbuffers Bin",
             "color": "default"
+        },
+        {
+            "label": "$(keyboard) Host Test",
+            "task": "(Host) Dual Target Test Build",
+            "tooltip": "(Host) Dual Target Test Build",
+            "color": "default"
+        },
+        {
+            "label": "$(bug) Target Test",
+            "task": "(Target) Dual Target Test Build",
+            "tooltip": "(Target) Dual Target Test Build",
+            "color": "default"
         }
     ],
     "cmake.showSystemKits": false,
