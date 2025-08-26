@@ -122,19 +122,19 @@ struct kAcc64
 
 }
   
-struct kBitField16
+struct kBitfield16
 {
     value : uint16;
 
 }
   
-struct kBitField32
+struct kBitfield32
 {
     value : uint32;
 
 }
   
-struct kBitField64
+struct kBitfield64
 {
     value : uint64;
 
@@ -184,7 +184,10 @@ struct kPad16
   
 struct kIpAddr
 {
-    value : uint32;
+    octet1 : uint8;
+    octet2 : uint8;
+    octet3 : uint8;
+    octet4 : uint8;
 
 }
   
@@ -213,9 +216,9 @@ union SunspecPointData
     kAcc16,             /**< Unsigned 16-bit accumulator(deprecated, in favor of uint16) */
     KAcc32,             /**< Unsigned 32-bit accumulator (deprecated in favor of uint32) */
     kAcc64,             /**< Unsigned 64-bit accumulator (deprecated in favor of uint64) */
-    kBitField16,        /**< 16-bit bitfield */
-    kBitField32,        /**< 32-bit bitfield */
-    kBitField64,        /**< 64-bit bitfield */
+    kBitfield16,        /**< 16-bit bitfield */
+    kBitfield32,        /**< 32-bit bitfield */
+    kBitfield64,        /**< 64-bit bitfield */
     kEnum16,            /**< 16-bit enumeration */
     kEnum32,            /**< 32-bit enumeration */
     kFloat32,           /**< 32-bit floating-point */

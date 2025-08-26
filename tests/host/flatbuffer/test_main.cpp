@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+#include <iostream>
+
+#include "CppUTest/TestHarness.h"
+#include "CppUTest/CommandLineTestRunner.h"
+
+int main(int ac, char **av)
+{
+
+    printf("\nRunning tests with CppUTest\n\n");
+
+    const char *fav[3] = {"sunspec", "-c", "-v"};
+
+    return CommandLineTestRunner::RunAllTests(3, fav);
+}

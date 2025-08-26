@@ -15,12 +15,13 @@ set -e
 # ------------------------------------------------------------------------
 TEST_TYPE=$1                   # First argument: which test type to build/run
 SUNSPEC_ROOT_DIR=$2        # Second argument: root directory of the project
+TEST_TO_RUN=$3
 
 # ------------------------------------------------------------------------
 # Derived directories
 # ------------------------------------------------------------------------
-SOURCE_DIR="./tests/${TEST_TYPE}"      # Path to the source directory for the selected test type
-BUILD_DIR="./build/tests/${TEST_TYPE}" # Path to the build directory for the selected test type
+SOURCE_DIR="$SUNSPEC_ROOT_DIR/tests/${TEST_TYPE}"      # Path to the source directory for the selected test type
+BUILD_DIR="$SUNSPEC_ROOT_DIR/build/tests/${TEST_TYPE}" # Path to the build directory for the selected test type
 PICOTOOL_PATH=${HOME}/.pico-sdk/picotool/2.2.0/picotool/picotool
 # ------------------------------------------------------------------------
 # Color definitions for terminal output
@@ -31,7 +32,10 @@ YELLOW='\033[1;33m'     # Yellow text (warnings)
 BLUE='\033[0;34m'       # Blue text
 MAGENTA='\033[0;35m'    # Magenta text
 NC='\033[0m'            # No Color / reset
-
+BOLD='\033[1m'
+BG_BLUE='\033[44m'
+BOLD_RED='\033[1;31m'
+BOLD_GREEN='\033[1;32m'
 # ------------------------------------------------------------------------
 # Check if TEST_TYPE is provided
 # ------------------------------------------------------------------------
@@ -76,17 +80,19 @@ cmake -S$SOURCE_DIR \
       -DTESTS=OFF \
       -DHOST_TEST=$HOST_TEST \
       -DTARGET_TEST=$TARGET_TEST \
-      -DSUNSPEC_PAI_TEST=$SUNSPEC_TEST \
-&& cmake --build $BUILD_DIR -j$(nproc)
+      -DSUNSPEC_PAI_TEST=$SUNSPEC_TEST
+cmake --build $BUILD_DIR -j$(nproc)
 
-if [[ ${TEST_TYPE,,} == "target" ]]; then
-    # Target test selected
-    echo -e "${GREEN}Building TARGET tests Successfully${NC}"
-    echo -e "${GREEN}Now Running Target Test on Target${NC}"
-    ${PICOTOOL_PATH} load -f ${BUILD_DIR}/scan_address_stub/SunspecScanAddressStub.uf2
+if [[ $? -ne 0 ]]; then
+    echo -e "${BOLD_RED}Build failed!!! :(${NC}"
+    exit 1
 else
-    # Host test selected
-    echo -e "${GREEN}Building HOST tests Successfully${NC}"
-    echo -e "${GREEN}Now Running Host Test on Host${NC}"
-    "${BUILD_DIR}/read_model_stub/SunspecReadModelFake"
+    if [[ ${TEST_TYPE,,} == "target" ]]; then
+        # Target test selected
+        echo -e "${GREEN}Building TARGET tests Successfully${NC}"
+    else
+        # Host test selected
+        echo -e "${GREEN}Building HOST tests Successfully${NC}"
+        
+    fi
 fi

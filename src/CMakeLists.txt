@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(sunspec_src C CXX ASM)
+project(sunspec C CXX ASM)
 
 if(NOT DEFINED SUNSPEC_ROOT_DIR OR SUNSPEC_ROOT_DIR STREQUAL "" OR NOT EXISTS "${SUNSPEC_ROOT_DIR}/src")
         message(FATAL_ERROR "SUNSPEC_ROOT_DIR must be defined and must point to the root of the project where src folder and the include folders are located")
@@ -47,11 +47,11 @@ target_link_libraries(${PROJECT_NAME} PRIVATE )
 
 # Add the standard include files to the build
 target_include_directories(${PROJECT_NAME} PUBLIC
-/home/busoye_tm/Documents/matthew/sunspec_flatbuffer/include
         ${SUNSPEC_ROOT_DIR}/
         ${SUNSPEC_ROOT_DIR}/include
-        ${SUNSPEC_ROOT_DIR}/include/modbus_writer
-        ${SUNSPEC_ROOT_DIR}/include/modbus/inc
+        ${SUNSPEC_ROOT_DIR}/third_party/flatbuffers
+        ${SUNSPEC_ROOT_DIR}/third_party/modbus_writer
+        ${SUNSPEC_ROOT_DIR}/third_party/modbus/inc
 )
 
 

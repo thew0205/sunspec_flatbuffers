@@ -34,7 +34,6 @@ public:
     {
         return def_;
     }
-    uint16_t init(uint16_t address);
 
     /**
      * @brief Returns the toplevel  groupPoint of this model.
@@ -61,7 +60,7 @@ public:
     /**
      * @brief Reads all points in the model from the device and sets their values.
      */
-    void setToDeviceBuffer(uint16_t *buffer);
+    uint16_t setBuffer(uint16_t *buffer);
     void setConstantIdentifiersInBuffer(uint16_t *buffer);
 
     /**
@@ -72,13 +71,9 @@ public:
      */
     std::string toJson(bool includeSf = false, bool includeUnits = false) const;
 
-    /**
-     * @brief Retrieves a point from the model by its name.
-     * @param [in] pointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    SunspecPointWriter *getPoint(const string_view pointName, bool findRecursively = true);
+    SunspecPointWriter *getTopLevelPoint(const string_view pointName);
+
+    const SunspecPointWriter *getTopLevelPoint(const string_view pointName) const;
 
     /**
      * @brief Retrieves a point from the model by its name.
@@ -86,7 +81,15 @@ public:
      * @param [in] findRecursively Whether to search in nested groups as well.
      * @return A pointer to the SunspecPoint, or nullptr if not found.
      */
-    const SunspecPointWriter *getPoint(const string_view pointName, bool findRecursively = true) const;
+    SunspecPointWriter *getPoint(const string_view pointName, bool findRecursively);
+
+    /**
+     * @brief Retrieves a point from the model by its name.
+     * @param [in] pointName The name of the point to find.
+     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @return A pointer to the SunspecPoint, or nullptr if not found.
+     */
+    const SunspecPointWriter *getPoint(const string_view pointName, bool findRecursively) const;
 
     /**
      * @brief Retrieves a groupPoint from the model by its name, it cam return the top level group point.
@@ -106,10 +109,10 @@ public:
     /**
      * @brief Class constructor.
      * @param [in] _def The definition of the model.
-     * @param [in] _addr The starting address of the model in the register map.
+     * @param [in] relativeAddress The starting address of the model in the register map.
      * @param [in] _device A reference to the parent SunspecDevice.
      */
-    SunspecModelWriter(const SunspecModelDef &_def, uint16_t _addr, SunspecDeviceWriter &_device);
+    SunspecModelWriter(const SunspecModelDef &_def, SunspecDeviceWriter &_device);
 
     /**
      * @brief Copy constructor.
@@ -125,6 +128,9 @@ public:
      * @brief Destructor.
      */
     ~SunspecModelWriter() = default;
+    uint16_t initTopLevel();
+    uint16_t initSubLevels();
+    void setRelativeAddress(uint16_t relativeAddress);
 
 private:
     SunspecModelWriter &operator=(const SunspecModelWriter &groupPoints) = delete;

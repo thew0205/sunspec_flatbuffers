@@ -1,21 +1,21 @@
 {
     "VsCodeTaskButtons.tasks": [
         {
-            "label": "$(gear) Model_Bin",
+            "label": "$(keyboard) Model->Bin",
             "task": "Run Models to Flatbuffer Bin",
             "tooltip": "Run Models to Flatbuffers Bin",
             "color": "default"
         },
         {
-            "label": "$(keyboard) Host Test",
-            "task": "(Host) Dual Target Test Build",
-            "tooltip": "(Host) Dual Target Test Build",
+            "label": "$(play) Run Test",
+            "task": "Host Test Build and Run",
+            "tooltip": "Host Test Build and Run",
             "color": "default"
         },
         {
-            "label": "$(bug) Target Test",
-            "task": "(Target) Dual Target Test Build",
-            "tooltip": "(Target) Dual Target Test Build",
+            "label": "$(gear) Build Test",
+            "task": "Host Test Build",
+            "tooltip": "Host Test Build",
             "color": "default"
         }
     ],
@@ -58,8 +58,10 @@
     "raspberry-pi-pico.cmakePath": "${HOME}/.pico-sdk/cmake/v3.31.5/bin/cmake",
     "raspberry-pi-pico.ninjaPath": "${HOME}/.pico-sdk/ninja/v1.12.1/ninja",
     "cSpell.words": [
+        "Bitfield",
         "FLATC",
         "fronius",
+        "pzem",
         "Sint",
         "Stringx"
     ],
@@ -123,6 +125,11 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "unordered_set": "cpp"
+        "unordered_set": "cpp",
+        "chrono": "cpp",
+        "ratio": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }

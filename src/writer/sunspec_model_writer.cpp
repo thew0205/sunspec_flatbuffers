@@ -5,21 +5,53 @@
 
 using std::to_string;
 
-SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, uint16_t address, SunspecDeviceWriter &device) : def_{def}, relativeAddress_{address}, device_{device}, topLevelGroupPoint_{*def.group(), address, this, nullptr}, registerLength_{0}
+uint16_t SunspecModelWriter::initTopLevel()
+{
+
+    topLevelGroupPoint_.initPoint();
+
+    return registerLength_;
+}
+uint16_t SunspecModelWriter::initSubLevels()
+{
+    registerLength_ = 0; // Start with 2 for the base address and model end marker.
+    topLevelGroupPoint_.initGroups();
+    registerLength_ += topLevelGroupPoint_.registerLength();
+    return registerLength_;
+}
+
+void SunspecModelWriter::setRelativeAddress(uint16_t relativeAddress)
+{
+    relativeAddress_ = relativeAddress;
+    topLevelGroupPoint_.setRelativeAddress(relativeAddress);
+}
+
+SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, SunspecDeviceWriter &device) : def_{def}, /*relativeAddress_{address},*/ device_{device}, topLevelGroupPoint_{*def.group(), this, nullptr}, registerLength_{0}
 {
 }
 
-uint16_t SunspecModelWriter::init(uint16_t address)
-{
-    registerLength_ = topLevelGroupPoint_.init(relativeAddress_);
-    return registerLength_;
-}
 void SunspecModelWriter::setConstantIdentifiersInBuffer(uint16_t *buffer)
 {
-    const uint16_t modelConstantIdentifierBuffer[2] = {def_.id(), registerLength_ - 2};
+    assert(registerLength_ >= 2);
+    assert(buffer != nullptr);
+
+    const uint16_t modelConstantIdentifierBuffer[2] = {uint16_tToBigEndian(def_.id()), uint16_tToBigEndian(static_cast<uint16_t>(registerLength_ - 2))};
 
     memcpy(buffer, modelConstantIdentifierBuffer, sizeof(uint16_t) * 2);
 }
+
+SunspecPointWriter *SunspecModelWriter::getTopLevelPoint(const string_view countName)
+{
+
+    return topLevelGroupPoint_.getPoint(countName, false);
+}
+
+const SunspecPointWriter *SunspecModelWriter::getTopLevelPoint(const string_view pointName) const
+{
+
+    return topLevelGroupPoint_.getPoint(pointName, false);
+}
+
 SunspecPointWriter *SunspecModelWriter::getPoint(const string_view countName, bool findRecursively)
 {
 
@@ -40,10 +72,12 @@ const SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &g
 {
     return topLevelGroupPoint_.getGroupPoint(groupPointName, findRecursively);
 }
-void SunspecModelWriter::setToDeviceBuffer(uint16_t *buffer)
+uint16_t SunspecModelWriter::setBuffer(uint16_t *buffer)
 {
 
     topLevelGroupPoint_.setAllToBuffer(buffer);
+    setConstantIdentifiersInBuffer(buffer);
+    return topLevelGroupPoint_.registerLength();
 }
 std::string SunspecModelWriter::toJson(bool includeSf, bool includeUnits) const
 {

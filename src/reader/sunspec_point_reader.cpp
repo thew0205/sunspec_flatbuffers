@@ -62,7 +62,7 @@ void SunspecPointReader::setValueFromBuffer(uint16_t *buf)
     case SunspecPointData_kSint16:
     case SunspecPointData_kSunsSf:
     case SunspecPointData_kPad16:
-    case SunspecPointData_kBitField16:
+    case SunspecPointData_kBitfield16:
     case SunspecPointData_kAcc16:
     case SunspecPointData_kEnum16:
     case SunspecPointData_kRaw16:
@@ -74,7 +74,7 @@ void SunspecPointReader::setValueFromBuffer(uint16_t *buf)
     case SunspecPointData_kFloat32:
     case SunspecPointData_kUint32:
     case SunspecPointData_KAcc32:
-    case SunspecPointData_kBitField32:
+    case SunspecPointData_kBitfield32:
     case SunspecPointData_kEnum32:
     case SunspecPointData_kIpAddr:
         value_.u32 = registersToUint32(buf[0], buf[1]);
@@ -84,7 +84,7 @@ void SunspecPointReader::setValueFromBuffer(uint16_t *buf)
     case SunspecPointData_kSint64:
     case SunspecPointData_kUint64:
     case SunspecPointData_kAcc64:
-    case SunspecPointData_kBitField64:
+    case SunspecPointData_kBitfield64:
         value_.u64 = registersToUint64(buf[0], buf[1], buf[2], buf[3]);
         break;
 
@@ -138,7 +138,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         break;
 
     case SunspecPointData_kPad16:
-    case SunspecPointData_kBitField16:
+    case SunspecPointData_kBitfield16:
     case SunspecPointData_kAcc16:
     case SunspecPointData_kEnum16:
     case SunspecPointData_kRaw16:
@@ -155,7 +155,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         ret += (includeSf && !def_.sf_id()->size()) ? to_string(value_.u32 * pow(10, sf_)) : to_string(value_.u32);
         break;
     case SunspecPointData_KAcc32:
-    case SunspecPointData_kBitField32:
+    case SunspecPointData_kBitfield32:
     case SunspecPointData_kEnum32:
     case SunspecPointData_kIpAddr:
         ret += to_string(value_.u32);
@@ -170,7 +170,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         ret += (includeSf && !def_.sf_id()->size()) ? to_string(value_.u64 * pow(10, sf_)) : to_string(value_.u64);
         break;
     case SunspecPointData_kAcc64:
-    case SunspecPointData_kBitField64:
+    case SunspecPointData_kBitfield64:
         ret += to_string(value_.u64);
         break;
 
@@ -213,7 +213,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         break;
 
     case SunspecPointData_kPad16:
-    case SunspecPointData_kBitField16:
+    case SunspecPointData_kBitfield16:
     case SunspecPointData_kAcc16:
     case SunspecPointData_kEnum16:
     case SunspecPointData_kRaw16:
@@ -230,7 +230,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         ret += (includeSf && !def_.sf_id()->size()) ? to_string(value_.u32 * pow(10, sf_)) : to_string(value_.u32);
         break;
     case SunspecPointData_KAcc32:
-    case SunspecPointData_kBitField32:
+    case SunspecPointData_kBitfield32:
     case SunspecPointData_kEnum32:
     case SunspecPointData_kIpAddr:
         ret += to_string(value_.u32);
@@ -245,7 +245,7 @@ string SunspecPointReader::toJson(bool includeSf, bool includeUnits) const
         ret += (includeSf && !def_.sf_id()->size()) ? to_string(value_.u64 * pow(10, sf_)) : to_string(value_.u64);
         break;
     case SunspecPointData_kAcc64:
-    case SunspecPointData_kBitField64:
+    case SunspecPointData_kBitfield64:
         ret += to_string(value_.u64);
         break;
 

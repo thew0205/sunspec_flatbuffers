@@ -35,10 +35,111 @@ public:
     {
         return def_.size();
     }
+    uint16_t relativeAddress() const
+    {
+        return relativeAddress_;
+    }
+    void setValueFunction(SunspecValueFunction valueFunction)
+    {
+        valueFunction_ = valueFunction;
+    }
 
-void setValueFunction(SunspecValueFunction valueFunction){
-    valueFunction_ = valueFunction;
-}
+    void setRelativeAddress(uint16_t relativeAddress)
+    {
+        relativeAddress_ = relativeAddress;
+    }
+    int16_t getValueAsSint16() const
+    {
+        return valueFunction_.sint16 == nullptr ? FlatbufferKSint16toSint16_t(def_.data_as_kSint16()) : valueFunction_.sint16();
+    }
+
+    uint16_t getValueAsUint16() const
+    {
+        return valueFunction_.uint16 == nullptr ? FlatbufferKUint16toUint16_t(def_.data_as_kUint16()) : valueFunction_.uint16();
+    }
+
+    pad16_t getValueAsPad16() const
+    {
+        return valueFunction_.pad16 == nullptr ? FlatbufferKPad16toPad16_t(def_.data_as_kPad16()) : valueFunction_.pad16();
+    }
+    sunsSf_t getValueAsSunsSf() const
+    {
+        return valueFunction_.sunsSf == nullptr ? FlatbufferKSunsSftoSunsSf_t(def_.data_as_kSunsSf()) : valueFunction_.sunsSf();
+    }
+    acc16_t getValueAsAcc16() const
+    {
+        return valueFunction_.acc16 == nullptr ? FlatbufferKAcc16toAcc16_t(def_.data_as_kAcc16()) : valueFunction_.acc16();
+    }
+    bitfield16_t getValueAsBit16() const
+    {
+        return valueFunction_.bit16 == nullptr ? FlatbufferKBit16toBit16_t(def_.data_as_kBitfield16()) : valueFunction_.bit16();
+    }
+    enum16_t getValueAsEnum16() const
+    {
+        return valueFunction_.enum16 == nullptr ? FlatbufferKEnum16toEnum16_t(def_.data_as_kEnum16()) : valueFunction_.enum16();
+    }
+    raw16_t getValueAsRaw16() const
+    {
+        return valueFunction_.raw16 == nullptr ? FlatbufferKRaw16toRaw16_t(def_.data_as_kRaw16()) : valueFunction_.raw16();
+    }
+    int32_t getValueAsSint32() const
+    {
+        return valueFunction_.sint32 == nullptr ? FlatbufferKSint32toSint32_t(def_.data_as_kSint32()) : valueFunction_.sint32();
+    }
+    uint32_t getValueAsUint32() const
+    {
+        return valueFunction_.uint32 == nullptr ? FlatbufferKUint32toUint32_t(def_.data_as_kUint32()) : valueFunction_.uint32();
+    }
+    acc32_t getValueAsAcc32() const
+    {
+        return valueFunction_.acc32 == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_KAcc32()) : valueFunction_.acc32();
+    }
+    bit32_t getValueAsBit32() const
+    {
+        return valueFunction_.bit32 == nullptr ? FlatbufferKBit32toBit32_t(def_.data_as_kBitfield32()) : valueFunction_.bit32();
+    }
+    enum32_t getValueAsEnum32() const
+    {
+        return valueFunction_.enum32 == nullptr ? FlatbufferKEnum32toEnum32_t(def_.data_as_kEnum32()) : valueFunction_.enum32();
+    }
+    ipAddr_t getValueAsIpAddr() const
+    {
+        return valueFunction_.ipAddr == nullptr ? FlatbufferKIpAddrtoIpAddr_t(def_.data_as_kIpAddr()) : valueFunction_.ipAddr();
+    }
+    float getValueAsFloat32() const
+    {
+        return valueFunction_.float32 == nullptr ? FlatbufferKFloat32toFloat(def_.data_as_kFloat32()) : valueFunction_.float32();
+    }
+    double getValueAsFloat64() const
+    {
+        return valueFunction_.float64 == nullptr ? FlatbufferKFloat64toDouble(def_.data_as_kFloat64()) : valueFunction_.float64();
+    }
+    int64_t getValueAsSint64() const
+    {
+        return valueFunction_.sint64 == nullptr ? FlatbufferKSint64toSint64_t(def_.data_as_kSint64()) : valueFunction_.sint64();
+    }
+    uint64_t getValueAsUint64() const
+    {
+        return valueFunction_.uint64 == nullptr ? FlatbufferKUint64toUint64_t(def_.data_as_kUint64()) : valueFunction_.uint64();
+    }
+
+    acc64_t getValueAsAcc64() const
+    {
+        return valueFunction_.acc64 == nullptr ? FlatbufferKAcc64toAcc64_t(def_.data_as_kAcc64()) : valueFunction_.acc64();
+    }
+    bit64_t getValueAsBit64() const
+    {
+        return valueFunction_.bit64 == nullptr ? FlatbufferKBit64toBit64_t(def_.data_as_kBitfield64()) : valueFunction_.bit64();
+    }
+
+    string getValueAsString() const
+    {
+        string tempString = valueFunction_.str == nullptr ? FlatbufferKStringxToString(def_.data_as_kStringx()) : valueFunction_.str();
+        std::size_t newLength = std::min(static_cast<size_t>((def_.size() * sizeof(uint16_t)) - 1), tempString.size());
+
+        tempString.resize(newLength);
+        return tempString;
+    }
 
     /**
      * @brief Returns the definition of the point.
@@ -69,7 +170,7 @@ void setValueFunction(SunspecValueFunction valueFunction){
      * @param [in] _addr The starting address of the point in the register map.
      * @param [in] _groupPoint A reference to the parent SunspecGroupPoint.
      */
-    SunspecPointWriter(const SunspecPointDef &def, uint16_t address, SunspecGroupWriter &groupPoint, SunspecValueFunction valueFunction);
+    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecValueFunction valueFunction);
     SunspecPointWriter(const SunspecPointDef &def, uint16_t address, SunspecGroupWriter &groupPoint);
     /**
      * @brief Copy constructor.

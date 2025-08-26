@@ -1,15 +1,16 @@
 #include <stdio.h>
 
 #include <iostream>
-
+#include "pico/stdlib.h"
+#include "pico/stdio.h"
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"
-#include <pico/stdio.h>
 
 int main(int ac, char **av)
 {
 
     stdio_init_all();
+    sleep_ms(10000);
 
     printf("\nRunning tests with CppUTest\n\n");
 
@@ -17,7 +18,7 @@ int main(int ac, char **av)
 
     CommandLineTestRunner::RunAllTests(3, fav);
     while (1)
-        ;
+    {
+        /* code */
+    }
 }
-
-

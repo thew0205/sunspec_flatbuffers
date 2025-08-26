@@ -25,9 +25,7 @@
             {
                 "id": "L",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -41,9 +39,7 @@
             {
                 "id": "A",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -57,9 +53,7 @@
             {
                 "id": "AphA",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -73,9 +67,7 @@
             {
                 "id": "AphB",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -89,9 +81,7 @@
             {
                 "id": "AphC",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -105,9 +95,7 @@
             {
                 "id": "PPVphAB",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -121,9 +109,7 @@
             {
                 "id": "PPVphBC",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -137,9 +123,7 @@
             {
                 "id": "PPVphCA",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -153,9 +137,7 @@
             {
                 "id": "PhVphA",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -169,9 +151,7 @@
             {
                 "id": "PhVphB",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -185,9 +165,7 @@
             {
                 "id": "PhVphC",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -201,9 +179,7 @@
             {
                 "id": "W",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -217,9 +193,7 @@
             {
                 "id": "Hz",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -233,9 +207,7 @@
             {
                 "id": "VA",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -249,9 +221,7 @@
             {
                 "id": "VAr",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -265,9 +235,7 @@
             {
                 "id": "PF",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -281,9 +249,7 @@
             {
                 "id": "WH",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -297,9 +263,7 @@
             {
                 "id": "DCA",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -313,9 +277,7 @@
             {
                 "id": "DCV",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -329,9 +291,7 @@
             {
                 "id": "DCW",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -345,9 +305,7 @@
             {
                 "id": "TmpCab",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -361,9 +319,7 @@
             {
                 "id": "TmpSnk",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -377,9 +333,7 @@
             {
                 "id": "TmpTrns",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -393,9 +347,7 @@
             {
                 "id": "TmpOt",
                 "data_type": "kFloat32",
-                "data": {
-                    "value": 5.6
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -409,9 +361,7 @@
             {
                 "id": "St",
                 "data_type": "kEnum16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -425,9 +375,7 @@
             {
                 "id": "StVnd",
                 "data_type": "kEnum16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -440,10 +388,8 @@
             },
             {
                 "id": "Evt1",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -456,10 +402,8 @@
             },
             {
                 "id": "Evt2",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -472,10 +416,8 @@
             },
             {
                 "id": "EvtVnd1",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -488,10 +430,8 @@
             },
             {
                 "id": "EvtVnd2",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -504,10 +444,8 @@
             },
             {
                 "id": "EvtVnd3",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,
@@ -520,10 +458,8 @@
             },
             {
                 "id": "EvtVnd4",
-                "data_type": "kBitField32",
-                "data": {
-                    "value": 4294967295
-                },
+                "data_type": "kBitfield32",
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 2,

@@ -25,9 +25,7 @@
             {
                 "id": "L",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -41,9 +39,7 @@
             {
                 "id": "DERTyp",
                 "data_type": "kEnum16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -57,9 +53,7 @@
             {
                 "id": "WRtg",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -73,9 +67,7 @@
             {
                 "id": "WRtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -89,9 +81,7 @@
             {
                 "id": "VARtg",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -105,9 +95,7 @@
             {
                 "id": "VARtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -121,9 +109,7 @@
             {
                 "id": "VArRtgQ1",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -137,9 +123,7 @@
             {
                 "id": "VArRtgQ2",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -153,9 +137,7 @@
             {
                 "id": "VArRtgQ3",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -169,9 +151,7 @@
             {
                 "id": "VArRtgQ4",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -185,9 +165,7 @@
             {
                 "id": "VArRtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -201,9 +179,7 @@
             {
                 "id": "ARtg",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -217,9 +193,7 @@
             {
                 "id": "ARtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -233,9 +207,7 @@
             {
                 "id": "PFRtgQ1",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -249,9 +221,7 @@
             {
                 "id": "PFRtgQ2",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -265,9 +235,7 @@
             {
                 "id": "PFRtgQ3",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -281,9 +249,7 @@
             {
                 "id": "PFRtgQ4",
                 "data_type": "kSint16",
-                "data": {
-                    "value": -32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -297,9 +263,7 @@
             {
                 "id": "PFRtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -313,9 +277,7 @@
             {
                 "id": "WHRtg",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -329,9 +291,7 @@
             {
                 "id": "WHRtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -345,9 +305,7 @@
             {
                 "id": "AhrRtg",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -361,9 +319,7 @@
             {
                 "id": "AhrRtg_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -377,9 +333,7 @@
             {
                 "id": "MaxChaRte",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -393,9 +347,7 @@
             {
                 "id": "MaxChaRte_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -409,9 +361,7 @@
             {
                 "id": "MaxDisChaRte",
                 "data_type": "kUint16",
-                "data": {
-                    "value": 65535
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -425,9 +375,7 @@
             {
                 "id": "MaxDisChaRte_SF",
                 "data_type": "kSunsSf",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -441,9 +389,7 @@
             {
                 "id": "Pad",
                 "data_type": "kPad16",
-                "data": {
-                    "value": 32768
-                },
+                "data": null,
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,

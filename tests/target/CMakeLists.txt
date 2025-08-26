@@ -2,10 +2,12 @@
 # Generated Cmake Pico project file
 
 cmake_minimum_required(VERSION 3.13)
+set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build." FORCE)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
@@ -43,11 +45,19 @@ FetchContent_Declare(
     GIT_TAG v4.0
 )
 
-FetchContent_MakeAvailable(CppUTest)
+# FetchContent_MakeAvailable(CppUTest)
 
+set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 
-# add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/external/cpputest ${CMAKE_BINARY_DIR}/tests/external/cpputest)
+add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
-add_subdirectory(flatbuffer)
+add_subdirectory(generic)
+add_subdirectory(modbus)
+add_subdirectory(pzem_temp)
+# add_subdirectory(modbus_rtu)
 
+# add_subdirectory(flatbuffer)
+# add_subdirectory(sunspec_init)
+# add_subdirectory(sunspec_set_value)

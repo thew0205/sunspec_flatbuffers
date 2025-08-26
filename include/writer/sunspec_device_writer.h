@@ -34,7 +34,7 @@ public:
      * @brief Returns the number of models initialized on this device.
      * @return The size of the models list.
      */
-    size_t modelLength() const
+    size_t modelCount() const
     {
         return models_.size();
     }
@@ -81,13 +81,7 @@ public:
      * @param [in] supportedModel An initializer list of model IDs that should be initialized.
      * @return The number of models successfully initialized.
      */
-    uint16_t initAllModels(const std::initializer_list<SunspecModelList> &supportedModel);
 
-    /**
-     * @brief Reads all data from the device for all initialized models.
-     */
-    void setAllBuffer();
-    void setConstantIdentifiersInBuffer();
     /**
      * @brief Generates a JSON representation of all initialized models and their data.
      * @param [in] includeSf Whether to include scale factors in the JSON output.
@@ -114,7 +108,7 @@ public:
     /** The maximum number of retries for a Modbus operation. */
     static constexpr uint8_t kModbusMaxRetries = 10;
     /** The 32-bit "SunS" magic number identifier for Sunspec. */
-    static constexpr uint32_t kSunspecIdentifier = 0x53756E53;
+    static constexpr uint16_t kSunspecIdentifier[2] = {0x5375, 0x6E53};
 
     /**
      * @brief Class constructor.
@@ -124,16 +118,30 @@ public:
      */
     SunspecDeviceWriter(uint8_t slaveId, ModbusRTUSlave &_client, uint16_t _baseAddr = kInvalidBaseAddress);
 
+    ~SunspecDeviceWriter();
+
     /**
      * @brief Retrieves a static model definition by its ID.
      * @param [in] id The ID of the Sunspec model to retrieve.
      * @return A pointer to the requested SunspecModelDef, or nullptr if not found.
      */
-    static const SunspecModelDef *getModelDefinition(SunspecModelList id);
+    // For device with only fixed value models, we can use this function to get the model definition.
+    uint16_t initAll(const std::initializer_list<SunspecModelList> &supportedModel);
+
+    // For device with either fixed or variable models with variable length groups, we need to call this function after setting any dynamic group lengths.
+    uint16_t initTopLevel(const std::initializer_list<SunspecModelList> &supportedModel);
+    uint16_t initSubLevels();
+    void setBuffer();
+    void setRelativeAddress();
 
 private:
+    static const SunspecModelDef *getModelDefinition(SunspecModelList id);
+
+    void setConstantIdentifiersInBuffer();
+    uint16_t assignBuffer();
+
     uint8_t slaveId_{0};
-    uint16_t baseAddress_{kInvalidBaseAddress};
+    // uint16_t baseAddress_{kInvalidBaseAddress};
     list<SunspecModelWriter> models_;
     ModbusRTUSlave &client_;
     uint16_t *buffer_;

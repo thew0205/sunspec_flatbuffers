@@ -24,11 +24,11 @@ def get_flatbuffer_data_type(type):
         case "acc64" :
             return "kAcc64"
         case "bitfield16" :
-            return "kBitField16"
+            return "kBitfield16"
         case "bitfield32" :
-            return "kBitField32"
+            return "kBitfield32"
         case "bitfield64" :
-            return "kBitField64"
+            return "kBitfield64"
         case "enum16" :
             return "kEnum16"
         case "enum32" :
@@ -84,7 +84,7 @@ def get_unimplemented_value(type):
         case "enum32" :
             return 0xFFFFFFFF
         case "float32" :
-            return 5.6
+            return 0x7FC00000
         case "float64" :
             return ctypes.c_float(0x7FF8000000000000).value
         case "string" :
@@ -104,7 +104,9 @@ def get_unimplemented_value(type):
         
 def get_flatbuffer_data(type, value):
     if value == None:
-        value = get_unimplemented_value(type)
+        return None
+        # value = get_unimplemented_value(type)
+        # IpAddr and Ipv6Addr and Eui48 are not implemented here
     data = {}
     data["value"] = value
     return data

@@ -38,17 +38,16 @@ public:
     {
         return def_;
     }
-    uint16_t len() const
+    uint16_t registerLength() const
     {
         return registerLength_;
     }
 
-    uint16_t init(uint16_t address);
     /**
      * @brief Sets the values of all points within the group from a raw buffer of 16-bit words.
      * @param [in] buf A pointer to the buffer containing the raw data.
      */
-    void setAllToBuffer(uint16_t *buf);
+    uint16_t setAllToBuffer(uint16_t *buf);
     /**
      * @brief Checks if this group is the top-level group of a model.
      * @return true if it is the top-level group, false otherwise.
@@ -111,7 +110,7 @@ public:
      * @brief Returns the number of points directly contained within this group.
      * @return The number of points.
      */
-    uint16_t pointLength() const
+    uint16_t pointCount() const
     {
         return points_.size();
     }
@@ -120,7 +119,7 @@ public:
      * @brief Returns the number of groupPoint directly contained within this group.
      * @return The number of groupPoints in this group.
      */
-    uint16_t groupPointLength() const
+    uint16_t groupPointCount() const
     {
         return groupPoints_.size();
     }
@@ -132,7 +131,7 @@ public:
      * @param [in] model A pointer to the parent SunspecModel.
      * @param [in] groupPoint A pointer to the parent SunspecGroupPoint (nullptr for top-level groups).
      */
-    SunspecGroupWriter(const SunspecGroupPointDef &def, uint16_t address, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
+    SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
 
     /**
      * @brief Copy constructor.
@@ -148,6 +147,9 @@ public:
      * @brief Destructor.
      */
     ~SunspecGroupWriter() = default;
+    void initPoint();
+    uint16_t initGroups();
+    void setRelativeAddress(uint16_t relativeAddress);
 
 private:
     uint16_t relativeAddress_;

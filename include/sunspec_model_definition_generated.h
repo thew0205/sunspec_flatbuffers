@@ -33,11 +33,11 @@ struct KAcc32;
 
 struct kAcc64;
 
-struct kBitField16;
+struct kBitfield16;
 
-struct kBitField32;
+struct kBitfield32;
 
-struct kBitField64;
+struct kBitfield64;
 
 struct kEnum16;
 
@@ -141,9 +141,9 @@ enum SunspecPointData : uint8_t {
   SunspecPointData_kAcc16 = 8,
   SunspecPointData_KAcc32 = 9,
   SunspecPointData_kAcc64 = 10,
-  SunspecPointData_kBitField16 = 11,
-  SunspecPointData_kBitField32 = 12,
-  SunspecPointData_kBitField64 = 13,
+  SunspecPointData_kBitfield16 = 11,
+  SunspecPointData_kBitfield32 = 12,
+  SunspecPointData_kBitfield64 = 13,
   SunspecPointData_kEnum16 = 14,
   SunspecPointData_kEnum32 = 15,
   SunspecPointData_kFloat32 = 16,
@@ -171,9 +171,9 @@ inline const SunspecPointData (&EnumValuesSunspecPointData())[24] {
     SunspecPointData_kAcc16,
     SunspecPointData_KAcc32,
     SunspecPointData_kAcc64,
-    SunspecPointData_kBitField16,
-    SunspecPointData_kBitField32,
-    SunspecPointData_kBitField64,
+    SunspecPointData_kBitfield16,
+    SunspecPointData_kBitfield32,
+    SunspecPointData_kBitfield64,
     SunspecPointData_kEnum16,
     SunspecPointData_kEnum32,
     SunspecPointData_kFloat32,
@@ -201,9 +201,9 @@ inline const char * const *EnumNamesSunspecPointData() {
     "kAcc16",
     "KAcc32",
     "kAcc64",
-    "kBitField16",
-    "kBitField32",
-    "kBitField64",
+    "kBitfield16",
+    "kBitfield32",
+    "kBitfield64",
     "kEnum16",
     "kEnum32",
     "kFloat32",
@@ -269,16 +269,16 @@ template<> struct SunspecPointDataTraits<kAcc64> {
   static const SunspecPointData enum_value = SunspecPointData_kAcc64;
 };
 
-template<> struct SunspecPointDataTraits<kBitField16> {
-  static const SunspecPointData enum_value = SunspecPointData_kBitField16;
+template<> struct SunspecPointDataTraits<kBitfield16> {
+  static const SunspecPointData enum_value = SunspecPointData_kBitfield16;
 };
 
-template<> struct SunspecPointDataTraits<kBitField32> {
-  static const SunspecPointData enum_value = SunspecPointData_kBitField32;
+template<> struct SunspecPointDataTraits<kBitfield32> {
+  static const SunspecPointData enum_value = SunspecPointData_kBitfield32;
 };
 
-template<> struct SunspecPointDataTraits<kBitField64> {
-  static const SunspecPointData enum_value = SunspecPointData_kBitField64;
+template<> struct SunspecPointDataTraits<kBitfield64> {
+  static const SunspecPointData enum_value = SunspecPointData_kBitfield64;
 };
 
 template<> struct SunspecPointDataTraits<kEnum16> {
@@ -577,56 +577,56 @@ FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(8) kAcc64 FLATBUFFERS_FINAL_CLASS {
 };
 FLATBUFFERS_STRUCT_END(kAcc64, 8);
 
-FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kBitField16 FLATBUFFERS_FINAL_CLASS {
+FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kBitfield16 FLATBUFFERS_FINAL_CLASS {
  private:
   uint16_t value_;
 
  public:
-  kBitField16()
+  kBitfield16()
       : value_(0) {
   }
-  kBitField16(uint16_t _value)
+  kBitfield16(uint16_t _value)
       : value_(::flatbuffers::EndianScalar(_value)) {
   }
   uint16_t value() const {
     return ::flatbuffers::EndianScalar(value_);
   }
 };
-FLATBUFFERS_STRUCT_END(kBitField16, 2);
+FLATBUFFERS_STRUCT_END(kBitfield16, 2);
 
-FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) kBitField32 FLATBUFFERS_FINAL_CLASS {
+FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) kBitfield32 FLATBUFFERS_FINAL_CLASS {
  private:
   uint32_t value_;
 
  public:
-  kBitField32()
+  kBitfield32()
       : value_(0) {
   }
-  kBitField32(uint32_t _value)
+  kBitfield32(uint32_t _value)
       : value_(::flatbuffers::EndianScalar(_value)) {
   }
   uint32_t value() const {
     return ::flatbuffers::EndianScalar(value_);
   }
 };
-FLATBUFFERS_STRUCT_END(kBitField32, 4);
+FLATBUFFERS_STRUCT_END(kBitfield32, 4);
 
-FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(8) kBitField64 FLATBUFFERS_FINAL_CLASS {
+FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(8) kBitfield64 FLATBUFFERS_FINAL_CLASS {
  private:
   uint64_t value_;
 
  public:
-  kBitField64()
+  kBitfield64()
       : value_(0) {
   }
-  kBitField64(uint64_t _value)
+  kBitfield64(uint64_t _value)
       : value_(::flatbuffers::EndianScalar(_value)) {
   }
   uint64_t value() const {
     return ::flatbuffers::EndianScalar(value_);
   }
 };
-FLATBUFFERS_STRUCT_END(kBitField64, 8);
+FLATBUFFERS_STRUCT_END(kBitfield64, 8);
 
 FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kEnum16 FLATBUFFERS_FINAL_CLASS {
  private:
@@ -730,19 +730,37 @@ FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kPad16 FLATBUFFERS_FINAL_CLASS {
 };
 FLATBUFFERS_STRUCT_END(kPad16, 2);
 
-FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) kIpAddr FLATBUFFERS_FINAL_CLASS {
+FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(1) kIpAddr FLATBUFFERS_FINAL_CLASS {
  private:
-  uint32_t value_;
+  uint8_t octet1_;
+  uint8_t octet2_;
+  uint8_t octet3_;
+  uint8_t octet4_;
 
  public:
   kIpAddr()
-      : value_(0) {
+      : octet1_(0),
+        octet2_(0),
+        octet3_(0),
+        octet4_(0) {
   }
-  kIpAddr(uint32_t _value)
-      : value_(::flatbuffers::EndianScalar(_value)) {
+  kIpAddr(uint8_t _octet1, uint8_t _octet2, uint8_t _octet3, uint8_t _octet4)
+      : octet1_(::flatbuffers::EndianScalar(_octet1)),
+        octet2_(::flatbuffers::EndianScalar(_octet2)),
+        octet3_(::flatbuffers::EndianScalar(_octet3)),
+        octet4_(::flatbuffers::EndianScalar(_octet4)) {
   }
-  uint32_t value() const {
-    return ::flatbuffers::EndianScalar(value_);
+  uint8_t octet1() const {
+    return ::flatbuffers::EndianScalar(octet1_);
+  }
+  uint8_t octet2() const {
+    return ::flatbuffers::EndianScalar(octet2_);
+  }
+  uint8_t octet3() const {
+    return ::flatbuffers::EndianScalar(octet3_);
+  }
+  uint8_t octet4() const {
+    return ::flatbuffers::EndianScalar(octet4_);
   }
 };
 FLATBUFFERS_STRUCT_END(kIpAddr, 4);
@@ -888,14 +906,14 @@ struct SunspecPointDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
   const kAcc64 *data_as_kAcc64() const {
     return data_type() == SunspecPointData_kAcc64 ? static_cast<const kAcc64 *>(data()) : nullptr;
   }
-  const kBitField16 *data_as_kBitField16() const {
-    return data_type() == SunspecPointData_kBitField16 ? static_cast<const kBitField16 *>(data()) : nullptr;
+  const kBitfield16 *data_as_kBitfield16() const {
+    return data_type() == SunspecPointData_kBitfield16 ? static_cast<const kBitfield16 *>(data()) : nullptr;
   }
-  const kBitField32 *data_as_kBitField32() const {
-    return data_type() == SunspecPointData_kBitField32 ? static_cast<const kBitField32 *>(data()) : nullptr;
+  const kBitfield32 *data_as_kBitfield32() const {
+    return data_type() == SunspecPointData_kBitfield32 ? static_cast<const kBitfield32 *>(data()) : nullptr;
   }
-  const kBitField64 *data_as_kBitField64() const {
-    return data_type() == SunspecPointData_kBitField64 ? static_cast<const kBitField64 *>(data()) : nullptr;
+  const kBitfield64 *data_as_kBitfield64() const {
+    return data_type() == SunspecPointData_kBitfield64 ? static_cast<const kBitfield64 *>(data()) : nullptr;
   }
   const kEnum16 *data_as_kEnum16() const {
     return data_type() == SunspecPointData_kEnum16 ? static_cast<const kEnum16 *>(data()) : nullptr;
@@ -1018,16 +1036,16 @@ template<> inline const kAcc64 *SunspecPointDef::data_as<kAcc64>() const {
   return data_as_kAcc64();
 }
 
-template<> inline const kBitField16 *SunspecPointDef::data_as<kBitField16>() const {
-  return data_as_kBitField16();
+template<> inline const kBitfield16 *SunspecPointDef::data_as<kBitfield16>() const {
+  return data_as_kBitfield16();
 }
 
-template<> inline const kBitField32 *SunspecPointDef::data_as<kBitField32>() const {
-  return data_as_kBitField32();
+template<> inline const kBitfield32 *SunspecPointDef::data_as<kBitfield32>() const {
+  return data_as_kBitfield32();
 }
 
-template<> inline const kBitField64 *SunspecPointDef::data_as<kBitField64>() const {
-  return data_as_kBitField64();
+template<> inline const kBitfield64 *SunspecPointDef::data_as<kBitfield64>() const {
+  return data_as_kBitfield64();
 }
 
 template<> inline const kEnum16 *SunspecPointDef::data_as<kEnum16>() const {
@@ -1406,14 +1424,14 @@ inline bool VerifySunspecPointData(::flatbuffers::Verifier &verifier, const void
     case SunspecPointData_kAcc64: {
       return verifier.VerifyField<kAcc64>(static_cast<const uint8_t *>(obj), 0, 8);
     }
-    case SunspecPointData_kBitField16: {
-      return verifier.VerifyField<kBitField16>(static_cast<const uint8_t *>(obj), 0, 2);
+    case SunspecPointData_kBitfield16: {
+      return verifier.VerifyField<kBitfield16>(static_cast<const uint8_t *>(obj), 0, 2);
     }
-    case SunspecPointData_kBitField32: {
-      return verifier.VerifyField<kBitField32>(static_cast<const uint8_t *>(obj), 0, 4);
+    case SunspecPointData_kBitfield32: {
+      return verifier.VerifyField<kBitfield32>(static_cast<const uint8_t *>(obj), 0, 4);
     }
-    case SunspecPointData_kBitField64: {
-      return verifier.VerifyField<kBitField64>(static_cast<const uint8_t *>(obj), 0, 8);
+    case SunspecPointData_kBitfield64: {
+      return verifier.VerifyField<kBitfield64>(static_cast<const uint8_t *>(obj), 0, 8);
     }
     case SunspecPointData_kEnum16: {
       return verifier.VerifyField<kEnum16>(static_cast<const uint8_t *>(obj), 0, 2);
@@ -1438,7 +1456,7 @@ inline bool VerifySunspecPointData(::flatbuffers::Verifier &verifier, const void
       return verifier.VerifyField<kPad16>(static_cast<const uint8_t *>(obj), 0, 2);
     }
     case SunspecPointData_kIpAddr: {
-      return verifier.VerifyField<kIpAddr>(static_cast<const uint8_t *>(obj), 0, 4);
+      return verifier.VerifyField<kIpAddr>(static_cast<const uint8_t *>(obj), 0, 1);
     }
     case SunspecPointData_kIpv6Addr: {
       return verifier.VerifyField<kIpv6Addr>(static_cast<const uint8_t *>(obj), 0, 1);

@@ -10,7 +10,7 @@ SunspecDeviceWriter *SunspecGroupWriter::getDevice() const
     return model() == nullptr ? nullptr : &(model()->device());
 }
 
-void SunspecGroupWriter::setAllToBuffer(uint16_t *buf)
+uint16_t SunspecGroupWriter::setAllToBuffer(uint16_t *buf)
 {
 
     uint16_t currOffset = 0;
@@ -24,6 +24,7 @@ void SunspecGroupWriter::setAllToBuffer(uint16_t *buf)
         group.setAllToBuffer(buf + currOffset);
         currOffset += group.registerLength_;
     }
+    return registerLength_;
 }
 
 std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
@@ -65,22 +66,26 @@ std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, uint16_t address, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, relativeAddress_{address}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}
 {
+    // Either model or group must be non-null, but not both.
+    assert((model != nullptr) ^ (group != nullptr));
 }
 
-uint16_t SunspecGroupWriter::init(uint16_t address)
+void SunspecGroupWriter::initPoint()
 {
-    relativeAddress_ = address;
+    registerLength_ = 0;
+    points_.clear();
+    groupPoints_.clear();
     for (const auto &pointDef : *def_.points())
     {
         uint16_t count = pointDef->count();
         if (0 == count)
         {
             // NOTE Count is always in the top levelgroup
-            SunspecPointWriter *countPoint = model_->getPoint(pointDef->count_point_id()->c_str(), false);
+            SunspecPointWriter *countPoint = model_->getTopLevelPoint(pointDef->count_point_id()->c_str());
 
-            count = countPoint == nullptr ? 0 : 1; // countPoint->readFromDevice().u16;
+            count = countPoint == nullptr ? 0 : countPoint->getValueAsUint16();
         }
         for (size_t i = 0; i < count; i++)
         {
@@ -88,27 +93,49 @@ uint16_t SunspecGroupWriter::init(uint16_t address)
             registerLength_ += pointDef->size();
         }
     }
+}
+uint16_t SunspecGroupWriter::initGroups()
+{
+
     for (const auto &groupDef : *def_.groups())
     {
         uint16_t count = groupDef->count();
         if (0 == count)
         {
-            SunspecPointWriter *countPoint = model_->getPoint(groupDef->count_point_id()->c_str(), false);
+            SunspecPointWriter *countPoint = model_->getTopLevelPoint(groupDef->count_point_id()->c_str());
 
-            count = countPoint == nullptr ? 0 : 1; // countPoint->readFromDevice().u16;
+            count = (countPoint == nullptr) ? 0 : countPoint->getValueAsUint16();
+            count = (count == kUint16UnimplementedValue) ? 0 : count;
         }
         for (size_t i = 0; i < count; i++)
         {
-            groupPoints_.emplace_back(*groupDef, relativeAddress_ + registerLength_, nullptr, this);
-            registerLength_ += groupPoints_.back().registerLength_;
+            groupPoints_.emplace_back(*groupDef, nullptr, this).initPoint();
+            registerLength_ += groupPoints_.back().initGroups();
         }
     }
+
     return registerLength_;
 }
 
+void SunspecGroupWriter::setRelativeAddress(uint16_t relativeAddress)
+{
+    relativeAddress_ = relativeAddress;
+
+    uint16_t offset = 0;
+    for (auto &point : points_)
+    {
+        point.setRelativeAddress(relativeAddress_ + offset);
+        offset += point.size();
+    }
+    for (auto &group : groupPoints_)
+    {
+        group.setRelativeAddress(relativeAddress_ + offset);
+        offset += group.registerLength_;
+    }
+}
 bool SunspecGroupWriter::isTopLevelGroupPoint() const
 {
-    // static_assert(group_  == nullptr && model_ == nullptr);
+    assert(group_ == nullptr ^ model_ == nullptr);
 
     // If it belongs to a group then it is not a toplevel group
     return (group_ == nullptr) && (model_ != nullptr);
@@ -167,7 +194,6 @@ const SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &g
 
 const SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointName, bool findRecursively) const
 {
-    // TODO To implement it to be recursive.
     for (auto &point : points_)
     {
         if (pointName == point.def().id()->c_str())

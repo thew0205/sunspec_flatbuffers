@@ -3,14 +3,15 @@
 #include <cmath>
 
 #include "sunspec_utils.h"
+#include <algorithm>
 // #include "writer/sunspec_device_writer.h"
-
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
 using std::string;
 using std::to_string;
 
 using namespace Sunspec;
 
-SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, uint16_t address, SunspecGroupWriter &groupPoint, SunspecValueFunction valueFunction) : def_{def}, relativeAddress_{address}, valueFunction_{valueFunction}, groupPoint_{groupPoint}
+SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecValueFunction valueFunction) : def_{def}, valueFunction_{valueFunction}, groupPoint_{groupPoint}
 {
 }
 
@@ -25,68 +26,163 @@ SunspecPointWriter::~SunspecPointWriter()
 void SunspecPointWriter::setValueToBuffer(uint16_t *buf)
 {
 
-    uint16_t tempBuf[def_.size()];
-    string tempString{def_.id()->c_str()};
+    // uint16_t tempBuf[def_.size()];
+    string temp{def_.id()->c_str()};
     switch (def_.data_type())
     {
 
     case SunspecPointData_kSint16:
-        *reinterpret_cast<int16_t *>(tempBuf) = valueFunction_.sint16 == nullptr ? def_.data_as_kSint16()->value() : valueFunction_.sint16();
-        memcpy(buf, tempBuf, sizeof(int16_t));
+    {
+        const int16_t valueSint16 = sint16_tToBigEndian(getValueAsSint16());
+        memcpy(buf, &valueSint16, sizeof(int16_t));
         break;
+    }
+
     case SunspecPointData_kSunsSf:
-    case SunspecPointData_kPad16:
-    case SunspecPointData_kBitField16:
-    case SunspecPointData_kAcc16:
-    case SunspecPointData_kEnum16:
-    case SunspecPointData_kRaw16:
-    case SunspecPointData_kUint16:
-        *reinterpret_cast<uint16_t *>(tempBuf) = valueFunction_.uint16 == nullptr ? def_.data_as_kUint16()->value() : valueFunction_.uint16();
-        memcpy(buf, tempBuf, sizeof(uint16_t));
+    {
+        const sunsSf_t valueSunsSf = uint16_tToBigEndian(getValueAsSunsSf());
+        memcpy(buf, &valueSunsSf, sizeof(kSunsSf));
         break;
+    }
+
+    case SunspecPointData_kPad16:
+    {
+        const pad16_t valuePad16 = uint16_tToBigEndian(getValueAsPad16());
+        memcpy(buf, &valuePad16, sizeof(kPad16));
+        break;
+    }
+
+    case SunspecPointData_kBitfield16:
+    {
+        const bitfield16_t valueBit16 = uint16_tToBigEndian(getValueAsBit16());
+        memcpy(buf, &valueBit16, sizeof(bitfield16_t));
+        break;
+    }
+
+    case SunspecPointData_kAcc16:
+    {
+        const acc16_t valueAcc16 = uint16_tToBigEndian(getValueAsAcc16());
+        memcpy(buf, &valueAcc16, sizeof(acc16_t));
+        break;
+    }
+
+    case SunspecPointData_kEnum16:
+    {
+        const enum16_t valueEnum16 = uint16_tToBigEndian(getValueAsEnum16());
+        memcpy(buf, &valueEnum16, sizeof(enum16_t));
+        break;
+    }
+
+    case SunspecPointData_kRaw16:
+    {
+        const raw16_t valueRaw16 = uint16_tToBigEndian(getValueAsRaw16());
+        memcpy(buf, &valueRaw16, sizeof(raw16_t));
+        break;
+    }
+
+    case SunspecPointData_kUint16:
+    {
+        const uint16_t valueUint16 = uint16_tToBigEndian(getValueAsUint16());
+        memcpy(buf, &valueUint16, sizeof(uint16_t));
+        break;
+    }
 
     case SunspecPointData_kSint32:
-        *reinterpret_cast<int32_t *>(tempBuf) = valueFunction_.sint32 == nullptr ? def_.data_as_kSint32()->value() : valueFunction_.sint32();
+    {
+        const int32_t valueSint32 = sint16_tToBigEndian(getValueAsSint32());
+        memcpy(buf, &valueSint32, sizeof(int32_t));
         break;
+    }
 
     case SunspecPointData_kFloat32:
-        *reinterpret_cast<float *>(tempBuf) = valueFunction_.float32 == nullptr ? def_.data_as_kFloat32()->value() : valueFunction_.float32();
-        memcpy(buf, tempBuf, sizeof(float));
+    {
+        const float valueFloat32 = floatToBigEndian(getValueAsFloat32());
+        memcpy(buf, &valueFloat32, sizeof(float));
         break;
+    }
 
     case SunspecPointData_kUint32:
-    case SunspecPointData_KAcc32:
-    case SunspecPointData_kBitField32:
-    case SunspecPointData_kEnum32:
-    case SunspecPointData_kIpAddr:
-        *reinterpret_cast<uint32_t *>(tempBuf) = valueFunction_.uint32 == nullptr ? def_.data_as_kUint32()->value() : valueFunction_.uint32();
-        memcpy(buf, tempBuf, sizeof(uint32_t));
+    {
+        const uint32_t valueUint32 =uint32_tToBigEndian(getValueAsUint32());
+        memcpy(buf, &valueUint32, sizeof(uint32_t));
         break;
+    }
+
+    case SunspecPointData_KAcc32:
+    {
+        const acc32_t valueAcc32 = uint32_tToBigEndian(getValueAsAcc32());
+        memcpy(buf, &valueAcc32, sizeof(acc32_t));
+        break;
+    }
+
+    case SunspecPointData_kBitfield32:
+    {
+        const bit32_t valueBit32 = uint32_tToBigEndian(getValueAsBit32());
+        memcpy(buf, &valueBit32, sizeof(bit32_t));
+        break;
+    }
+
+    case SunspecPointData_kEnum32:
+    {
+        const enum32_t valueEnum32 = uint32_tToBigEndian(getValueAsEnum32());
+        memcpy(buf, &valueEnum32, sizeof(enum32_t));
+        break;
+    }
+// Check the Endianess
+    case SunspecPointData_kIpAddr:
+    {
+        const ipAddr_t valueIpAddr = getValueAsIpAddr();
+        memcpy(buf, &valueIpAddr, sizeof(kIpAddr));
+        break;
+    }
 
     case SunspecPointData_kFloat64:
-        *reinterpret_cast<double *>(tempBuf) = valueFunction_.float64 == nullptr ? def_.data_as_kFloat64()->value() : valueFunction_.float64();
-        memcpy(buf, tempBuf, sizeof(double));
+    {
+        const double valueFloat64 = doubleToBigEndian(getValueAsFloat64());
+        memcpy(buf, &valueFloat64, sizeof(double));
         break;
+    }
+
     case SunspecPointData_kSint64:
-        *reinterpret_cast<int64_t *>(tempBuf) = valueFunction_.sint64 == nullptr ? def_.data_as_kSint64()->value() : valueFunction_.sint64();
-        memcpy(buf, tempBuf, sizeof(int64_t));
+    {
+        const int64_t valueSint64 = sint64_tToBigEndian(getValueAsSint64());
+        memcpy(buf, &valueSint64, sizeof(int64_t));
         break;
+    }
+
     case SunspecPointData_kUint64:
-    case SunspecPointData_kAcc64:
-    case SunspecPointData_kBitField64:
-        *reinterpret_cast<uint64_t *>(tempBuf) = valueFunction_.uint64 == nullptr ? def_.data_as_kUint64()->value() : valueFunction_.uint64();
-        memcpy(buf, tempBuf, sizeof(uint64_t));
+    {
+        const uint64_t valueUint64 = uint64_tToBigEndian(getValueAsUint64());
+        memcpy(buf, &valueUint64, sizeof(uint64_t));
         break;
+    }
+    case SunspecPointData_kAcc64:
+    {
+        const acc64_t valueAcc64 = uint64_tToBigEndian(getValueAsAcc64());
+        memcpy(buf, &valueAcc64, sizeof(acc64_t));
+        break;
+    }
+    case SunspecPointData_kBitfield64:
+    {
+        const bit64_t valueBit64 = uint64_tToBigEndian(getValueAsBit64());
+        memcpy(buf, &valueBit64, sizeof(bit64_t));
+        break;
+    }
 
     case SunspecPointData_kStringx:
-        tempString = valueFunction_.str == nullptr ? def_.data_as_kStringx()->value()->c_str() : valueFunction_.str();
-        // TODO (Matthew) Compare the string length to the size of buffer and cut off excess.
-        memcpy(buf, tempString.c_str(), tempString.size());
-        // memset(reinterpret_cast<char*> (buf) + tempString.size(), '\0', def_.size()- )
+    {
+
+        const string valueString{getValueAsString()};
+        const auto strLength = valueString.size();
+        stringToBigEndian(valueString, buf, def_.size());
+        // memcpy(buf, valueString.c_str(), strLength);
+        // memset(&(reinterpret_cast<uint8_t *>(buf)[strLength]), 0, def_.size() * sizeof(uint16_t) - strLength); // terminate with a null character
         break;
+    }
 
     // TODO (Matthew): Implementation of variable length types
     case SunspecPointData_kIpv6Addr:
+
     case SunspecPointData_kEui48:
 
     case SunspecPointData_NONE:
@@ -100,7 +196,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
 {
     string ret;
     ret += "\"";
-    ret += def_.id()->c_str();
+    ret += FlatbufferStringToString(def_.id());
     ret += "\":";
 
     uint16_t tempBuf[def_.size()];
@@ -115,7 +211,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
         break;
     case SunspecPointData_kSunsSf:
     case SunspecPointData_kPad16:
-    case SunspecPointData_kBitField16:
+    case SunspecPointData_kBitfield16:
     case SunspecPointData_kAcc16:
     case SunspecPointData_kEnum16:
     case SunspecPointData_kRaw16:
@@ -139,7 +235,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
 
     case SunspecPointData_kUint32:
     case SunspecPointData_KAcc32:
-    case SunspecPointData_kBitField32:
+    case SunspecPointData_kBitfield32:
     case SunspecPointData_kEnum32:
     case SunspecPointData_kIpAddr:
         *reinterpret_cast<uint32_t *>(tempBuf) = valueFunction_.uint32 == nullptr ? def_.data_as_kUint32()->value() : valueFunction_.uint32();
@@ -159,14 +255,14 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
         break;
     case SunspecPointData_kUint64:
     case SunspecPointData_kAcc64:
-    case SunspecPointData_kBitField64:
+    case SunspecPointData_kBitfield64:
         *reinterpret_cast<uint64_t *>(tempBuf) = valueFunction_.uint64 == nullptr ? def_.data_as_kUint64()->value() : valueFunction_.uint64();
         ret += to_string(*reinterpret_cast<uint64_t *>(tempBuf));
 
         break;
 
     case SunspecPointData_kStringx:
-        ret += valueFunction_.str == nullptr ? def_.data_as_kStringx()->value()->c_str() : valueFunction_.str();
+        ret += valueFunction_.str == nullptr ? FlatbufferStringToString(def_.data_as_kStringx()->value()) : valueFunction_.str();
         break;
 
     // TODO (Matthew): Implementation of variable length types
@@ -179,6 +275,6 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
         break;
     }
 
-    ret += includeUnits ? def_.units()->c_str() : "";
+    ret += includeUnits ? FlatbufferStringToString(def_.units()) : "";
     return ret;
 }

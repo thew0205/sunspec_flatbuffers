@@ -1,33 +1,92 @@
 {
     "version": "0.2.0",
+    "inputs": [
+        {
+            "id": "testToRun",
+            "type": "pickString",
+            "description": "The test to be run",
+            "options": [
+                "sunspec_init",
+                "flatbuffer",
+                "sunspec_set_value",
+                "modbus_rtu"
+            ],
+            "default": "sunspec_init"
+        },
+        {
+            "id": "piPicoChip",
+            "type": "pickString",
+            "description": "The pico chip you are using",
+            "options": [
+                "rp2040",
+                "rp2350",
+            ],
+            "default": "rp2040"
+        },
+        {
+            "id": "piPicoChipUpperCase",
+            "type": "pickString",
+            "description": "The pico chip you are using",
+            "options": [
+                "RP2040",
+                "RP2350",
+            ],
+            "default": "RP2040"
+        }
+    ],
     "configurations": [
         {
-            "name": "Pico Debug (Cortex-Debug)",
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/tests/host/${input:testToRun}/${input:testToRun}_test",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Host Test Build"
+        },
+        {
+            "name": "Pico (Cortex-Debug)",
             "cwd": "${userHome}/.pico-sdk/openocd/0.12.0+dev/scripts",
-            "executable": "${workspaceFolder}/build/sunspec/tests/target/flatbuffer/flatbuffer_test.elf",
+            "executable": "${workspaceFolder}/build/tests/target/${input:testToRun}/${input:testToRun}_test.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
-            "serverpath": "${userHome}/.pico-sdk/openocd/0.12.0+dev/openocd.exe",
-            "gdbPath": "/home/busoye_tm/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gdb",
-            "device": "${command:raspberry-pi-pico.getChipUppercase}",
+            "serverpath": "${userHome}/.pico-sdk/openocd/0.12.0+dev/openocd",
+            "gdbPath": "${userHome}/.pico-sdk/toolchain/14_2_Rel1/bin/arm-none-eabi-gdb",
+            "device": "${input:piPicoChipUpperCase}",
             "configFiles": [
                 "interface/cmsis-dap.cfg",
-                "target/${command:raspberry-pi-pico.getTarget}.cfg"
+                "target/${input:piPicoChip}.cfg"
             ],
-            "svdFile": "${userHome}/.pico-sdk/sdk/2.2.0/src/${command:raspberry-pi-pico.getChip}/hardware_regs/${command:raspberry-pi-pico.getChipUppercase}.svd",
+            "svdFile": "${userHome}/.pico-sdk/sdk/2.2.0/src/${input:piPicoChip}/hardware_regs/${input:piPicoChipUpperCase}.svd",
             "runToEntryPoint": "main",
             // Fix for no_flash binaries, where monitor reset halt doesn't do what is expected
             // Also works fine for flash binaries
             "overrideLaunchCommands": [
                 "monitor reset init",
-                "load \"${workspaceFolder}/build/sunspec/tests/target/flatbuffer/flatbuffer_test.elf\""
+                "load \"${workspaceFolder}/build/tests/target/${input:testToRun}/${input:testToRun}_test.elf\""
             ],
             "openOCDLaunchCommands": [
                 "adapter speed 5000"
             ],
             "showDevDebugOutput": "raw",
-            "preLaunchTask": "Compile Project"
-        },
+            "preLaunchTask": "Target Test Build"
+        }
     ]
 }

@@ -12,11 +12,8 @@ add_library(${PROJECT_NAME}
 
 # Add the standard include files to the build
 target_include_directories(${PROJECT_NAME} PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../generic/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../modbus/inc
-        ${CMAKE_CURRENT_LIST_DIR}
+         ${SUNSPEC_ROOT_DIR}/third_party/modbus/inc
+        ${SUNSPEC_ROOT_DIR}/third_party/generic/include
 )
 
 

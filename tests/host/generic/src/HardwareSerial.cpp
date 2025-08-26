@@ -6,7 +6,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <iostream>
-#include <termios.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 using namespace std;
@@ -93,14 +92,14 @@ void waitForTxDrain(int fd) {
 }
 HardwareSerial::HardwareSerial() : rx_buffer({{0}, 0, 0}) {}
 
-void HardwareSerial::begin( const char *portname)
+void HardwareSerial::begin( const char *portname, unsigned long baud)
 {
     // Replace with your serial port name
     fd = openSerialPort(portname);
     if (fd < 0)
         return;
 
-    if (!configureSerialPort(fd, B9600))
+    if (!configureSerialPort(fd, baud))
     {
         closeSerialPort(fd);
     }
@@ -182,7 +181,7 @@ size_t HardwareSerial::write(uint8_t c)
     
 }
 
-// HardwareSerial Serial(uart0);
+HardwareSerial Serial0{};
 HardwareSerial Serial1{};
 
 // #include "HardwareSerial.h"
