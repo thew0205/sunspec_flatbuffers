@@ -7,3 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, Github action"
+
+  say_hi:
+    needs: [say_hello]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: flatbuffer_integration
+      - run: sudo apt intall -y build-essential python3 cmake make ninja-build
+      - run: pwd
+      - run: tools/dual_target_test_build_run.sh
