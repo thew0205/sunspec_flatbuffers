@@ -32,7 +32,7 @@ set(PICO_BOARD pico2 CACHE STRING "Board type")
 include(pico_sdk_import.cmake)
 
 project(sunspec_pai_target_test C CXX ASM)
- 
+
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
