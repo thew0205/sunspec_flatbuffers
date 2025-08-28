@@ -18,4 +18,4 @@ jobs:
           ref: flatbuffer_integration
       - run: sudo apt install -y build-essential python3 cmake make ninja-build
       - run: pwd
-      - run: tools/dual_target_test_build_run.sh target $(pwd) flatbuffer
+      - run: tools/dual_target_test_build_run.sh host $(pwd) flatbuffer
