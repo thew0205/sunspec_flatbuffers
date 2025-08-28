@@ -18,9 +18,9 @@ FetchContent_Declare(
     GIT_TAG v4.0
 )
 
-# FetchContent_MakeAvailable(CppUTest)
+FetchContent_MakeAvailable(CppUTest)
 
-add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
+# add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
