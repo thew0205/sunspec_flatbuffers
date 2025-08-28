@@ -9,7 +9,6 @@ jobs:
       - run: echo "Hello, Github action"
 
   say_hi:
-    needs: [say_hello]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
