@@ -42,7 +42,6 @@ public:
     }
 };
 
-
 TEST_GROUP(Sunspec_Init)
 {
     Stream stream{};
@@ -84,8 +83,10 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_113)
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
 {
     writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
-    writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setValueFunction({.uint16 = []() -> uint16_t
-                                                                                          { return 2; }});
+    SunspecPointFunction funct{.uint16 = {.function = [](void *param) -> uint16_t
+                                          { return 2; }}};
+
+    writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setPointFunction(funct);
 
     writer.initSubLevels();
     writer.setBuffer();

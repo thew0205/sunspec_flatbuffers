@@ -60,13 +60,14 @@ TEST_GROUP(Sunspec_Set_Value)
 TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_113)
 {
     writer.initAll({SunspecModelList_kModel1, SunspecModelList_kModel113});
+    SunspecPointFunction functMn{.str = {.function = [](void *param) -> string
+                                         { return "Matthew"; }}};
 
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Mn")->setValueFunction({.str = []() -> string
-                                                                                         { return "Matthew"; }});
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Opt")->setValueFunction({.str = []() -> string
-                                                                                          { return "Busoye Tolulope Matthew"; }});
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("DA")->setValueFunction({.uint16 = []() -> uint16_t
-                                                                                         { return 0XDEAD; }});
+    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Mn")->setPointFunction(functMn);
+    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Opt")->setPointFunction({.str = {.function = [](void * param) -> string
+                                                                                                  { return "Busoye Tolulope Matthew"; }}});
+    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
+                                                                                                    { return 0xDEAD; }}});
 
     writer.setBuffer();
 
@@ -81,14 +82,13 @@ TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_113)
     LONGS_EQUAL(0xFFFF, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("St")->relativeAddress()));
     LONGS_EQUAL(0xFFFF, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("Evt1")->relativeAddress()));
     LONGS_EQUAL(0xFFFF, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("Evt1")->relativeAddress() + 1));
-  
 }
 
 TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_160)
 {
     writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
-    writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setValueFunction({.uint16 = []() -> uint16_t
-                                                                                          { return 2; }});
+    writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
+                                                                                                     { return 2; }}});
 
     writer.initSubLevels();
     writer.setBuffer();
@@ -100,7 +100,6 @@ TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_160)
     LONGS_EQUAL(2, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->relativeAddress()));
     LONGS_EQUAL(0x8000, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("DCA_SF")->relativeAddress()));
     LONGS_EQUAL(0x8000, client.getValueHoldingRegister(writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("DCV_SF")->relativeAddress()));
-  
 }
 
 TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count_set)

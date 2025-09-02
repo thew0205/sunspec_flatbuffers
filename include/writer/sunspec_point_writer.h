@@ -39,9 +39,9 @@ public:
     {
         return relativeAddress_;
     }
-    void setValueFunction(SunspecValueFunction valueFunction)
+    void setPointFunction(const SunspecPointFunction &pointFunction)
     {
-        valueFunction_ = valueFunction;
+        pointFunction_ = pointFunction;
     }
 
     void setRelativeAddress(uint16_t relativeAddress)
@@ -50,91 +50,91 @@ public:
     }
     int16_t getValueAsSint16() const
     {
-        return valueFunction_.sint16 == nullptr ? FlatbufferKSint16toSint16_t(def_.data_as_kSint16()) : valueFunction_.sint16();
+        return pointFunction_.sint16.function == nullptr ? FlatbufferKSint16toSint16_t(def_.data_as_kSint16()) : pointFunction_.sint16.call();
     }
 
     uint16_t getValueAsUint16() const
     {
-        return valueFunction_.uint16 == nullptr ? FlatbufferKUint16toUint16_t(def_.data_as_kUint16()) : valueFunction_.uint16();
+        return pointFunction_.uint16.function == nullptr ? FlatbufferKUint16toUint16_t(def_.data_as_kUint16()) : pointFunction_.uint16.call();
     }
 
     pad16_t getValueAsPad16() const
     {
-        return valueFunction_.pad16 == nullptr ? FlatbufferKPad16toPad16_t(def_.data_as_kPad16()) : valueFunction_.pad16();
+        return pointFunction_.pad16.function == nullptr ? FlatbufferKPad16toPad16_t(def_.data_as_kPad16()) : pointFunction_.pad16.call();
     }
     sunsSf_t getValueAsSunsSf() const
     {
-        return valueFunction_.sunsSf == nullptr ? FlatbufferKSunsSftoSunsSf_t(def_.data_as_kSunsSf()) : valueFunction_.sunsSf();
+        return pointFunction_.sunsSf.function == nullptr ? FlatbufferKSunsSftoSunsSf_t(def_.data_as_kSunsSf()) : pointFunction_.sunsSf.call();
     }
     acc16_t getValueAsAcc16() const
     {
-        return valueFunction_.acc16 == nullptr ? FlatbufferKAcc16toAcc16_t(def_.data_as_kAcc16()) : valueFunction_.acc16();
+        return pointFunction_.acc16.function == nullptr ? FlatbufferKAcc16toAcc16_t(def_.data_as_kAcc16()) : pointFunction_.acc16.call();
     }
     bitfield16_t getValueAsBit16() const
     {
-        return valueFunction_.bit16 == nullptr ? FlatbufferKBit16toBit16_t(def_.data_as_kBitfield16()) : valueFunction_.bit16();
+        return pointFunction_.bit16.function == nullptr ? FlatbufferKBit16toBit16_t(def_.data_as_kBitfield16()) : pointFunction_.bit16.call();
     }
     enum16_t getValueAsEnum16() const
     {
-        return valueFunction_.enum16 == nullptr ? FlatbufferKEnum16toEnum16_t(def_.data_as_kEnum16()) : valueFunction_.enum16();
+        return pointFunction_.enum16.function == nullptr ? FlatbufferKEnum16toEnum16_t(def_.data_as_kEnum16()) : pointFunction_.enum16.call();
     }
     raw16_t getValueAsRaw16() const
     {
-        return valueFunction_.raw16 == nullptr ? FlatbufferKRaw16toRaw16_t(def_.data_as_kRaw16()) : valueFunction_.raw16();
+        return pointFunction_.raw16.function == nullptr ? FlatbufferKRaw16toRaw16_t(def_.data_as_kRaw16()) : pointFunction_.raw16.call();
     }
     int32_t getValueAsSint32() const
     {
-        return valueFunction_.sint32 == nullptr ? FlatbufferKSint32toSint32_t(def_.data_as_kSint32()) : valueFunction_.sint32();
+        return pointFunction_.sint32.function == nullptr ? FlatbufferKSint32toSint32_t(def_.data_as_kSint32()) : pointFunction_.sint32.call();
     }
     uint32_t getValueAsUint32() const
     {
-        return valueFunction_.uint32 == nullptr ? FlatbufferKUint32toUint32_t(def_.data_as_kUint32()) : valueFunction_.uint32();
+        return pointFunction_.uint32.function == nullptr ? FlatbufferKUint32toUint32_t(def_.data_as_kUint32()) : pointFunction_.uint32.call();
     }
     acc32_t getValueAsAcc32() const
     {
-        return valueFunction_.acc32 == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_KAcc32()) : valueFunction_.acc32();
+        return pointFunction_.acc32.function == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_KAcc32()) : pointFunction_.acc32.call();
     }
     bit32_t getValueAsBit32() const
     {
-        return valueFunction_.bit32 == nullptr ? FlatbufferKBit32toBit32_t(def_.data_as_kBitfield32()) : valueFunction_.bit32();
+        return pointFunction_.bit32.function == nullptr ? FlatbufferKBit32toBit32_t(def_.data_as_kBitfield32()) : pointFunction_.bit32.call();
     }
     enum32_t getValueAsEnum32() const
     {
-        return valueFunction_.enum32 == nullptr ? FlatbufferKEnum32toEnum32_t(def_.data_as_kEnum32()) : valueFunction_.enum32();
+        return pointFunction_.enum32.function == nullptr ? FlatbufferKEnum32toEnum32_t(def_.data_as_kEnum32()) : pointFunction_.enum32.call();
     }
     ipAddr_t getValueAsIpAddr() const
     {
-        return valueFunction_.ipAddr == nullptr ? FlatbufferKIpAddrtoIpAddr_t(def_.data_as_kIpAddr()) : valueFunction_.ipAddr();
+        return pointFunction_.ipAddr.function == nullptr ? FlatbufferKIpAddrtoIpAddr_t(def_.data_as_kIpAddr()) : pointFunction_.ipAddr.call();
     }
     float getValueAsFloat32() const
     {
-        return valueFunction_.float32 == nullptr ? FlatbufferKFloat32toFloat(def_.data_as_kFloat32()) : valueFunction_.float32();
+        return pointFunction_.float32.function == nullptr ? FlatbufferKFloat32toFloat(def_.data_as_kFloat32()) : pointFunction_.float32.call();
     }
     double getValueAsFloat64() const
     {
-        return valueFunction_.float64 == nullptr ? FlatbufferKFloat64toDouble(def_.data_as_kFloat64()) : valueFunction_.float64();
+        return pointFunction_.float64.function == nullptr ? FlatbufferKFloat64toDouble(def_.data_as_kFloat64()) : pointFunction_.float64.call();
     }
     int64_t getValueAsSint64() const
     {
-        return valueFunction_.sint64 == nullptr ? FlatbufferKSint64toSint64_t(def_.data_as_kSint64()) : valueFunction_.sint64();
+        return pointFunction_.sint64.function == nullptr ? FlatbufferKSint64toSint64_t(def_.data_as_kSint64()) : pointFunction_.sint64.call();
     }
     uint64_t getValueAsUint64() const
     {
-        return valueFunction_.uint64 == nullptr ? FlatbufferKUint64toUint64_t(def_.data_as_kUint64()) : valueFunction_.uint64();
+        return pointFunction_.uint64.function == nullptr ? FlatbufferKUint64toUint64_t(def_.data_as_kUint64()) : pointFunction_.uint64.call();
     }
 
     acc64_t getValueAsAcc64() const
     {
-        return valueFunction_.acc64 == nullptr ? FlatbufferKAcc64toAcc64_t(def_.data_as_kAcc64()) : valueFunction_.acc64();
+        return pointFunction_.acc64.function == nullptr ? FlatbufferKAcc64toAcc64_t(def_.data_as_kAcc64()) : pointFunction_.acc64.call();
     }
     bit64_t getValueAsBit64() const
     {
-        return valueFunction_.bit64 == nullptr ? FlatbufferKBit64toBit64_t(def_.data_as_kBitfield64()) : valueFunction_.bit64();
+        return pointFunction_.bit64.function == nullptr ? FlatbufferKBit64toBit64_t(def_.data_as_kBitfield64()) : pointFunction_.bit64.call();
     }
 
     string getValueAsString() const
     {
-        string tempString = valueFunction_.str == nullptr ? FlatbufferKStringxToString(def_.data_as_kStringx()) : valueFunction_.str();
+        string tempString = pointFunction_.str.function == nullptr ? FlatbufferKStringxToString(def_.data_as_kStringx()) : pointFunction_.str.call();
         std::size_t newLength = std::min(static_cast<size_t>((def_.size() * sizeof(uint16_t)) - 1), tempString.size());
 
         tempString.resize(newLength);
@@ -170,7 +170,7 @@ public:
      * @param [in] _addr The starting address of the point in the register map.
      * @param [in] _groupPoint A reference to the parent SunspecGroupPoint.
      */
-    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecValueFunction valueFunction);
+    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction);
     SunspecPointWriter(const SunspecPointDef &def, uint16_t address, SunspecGroupWriter &groupPoint);
     /**
      * @brief Copy constructor.
@@ -189,7 +189,7 @@ public:
 
 private:
     const SunspecPointDef &def_;
-    SunspecValueFunction valueFunction_;
+    SunspecPointFunction pointFunction_;
     uint16_t relativeAddress_;
     SunspecGroupWriter &groupPoint_;
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;

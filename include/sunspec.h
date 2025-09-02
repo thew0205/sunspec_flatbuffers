@@ -58,31 +58,71 @@ typedef ipAddr_t (*functionIpAddr)();
 typedef ipv6Addr_t (*functionIpv6Addr)();
 typedef eui48_t (*functionEui48)();
 
-union SunspecValueFunction
+// union SunspecValueFunction
+// {
+//     functionSint16 sint16;
+//     functionSint32 sint32;
+//     functionSint64 sint64;
+//     functionRaw16 raw16;
+//     functionUint16 uint16;
+//     functionUint32 uint32;
+//     functionUint64 uint64;
+//     functionAcc16 acc16;
+//     functionAcc32 acc32;
+//     functionAcc64 acc64;
+//     functionBit16 bit16;
+//     functionBit32 bit32;
+//     functionBit64 bit64;
+//     functionEnum16 enum16;
+//     functionEnum32 enum32;
+//     functionFloat32 float32;
+//     functionFloat64 float64;
+//     functionString str;
+//     functionSunsSf sunsSf;
+//     functionPad16 pad16;
+//     functionIpAddr ipAddr;
+//     functionIpv6Addr ipv6Addr;
+//     functionEui48 eui48;
+// };
+
+template <typename ReturnType>
+struct SunspecValueFunction
 {
-    functionSint16 sint16;
-    functionSint32 sint32;
-    functionSint64 sint64;
-    functionRaw16 raw16;
-    functionUint16 uint16;
-    functionUint32 uint32;
-    functionUint64 uint64;
-    functionAcc16 acc16;
-    functionAcc32 acc32;
-    functionAcc64 acc64;
-    functionBit16 bit16;
-    functionBit32 bit32;
-    functionBit64 bit64;
-    functionEnum16 enum16;
-    functionEnum32 enum32;
-    functionFloat32 float32;
-    functionFloat64 float64;
-    functionString str;
-    functionSunsSf sunsSf;
-    functionPad16 pad16;
-    functionIpAddr ipAddr;
-    functionIpv6Addr ipv6Addr;
-    functionEui48 eui48;
+    void *param;
+    ReturnType (*function)(void *param);
+
+    ReturnType call() const
+    {
+        return function(param);
+    }
+};
+
+union SunspecPointFunction
+{
+
+    SunspecValueFunction<int16_t> sint16;
+    SunspecValueFunction<int32_t> sint32;
+    SunspecValueFunction<int64_t> sint64;
+    SunspecValueFunction<raw16_t> raw16;
+    SunspecValueFunction<uint16_t> uint16;
+    SunspecValueFunction<uint32_t> uint32;
+    SunspecValueFunction<uint64_t> uint64;
+    SunspecValueFunction<acc16_t> acc16;
+    SunspecValueFunction<acc32_t> acc32;
+    SunspecValueFunction<acc64_t> acc64;
+    SunspecValueFunction<bitfield16_t> bit16;
+    SunspecValueFunction<bit32_t> bit32;
+    SunspecValueFunction<bit64_t> bit64;
+    SunspecValueFunction<enum16_t> enum16;
+    SunspecValueFunction<enum32_t> enum32;
+    SunspecValueFunction<float> float32;
+    SunspecValueFunction<double> float64;
+    SunspecValueFunction<std::string> str;
+    SunspecValueFunction<sunsSf_t> sunsSf;
+    SunspecValueFunction<pad16_t> pad16;
+    SunspecValueFunction<ipAddr_t> ipAddr;
+    SunspecValueFunction<ipv6Addr_t> ipv6Addr;
+    SunspecValueFunction<eui48_t> eui48;
 };
 
 constexpr int16_t kSint16UnimplementedValue = 0x8000;
@@ -208,15 +248,15 @@ inline std::string FlatbufferKStringxToString(const kStringx *stringx)
     return {stringx == nullptr ? "" : FlatbufferStringToString(stringx->value())};
 }
 
-inline uint16_t uint16_tToBigEndian(uint16_t val)
+inline uint16_t uint16_tToModbusRegisterFormat(uint16_t val)
 {
     return val;
 }
-inline uint32_t uint32_tToBigEndian(uint32_t val)
+inline uint32_t uint32_tToModbusRegisterFormat(uint32_t val)
 {
     return ((val << 16) & 0xffff0000) | ((val >> 16) & 0x0000ffff);
 }
-inline uint64_t uint64_tToBigEndian(uint64_t val)
+inline uint64_t uint64_tToModbusRegisterFormat(uint64_t val)
 {
     return ((val << 16 * 3) & 0xFFFF000000000000) |
            ((val << 16 * 1) & 0x0000FFFF00000000) |
@@ -224,42 +264,42 @@ inline uint64_t uint64_tToBigEndian(uint64_t val)
            ((val >> 16 * 3) & 0x000000000000FFFF);
 }
 
-inline int64_t sint64_tToBigEndian(int64_t val)
+inline int64_t sint64_tToModbusRegisterFormat(int64_t val)
 {
     return ((val << 16 * 3) & 0xFFFF000000000000) |
            ((val << 16 * 1) & 0x0000FFFF00000000) |
            ((val >> 16 * 1) & 0x00000000FFFF0000) |
            ((val >> 16 * 3) & 0x000000000000FFFF);
 }
-inline int16_t sint16_tToBigEndian(int16_t val)
+inline int16_t sint16_tToModbusRegisterFormat(int16_t val)
 {
     return val;
 }
 
-inline int32_t sint32_tToBigEndian(int32_t val)
+inline int32_t sint32_tToModbusRegisterFormat(int32_t val)
 {
     return ((val << 16) & 0xffff0000) | ((val >> 16) & 0x0000ffff);
 }
 
-inline float floatToBigEndian(float val)
+inline float floatToModbusRegisterFormat(float val)
 {
     uint32_t temp = *reinterpret_cast<uint32_t *>(&val);
-    temp = uint32_tToBigEndian(temp);
+    temp = uint32_tToModbusRegisterFormat(temp);
     return *reinterpret_cast<float *>(&temp);
 }
 
-inline double doubleToBigEndian(double val)
+inline double doubleToModbusRegisterFormat(double val)
 {
     uint64_t temp = *reinterpret_cast<uint64_t *>(&val);
-    temp = uint64_tToBigEndian(temp);
+    temp = uint64_tToModbusRegisterFormat(temp);
     return *reinterpret_cast<double *>(&temp);
 }
 
-inline void stringToBigEndian(const std::string &str, uint16_t *buffer, uint16_t bufferSize)
+inline void stringToModbusRegisterFormat(const std::string &str, uint16_t *buffer, uint16_t bufferSize)
 {
     const char *raw = str.data();
     bufferSize = std::min(static_cast<size_t>((bufferSize * 2) - 1), str.size()); // The minus one is space for a compulsory null.
-  
+
     if (((bufferSize * 2) - 1) < str.size())
     {
         for (int i = 0; i < bufferSize; i++)

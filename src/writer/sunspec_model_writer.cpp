@@ -35,7 +35,7 @@ void SunspecModelWriter::setConstantIdentifiersInBuffer(uint16_t *buffer)
     assert(registerLength_ >= 2);
     assert(buffer != nullptr);
 
-    const uint16_t modelConstantIdentifierBuffer[2] = {uint16_tToBigEndian(def_.id()), uint16_tToBigEndian(static_cast<uint16_t>(registerLength_ - 2))};
+    const uint16_t modelConstantIdentifierBuffer[2] = {uint16_tToModbusRegisterFormat(def_.id()), uint16_tToModbusRegisterFormat(static_cast<uint16_t>(registerLength_ - 2))};
 
     memcpy(buffer, modelConstantIdentifierBuffer, sizeof(uint16_t) * 2);
 }
