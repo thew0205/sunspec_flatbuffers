@@ -131,7 +131,7 @@ public:
     // For device with either fixed or variable models with variable length groups, we need to call this function after setting any dynamic group lengths.
     uint16_t initTopLevel(const std::initializer_list<SunspecModelList> &supportedModel);
     uint16_t initSubLevels();
-    void setBuffer();
+    void setAllToBuffer();
     void setRelativeAddress();
 
 private:
@@ -144,6 +144,6 @@ private:
     // uint16_t baseAddress_{kInvalidBaseAddress};
     list<SunspecModelWriter> models_;
     ModbusRTUSlave &client_;
-    uint16_t *buffer_;
+    uint16_t *modbusBuffer_;
     uint16_t registerLength_;
 };

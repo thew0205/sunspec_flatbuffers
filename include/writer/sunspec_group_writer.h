@@ -47,7 +47,7 @@ public:
      * @brief Sets the values of all points within the group from a raw buffer of 16-bit words.
      * @param [in] buf A pointer to the buffer containing the raw data.
      */
-    uint16_t setAllToBuffer(uint16_t *buf);
+    uint16_t setAllToBuffer();
     /**
      * @brief Checks if this group is the top-level group of a model.
      * @return true if it is the top-level group, false otherwise.
@@ -149,10 +149,15 @@ public:
     ~SunspecGroupWriter() = default;
     void initPoint();
     uint16_t initGroups();
-    void setRelativeAddress(uint16_t relativeAddress);
+    void setAllModbusBuffer(uint16_t *modbusBuffer);
 
 private:
-    uint16_t relativeAddress_;
+    void setModbusBuffer(uint16_t *modbusBuffer)
+    {
+        modbusBuffer_ = modbusBuffer;
+    }
+    // uint16_t relativeAddress_;
+    uint16_t *modbusBuffer_;
     uint16_t registerLength_;
 
     /** Const pointer was used here rather than reference because the we are using the logic that if the group is not null, the it is not a top level point else the model will be not null and it is a toplevel point */

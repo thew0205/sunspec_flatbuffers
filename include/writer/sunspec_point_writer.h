@@ -35,18 +35,18 @@ public:
     {
         return def_.size();
     }
-    uint16_t relativeAddress() const
-    {
-        return relativeAddress_;
-    }
+    // uint16_t relativeAddress() const
+    // {
+    //     return relativeAddress_;
+    // }
     void setPointFunction(const SunspecPointFunction &pointFunction)
     {
         pointFunction_ = pointFunction;
     }
 
-    void setRelativeAddress(uint16_t relativeAddress)
+    void setModbusBuffer(uint16_t *modbusBuffer)
     {
-        relativeAddress_ = relativeAddress;
+        modbusBuffer_ = modbusBuffer;
     }
     int16_t getValueAsSint16() const
     {
@@ -154,7 +154,7 @@ public:
      * @brief Sets the point's value from a raw buffer of 16-bit words.
      * @param [in] buf A pointer to the buffer containing the raw data.
      */
-    void setValueToBuffer(uint16_t *buf);
+    void setValueToBuffer();
 
     /**
      * @brief Generates a JSON representation of the point's data.
@@ -171,7 +171,7 @@ public:
      * @param [in] _groupPoint A reference to the parent SunspecGroupPoint.
      */
     SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction);
-    SunspecPointWriter(const SunspecPointDef &def, uint16_t address, SunspecGroupWriter &groupPoint);
+    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint);
     /**
      * @brief Copy constructor.
      */
@@ -190,7 +190,8 @@ public:
 private:
     const SunspecPointDef &def_;
     SunspecPointFunction pointFunction_;
-    uint16_t relativeAddress_;
+    // uint16_t relativeAddress_;
+    uint16_t *modbusBuffer_;
     SunspecGroupWriter &groupPoint_;
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;
     SunspecPointWriter &operator=(SunspecPointWriter &&_point) = delete;

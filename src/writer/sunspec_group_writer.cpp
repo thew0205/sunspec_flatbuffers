@@ -10,18 +10,18 @@ SunspecDeviceWriter *SunspecGroupWriter::getDevice() const
     return model() == nullptr ? nullptr : &(model()->device());
 }
 
-uint16_t SunspecGroupWriter::setAllToBuffer(uint16_t *buf)
+uint16_t SunspecGroupWriter::setAllToBuffer()
 {
 
     uint16_t currOffset = 0;
     for (auto &point : points_)
     {
-        point.setValueToBuffer(buf + currOffset);
+        point.setValueToBuffer();
         currOffset += point.size();
     }
     for (auto &group : groupPoints_)
     {
-        group.setAllToBuffer(buf + currOffset);
+        group.setAllToBuffer();
         currOffset += group.registerLength_;
     }
     return registerLength_;
@@ -66,7 +66,7 @@ std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}, modbusBuffer_{nullptr}
 {
     // Either model or group must be non-null, but not both.
     assert((model != nullptr) ^ (group != nullptr));
@@ -83,13 +83,14 @@ void SunspecGroupWriter::initPoint()
         if (0 == count)
         {
             // NOTE Count is always in the top levelgroup
+            // NOTE All toplevel points have fixed count
             SunspecPointWriter *countPoint = model_->getTopLevelPoint(pointDef->count_point_id()->c_str());
 
             count = countPoint == nullptr ? 0 : countPoint->getValueAsUint16();
         }
         for (size_t i = 0; i < count; i++)
         {
-            points_.emplace_back(*pointDef, relativeAddress_ + registerLength_, *this);
+            points_.emplace_back(*pointDef, *this);
             registerLength_ += pointDef->size();
         }
     }
@@ -116,23 +117,39 @@ uint16_t SunspecGroupWriter::initGroups()
 
     return registerLength_;
 }
-
-void SunspecGroupWriter::setRelativeAddress(uint16_t relativeAddress)
+void SunspecGroupWriter::setAllModbusBuffer(uint16_t *modbusBuffer)
 {
-    relativeAddress_ = relativeAddress;
+    setModbusBuffer(modbusBuffer);
 
     uint16_t offset = 0;
     for (auto &point : points_)
     {
-        point.setRelativeAddress(relativeAddress_ + offset);
+        point.setModbusBuffer(&modbusBuffer[offset]);
         offset += point.size();
     }
     for (auto &group : groupPoints_)
     {
-        group.setRelativeAddress(relativeAddress_ + offset);
+        group.setAllModbusBuffer(&modbusBuffer[offset]);
         offset += group.registerLength_;
     }
 }
+
+// void SunspecGroupWriter::setRelativeAddress(uint16_t relativeAddress)
+// {
+//     relativeAddress_ = relativeAddress;
+
+//     uint16_t offset = 0;
+//     for (auto &point : points_)
+//     {
+//         point.setRelativeAddress(relativeAddress_ + offset);
+//         offset += point.size();
+//     }
+//     for (auto &group : groupPoints_)
+//     {
+//         group.setRelativeAddress(relativeAddress_ + offset);
+//         offset += group.registerLength_;
+//     }
+// }
 bool SunspecGroupWriter::isTopLevelGroupPoint() const
 {
     assert(group_ == nullptr ^ model_ == nullptr);

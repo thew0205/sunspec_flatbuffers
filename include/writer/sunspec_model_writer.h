@@ -60,8 +60,7 @@ public:
     /**
      * @brief Reads all points in the model from the device and sets their values.
      */
-    uint16_t setBuffer(uint16_t *buffer);
-    void setConstantIdentifiersInBuffer(uint16_t *buffer);
+    uint16_t setAllToBuffer();
 
     /**
      * @brief Generates a JSON representation of the entire model.
@@ -130,9 +129,15 @@ public:
     ~SunspecModelWriter() = default;
     uint16_t initTopLevel();
     uint16_t initSubLevels();
-    void setRelativeAddress(uint16_t relativeAddress);
+    void setAllModbusBuffer(uint16_t *modbusBuffer);
 
 private:
+    void setConstantIdentifiersInBuffer();
+
+    void setModbusBuffer(uint16_t *modbusBuffer)
+    {
+        modbusBuffer_ = modbusBuffer;
+    }
     SunspecModelWriter &operator=(const SunspecModelWriter &groupPoints) = delete;
     SunspecModelWriter &operator=(SunspecModelWriter &&groupPoints) = delete;
 
@@ -140,6 +145,7 @@ private:
 
     SunspecGroupWriter topLevelGroupPoint_;
     const SunspecModelDef &def_;
-    uint16_t relativeAddress_;
+    // uint16_t relativeAddress_;
+    uint16_t *modbusBuffer_;
     uint16_t registerLength_;
 };

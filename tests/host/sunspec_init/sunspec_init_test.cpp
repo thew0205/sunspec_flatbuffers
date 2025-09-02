@@ -89,7 +89,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
     writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setPointFunction(funct);
 
     writer.initSubLevels();
-    writer.setBuffer();
+    writer.setAllToBuffer();
 
     LONGS_EQUAL(0x5375, client.getValueHoldingRegister(0));
     LONGS_EQUAL(0x6E53, client.getValueHoldingRegister(1));
@@ -116,7 +116,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count)
     writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
 
     writer.initSubLevels();
-    writer.setBuffer();
+    writer.setAllToBuffer();
 
     LONGS_EQUAL(0x5375, client.getValueHoldingRegister(0));
     LONGS_EQUAL(0x6E53, client.getValueHoldingRegister(1));
