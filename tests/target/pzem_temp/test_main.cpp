@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "main.h"
 #include "pico/stdlib.h"
-#include "modbus.h"
+#include "modbus_master.h"
 #include <ModbusRTUSlave.h>
 #include "writer/sunspec_device_writer.h"
 
@@ -19,8 +19,6 @@ using std::cout;
 using std::endl;
 using std::string;
 ModbusRTUSlave modbus(Serial1, MAX485_CTRL);
-
-
 
 PZEM004Tv30 pzem;
 

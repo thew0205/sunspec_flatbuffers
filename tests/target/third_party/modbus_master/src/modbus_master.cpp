@@ -27,8 +27,9 @@ Arduino library for communicating with Modbus slaves over RS232/485 (via RTU pro
 */
 
 /* _____PROJECT INCLUDES_____________________________________________________ */
-#include "modbus.h"
-
+#include "modbus_master.h"
+#include "Stream.h"
+#include "pico_includes.h"
 /* _____GLOBAL VARIABLES_____________________________________________________ */
 #define millis() (time_us_32() / 1000)
 #define lowByte(w) ((uint8_t)((w) & 0xff))
@@ -883,6 +884,7 @@ uint8_t ModbusMaster::ModbusMasterTransaction(uint8_t u8MBFunction)
     {
     case ku8MBReadCoils:
     case ku8MBReadDiscreteInputs:
+      // 0x7F C0
       // load bytes into word; response bytes are ordered L, H, L, H, ...
       for (i = 0; i < (u8ModbusADU[2] >> 1); i++)
       {

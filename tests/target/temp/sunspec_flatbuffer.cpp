@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include "main.h"
 #include "pico/stdlib.h"
-#include "modbus.h"
+#include "modbus_master.h"
 #include "writer/sunspec_group_writer.h"
 #include "HardwareSerial.h"
 #include "writer/sunspec_device_writer.h"

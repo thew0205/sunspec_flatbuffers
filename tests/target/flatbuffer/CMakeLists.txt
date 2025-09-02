@@ -17,8 +17,6 @@ target_link_libraries(${TEST_NAME}
         CppUTest
         CppUTestExt
         pico_stdlib
-        generic_lib
-        modbusmaster_lib
         sunspec
 )
 

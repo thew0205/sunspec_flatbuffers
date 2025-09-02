@@ -27,7 +27,7 @@ Arduino library for communicating with Modbus slaves over RS232/485 (via RTU pro
 */
 
 /* _____PROJECT INCLUDES_____________________________________________________ */
-#include "modbus.h"
+#include "modbus_master.h"
 #include "Stream.h"
 #include "host_utilis.h"
 /* _____GLOBAL VARIABLES_____________________________________________________ */

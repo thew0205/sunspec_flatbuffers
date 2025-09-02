@@ -4,7 +4,7 @@
 // #include <stdio.h>
 // #include "pico/stdlib.h"
 // #include "hardware/gpio.h"
-// #include "modbus.h"
+// #include "modbus_master.h"
 // #include "stdint.h"
 
 // #define BAUD_9600       9600
@@ -13,7 +13,7 @@
 // #define MAX485_RE_NEG   15
 // #define HIGH            true
 // #define LOW             false
- 
+
 // #define PHASE_A_VOLTAGE         0x01
 // #define PHASE_B_VOLTAGE         0x08
 // #define PHASE_C_VOLTAGE         0x0A
@@ -35,6 +35,5 @@
 //     const uint8_t rxPin = 8;
 //     const uint8_t txPin = 9;
 // }
-
 
 // #endif

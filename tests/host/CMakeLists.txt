@@ -24,8 +24,10 @@ FetchContent_MakeAvailable(CppUTest)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
-add_subdirectory(generic)
-add_subdirectory(modbus)
+add_subdirectory(third_party/generic)
+add_subdirectory(third_party/modbus_master)
+add_subdirectory(third_party/modbus_slave)
 add_subdirectory(flatbuffer)
 add_subdirectory(sunspec_init)
 add_subdirectory(sunspec_set_value)
+

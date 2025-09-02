@@ -4,10 +4,6 @@ set(TEST_NAME sunspec_set_value_test)
 set(SUNSPEC_TEST_SRC 
                         test_main.cpp
                         sunspec_set_value_test.cpp
-                        ModbusADU.cpp
-                        ModbusRTUComm.cpp
-                        ModbusRTUSlave.cpp
-                        ModbusSlaveLogic.cpp
                         )
 
 add_executable(${TEST_NAME}
@@ -20,7 +16,7 @@ target_link_libraries(${TEST_NAME}
         CppUTestExt
         pico_stdlib
         generic_lib
-        modbusmaster_lib
+        modbus_slave_lib
         sunspec
 )
 

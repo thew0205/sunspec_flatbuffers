@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-#include "modbus.h"
+#include "modbus_master.h"
 #include "reader/sunspec_point_reader.h"
 #include "reader/sunspec_group_reader.h"
 #include "sunspec_utils.h"
@@ -171,7 +171,7 @@ uint32_t SunspecDeviceReader::readUint32Field(uint16_t address, uint16_t slaveId
     return 0;
 }
 
-extern const  unsigned char modelDef112[];
+extern const unsigned char modelDef112[];
 extern const unsigned char modelDef113[];
 const SunspecModelDef *SunspecDeviceReader::getModelDefinition(SunspecModelList id)
 {

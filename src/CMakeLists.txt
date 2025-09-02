@@ -50,8 +50,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${SUNSPEC_ROOT_DIR}/
         ${SUNSPEC_ROOT_DIR}/include
         ${SUNSPEC_ROOT_DIR}/third_party/flatbuffers
-        ${SUNSPEC_ROOT_DIR}/third_party/modbus_writer
-        ${SUNSPEC_ROOT_DIR}/third_party/modbus/inc
+        ${SUNSPEC_ROOT_DIR}/third_party/modbus_slave/include
+        ${SUNSPEC_ROOT_DIR}/third_party/modbus_master/include
 )
 
 

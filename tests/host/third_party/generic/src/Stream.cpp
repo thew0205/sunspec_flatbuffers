@@ -3,7 +3,6 @@
 
 
 #define PARSE_TIMEOUT 1000 // default number of milli-seconds to wait
-#define millis() (time_ms_32())
 
 // protected method to read stream with timeout
 int Stream::timedRead()
