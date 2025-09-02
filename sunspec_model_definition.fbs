@@ -253,13 +253,13 @@ enum SunspecGroupType:uint8
     kSync,
 }
 
-table SunspecGroupPointDef{
+table SunspecGroupDef{
     id: string;
     type:SunspecGroupType = kGroup;
     count:uint16= 1;
     count_point_id:string;
     points: [SunspecPointDef];
-    groups: [SunspecGroupPointDef];
+    groups: [SunspecGroupDef];
     label:string;
 }
 
@@ -284,6 +284,6 @@ enum SunspecModelList : uint16
 
 table SunspecModelDef{
     id: SunspecModelList = KModelInvalid;
-    group:SunspecGroupPointDef;
+    group:SunspecGroupDef;
 }
 root_type SunspecModelDef;

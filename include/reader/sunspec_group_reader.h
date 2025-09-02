@@ -33,7 +33,7 @@ public:
      * @brief Returns the groupPoint's definition.
      * @return A const reference to the SunspecModelDef object.
      */
-    const SunspecGroupPointDef &def() const
+    const SunspecGroupDef &def() const
     {
         return def_;
     }
@@ -136,7 +136,7 @@ public:
      * @param [in] model A pointer to the parent SunspecModel.
      * @param [in] groupPoint A pointer to the parent SunspecGroupPoint (nullptr for top-level groups).
      */
-    SunspecGroupReader(const SunspecGroupPointDef &def, uint16_t addr, SunspecModelReader *model, SunspecGroupReader *groupPoint);
+    SunspecGroupReader(const SunspecGroupDef &def, uint16_t addr, SunspecModelReader *model, SunspecGroupReader *groupPoint);
 
     /**
      * @brief Copy constructor.
@@ -160,7 +160,7 @@ private:
     /** Const pointer was used here rather than reference because the we are using the logic that if the group is not null, the it is not a top level point else the model will be not null and it is a toplevel point */
     SunspecModelReader *const model_{nullptr};
     SunspecGroupReader *const group_{nullptr};
-    const SunspecGroupPointDef &def_;
+    const SunspecGroupDef &def_;
     list<SunspecPointReader> points_;
     list<SunspecGroupReader> groupPoints_;
 

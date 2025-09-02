@@ -1,6 +1,6 @@
 /**
- * @file sunspec_group_point.h
- * @brief This file defines the SunspecGroupPoint class, which is a sunspec block that can hold a list of SunspecPoint as well as nested SunspecGroupPoint within it.
+ * @file sunspec_group_writer.h
+ * @brief This file defines the SunspecGroupWriter class, which is a sunspec block that can hold a list of SunspecPoint as well as nested SunspecGroupWriter within it.
  *
  * @author Tolulope Matthew Busoye PowerLabs
  */
@@ -17,11 +17,11 @@ class SunspecModelWriter;
 class SunspecDeviceWriter;
 
 /**
- * @brief Represents a group of Sunspec points.
+ * @brief Represents a group of SunspecPointWriter as well as other nested SunspecGroupWriter.
  *
  * This class encapsulates a collection of Sunspec points and potentially other nested groups,
- * following the structure of a Sunspec model definition. It provides methods for reading data
- * from a device, converting the data to JSON, and accessing individual points.
+ * following the structure of a Sunspec model definition. It provides methods for storing data for each point to the device modbus memory buffer, accessing individual points
+ * converting the data to JSON for printing and debugging.
  */
 class SunspecGroupWriter
 {
@@ -34,10 +34,15 @@ public:
      * @brief Returns the groupPoint's definition.
      * @return A const reference to the SunspecModelDef object.
      */
-    const SunspecGroupPointDef &def() const
+    const SunspecGroupDef &def() const
     {
         return def_;
     }
+
+    /**
+     * @brief length of the umber of modbus registers occupied by this groupPoint and its children.
+     * @return The length in number of modbus registers.
+     */
     uint16_t registerLength() const
     {
         return registerLength_;
@@ -131,7 +136,7 @@ public:
      * @param [in] model A pointer to the parent SunspecModel.
      * @param [in] groupPoint A pointer to the parent SunspecGroupPoint (nullptr for top-level groups).
      */
-    SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
+    SunspecGroupWriter(const SunspecGroupDef &def, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
 
     /**
      * @brief Copy constructor.
@@ -158,14 +163,14 @@ private:
     }
     // uint16_t relativeAddress_;
     uint16_t *modbusBuffer_;
-    uint16_t registerLength_;
 
     /** Const pointer was used here rather than reference because the we are using the logic that if the group is not null, the it is not a top level point else the model will be not null and it is a toplevel point */
     SunspecModelWriter *const model_{nullptr};
     SunspecGroupWriter *const group_{nullptr};
-    const SunspecGroupPointDef &def_;
+    const SunspecGroupDef &def_;
     list<SunspecPointWriter> points_;
     list<SunspecGroupWriter> groupPoints_;
+    uint16_t registerLength_;
 
     SunspecGroupWriter &operator=(const SunspecGroupWriter &groupPoints) = delete;
     SunspecGroupWriter &operator=(SunspecGroupWriter &&groupPoints) = delete;

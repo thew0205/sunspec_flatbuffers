@@ -20,7 +20,7 @@ void CheckPoint(const SunspecPointDef &pointDef, const string &expectedId, Sunsp
     CHECK_EQUAL(label, FlatbufferStringToString(pointDef.label()));
 }
 
-void CheckGroup(const SunspecGroupPointDef &group, const string &id, SunspecGroupType type, uint16_t count, const string &count_point_id, uint16_t pointLength, uint16_t groupLength)
+void CheckGroup(const SunspecGroupDef &group, const string &id, SunspecGroupType type, uint16_t count, const string &count_point_id, uint16_t pointLength, uint16_t groupLength)
 {
     CHECK_EQUAL(id, FlatbufferStringToString(group.id()));
     ENUMS_EQUAL_INT(type, group.type());

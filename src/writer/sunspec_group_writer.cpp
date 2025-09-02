@@ -66,7 +66,7 @@ std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupPointDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}, modbusBuffer_{nullptr}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}, modbusBuffer_{nullptr}
 {
     // Either model or group must be non-null, but not both.
     assert((model != nullptr) ^ (group != nullptr));

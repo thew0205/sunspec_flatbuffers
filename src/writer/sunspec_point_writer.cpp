@@ -10,11 +10,11 @@ using std::to_string;
 
 using namespace Sunspec;
 
-SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction) : def_{def}, pointFunction_{valueFunction}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}
+SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint) : def_{def}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}, pointFunction_{.uint64 = {.param = nullptr, .function = nullptr}}
 {
 }
 
-SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint) : def_{def}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}, pointFunction_{.uint64 = {.param = nullptr, .function = nullptr}}
+SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction) : def_{def}, pointFunction_{valueFunction}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}
 {
 }
 
@@ -24,12 +24,12 @@ SunspecPointWriter::~SunspecPointWriter()
 
 void SunspecPointWriter::setValueToBuffer()
 {
+    assert(modbusBuffer_ != nullptr && "Modbus buffer pointer is null. Call setModbusBuffer() before setting value to buffer.");
     if (modbusBuffer_ == nullptr)
     {
         return;
     }
 
-    // uint16_t tempBuf[def_.size()];
     string temp{def_.id()->c_str()};
     switch (def_.data_type())
     {
@@ -178,8 +178,6 @@ void SunspecPointWriter::setValueToBuffer()
         const string valueString{getValueAsString()};
         const auto strLength = valueString.size();
         stringToModbusRegisterFormat(valueString, modbusBuffer_, def_.size());
-        // memcpy(modbusBuffer_, valueString.c_str(), strLength);
-        // memset(&(reinterpret_cast<uint8_t *>(modbusBuffer_)[strLength]), 0, def_.size() * sizeof(uint16_t) - strLength); // terminate with a null character
         break;
     }
 

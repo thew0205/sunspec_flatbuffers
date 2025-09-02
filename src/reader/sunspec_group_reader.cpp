@@ -106,7 +106,7 @@ std::string SunspecGroupReader::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecGroupReader::SunspecGroupReader(const SunspecGroupPointDef &def, uint16_t addr, SunspecModelReader *model, SunspecGroupReader *group) : def_{def}, address_{addr}, model_{model}, group_{group}, len_{0}, points_{}, groupPoints_{}
+SunspecGroupReader::SunspecGroupReader(const SunspecGroupDef &def, uint16_t addr, SunspecModelReader *model, SunspecGroupReader *group) : def_{def}, address_{addr}, model_{model}, group_{group}, len_{0}, points_{}, groupPoints_{}
 {
 
     for (const auto &pointDef : *def_.points())

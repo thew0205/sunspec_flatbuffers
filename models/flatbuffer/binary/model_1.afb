@@ -19,7 +19,7 @@ root_table (SunspecModelDef):
   +0x0014 | 18 00 00 00             | UOffset32  | 0x00000018 (24) Loc: 0x002C   | offset to field `group` (table)
   +0x0018 | 00 00                   | uint8_t[2] | ..                            | padding
 
-vtable (SunspecGroupPointDef):
+vtable (SunspecGroupDef):
   +0x001A | 12 00                   | uint16_t   | 0x0012 (18)                   | size of this vtable
   +0x001C | 14 00                   | uint16_t   | 0x0014 (20)                   | size of referring table
   +0x001E | 04 00                   | VOffset16  | 0x0004 (4)                    | offset to field `id` (id: 0)
@@ -30,22 +30,22 @@ vtable (SunspecGroupPointDef):
   +0x0028 | 0C 00                   | VOffset16  | 0x000C (12)                   | offset to field `groups` (id: 5)
   +0x002A | 10 00                   | VOffset16  | 0x0010 (16)                   | offset to field `label` (id: 6)
 
-table (SunspecGroupPointDef):
+table (SunspecGroupDef):
   +0x002C | 12 00 00 00             | SOffset32  | 0x00000012 (18) Loc: 0x001A   | offset to vtable
   +0x0030 | 24 02 00 00             | UOffset32  | 0x00000224 (548) Loc: 0x0254  | offset to field `id` (string)
   +0x0034 | 1C 00 00 00             | UOffset32  | 0x0000001C (28) Loc: 0x0050   | offset to field `points` (vector)
   +0x0038 | 14 00 00 00             | UOffset32  | 0x00000014 (20) Loc: 0x004C   | offset to field `groups` (vector)
   +0x003C | 04 00 00 00             | UOffset32  | 0x00000004 (4) Loc: 0x0040    | offset to field `label` (string)
 
-string (SunspecGroupPointDef.label):
+string (SunspecGroupDef.label):
   +0x0040 | 06 00 00 00             | uint32_t   | 0x00000006 (6)                | length of string
   +0x0044 | 43 6F 6D 6D 6F 6E       | char[6]    | Common                        | string literal
   +0x004A | 00                      | char       | 0x00 (0)                      | string terminator
 
-vector (SunspecGroupPointDef.groups):
+vector (SunspecGroupDef.groups):
   +0x004C | 00 00 00 00             | uint32_t   | 0x00000000 (0)                | length of vector (# items)
 
-vector (SunspecGroupPointDef.points):
+vector (SunspecGroupDef.points):
   +0x0050 | 09 00 00 00             | uint32_t   | 0x00000009 (9)                | length of vector (# items)
   +0x0054 | D4 01 00 00             | UOffset32  | 0x000001D4 (468) Loc: 0x0228  | offset to table[0]
   +0x0058 | 88 01 00 00             | UOffset32  | 0x00000188 (392) Loc: 0x01E0  | offset to table[1]
@@ -310,7 +310,7 @@ string (SunspecPointDef.id):
   +0x0250 | 49 44                   | char[2]    | ID                            | string literal
   +0x0252 | 00                      | char       | 0x00 (0)                      | string terminator
 
-string (SunspecGroupPointDef.id):
+string (SunspecGroupDef.id):
   +0x0254 | 06 00 00 00             | uint32_t   | 0x00000006 (6)                | length of string
   +0x0258 | 63 6F 6D 6D 6F 6E       | char[6]    | common                        | string literal
   +0x025E | 00                      | char       | 0x00 (0)                      | string terminator
