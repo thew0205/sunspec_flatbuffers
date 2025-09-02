@@ -1,6 +1,6 @@
 #include "writer/sunspec_model_writer.h"
 
-#include "sunspec_utils.h"
+#include "sunspec.h"
 #include "writer/sunspec_device_writer.h"
 
 using std::to_string;

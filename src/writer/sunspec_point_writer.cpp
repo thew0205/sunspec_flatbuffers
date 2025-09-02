@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "sunspec_utils.h"
+#include "sunspec.h"
 #include <algorithm>
 // #include "writer/sunspec_device_writer.h"
 #define MIN(a, b) ((a) < (b) ? (a) : (b))

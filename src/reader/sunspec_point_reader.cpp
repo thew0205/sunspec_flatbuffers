@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "sunspec_utils.h"
+#include "sunspec.h"
 #include "reader/sunspec_device_reader.h"
 
 using std::string;

@@ -1,0 +1,19 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[0,0],
+"classes.html":[0,1],
+"d2/d96/sunspec_8h_source.html":[1,0,0,0],
+"d4/d6d/unionSunspecPointFunction.html":[0,0,1],
+"de/d19/structipAddr__t.html":[0,0,0],
+"de/d43/structSunspecValueFunction.html":[0,0,2],
+"de/d43/structSunspecValueFunction.html#a7c7d6263429fa1ea89552a6cad3783be":[0,0,2,0],
+"de/d43/structSunspecValueFunction.html#a7f5044f7d9f4fb1305e047e0cbef60b7":[0,0,2,1],
+"de/d43/structSunspecValueFunction.html#aae91dd116b028aaf20e9f7d850542ed1":[0,0,2,2],
+"dir_d44c64559bbebec7f509842c48db8b23.html":[1,0,0],
+"files.html":[1,0],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"functions_vars.html":[0,2,2],
+"index.html":[],
+"pages.html":[]
+};

@@ -8,7 +8,7 @@ endif()
 
 
 set(SUNSPEC_FILES
-        sunspec_utils.cpp
+        sunspec.cpp
 )
 
 set(SUNSPEC_FILES_READER
@@ -49,7 +49,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE )
 target_include_directories(${PROJECT_NAME} PUBLIC
         ${SUNSPEC_ROOT_DIR}/
         ${SUNSPEC_ROOT_DIR}/include
-        ${SUNSPEC_ROOT_DIR}/third_party/flatbuffers
         ${SUNSPEC_ROOT_DIR}/third_party/modbus_slave/include
         ${SUNSPEC_ROOT_DIR}/third_party/modbus_master/include
 )

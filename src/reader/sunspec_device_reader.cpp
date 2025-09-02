@@ -5,7 +5,7 @@
 #include "modbus_master.h"
 #include "reader/sunspec_point_reader.h"
 #include "reader/sunspec_group_reader.h"
-#include "sunspec_utils.h"
+#include "sunspec.h"
 
 using namespace Sunspec;
 

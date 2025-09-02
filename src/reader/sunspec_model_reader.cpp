@@ -1,6 +1,6 @@
 #include "reader/sunspec_model_reader.h"
 
-#include "sunspec_utils.h"
+#include "sunspec.h"
 #include "reader/sunspec_device_reader.h"
 
 using std::to_string;

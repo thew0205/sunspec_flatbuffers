@@ -5,7 +5,7 @@
 #include "ModbusRTUSlave.h"
 #include "writer/sunspec_point_writer.h"
 #include "writer/sunspec_group_writer.h"
-#include "sunspec_utils.h"
+#include "sunspec.h"
 
 using namespace Sunspec;
 
