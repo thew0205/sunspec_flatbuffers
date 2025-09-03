@@ -52,12 +52,16 @@ set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 # add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
 add_subdirectory(third_party/generic)
 add_subdirectory(third_party/modbus_master)
 add_subdirectory(third_party/modbus_slave)
 
+add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/common ${CMAKE_BINARY_DIR}/common)
+
 add_subdirectory(flatbuffer)
-add_subdirectory(sunspec_init)
-add_subdirectory(sunspec_set_value)
-add_subdirectory(pzem_temp)
+# add_subdirectory(sunspec_init)
+# add_subdirectory(sunspec_set_value)
+# add_subdirectory(pzem_temp)

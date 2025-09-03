@@ -1,18 +1,12 @@
 
 set(TEST_NAME sunspec_init_test)
 
-set(SUNSPEC_TEST_SRC 
-                        test_main.cpp
-                        sunspec_init_test.cpp
-                        # ModbusADU.cpp
-                        # ModbusRTUComm.cpp
-                        # ModbusRTUSlave.cpp
-                        # ModbusSlaveLogic.cpp
-                        )
+et(TEST_MAIN_SRC 
+                ${SUNSPEC_ROOT_DIR}/tests/target/test_main.cpp
+                )
 
 add_executable(${TEST_NAME}
         ${TEST_MAIN_SRC}
-        ${SUNSPEC_TEST_SRC}
 )
 
 target_link_libraries(${TEST_NAME}
@@ -22,6 +16,7 @@ target_link_libraries(${TEST_NAME}
         generic_lib
         modbus_slave_lib
         sunspec
+        sunspec_init_common_test
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE

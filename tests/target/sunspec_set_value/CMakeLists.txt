@@ -1,14 +1,12 @@
 
 set(TEST_NAME sunspec_set_value_test)
 
-set(SUNSPEC_TEST_SRC 
-                        test_main.cpp
-                        sunspec_set_value_test.cpp
-                        )
+set(TEST_MAIN_SRC 
+                ${SUNSPEC_ROOT_DIR}/tests/target/test_main.cpp
+                )
 
 add_executable(${TEST_NAME}
         ${TEST_MAIN_SRC}
-        ${SUNSPEC_TEST_SRC}
 )
 
 target_link_libraries(${TEST_NAME}
@@ -18,6 +16,7 @@ target_link_libraries(${TEST_NAME}
         generic_lib
         modbus_slave_lib
         sunspec
+        sunspec_set_value_common_test
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE
