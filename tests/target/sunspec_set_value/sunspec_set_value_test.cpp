@@ -46,8 +46,7 @@ TEST_GROUP(Sunspec_Set_Value)
 {
     Stream stream{};
     MockModbusWriter client{};
-    SunspecDeviceWriter writer{
-        1, client, 40000};
+    SunspecDeviceWriter writer{client};
     void setup()
     {
     }
@@ -69,7 +68,7 @@ TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_113)
     writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
                                                                                                     { return 0xDEAD; }}});
 
-    writer.setAllToBuffer();
+    writer.setAllValueToModbusBuffer();
 
     CHECK_EQUAL("Matthew", writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Mn")->getValueAsString());
     STRCMP_EQUAL("Busoye Tolulope", writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Opt")->getValueAsString().c_str());
@@ -91,7 +90,7 @@ TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_160)
                                                                                                      { return 2; }}});
 
     writer.initSubLevels();
-    writer.setAllToBuffer();
+    writer.setAllValueToModbusBuffer();
 
     LONGS_EQUAL(2, writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->getValueAsUint16());
 
@@ -107,7 +106,7 @@ TEST(Sunspec_Set_Value, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count_s
     writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
 
     writer.initSubLevels();
-    writer.setAllToBuffer();
+    writer.setAllValueToModbusBuffer();
 
     LONGS_EQUAL(0XFFFF, writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->getValueAsUint16());
 }

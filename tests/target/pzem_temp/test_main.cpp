@@ -32,8 +32,7 @@ int main()
 
     modbus.begin(1, BAUD_9600, SERIAL_8N1);
 
-    SunspecDeviceWriter writer{
-        1, modbus, 0};
+    SunspecDeviceWriter writer{ modbus};
     writer.initAll({SunspecModelList_kModel1, SunspecModelList_kModel113});
     SunspecPointFunction functMn{.str = {.function = [](void *param) -> string
                                          { return "Matthew"; }}};

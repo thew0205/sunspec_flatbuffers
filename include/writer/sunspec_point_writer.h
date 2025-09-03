@@ -291,7 +291,7 @@ public:
      * If no function is set, it uses the default value from the definition.
      * This function writes the value into the modbusBuffer_ at the appropriate offset.
      */
-    void setValueToBuffer();
+    void setValueToModbusBuffer();
 
     /**
      * @brief Generates a JSON representation of the point's data.

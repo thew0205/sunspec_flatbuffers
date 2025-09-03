@@ -22,7 +22,7 @@ SunspecPointWriter::~SunspecPointWriter()
 {
 }
 
-void SunspecPointWriter::setValueToBuffer()
+void SunspecPointWriter::setValueToModbusBuffer()
 {
     assert(modbusBuffer_ != nullptr && "Modbus buffer pointer is null. Call setModbusBuffer() before setting value to buffer.");
     if (modbusBuffer_ == nullptr)

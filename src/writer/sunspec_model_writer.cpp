@@ -40,18 +40,6 @@ void SunspecModelWriter::setConstantIdentifiersInBuffer()
     memcpy(modbusBuffer_, modelConstantIdentifierBuffer, sizeof(uint16_t) * 2);
 }
 
-SunspecPointWriter *SunspecModelWriter::getTopLevelPoint(const string_view countName)
-{
-
-    return topLevelGroupPoint_.getPoint(countName, false);
-}
-
-const SunspecPointWriter *SunspecModelWriter::getTopLevelPoint(const string_view pointName) const
-{
-
-    return topLevelGroupPoint_.getPoint(pointName, false);
-}
-
 SunspecPointWriter *SunspecModelWriter::getPoint(const string_view countName, bool findRecursively)
 {
 
@@ -64,18 +52,18 @@ const SunspecPointWriter *SunspecModelWriter::getPoint(const string_view pointNa
     return topLevelGroupPoint_.getPoint(pointName, findRecursively);
 }
 
-SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &groupPointName, bool findRecursively)
+SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &groupId, bool findRecursively)
 {
-    return topLevelGroupPoint_.getGroupPoint(groupPointName, findRecursively);
+    return topLevelGroupPoint_.getGroupPoint(groupId, findRecursively);
 }
-const SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &groupPointName, bool findRecursively) const
+const SunspecGroupWriter *SunspecModelWriter::getGroupPoint(const string_view &groupId, bool findRecursively) const
 {
-    return topLevelGroupPoint_.getGroupPoint(groupPointName, findRecursively);
+    return topLevelGroupPoint_.getGroupPoint(groupId, findRecursively);
 }
-uint16_t SunspecModelWriter::setAllToBuffer()
+uint16_t SunspecModelWriter::setAllValueToModbusBuffer()
 {
 
-    topLevelGroupPoint_.setAllToBuffer();
+    topLevelGroupPoint_.setAllValueToModbusBuffer();
     setConstantIdentifiersInBuffer();
     return topLevelGroupPoint_.registerLength();
 }

@@ -9,10 +9,6 @@
 
 using namespace Sunspec;
 
-// bool SunspecDeviceWriter::setBaseAddress(uint16_t baseAddr)
-// {
-//     baseAddress_ = baseAddr;
-// }
 SunspecModelWriter *SunspecDeviceWriter::getModel(SunspecModelList id)
 {
     for (auto &model : models_)
@@ -60,11 +56,11 @@ uint16_t SunspecDeviceWriter::initSubLevels()
     }
     registerLength_ += 2; // Start with 2 for the base address and model end marker.
     assignBuffer();
-    setRelativeAddress();
+    setAllModbusBuffer();
     return registerLength_;
 }
 
-void SunspecDeviceWriter::setRelativeAddress()
+void SunspecDeviceWriter::setAllModbusBuffer()
 {
 
     uint16_t offset = 2;
@@ -114,13 +110,13 @@ uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelLi
         return 0; // Buffer allocation failed, return 0.
     }
 
-    setAllToBuffer();
+    setAllValueToModbusBuffer();
     return count;
 }
 
 void SunspecDeviceWriter::poll()
 {
-    setAllToBuffer();
+    setAllValueToModbusBuffer();
     client_.poll();
 }
 void SunspecDeviceWriter::setConstantIdentifiersInBuffer()
@@ -133,12 +129,12 @@ void SunspecDeviceWriter::setConstantIdentifiersInBuffer()
 
     memcpy(&modbusBuffer_[registerLength_ - 2], modelEndBuffer, sizeof(uint16_t) * 2);
 }
-void SunspecDeviceWriter::setAllToBuffer()
+void SunspecDeviceWriter::setAllValueToModbusBuffer()
 {
 
     for (auto &model : models_)
     {
-        model.setAllToBuffer();
+        model.setAllValueToModbusBuffer();
     }
     setConstantIdentifiersInBuffer();
 }
@@ -146,8 +142,7 @@ void SunspecDeviceWriter::setAllToBuffer()
 std::string SunspecDeviceWriter::toJson(bool includeSf, bool includeUnits) const
 {
     std::string ret;
-    // ret += "{ \"baseAddress\":" + std::to_string(baseAddress_) + ",";
-    ret += "\"deviceId\" : " + std::to_string(slaveId_) + ",";
+    ret += "{ ";
     if (!models_.empty())
     {
         ret += "\"models\":[";
@@ -167,7 +162,7 @@ std::string SunspecDeviceWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecDeviceWriter::SunspecDeviceWriter(uint8_t slaveId, ModbusRTUSlave &client, uint16_t baseAddress) : slaveId_(slaveId), client_{client}, /*baseAddress_{baseAddress},*/ registerLength_{0}, modbusBuffer_{nullptr}
+SunspecDeviceWriter::SunspecDeviceWriter(ModbusRTUSlave &client) : client_{client}, registerLength_{0}, modbusBuffer_{nullptr}
 {
 }
 

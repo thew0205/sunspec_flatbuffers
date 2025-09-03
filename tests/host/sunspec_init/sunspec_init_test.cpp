@@ -46,8 +46,7 @@ TEST_GROUP(Sunspec_Init)
 {
     Stream stream{};
     MockModbusWriter client{};
-    SunspecDeviceWriter writer{
-        1, client, 40000};
+    SunspecDeviceWriter writer{client};
     void setup()
     {
     }
@@ -77,7 +76,6 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_113)
     LONGS_EQUAL(134, client.getNumHoldingRegisters());
 
     LONGS_EQUAL(2, writer.modelCount());
-    LONGS_EQUAL(1, writer.slaveId());
 }
 
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
@@ -89,7 +87,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
     writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setPointFunction(funct);
 
     writer.initSubLevels();
-    writer.setAllToBuffer();
+    writer.setAllValueToModbusBuffer();
 
     LONGS_EQUAL(0x5375, client.getValueHoldingRegister(0));
     LONGS_EQUAL(0x6E53, client.getValueHoldingRegister(1));
@@ -108,7 +106,6 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
     LONGS_EQUAL(122, client.getNumHoldingRegisters());
 
     LONGS_EQUAL(2, writer.modelCount());
-    LONGS_EQUAL(1, writer.slaveId());
 }
 
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count)
@@ -116,7 +113,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count)
     writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
 
     writer.initSubLevels();
-    writer.setAllToBuffer();
+    writer.setAllValueToModbusBuffer();
 
     LONGS_EQUAL(0x5375, client.getValueHoldingRegister(0));
     LONGS_EQUAL(0x6E53, client.getValueHoldingRegister(1));
@@ -135,5 +132,4 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count)
     LONGS_EQUAL(82, client.getNumHoldingRegisters());
 
     LONGS_EQUAL(2, writer.modelCount());
-    LONGS_EQUAL(1, writer.slaveId());
 }
