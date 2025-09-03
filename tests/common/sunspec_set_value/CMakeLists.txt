@@ -2,7 +2,7 @@
 set(TEST_NAME sunspec_set_value_common_test)
 
 set(SUNSPEC_TEST_SRC 
-                        sunspec_set_value_test.cpp
+                sunspec_set_value_test.cpp
                         )
 
 add_library(${TEST_NAME}

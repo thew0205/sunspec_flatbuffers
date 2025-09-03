@@ -1,8 +1,8 @@
 
 set(TEST_NAME sunspec_init_test)
 
-et(TEST_MAIN_SRC 
-                ${SUNSPEC_ROOT_DIR}/tests/target/test_main.cpp
+set(TEST_MAIN_SRC 
+                test_main.cpp
                 )
 
 add_executable(${TEST_NAME}

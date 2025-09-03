@@ -2,7 +2,7 @@
 set(TEST_NAME flatbuffer_test)
 
 set(TEST_MAIN_SRC 
-                ${SUNSPEC_ROOT_DIR}/tests/host/test_main.cpp
+                test_main.cpp
                 )
 
 add_executable(${TEST_NAME}
