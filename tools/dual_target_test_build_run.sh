@@ -15,7 +15,7 @@ set -e
 # ------------------------------------------------------------------------
 TEST_TYPE=$1                   # First argument: which test type to build/run
 SUNSPEC_ROOT_DIR=$2        # Second argument: root directory of the project
-TEST_TO_RUN=$3
+TESTS_TO_RUN=$3
 
 # ------------------------------------------------------------------------
 # Derived directories
@@ -36,6 +36,20 @@ BOLD='\033[1m'
 BG_BLUE='\033[44m'
 BOLD_RED='\033[1;31m'
 BOLD_GREEN='\033[1;32m'
+
+function run_test(){
+    local TEST_TO_RUN=$1
+
+    if [[ ${TEST_TYPE,,} == "target" ]]; then
+    # Target test selected
+    # A more complex logic is needed for target to know when the test was successful and to start flashing the new code.
+        ${PICOTOOL_PATH} load -fx ${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test.uf2
+    else
+    # Host test selected
+        "${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test"
+    fi
+}
+
 # ------------------------------------------------------------------------
 # Check if TEST_TYPE is provided
 # ------------------------------------------------------------------------
@@ -87,26 +101,20 @@ if [[ $? -ne 0 ]]; then
     echo -e "${BOLD_RED}Build failed!!! :(${NC}"
     exit 1
 else
-    if [[ -z $TEST_TO_RUN ]]; then
+    echo -e "${GREEN}Building $TEST_TYPE tests Successfully${NC}"
+
+    if [[ -z $TESTS_TO_RUN ]]; then
         echo -e "${MAGENTA}No test to be run.${NC}"
     else
-   
-        if [[ ${TEST_TYPE,,} == "target" ]]; then
-            # Target test selected
-            echo -e "${GREEN}Building TARGET tests Successfully${NC}"
-            echo -e "${GREEN}Now Running ${TEST_TO_RUN} Target Test on Target${NC}"
-            ${PICOTOOL_PATH} load -fx ${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test.uf2
-        else
-            # Host test selected
-            echo -e "${GREEN}Building HOST tests Successfully${NC}"
-            echo -e "${GREEN}Now Running Host ${TEST_TO_RUN} Test on Host${NC}"
-            "${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test"
+        for TEST_TO_RUN in $TESTS_TO_RUN; do
+            echo -e "${MAGENTA}Now Running ${TEST_TO_RUN^^} test on ${TEST_TYPE^^}${NC}"
+            run_test $TEST_TO_RUN
             if [[ $? -ne 0 ]]; then
-                echo -e "${BOLD_RED}Host tests failed!!! :(${NC}"
+                echo -e "${BOLD_RED}${TEST_TO_RUN^^} test on ${TEST_TYPE^^} FAILED!!! :(${NC}"
                 exit 1
             else
-                echo -e "${BOLD_GREEN}Host tests passed successfully :)${NC}"
+                echo -e "${BOLD_GREEN}${TEST_TO_RUN^^} test on ${TEST_TYPE^^} passed successfully :)${NC}"
             fi
-        fi
+        done
     fi
 fi

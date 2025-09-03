@@ -9,8 +9,9 @@
                 "sunspec_init",
                 "flatbuffer",
                 "sunspec_set_value",
-                "modbus_rtu",
-                "pzem_temp"
+                "pzem_temp",
+                "flatbuffer sunspec_init sunspec_set_value"
+                
             ],
             "default": "sunspec_init"
         }
