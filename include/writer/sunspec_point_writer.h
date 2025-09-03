@@ -14,6 +14,7 @@
 #include "sunspec_model_definition_generated.h"
 #include "sunspec.h"
 class SunspecGroupWriter;
+class SunspecDeviceWriter;
 
 /**
  * @brief Represents a single data point in a Sunspec model.
@@ -60,21 +61,30 @@ public:
     ~SunspecPointWriter();
 
     /**
-     * @brief Returns the size of the point's data in 16-bit words.
-     * @return The size of the point.
-     */
-    uint16_t size() const
-    {
-        return def_.size();
-    }
-
-    /**
      * @brief Returns the definition of the point.
      * @return A const reference to the SunspecPointDef object.
      */
     const SunspecPointDef &def() const
     {
         return def_;
+    }
+
+    /**
+     * @brief Return the SunspecGroupWriter of this point.
+     * @return A const reference to the SunspecGroupWriter of this object.
+     */
+    const SunspecGroupWriter &group() const
+    {
+        return group_;
+    }
+
+    /**
+     * @brief Returns the size of the point's data in 16-bit words.
+     * @return The size of the point.
+     */
+    uint16_t size() const
+    {
+        return def_.size();
     }
 
     /**
@@ -286,6 +296,12 @@ public:
     }
 
     /**
+     * @brief Returns a pointer to the SunspecDeviceWriter associated with this point.
+     * @return A pointer to the SunspecDeviceWriter object.
+     */
+    const SunspecDeviceWriter *getDevice() const;
+
+    /**
      * @brief Sets the value of the point in the modbus buffer using the point's SunspecPointFunction.
      *
      * If no function is set, it uses the default value from the definition.
@@ -304,9 +320,9 @@ public:
 private:
     SunspecPointFunction pointFunction_; /**< The function of the point ensures the union member is initialised based on the type in the point definition. */
     // uint16_t relativeAddress_;
-    SunspecGroupWriter &groupPoint_; /**< A reference to the parent group point of this point. */
-    uint16_t *modbusBuffer_;         /**< A pointer to the inplace modbus buffer where the point's data is to be stored. */
-    const SunspecPointDef &def_;     /**< The sunspec point definition of this point. */
+    SunspecGroupWriter &group_;  /**< A reference to the parent group point of this point. */
+    uint16_t *modbusBuffer_;     /**< A pointer to the inplace modbus buffer where the point's data is to be stored. */
+    const SunspecPointDef &def_; /**< The sunspec point definition of this point. */
 
     // Disable assignment operators
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;

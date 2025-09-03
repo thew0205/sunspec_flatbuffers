@@ -11,7 +11,6 @@
 #include <stdint.h>
 
 #include <initializer_list>
-#include <list>
 #include <string>
 
 #include "writer/sunspec_model_writer.h"
@@ -28,7 +27,7 @@ class ModbusRTUSlave;
 class SunspecDeviceWriter
 {
     template <typename T>
-    using list = std::list<T>;
+    using vector = std::vector<T>;
 
 public:
     /**
@@ -37,6 +36,16 @@ public:
      * @param [in] _client A reference to the ModbusRTUSlave client.
      */
     SunspecDeviceWriter(ModbusRTUSlave &_client);
+
+    /**
+     * @brief Copy constructor.
+     */
+    SunspecDeviceWriter(const SunspecDeviceWriter &device) = delete;
+
+    /**
+     * @brief Move constructor.
+     */
+    SunspecDeviceWriter(SunspecDeviceWriter &&device) noexcept = delete;
 
     ~SunspecDeviceWriter();
 
@@ -49,7 +58,7 @@ public:
      * @brief Returns the number of models initialized on this device.
      * @return The size of the models list.
      */
-    const list<SunspecModelWriter> &models() const
+    const vector<SunspecModelWriter> &models() const
     {
         return models_;
     }
@@ -155,8 +164,8 @@ private:
      */
     void setAllModbusBuffer();
 
-    list<SunspecModelWriter> models_; /**< A list of models in the device. */
-    ModbusRTUSlave &client_;          /**< A reference to the ModbusRTUSlave client used for communication. */
-    uint16_t *modbusBuffer_;          /**< A pointer to the inplace modbus buffer where the device's data is to be stored. */
-    uint16_t registerLength_;         /**< The total length of the modbus register map for all models, including 2 registers for the Sunspec identifier and the end model identifier */
+    vector<SunspecModelWriter> models_; /**< A list of models in the device. */
+    ModbusRTUSlave &client_;            /**< A reference to the ModbusRTUSlave client used for communication. */
+    uint16_t *modbusBuffer_;            /**< A pointer to the inplace modbus buffer where the device's data is to be stored. */
+    uint16_t registerLength_;           /**< The total length of the modbus register map for all models, including 2 registers for the Sunspec identifier and the end model identifier */
 };

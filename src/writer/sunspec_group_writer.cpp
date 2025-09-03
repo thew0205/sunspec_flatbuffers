@@ -5,10 +5,10 @@
 
 using std::to_string;
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groupPoints_{}, modbusBuffer_{nullptr}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupDef &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groups_{}, modbusBuffer_{nullptr}
 {
     // Either model or group must be non-null, but not both.
-    assert((model != nullptr) ^ (group != nullptr));
+    assert(group_ == nullptr ^ model_ == nullptr);
 }
 
 bool SunspecGroupWriter::isTopLevelGroupPoint() const
@@ -31,7 +31,19 @@ SunspecModelWriter *SunspecGroupWriter::getModel() const
     }
 }
 
-SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId, bool findRecursively)
+SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId)
+{
+    for (auto &point : points_)
+    {
+        if (pointId == point.def().id()->c_str())
+        {
+            return &point;
+        }
+    }
+    return nullptr;
+}
+
+const SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId) const
 {
     for (auto &point : points_)
     {
@@ -41,46 +53,31 @@ SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId, bool
         }
     }
 
-    return (isTopLevelGroupPoint() || !findRecursively) ? nullptr : group_->getPoint(pointId, findRecursively);
+    return nullptr;
 }
 
-const SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId, bool findRecursively) const
+SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupId)
 {
-    for (auto &point : points_)
+    for (auto &groupPoint : groups_)
     {
-        if (pointId == point.def().id()->c_str())
-        {
-            return &point;
-        }
-    }
-
-    return (isTopLevelGroupPoint() || !findRecursively) ? nullptr : group_->getPoint(pointId, findRecursively);
-}
-
-SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupPointName, bool findRecursively)
-{
-    for (auto &groupPoint : groupPoints_)
-    {
-        if (groupPointName == groupPoint.def().id()->c_str())
+        if (groupId == groupPoint.def().id()->c_str())
         {
             return &groupPoint;
         }
     }
-
-    return (isTopLevelGroupPoint() || !findRecursively) ? nullptr : group_->getGroupPoint(groupPointName);
+    return nullptr;
 }
 
-const SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupPointName, bool findRecursively) const
+const SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupId) const
 {
-    for (auto &groupPoint : groupPoints_)
+    for (auto &groupPoint : groups_)
     {
-        if (groupPointName == groupPoint.def().id()->c_str())
+        if (groupId == groupPoint.def().id()->c_str())
         {
             return &groupPoint;
         }
     }
-
-    return (isTopLevelGroupPoint() || !findRecursively) ? nullptr : group_->getGroupPoint(groupPointName);
+    return nullptr;
 }
 
 SunspecDeviceWriter *SunspecGroupWriter::getDevice() const
@@ -92,7 +89,11 @@ void SunspecGroupWriter::initPoint()
 {
     registerLength_ = 0;
     points_.clear();
-    groupPoints_.clear();
+    groups_.clear();
+
+    vector<size_t> pointCounts;
+    vector<const SunspecPointDef *> pointDefs;
+    size_t totalPointCount = 0;
     for (const auto &pointDef : *def_.points())
     {
         uint16_t count = pointDef->count();
@@ -100,10 +101,26 @@ void SunspecGroupWriter::initPoint()
         {
             // NOTE Count is always in the top levelgroup
             // NOTE All toplevel points have fixed count
-            SunspecPointWriter *countPoint = model_->getTopLevelPoint(pointDef->count_point_id()->c_str());
+            SunspecPointWriter *countPoint = model_->getPoint(pointDef->count_point_id()->c_str());
 
             count = countPoint == nullptr ? 0 : countPoint->getValueAsUint16();
+            count = (count == kUint16UnimplementedValue) ? 0 : count;
         }
+        totalPointCount += count;
+        pointCounts.push_back(count);
+        pointDefs.push_back(pointDef);
+    }
+    assert(pointCounts.size() == pointDefs.size() /*, "Internal error: pointCounts and pointDefs size mismatch"*/);
+    points_.reserve(totalPointCount);
+    for (size_t i = 0; i < pointCounts.size(); ++i)
+    {
+        const auto pointDef = pointDefs[i];
+        const auto count = pointCounts[i];
+        if (count == 0)
+        {
+            continue;
+        }
+
         for (size_t i = 0; i < count; i++)
         {
             points_.emplace_back(*pointDef, *this);
@@ -113,21 +130,41 @@ void SunspecGroupWriter::initPoint()
 }
 uint16_t SunspecGroupWriter::initGroups()
 {
+    vector<size_t> groupCounts;
+    vector<const SunspecGroupDef *> groupDefs;
+    size_t totalGroupCount = 0;
 
     for (const auto &groupDef : *def_.groups())
     {
         uint16_t count = groupDef->count();
         if (0 == count)
         {
-            SunspecPointWriter *countPoint = model_->getTopLevelPoint(groupDef->count_point_id()->c_str());
+            SunspecPointWriter *countPoint = model_->getPoint(groupDef->count_point_id()->c_str());
 
             count = (countPoint == nullptr) ? 0 : countPoint->getValueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
         }
+
+        totalGroupCount += count;
+        groupCounts.push_back(count);
+        groupDefs.push_back(groupDef);
+    }
+
+    assert(groupCounts.size() == groupDefs.size() /*, "Internal error: groupCounts and groupDefs size mismatch"*/);
+    groups_.reserve(totalGroupCount);
+    for (size_t i = 0; i < groupCounts.size(); ++i)
+    {
+
+        const auto groupDef = groupDefs[i];
+        const auto count = groupCounts[i];
+        if (count == 0)
+        {
+            continue;
+        }
         for (size_t i = 0; i < count; i++)
         {
-            groupPoints_.emplace_back(*groupDef, nullptr, this).initPoint();
-            registerLength_ += groupPoints_.back().initGroups();
+            groups_.emplace_back(*groupDef, nullptr, this).initPoint();
+            registerLength_ += groups_.back().initGroups();
         }
     }
 
@@ -144,7 +181,7 @@ void SunspecGroupWriter::setAllModbusBuffer(uint16_t *modbusBuffer)
         point.setModbusBuffer(&modbusBuffer[offset]);
         offset += point.size();
     }
-    for (auto &group : groupPoints_)
+    for (auto &group : groups_)
     {
         group.setAllModbusBuffer(&modbusBuffer[offset]);
         offset += group.registerLength_;
@@ -160,7 +197,7 @@ uint16_t SunspecGroupWriter::setAllValueToModbusBuffer()
         point.setValueToModbusBuffer();
         currOffset += point.size();
     }
-    for (auto &group : groupPoints_)
+    for (auto &group : groups_)
     {
         group.setAllValueToModbusBuffer();
         currOffset += group.registerLength_;
@@ -189,10 +226,10 @@ std::string SunspecGroupWriter::toJson(bool includeSf, bool includeUnits) const
         ret += "}";
     }
 
-    if (!groupPoints_.empty())
+    if (!groups_.empty())
     {
         ret += ",\"groups\":[";
-        for (auto &group : groupPoints_)
+        for (auto &group : groups_)
         {
             ret += group.toJson(includeSf, includeUnits) + ",";
         }

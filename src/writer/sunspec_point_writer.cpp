@@ -2,24 +2,31 @@
 
 #include <cmath>
 
-#include "sunspec.h"
 #include <algorithm>
+
+#include "sunspec.h"
+#include "writer/sunspec_group_writer.h"
 
 using std::string;
 using std::to_string;
 
 using namespace Sunspec;
 
-SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint) : def_{def}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}, pointFunction_{.uint64 = {.param = nullptr, .function = nullptr}}
+SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint) : def_{def}, group_{groupPoint}, modbusBuffer_{nullptr}, pointFunction_{.uint64 = {.param = nullptr, .function = nullptr}}
 {
 }
 
-SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction) : def_{def}, pointFunction_{valueFunction}, groupPoint_{groupPoint}, modbusBuffer_{nullptr}
+SunspecPointWriter::SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction) : def_{def}, pointFunction_{valueFunction}, group_{groupPoint}, modbusBuffer_{nullptr}
 {
 }
 
 SunspecPointWriter::~SunspecPointWriter()
 {
+}
+
+const SunspecDeviceWriter *SunspecPointWriter::getDevice() const
+{
+    return group_.getDevice();
 }
 
 void SunspecPointWriter::setValueToModbusBuffer()

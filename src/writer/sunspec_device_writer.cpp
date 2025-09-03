@@ -9,6 +9,20 @@
 
 using namespace Sunspec;
 
+SunspecDeviceWriter::SunspecDeviceWriter(ModbusRTUSlave &client) : client_{client}, registerLength_{0}, modbusBuffer_{nullptr}
+{
+}
+
+SunspecDeviceWriter::~SunspecDeviceWriter()
+{
+    if (modbusBuffer_)
+    {
+        delete[] modbusBuffer_;
+        modbusBuffer_ = nullptr;
+    }
+    models_.clear();
+}
+
 SunspecModelWriter *SunspecDeviceWriter::getModel(SunspecModelList id)
 {
     for (auto &model : models_)
@@ -38,7 +52,7 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<SunspecMo
             modelCount++;
         }
     }
-    // models_.reserve(modelCount);
+    models_.reserve(modelCount);
     for (size_t i = 0; i < modelCount; i++)
     {
         registerLength_ += models_.emplace_back(*modelDefList[i], *this).initTopLevel();
@@ -60,75 +74,6 @@ uint16_t SunspecDeviceWriter::initSubLevels()
     return registerLength_;
 }
 
-void SunspecDeviceWriter::setAllModbusBuffer()
-{
-
-    uint16_t offset = 2;
-    for (auto &model : models_)
-    {
-        model.setAllModbusBuffer(&modbusBuffer_[offset]);
-        offset += model.registerLength();
-    }
-}
-
-uint16_t SunspecDeviceWriter::assignBuffer()
-{
-    if (modbusBuffer_)
-    {
-        delete[] modbusBuffer_;
-        modbusBuffer_ = nullptr;
-    }
-    modbusBuffer_ = new uint16_t[registerLength_];
-    assert(modbusBuffer_ != nullptr && "Failed to allocate buffer for Sunspec device writer");
-    if (nullptr == modbusBuffer_)
-    {
-        models_.clear(); // Clear the models if buffer allocation fails.
-        return 0;        // Allocation failed, return 0 to indicate no models initialized.
-    }
-    setConstantIdentifiersInBuffer();
-
-    client_.configureHoldingRegisters(modbusBuffer_, registerLength_);
-    return registerLength_;
-}
-uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelList> &supportedModel)
-{
-
-    uint16_t count = initTopLevel(supportedModel);
-    if (count == 0)
-    {
-        return 0; // No models initialized, return 0.
-    }
-
-    registerLength_ = initSubLevels();
-    if (registerLength_ == 0)
-    {
-        return 0; // No valid register length, return 0.
-    }
-
-    if (assignBuffer() == 0)
-    {
-        return 0; // Buffer allocation failed, return 0.
-    }
-
-    setAllValueToModbusBuffer();
-    return count;
-}
-
-void SunspecDeviceWriter::poll()
-{
-    setAllValueToModbusBuffer();
-    client_.poll();
-}
-void SunspecDeviceWriter::setConstantIdentifiersInBuffer()
-{
-    uint16_t currentOffset = 0;
-    memcpy(&modbusBuffer_[currentOffset], &kSunspecIdentifier, 2 * sizeof(uint16_t));
-
-    const uint16_t modelEndBuffer[2] = {SunspecModelList_kModelEnd, 0};
-    currentOffset += 2;
-
-    memcpy(&modbusBuffer_[registerLength_ - 2], modelEndBuffer, sizeof(uint16_t) * 2);
-}
 void SunspecDeviceWriter::setAllValueToModbusBuffer()
 {
 
@@ -138,6 +83,13 @@ void SunspecDeviceWriter::setAllValueToModbusBuffer()
     }
     setConstantIdentifiersInBuffer();
 }
+
+void SunspecDeviceWriter::poll()
+{
+    setAllValueToModbusBuffer();
+    client_.poll();
+}
+
 
 std::string SunspecDeviceWriter::toJson(bool includeSf, bool includeUnits) const
 {
@@ -162,9 +114,79 @@ std::string SunspecDeviceWriter::toJson(bool includeSf, bool includeUnits) const
     return ret;
 }
 
-SunspecDeviceWriter::SunspecDeviceWriter(ModbusRTUSlave &client) : client_{client}, registerLength_{0}, modbusBuffer_{nullptr}
+void SunspecDeviceWriter::setConstantIdentifiersInBuffer()
 {
+    uint16_t currentOffset = 0;
+    memcpy(&modbusBuffer_[currentOffset], &kSunspecIdentifier, 2 * sizeof(uint16_t));
+
+    const uint16_t modelEndBuffer[2] = {SunspecModelList_kModelEnd, 0};
+    currentOffset += 2;
+
+    memcpy(&modbusBuffer_[registerLength_ - 2], modelEndBuffer, sizeof(uint16_t) * 2);
 }
+
+uint16_t SunspecDeviceWriter::assignBuffer()
+{
+    if (modbusBuffer_)
+    {
+        delete[] modbusBuffer_;
+        modbusBuffer_ = nullptr;
+    }
+    modbusBuffer_ = new uint16_t[registerLength_];
+    assert(modbusBuffer_ != nullptr && "Failed to allocate buffer for Sunspec device writer");
+    if (nullptr == modbusBuffer_)
+    {
+        models_.clear(); // Clear the models if buffer allocation fails.
+        return 0;        // Allocation failed, return 0 to indicate no models initialized.
+    }
+    setConstantIdentifiersInBuffer();
+
+    client_.configureHoldingRegisters(modbusBuffer_, registerLength_);
+    return registerLength_;
+}
+
+void SunspecDeviceWriter::setAllModbusBuffer()
+{
+
+    uint16_t offset = 2;
+    for (auto &model : models_)
+    {
+        model.setAllModbusBuffer(&modbusBuffer_[offset]);
+        offset += model.registerLength();
+    }
+}
+
+
+uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelList> &supportedModel)
+{
+
+    uint16_t count = initTopLevel(supportedModel);
+    if (count == 0)
+    {
+        return 0; // No models initialized, return 0.
+    }
+
+    registerLength_ = initSubLevels();
+    if (registerLength_ == 0)
+    {
+        return 0; // No valid register length, return 0.
+    }
+
+    if (assignBuffer() == 0)
+    {
+        return 0; // Buffer allocation failed, return 0.
+    }
+
+    setAllValueToModbusBuffer();
+    return count;
+}
+
+
+
+
+
+
+
 
 extern const unsigned char modelDefinition1[];
 extern const unsigned char modelDefinition112[];
@@ -196,12 +218,3 @@ const SunspecModelDef *SunspecDeviceWriter::getModelDefinition(SunspecModelList 
     //  return modelDefIte == modelDefList.cend() ? nullptr : *modelDefIte;
 }
 
-SunspecDeviceWriter::~SunspecDeviceWriter()
-{
-    if (modbusBuffer_)
-    {
-        delete[] modbusBuffer_;
-        modbusBuffer_ = nullptr;
-    }
-    models_.clear();
-}

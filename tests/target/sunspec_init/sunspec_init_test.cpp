@@ -84,7 +84,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
     SunspecPointFunction funct{.uint16 = {.function = [](void *param) -> uint16_t
                                           { return 2; }}};
 
-    writer.getModel(SunspecModelList_kModel160)->getTopLevelPoint("N")->setPointFunction(funct);
+    writer.getModel(SunspecModelList_kModel160)->getPoint("N")->setPointFunction(funct);
 
     writer.initSubLevels();
     writer.setAllValueToModbusBuffer();

@@ -37,31 +37,31 @@ int main()
     SunspecPointFunction functMn{.str = {.function = [](void *param) -> string
                                          { return "Matthew"; }}};
 
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Mn")->setPointFunction(functMn);
+    writer.getModel(SunspecModelList_kModel1)->getPoint("Mn")->setPointFunction(functMn);
 
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
+    writer.getModel(SunspecModelList_kModel1)->getPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
                                                                                                   { return "Busoye Tolulope Matthew"; }}});
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
+    writer.getModel(SunspecModelList_kModel1)->getPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
                                                                                                     { return 1; }}});
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
+    writer.getModel(SunspecModelList_kModel1)->getPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
                                                                                                   { return "Busoye Tolulope Matthew"; }}});
-    writer.getModel(SunspecModelList_kModel1)->getTopLevelPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
+    writer.getModel(SunspecModelList_kModel1)->getPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
                                                                                                     { return 1; }}});
 
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("A")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("A")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                       { return pzem.current(); }}});
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("PhVphA")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("PhVphA")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                            { return pzem.voltage(); }}});
 
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("AphA")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("AphA")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                          { return pzem.current(); }}});
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("W")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("W")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                       { return pzem.power(); }}});
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("Hz")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("Hz")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                        { return pzem.frequency(); }}});
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("PF")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("PF")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                        { return pzem.pf(); }}});
-    writer.getModel(SunspecModelList_kModel113)->getTopLevelPoint("WH")->setPointFunction({.float32 = {.function = [](void *param)
+    writer.getModel(SunspecModelList_kModel113)->getPoint("WH")->setPointFunction({.float32 = {.function = [](void *param)
                                                                                                        { return pzem.energy(); }}});
 
     while (1)

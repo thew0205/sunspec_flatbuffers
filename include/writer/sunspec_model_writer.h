@@ -63,9 +63,9 @@ public:
      * @brief Returns the toplevel  groupPoint of this model.
      * @return A const reference to the SunspecGroupPoint object.
      */
-    const SunspecGroupWriter &topLevelGroupPoint() const
+    const SunspecGroupWriter &topLevelGroup() const
     {
-        return topLevelGroupPoint_;
+        return topLevelGroup_;
     }
 
     /**
@@ -86,56 +86,32 @@ public:
     }
 
     /**
-     * @brief Retrieves a point from the toplevel SunspecPointWriter of the model by its id.
-     * @param [in] pointId The id of the point to find.
+     * @brief Retrieves a point from the model by its id.
+     * @param [in] pointId The id of the point to retrieve.
      * @return A pointer to the SunspecPoint, or nullptr if not found.
      */
-    SunspecPointWriter *getTopLevelPoint(const string_view pointId)
-    {
-        return getPoint(pointId, false);
-    }
-
-    /**
-     * @brief Retrieves a point from the toplevel SunspecPointWriter of the model by its id.
-     * @param [in] pointId The id of the point to find.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    const SunspecPointWriter *getTopLevelPoint(const string_view pointId) const
-    {
-        return getPoint(pointId, false);
-    }
+    SunspecPointWriter *getPoint(const string_view pointId);
 
     /**
      * @brief Retrieves a point from the model by its id.
-     * @param [in] pointId The id of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @param [in] pointId The id of the point to retrieve.
      * @return A pointer to the SunspecPoint, or nullptr if not found.
      */
-    SunspecPointWriter *getPoint(const string_view pointId, bool findRecursively);
+    const SunspecPointWriter *getPoint(const string_view pointId) const;
 
     /**
-     * @brief Retrieves a point from the model by its id.
-     * @param [in] pointId The id of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    const SunspecPointWriter *getPoint(const string_view pointId, bool findRecursively) const;
-
-    /**
-     * @brief Retrieves a groupPoint from the model by its id, it cam return the top level group point.
+     * @brief Retrieves a groupPoint from the model by its id.
      * @param [in] groupId The id of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
      * @return A pointer to the SunspecPoint, or nullptr if not found.
      */
-    SunspecGroupWriter *getGroupPoint(const string_view &groupId, bool findRecursively = true);
+    SunspecGroupWriter *getGroup(const string_view &groupId);
 
     /**
-     * @brief Retrieves a groupPoint from the model by its name, it cam return the top level group point.
+     * @brief Retrieves a groupPoint from the model by its name.
      * @param [in] groupId The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
      * @return A pointer to the SunspecPoint, or nullptr if not found.
      */
-    const SunspecGroupWriter *getGroupPoint(const string_view &groupId, bool findRecursively = true) const;
+    const SunspecGroupWriter *getGroup(const string_view &groupId) const;
 
     /**
      * @brief Initializes only the top-level group of SunspecPointWriter in the model.
@@ -189,10 +165,10 @@ private:
 
     SunspecDeviceWriter &device_; /**< A reference to the parent device of this model. */
 
-    SunspecGroupWriter topLevelGroupPoint_; /**< The top-level group of the model that contains all the point and subgroup of the model. */
-    const SunspecModelDef &def_;            /**< The sunspec model definition of this model. */
-    uint16_t *modbusBuffer_;                /**< A pointer to the inplace modbus buffer where the model's data is to be stored. */
-    uint16_t registerLength_;               /**< The length of the model in number of modbus registers, including the 2 registers for the model ID and length. */
+    SunspecGroupWriter topLevelGroup_; /**< The top-level group of the model that contains all the point and subgroup of the model. */
+    const SunspecModelDef &def_;       /**< The sunspec model definition of this model. */
+    uint16_t *modbusBuffer_;           /**< A pointer to the inplace modbus buffer where the model's data is to be stored. */
+    uint16_t registerLength_;          /**< The length of the model in number of modbus registers, including the 2 registers for the model ID and length. */
 
     SunspecModelWriter &operator=(const SunspecModelWriter &groupPoints) = delete;
     SunspecModelWriter &operator=(SunspecModelWriter &&groupPoints) = delete;

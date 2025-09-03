@@ -8,7 +8,7 @@
 #pragma once
 
 #include <string>
-#include <list>
+#include <vector>
 #include <string_view>
 
 #include "writer/sunspec_point_writer.h"
@@ -26,8 +26,9 @@ class SunspecDeviceWriter;
 class SunspecGroupWriter
 {
     using string_view = std::string_view;
+
     template <typename T>
-    using list = std::list<T>;
+    using vector = std::vector<T>;
 
 public:
     /**
@@ -86,7 +87,7 @@ public:
      */
     uint16_t groupPointCount() const
     {
-        return groupPoints_.size();
+        return groups_.size();
     }
 
     /**
@@ -103,36 +104,32 @@ public:
     SunspecModelWriter *getModel() const;
 
     /**
-     * @brief Retrieves a SunspecPointWriter from the group by its name.
-     * @param [in] pointId The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @brief Retrieves a SunspecPointWriter from the group by its id.
+     * @param [in] pointId The id of the point to retrieve.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    SunspecPointWriter *getPoint(const string_view pointId, bool findRecursively);
+    SunspecPointWriter *getPoint(const string_view pointId);
 
     /**
-     * @brief Retrieves a SunspecPointWriter from the group by its name.
-     * @param [in] pointId The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @brief Retrieves a SunspecPointWriter from the group by its id.
+     * @param [in] pointId The id of the point to retrieve.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    const SunspecPointWriter *getPoint(const string_view pointId, bool findRecursively) const;
+    const SunspecPointWriter *getPoint(const string_view pointId) const;
 
     /**
-     * @brief Retrieves a SunspecGroupWriter from the group by its name.
-     * @param [in] groupPointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @brief Retrieves a SunspecGroupWriter from the group by its id.
+     * @param [in] groupId The id of the point to retrieve.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    SunspecGroupWriter *getGroupPoint(const string_view &groupPointName, bool findRecursively = true);
+    SunspecGroupWriter *getGroupPoint(const string_view &groupId);
 
     /**
-     * @brief Retrieves a SunspecGroupWriter from the group by its name.
-     * @param [in] groupPointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
+     * @brief Retrieves a SunspecGroupWriter from the group by its id.
+     * @param [in] groupId The id of the point to find.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    const SunspecGroupWriter *getGroupPoint(const string_view &groupPointName, bool findRecursively = true) const;
+    const SunspecGroupWriter *getGroupPoint(const string_view &groupId) const;
 
     /**
      * @brief Returns a pointer to the parent SunspecDeviceWriter.
@@ -190,9 +187,9 @@ private:
     SunspecModelWriter *const model_{nullptr}; /**< A pointer to the parent model of this group (nullptr for non top-level groups). */
     SunspecGroupWriter *const group_{nullptr}; /**< A pointer to the parent group of this group (nullptr for top-level groups). */
 
-    list<SunspecPointWriter> points_;      /**< A list of SunspecPointWriter directly contained within this group. */
-    list<SunspecGroupWriter> groupPoints_; /**< A list of SunspecGroupWriter directly contained within this group. */
-    uint16_t registerLength_;              /**< length of the number of modbus registers occupied by this group and its children. */
+    vector<SunspecPointWriter> points_; /**< A list of SunspecPointWriter directly contained within this group. */
+    vector<SunspecGroupWriter> groups_; /**< A list of SunspecGroupWriter directly contained within this group. */
+    uint16_t registerLength_;           /**< length of the number of modbus registers occupied by this group and its children. */
 
     SunspecGroupWriter &operator=(const SunspecGroupWriter &groupPoints) = delete;
     SunspecGroupWriter &operator=(SunspecGroupWriter &&groupPoints) = delete;
