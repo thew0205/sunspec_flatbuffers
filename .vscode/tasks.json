@@ -6,14 +6,14 @@
             "type": "pickString",
             "description": "The test to be run",
             "options": [
-                "sunspec_init",
+                "sunspec_init_writer",
                 "flatbuffer",
-                "sunspec_set_value",
+                "sunspec_set_value_writer",
                 "pzem_temp",
-                "flatbuffer sunspec_init sunspec_set_value"
+                "flatbuffer sunspec_init_writer sunspec_set_value_writer"
                 
             ],
-            "default": "sunspec_init"
+            "default": "sunspec_init_writer"
         }
     ],
     "tasks": [

@@ -1,5 +1,5 @@
 
-set(TEST_NAME sunspec_set_value_test)
+set(TEST_NAME sunspec_set_value_writer_test)
 
 set(TEST_MAIN_SRC 
                 test_main.cpp
@@ -15,7 +15,7 @@ target_link_libraries(${TEST_NAME}
         generic_lib
         modbus_slave_lib
         sunspec
-        sunspec_set_value_common_test
+        sunspec_set_value_common_writer_test
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE)

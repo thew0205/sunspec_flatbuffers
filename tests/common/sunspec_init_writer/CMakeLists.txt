@@ -1,5 +1,5 @@
 
-set(TEST_NAME sunspec_init_common_test)
+set(TEST_NAME sunspec_init_common_writer_test)
 
 set(SUNSPEC_TEST_SRC 
                         sunspec_init_test.cpp
