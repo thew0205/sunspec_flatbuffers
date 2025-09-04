@@ -3,6 +3,7 @@
 #include <algorithm>
 
 #include "ModbusRTUSlave.h"
+#include "model_definitions.h"
 #include "writer/sunspec_point_writer.h"
 #include "writer/sunspec_group_writer.h"
 #include "sunspec.h"
@@ -44,7 +45,7 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<SunspecMo
     std::vector<const SunspecModelDef *> modelDefList;
     for (const auto &modelId : supportedModels)
     {
-        const SunspecModelDef *const modelDef = SunspecDeviceWriter::getModelDefinition(modelId);
+        const SunspecModelDef *const modelDef = Sunspec::getModelDefinition(modelId);
         // The models not supported will return nullptr.
         if (nullptr != modelDef)
         {
@@ -186,35 +187,4 @@ uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelLi
 
 
 
-
-
-extern const unsigned char modelDefinition1[];
-extern const unsigned char modelDefinition112[];
-extern const unsigned char modelDefinition113[];
-extern const unsigned char modelDefinition160[];
-const SunspecModelDef *SunspecDeviceWriter::getModelDefinition(SunspecModelList id)
-{
-
-    switch (id)
-    {
-    case SunspecModelList_kModel1:
-        return GetSunspecModelDef(modelDefinition1);
-
-    case SunspecModelList_kModel112:
-
-        return GetSunspecModelDef(modelDefinition112);
-    case SunspecModelList_kModel113:
-
-        return GetSunspecModelDef(modelDefinition113);
-    case SunspecModelList_kModel160:
-        return GetSunspecModelDef(modelDefinition160);
-    default:
-        return nullptr;
-        break;
-    }
-    // TODO
-    //  auto modelDefIte = std::find_if(modelDefList.cbegin(), modelDefList.cend(), [id](const SunspecModelDef *pModelDef)
-    //                                  { return pModelDef->id() == id; });
-    //  return modelDefIte == modelDefList.cend() ? nullptr : *modelDefIte;
-}
 

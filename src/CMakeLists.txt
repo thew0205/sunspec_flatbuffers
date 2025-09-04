@@ -9,6 +9,7 @@ endif()
 
 set(SUNSPEC_FILES
         sunspec.cpp
+        model_definitions.cpp
 )
 
 set(SUNSPEC_FILES_READER

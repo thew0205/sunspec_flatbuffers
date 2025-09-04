@@ -138,13 +138,7 @@ public:
     static constexpr uint16_t kSunspecIdentifier[2] = {0x5375, 0x6E53};
 
 private:
-    /**
-     * @brief Retrieves the model definition for a given model ID.
-     * This function looks up the model definition based on the provided model ID.
-     * @param [in] id The ID of the model to look up.
-     * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
-     */
-    static const SunspecModelDef *getModelDefinition(SunspecModelList id);
+
 
     /**
      * @brief Set the constant identifiers (Sunspec identifier, model ID, and model length) in the modbus buffer.
