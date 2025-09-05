@@ -26,98 +26,52 @@ class SunspecModelReader
     using string_view = std::string_view;
 
 public:
-    /**
-     * @brief Returns the model's definition.
-     * @return A const reference to the SunspecModelDef object.
-     */
+    SunspecModelReader(const SunspecModelDef &def, const uint16_t *modbusBuffer, const uint16_t address, SunspecDeviceReader &device);
+
+    SunspecModelReader(const SunspecModelReader &groupPoints) = default;
+
+    SunspecModelReader(SunspecModelReader &&groupPoints) noexcept = default;
+
+    ~SunspecModelReader() = default;
+
     const SunspecModelDef &def() const
     {
         return def_;
     }
 
-    /**
-     * @brief Returns the toplevel  groupPoint of this model.
-     * @return A const reference to the SunspecGroupPoint object.
-     */
     const SunspecGroupReader &topLevelGroupPoint() const
     {
         return topLevelGroupPoint_;
     }
-    /**
-     * @brief Returns a reference to the parent Sunspec device.
-     * @return A reference to the SunspecDevice object.
-     */
+
     SunspecDeviceReader &device()
     {
         return device_;
     }
 
-    /**
-     * @brief Reads all points in the model from the device and sets their values.
-     */
-    void readAndSetFromDevice();
+    uint16_t registerLength() const
+    {
+        return topLevelGroupPoint_.registerLength();
+    }
 
-    /**
-     * @brief Generates a JSON representation of the entire model.
-     * @param [in] includeSf Whether to include scale factors in the JSON output.
-     * @param [in] includeUnits Whether to include units in the JSON output.
-     * @return A string containing the JSON representation.
-     */
+    uint16_t address() const
+    {
+        return address_;
+    }
+    // void readAndSetFromDevice();
+
     std::string toJson(bool includeSf = false, bool includeUnits = false) const;
 
-    /**
-     * @brief Retrieves a point from the model by its name.
-     * @param [in] pointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    SunspecPointReader *getPoint(const string_view pointName, bool findRecursively = true);
+    SunspecPointReader *getPoint(const string_view pointId);
 
-    /**
-     * @brief Retrieves a point from the model by its name.
-     * @param [in] pointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    const SunspecPointReader *getPoint(const string_view pointName, bool findRecursively = true) const;
+    const SunspecPointReader *getPoint(const string_view pointId) const;
 
-    /**
-     * @brief Retrieves a groupPoint from the model by its name, it cam return the top level group point.
-     * @param [in] groupPointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    SunspecGroupReader *getGroupPoint(const string_view &groupPointName, bool findRecursively = true);
+    SunspecGroupReader *getGroup(const string_view &groupId);
 
-    /**
-     * @brief Retrieves a groupPoint from the model by its name, it cam return the top level group point.
-     * @param [in] groupPointName The name of the point to find.
-     * @param [in] findRecursively Whether to search in nested groups as well.
-     * @return A pointer to the SunspecPoint, or nullptr if not found.
-     */
-    const SunspecGroupReader *getGroupPoint(const string_view &groupPointName, bool findRecursively = true) const;
-    /**
-     * @brief Class constructor.
-     * @param [in] _def The definition of the model.
-     * @param [in] _addr The starting address of the model in the register map.
-     * @param [in] _device A reference to the parent SunspecDevice.
-     */
-    SunspecModelReader(const SunspecModelDef &_def, uint16_t _addr, SunspecDeviceReader &_device);
+    const SunspecGroupReader *getGroup(const string_view &groupId) const;
 
-    /**
-     * @brief Copy constructor.
-     */
-    SunspecModelReader(const SunspecModelReader &groupPoints) = default;
-
-    /**
-     * @brief Move constructor.
-     */
-    SunspecModelReader(SunspecModelReader &&groupPoints) noexcept = default;
-
-    /**
-     * @brief Destructor.
-     */
-    ~SunspecModelReader() = default;
+    void initPoints();
+    uint16_t initGroups();
 
 private:
     SunspecModelReader &operator=(const SunspecModelReader &groupPoints) = delete;
@@ -127,5 +81,7 @@ private:
 
     SunspecGroupReader topLevelGroupPoint_;
     const SunspecModelDef &def_;
-    uint16_t addr_;
+    const uint16_t *modbusBuffer_;
+    uint16_t address_;
+    // uint16_t registerLength_;
 };

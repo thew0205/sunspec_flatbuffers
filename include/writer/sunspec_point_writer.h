@@ -205,7 +205,7 @@ public:
      * @brief Gets the value of the point as a bit32_t.
      * @return The bit32 value of the point.
      */
-    bit32_t getValueAsBit32() const
+    bitfield32_t getValueAsBit32() const
     {
         return pointFunction_.bit32.function == nullptr ? FlatbufferKBit32toBit32_t(def_.data_as_kBitfield32()) : pointFunction_.bit32.call();
     }
@@ -277,7 +277,7 @@ public:
      * @brief Gets the value of the point as a bit64_t.
      * @return The bit64 value of the point.
      */
-    bit64_t getValueAsBit64() const
+    bitfield64_t getValueAsBit64() const
     {
         return pointFunction_.bit64.function == nullptr ? FlatbufferKBit64toBit64_t(def_.data_as_kBitfield64()) : pointFunction_.bit64.call();
     }

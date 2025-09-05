@@ -1,8 +1,8 @@
 
-set(TEST_NAME sunspec_point_common_reader_test)
+set(TEST_NAME sunspec_group_common_reader_test)
 
 set(SUNSPEC_TEST_SRC 
-                        sunspec_point_reader_test.cpp
+                        sunspec_group_reader_test.cpp
                         )
 
 add_library(${TEST_NAME}

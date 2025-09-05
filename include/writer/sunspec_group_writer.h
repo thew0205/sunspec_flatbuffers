@@ -122,14 +122,14 @@ public:
      * @param [in] groupId The id of the point to retrieve.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    SunspecGroupWriter *getGroupPoint(const string_view &groupId);
+    SunspecGroupWriter *getGroup(const string_view &groupId);
 
     /**
      * @brief Retrieves a SunspecGroupWriter from the group by its id.
      * @param [in] groupId The id of the point to find.
      * @return A pointer to the SunspecPointWriter, or nullptr if not found.
      */
-    const SunspecGroupWriter *getGroupPoint(const string_view &groupId) const;
+    const SunspecGroupWriter *getGroup(const string_view &groupId) const;
 
     /**
      * @brief Returns a pointer to the parent SunspecDeviceWriter.
@@ -141,7 +141,7 @@ public:
      * @brief Initializes the toplevel SunspecPointWriter within the group based on the group definition.
      * This method populates the points_ list with SunspecPointWriter instances.
      */
-    void initPoint();
+    void initPoints();
 
     /**
      * @brief Initializes the nested SunspecGroupWriter within the group based on the group definition.

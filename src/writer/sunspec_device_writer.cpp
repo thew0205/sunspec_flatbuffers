@@ -56,7 +56,7 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<SunspecMo
     models_.reserve(modelCount);
     for (size_t i = 0; i < modelCount; i++)
     {
-        registerLength_ += models_.emplace_back(*modelDefList[i], *this).initTopLevel();
+        models_.emplace_back(*modelDefList[i], *this).initTopLevel();
     }
     return modelCount;
 }
@@ -90,7 +90,6 @@ void SunspecDeviceWriter::poll()
     setAllValueToModbusBuffer();
     client_.poll();
 }
-
 
 std::string SunspecDeviceWriter::toJson(bool includeSf, bool includeUnits) const
 {
@@ -157,7 +156,6 @@ void SunspecDeviceWriter::setAllModbusBuffer()
     }
 }
 
-
 uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelList> &supportedModel)
 {
 
@@ -181,10 +179,3 @@ uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelLi
     setAllValueToModbusBuffer();
     return count;
 }
-
-
-
-
-
-
-

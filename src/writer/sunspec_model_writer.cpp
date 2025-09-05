@@ -5,7 +5,7 @@
 
 using std::to_string;
 
-SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, SunspecDeviceWriter &device) : def_{def}, device_{device}, topLevelGroup_{*def.group(), this, nullptr}, registerLength_{0}
+SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, SunspecDeviceWriter &device) : def_{def}, device_{device}, topLevelGroup_{*def.group(), this, nullptr}
 {
 }
 
@@ -23,27 +23,24 @@ const SunspecPointWriter *SunspecModelWriter::getPoint(const string_view pointNa
 
 SunspecGroupWriter *SunspecModelWriter::getGroup(const string_view &groupId)
 {
-    return topLevelGroup_.getGroupPoint(groupId);
+    return topLevelGroup_.getGroup(groupId);
 }
 const SunspecGroupWriter *SunspecModelWriter::getGroup(const string_view &groupId) const
 {
-    return topLevelGroup_.getGroupPoint(groupId);
+    return topLevelGroup_.getGroup(groupId);
 }
 
-uint16_t SunspecModelWriter::initTopLevel()
+void SunspecModelWriter::initTopLevel()
 {
 
-    topLevelGroup_.initPoint();
+    return topLevelGroup_.initPoints();
 
-    return registerLength_;
+    ;
 }
 
 uint16_t SunspecModelWriter::initSubLevels()
 {
-    registerLength_ = 0; // Start with 2 for the base address and model end marker.
-    topLevelGroup_.initGroups();
-    registerLength_ += topLevelGroup_.registerLength();
-    return registerLength_;
+    return topLevelGroup_.initGroups();
 }
 
 void SunspecModelWriter::setAllModbusBuffer(uint16_t *modbusBuffer)
@@ -72,10 +69,10 @@ std::string SunspecModelWriter::toJson(bool includeSf, bool includeUnits) const
 
 void SunspecModelWriter::setConstantIdentifiersInBuffer()
 {
-    assert(registerLength_ >= 2);
+    assert(registerLength() >= 2);
     assert(modbusBuffer_ != nullptr);
 
-    const uint16_t modelConstantIdentifierBuffer[2] = {uint16_tToModbusRegisterFormat(def_.id()), uint16_tToModbusRegisterFormat(static_cast<uint16_t>(registerLength_ - 2))};
+    const uint16_t modelConstantIdentifierBuffer[2] = {uint16_tToModbusRegisterFormat(def_.id()), uint16_tToModbusRegisterFormat(static_cast<uint16_t>(registerLength() - 2))};
 
     memcpy(modbusBuffer_, modelConstantIdentifierBuffer, sizeof(uint16_t) * 2);
 }

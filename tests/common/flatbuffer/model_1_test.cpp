@@ -68,7 +68,7 @@ TEST(Flatbuffer_Model1, POINT_Mn_String)
     POINTERS_EQUAL(nullptr, point.units());
 }
 
-TEST(Flatbuffer_Model1, POINT_Pad_Pad16)
+TEST(Flatbuffer_Model1, POINT_Pad_Pad1i6)
 {
     const auto &points = *model1->group()->points();
     const auto &point = *points.Get(8);
@@ -79,16 +79,6 @@ TEST(Flatbuffer_Model1, POINT_Pad_Pad16)
     POINTERS_EQUAL(nullptr, point.units());
 }
 
-IGNORE_TEST(Flatbuffer_Model1, POINT_Pad_Pad16)
-{
-    const auto &points = *model1->group()->points();
-    const auto &point = *points.Get(8);
-    CheckPoint(point, "Pad", SunspecPointData_kUint16, 1, "", 1, 0, "", "", SunspecPointAccessType_kR, SunspecPointMandatoryType_kM, "");
-    // LONGS_EQUAL(65535, point.data_as_kUint16()->value());
-    POINTERS_EQUAL(nullptr, point.count_point_id());
-    POINTERS_EQUAL(nullptr, point.sf_id());
-    POINTERS_EQUAL(nullptr, point.units());
-}
 TEST(Flatbuffer_Model1, ToplevelGroup)
 {
     const auto &group = *model1->group();

@@ -1,8 +1,8 @@
 
-set(TEST_NAME sunspec_point_common_reader_test)
+set(TEST_NAME sunspec_device_common_reader_test)
 
 set(SUNSPEC_TEST_SRC 
-                        sunspec_point_reader_test.cpp
+                        sunspec_device_reader_test.cpp
                         )
 
 add_library(${TEST_NAME}
@@ -13,7 +13,7 @@ target_link_libraries(${TEST_NAME}
         CppUTest
         CppUTestExt
         generic_lib
-        modbus_slave_lib
+        modbus_master_lib
         sunspec
 )
 

@@ -1,232 +1,162 @@
-/**
- * @file sunspec_point.h
- * @brief This file defines the SunspecPoint class, which represents a single data point within a Sunspec model.
- *
- * The SunspecPoint class encapsulates the data value, its definition, and its relationship to a parent group.
- *
- * @author Tolulope Matthew Busoye PowerLabs
- */
+
 
 #pragma once
 
 #include <string>
 
+#include "sunspec.h"
 #include "sunspec_model_definition_generated.h"
 
 class SunspecGroupReader;
 
-/**
- * @brief Represents a single data point in a Sunspec model.
- *
- * This class holds the actual value of a point, its definition from the model, and
- * its address within the Sunspec register map.
- */
 class SunspecPointReader
 {
     using string = std::string;
     union SunspecValue;
 
 public:
-    /**
-     * @brief Sets the scale factor for the point.
-     * @param [in] sf The scale factor value.
-     */
-    void setSf(int16_t sf)
-    {
-        sf_ = sf;
-    }
+    SunspecPointReader(const SunspecPointDef &def, const uint16_t *modbusBuffer, SunspecGroupReader &groupPoint);
 
-    /**
-     * @brief Returns the scale factor of the point.
-     * @return The scale factor.
-     */
-    int16_t sf() const
-    {
-        return sf_;
-    }
-    // TODO (Matthew) Change the doc comments
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const int16_t valueInt16() const
-    {
-        return value_.s16;
-    }
+    SunspecPointReader(const SunspecPointReader &_point) = default;
 
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const int32_t valueInt32() const
-    {
-        return value_.s32;
-    }
+    SunspecPointReader(SunspecPointReader &&_point) noexcept = default;
 
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const int64_t valueInt64() const
-    {
-        return value_.s64;
-    }
+    ~SunspecPointReader() = default;
 
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const uint16_t valueUint16() const
+    const SunspecPointDef &def() const
     {
-        return value_.u16;
+        return def_;
     }
+    // void setSf(int16_t sf)
+    // {
+    //     sf_ = sf;
+    // }
 
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const uint32_t valueUint32() const
-    {
-        return value_.u32;
-    }
+    // int16_t sf() const
+    // {
+    //     return sf_;
+    // }
 
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const uint64_t valueUint64() const
-    {
-        return value_.u64;
-    }
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const float valueFloat32() const
-    {
-        return value_.f32;
-    }
-
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const double valueFloat64() const
-    {
-        return value_.f64;
-    }
-
-    /**
-     * @brief Returns the value of the point as an unsigned 16-bit integer, if applicable.
-     * @return The 16-bit unsigned value.
-     */
-    const string &valueString() const
-    {
-        return value_.str;
-    }
-
-    /**
-     * @brief Returns the value of the point as a signed 16-bit integer, if applicable.
-     * @return The 16-bit signed value.
-     */
-    const uint16_t valueSf() const
-    {
-        return value_.s16;
-    }
-
-    /**
-     * @brief Return the value in a string format based on the point type.
-     * @return The point as a string.
-     */
-     string getValueAsString(bool includeSf = true) const;
-    /**
-     * @brief Returns the size of the point's data in 16-bit words.
-     * @return The size of the point.
-     */
     uint16_t size() const
     {
         return def_.size();
     }
 
-    /**
-     * @brief Returns the definition of the point.
-     * @return A const reference to the SunspecPointDef object.
-     */
-    const SunspecPointDef &def() const
+    int16_t valueAsInt16() const
     {
-        return def_;
+        return modbusRegisterFormatToSint16(modbusBuffer_);
     }
 
-    /**
-     * @brief Reads the point's value from the underlying device.
-     * @return A const reference to the SunspecValue union containing the read value.
-     */
-    const SunspecPointReader::SunspecValue &readFromDevice();
+    int32_t valueAsInt32() const
+    {
+        return modbusRegisterFormatToSint32(modbusBuffer_);
+    }
 
-    /**
-     * @brief Sets the point's value from a raw buffer of 16-bit words.
-     * @param [in] buf A pointer to the buffer containing the raw data.
-     */
-    void setValueFromBuffer(uint16_t *buf);
+    int64_t valueAsInt64() const
+    {
+        return modbusRegisterFormatToSint64(modbusBuffer_);
+    }
 
-    /**
-     * @brief Generates a JSON representation of the point's data.
-     * @param [in] includeSf Whether to include the scale factor in the JSON output.
-     * @param [in] includeUnits Whether to include the units in the JSON output.
-     * @return A string containing the JSON representation.
-     */
-    string toJson(bool includeSf = false, bool includeUnits = false) const;
+    raw16_t valueAsRaw16() const
+    {
+        return modbusRegisterFormatToRaw16(modbusBuffer_);
+    }
 
-    /**
-     * @brief Class constructor.
-     * @param [in] _def The definition of the point.
-     * @param [in] _addr The starting address of the point in the register map.
-     * @param [in] _groupPoint A reference to the parent SunspecGroupPoint.
-     */
-    SunspecPointReader(const SunspecPointDef &_def, uint16_t _addr, SunspecGroupReader &_groupPoint);
+    uint16_t valueAsUint16() const
+    {
+        return modbusRegisterFormatToUint16(modbusBuffer_);
+    }
 
-    /**
-     * @brief Copy constructor.
-     */
-    SunspecPointReader(const SunspecPointReader &_point);
+    uint32_t valueAsUint32() const
+    {
+        return modbusRegisterFormatToUint32(modbusBuffer_);
+    }
 
-    /**
-     * @brief Move constructor.
-     */
-    SunspecPointReader(SunspecPointReader &&_point) noexcept;
+    uint64_t valueAsUint64() const
+    {
+        return modbusRegisterFormatToUint64(modbusBuffer_);
+    }
 
-    /**
-     * @brief Destructor.
-     */
-    ~SunspecPointReader();
+    acc16_t valueAsAcc16() const
+    {
+        return modbusRegisterFormatToAcc16(modbusBuffer_);
+    }
+
+    acc32_t valueAsAcc32() const
+    {
+        return modbusRegisterFormatToAcc32(modbusBuffer_);
+    }
+
+    acc64_t valueAsAcc64() const
+    {
+        return modbusRegisterFormatToAcc64(modbusBuffer_);
+    }
+
+    bitfield16_t valueAsBitfield16() const
+    {
+        return modbusRegisterFormatToBitfield16(modbusBuffer_);
+    }
+
+    bitfield32_t valueAsBitfield32() const
+    {
+        return modbusRegisterFormatToBitfield32(modbusBuffer_);
+    }
+
+    bitfield64_t valueAsBitfield64() const
+    {
+        return modbusRegisterFormatToBitfield64(modbusBuffer_);
+    }
+
+    enum16_t valueAsEnum16() const
+    {
+        return modbusRegisterFormatToEnum16(modbusBuffer_);
+    }
+
+    enum32_t valueAsEnum32() const
+    {
+        return modbusRegisterFormatToEnum32(modbusBuffer_);
+    }
+    float valueAsFloat32() const
+    {
+        return modbusRegisterFormatToFloat(modbusBuffer_);
+    }
+
+    double valueAsFloat64() const
+    {
+        return modbusRegisterFormatToDouble(modbusBuffer_);
+    }
+
+    string valueAsString() const
+    {
+        return modbusRegisterFormatToString(modbusBuffer_, def_.size());
+    }
+
+    sunsSf_t valueAsSunsSf() const
+    {
+        return modbusRegisterFormatToSunsSf(modbusBuffer_);
+    }
+
+    pad16_t valueAsPad16() const
+    {
+        return modbusRegisterFormatToPad16(modbusBuffer_);
+    }
+
+    // TODO Implement the rest of the data type
+    // ipAddr_t valueAsIpAddr()const{
+
+    // }
+
+    string getValueAsString() const;
+
+    // const SunspecPointReader::SunspecValue &readFromDevice();
+
+    // string toJson(bool includeSf = false, bool includeUnits = false) const;
 
 private:
-    /**
-     * @brief A union to hold the different possible data types of a Sunspec point.
-     *
-     * The union allows the class to store any of the defined SunspecPointDataType types
-     * in the same memory space.
-     */
-    union SunspecValue
-    {
-        int16_t s16;
-        uint16_t u16;
-        int32_t s32;
-        uint32_t u32;
-        int64_t s64;
-        uint64_t u64;
-        float f32;
-        double f64;
-        std::string str;
-        SunspecValue() : u64(0) {}
-        ~SunspecValue() {}
-    } value_;
-
     const SunspecPointDef &def_;
-
     SunspecGroupReader &groupPoint_;
-    int16_t sf_{0};
-    uint16_t addr_;
+    const uint16_t *modbusBuffer_;
+
     SunspecPointReader &operator=(const SunspecPointReader &_point) = delete;
     SunspecPointReader &operator=(SunspecPointReader &&_point) = delete;
 };

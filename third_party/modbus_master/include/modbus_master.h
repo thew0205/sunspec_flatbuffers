@@ -53,7 +53,7 @@ Set to 1 to enable debugging features within class:
 
 // functions to manipulate words
 #include "word.h"
-// 
+//
 class Stream;
 /* _____CLASS DEFINITIONS____________________________________________________ */
 /**
@@ -202,8 +202,8 @@ public:
   uint8_t readCoils(uint16_t, uint16_t);
   uint8_t readDiscreteInputs(uint8_t slaveId, uint16_t, uint16_t);
   uint8_t readDiscreteInputs(uint16_t, uint16_t);
-  uint8_t readHoldingRegisters(uint8_t slaveId, uint16_t, uint16_t);
-  uint8_t readHoldingRegisters(uint16_t, uint16_t);
+  VIRTUAL_TEST uint8_t readHoldingRegisters(uint8_t slaveId, uint16_t, uint16_t);
+  VIRTUAL_TEST uint8_t readHoldingRegisters(uint16_t, uint16_t);
   uint8_t readInputRegisters(uint8_t slaveId, uint16_t, uint8_t);
   uint8_t readInputRegisters(uint16_t, uint8_t);
   uint8_t writeSingleCoil(uint8_t slaveId, uint16_t, uint8_t);
@@ -225,7 +225,7 @@ public:
   uint8_t readWriteMultipleRegisters(uint8_t slaveId, uint16_t, uint16_t);
   uint8_t readWriteMultipleRegisters(uint16_t, uint16_t);
 
-private:
+protected:
   Stream *_serial;                               ///< reference to serial port object
   uint8_t _u8MBSlave;                            ///< Modbus slave (1..255) initialized in begin()
   static const uint8_t ku8MaxBufferSize = 255;   ///< size of response/transmit buffers

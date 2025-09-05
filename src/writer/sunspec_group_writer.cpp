@@ -56,7 +56,7 @@ const SunspecPointWriter *SunspecGroupWriter::getPoint(const string_view pointId
     return nullptr;
 }
 
-SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupId)
+SunspecGroupWriter *SunspecGroupWriter::getGroup(const string_view &groupId)
 {
     for (auto &groupPoint : groups_)
     {
@@ -68,7 +68,7 @@ SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupId
     return nullptr;
 }
 
-const SunspecGroupWriter *SunspecGroupWriter::getGroupPoint(const string_view &groupId) const
+const SunspecGroupWriter *SunspecGroupWriter::getGroup(const string_view &groupId) const
 {
     for (auto &groupPoint : groups_)
     {
@@ -85,7 +85,7 @@ SunspecDeviceWriter *SunspecGroupWriter::getDevice() const
     return getModel() == nullptr ? nullptr : &(getModel()->device());
 }
 
-void SunspecGroupWriter::initPoint()
+void SunspecGroupWriter::initPoints()
 {
     registerLength_ = 0;
     points_.clear();
@@ -101,7 +101,8 @@ void SunspecGroupWriter::initPoint()
         {
             // NOTE Count is always in the top levelgroup
             // NOTE All toplevel points have fixed count
-            SunspecPointWriter *countPoint = model_->getPoint(pointDef->count_point_id()->c_str());
+            assert(!isTopLevelGroupPoint());
+            SunspecPointWriter *countPoint = getModel()->getPoint(pointDef->count_point_id()->c_str());
 
             count = countPoint == nullptr ? 0 : countPoint->getValueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -139,7 +140,7 @@ uint16_t SunspecGroupWriter::initGroups()
         uint16_t count = groupDef->count();
         if (0 == count)
         {
-            SunspecPointWriter *countPoint = model_->getPoint(groupDef->count_point_id()->c_str());
+            SunspecPointWriter *countPoint = getModel()->getPoint(groupDef->count_point_id()->c_str());
 
             count = (countPoint == nullptr) ? 0 : countPoint->getValueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -163,7 +164,7 @@ uint16_t SunspecGroupWriter::initGroups()
         }
         for (size_t i = 0; i < count; i++)
         {
-            groups_.emplace_back(*groupDef, nullptr, this).initPoint();
+            groups_.emplace_back(*groupDef, nullptr, this).initPoints();
             registerLength_ += groups_.back().initGroups();
         }
     }

@@ -74,7 +74,7 @@ public:
      */
     uint16_t registerLength() const
     {
-        return registerLength_;
+        return topLevelGroup_.registerLength();
     }
     /**
      * @brief Returns a reference to the parent Sunspec device.
@@ -118,7 +118,7 @@ public:
      * This method sets up the toplevel points according to the model definition. This must be called before initSubLevels.
      * @return The total register length of the model after initialization.
      */
-    uint16_t initTopLevel();
+    void initTopLevel();
     /**
      * @brief Initializes all sub-level groups of SunspecPointWriter in the model.
      * This method recursively sets up all nested groups and their points according to the model definition. This must be called after initTopLevel.
@@ -168,7 +168,7 @@ private:
     SunspecGroupWriter topLevelGroup_; /**< The top-level group of the model that contains all the point and subgroup of the model. */
     const SunspecModelDef &def_;       /**< The sunspec model definition of this model. */
     uint16_t *modbusBuffer_;           /**< A pointer to the inplace modbus buffer where the model's data is to be stored. */
-    uint16_t registerLength_;          /**< The length of the model in number of modbus registers, including the 2 registers for the model ID and length. */
+    // uint16_t registerLength_;          /**< The length of the model in number of modbus registers, including the 2 registers for the model ID and length. */
 
     SunspecModelWriter &operator=(const SunspecModelWriter &groupPoints) = delete;
     SunspecModelWriter &operator=(SunspecModelWriter &&groupPoints) = delete;

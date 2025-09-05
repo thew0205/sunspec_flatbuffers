@@ -43,63 +43,63 @@ void SunspecPointWriter::setValueToModbusBuffer()
 
     case SunspecPointData_kSint16:
     {
-        const int16_t valueSint16 = sint16_tToModbusRegisterFormat(getValueAsSint16());
+        const int16_t valueSint16 = static_cast<int16_t>(uint16_tToModbusRegisterFormat(static_cast<uint16_t>(getValueAsSint16())));
         memcpy(modbusBuffer_, &valueSint16, sizeof(int16_t));
         break;
     }
 
     case SunspecPointData_kSunsSf:
     {
-        const sunsSf_t valueSunsSf = uint16_tToModbusRegisterFormat(getValueAsSunsSf());
+        const sunsSf_t valueSunsSf = static_cast<sunsSf_t>(uint16_tToModbusRegisterFormat(getValueAsSunsSf()));
         memcpy(modbusBuffer_, &valueSunsSf, sizeof(kSunsSf));
         break;
     }
 
     case SunspecPointData_kPad16:
     {
-        const pad16_t valuePad16 = uint16_tToModbusRegisterFormat(getValueAsPad16());
+        const pad16_t valuePad16 = static_cast<pad16_t>(uint16_tToModbusRegisterFormat(getValueAsPad16()));
         memcpy(modbusBuffer_, &valuePad16, sizeof(kPad16));
         break;
     }
 
     case SunspecPointData_kBitfield16:
     {
-        const bitfield16_t valueBit16 = uint16_tToModbusRegisterFormat(getValueAsBit16());
+        const bitfield16_t valueBit16 = static_cast<bitfield16_t>(uint16_tToModbusRegisterFormat(getValueAsBit16()));
         memcpy(modbusBuffer_, &valueBit16, sizeof(bitfield16_t));
         break;
     }
 
     case SunspecPointData_kAcc16:
     {
-        const acc16_t valueAcc16 = uint16_tToModbusRegisterFormat(getValueAsAcc16());
+        const acc16_t valueAcc16 = static_cast<acc16_t>(uint16_tToModbusRegisterFormat(getValueAsAcc16()));
         memcpy(modbusBuffer_, &valueAcc16, sizeof(acc16_t));
         break;
     }
 
     case SunspecPointData_kEnum16:
     {
-        const enum16_t valueEnum16 = uint16_tToModbusRegisterFormat(getValueAsEnum16());
+        const enum16_t valueEnum16 = static_cast<enum16_t>(uint16_tToModbusRegisterFormat(getValueAsEnum16()));
         memcpy(modbusBuffer_, &valueEnum16, sizeof(enum16_t));
         break;
     }
 
     case SunspecPointData_kRaw16:
     {
-        const raw16_t valueRaw16 = uint16_tToModbusRegisterFormat(getValueAsRaw16());
+        const raw16_t valueRaw16 = static_cast<raw16_t>(uint16_tToModbusRegisterFormat(getValueAsRaw16()));
         memcpy(modbusBuffer_, &valueRaw16, sizeof(raw16_t));
         break;
     }
 
     case SunspecPointData_kUint16:
     {
-        const uint16_t valueUint16 = uint16_tToModbusRegisterFormat(getValueAsUint16());
+        const uint16_t valueUint16 = static_cast<uint16_t>(uint16_tToModbusRegisterFormat(getValueAsUint16()));
         memcpy(modbusBuffer_, &valueUint16, sizeof(uint16_t));
         break;
     }
 
     case SunspecPointData_kSint32:
     {
-        const int32_t valueSint32 = sint16_tToModbusRegisterFormat(getValueAsSint32());
+        const int32_t valueSint32 = static_cast<int32_t>(uint32_tToModbusRegisterFormat(static_cast<uint32_t>(getValueAsSint32())));
         memcpy(modbusBuffer_, &valueSint32, sizeof(int32_t));
         break;
     }
@@ -113,28 +113,28 @@ void SunspecPointWriter::setValueToModbusBuffer()
 
     case SunspecPointData_kUint32:
     {
-        const uint32_t valueUint32 = uint32_tToModbusRegisterFormat(getValueAsUint32());
+        const uint32_t valueUint32 = static_cast<uint32_t>(uint32_tToModbusRegisterFormat(getValueAsUint32()));
         memcpy(modbusBuffer_, &valueUint32, sizeof(uint32_t));
         break;
     }
 
     case SunspecPointData_KAcc32:
     {
-        const acc32_t valueAcc32 = uint32_tToModbusRegisterFormat(getValueAsAcc32());
+        const acc32_t valueAcc32 = static_cast<acc32_t>(uint32_tToModbusRegisterFormat(getValueAsAcc32()));
         memcpy(modbusBuffer_, &valueAcc32, sizeof(acc32_t));
         break;
     }
 
     case SunspecPointData_kBitfield32:
     {
-        const bit32_t valueBit32 = uint32_tToModbusRegisterFormat(getValueAsBit32());
-        memcpy(modbusBuffer_, &valueBit32, sizeof(bit32_t));
+        const bitfield32_t valueBit32 = static_cast<bitfield32_t>(uint32_tToModbusRegisterFormat(getValueAsBit32()));
+        memcpy(modbusBuffer_, &valueBit32, sizeof(bitfield32_t));
         break;
     }
 
     case SunspecPointData_kEnum32:
     {
-        const enum32_t valueEnum32 = uint32_tToModbusRegisterFormat(getValueAsEnum32());
+        const enum32_t valueEnum32 = static_cast<enum32_t>(uint32_tToModbusRegisterFormat(getValueAsEnum32()));
         memcpy(modbusBuffer_, &valueEnum32, sizeof(enum32_t));
         break;
     }
@@ -155,27 +155,27 @@ void SunspecPointWriter::setValueToModbusBuffer()
 
     case SunspecPointData_kSint64:
     {
-        const int64_t valueSint64 = sint64_tToModbusRegisterFormat(getValueAsSint64());
+        const int64_t valueSint64 = static_cast<int64_t>(uint64_tToModbusRegisterFormat(static_cast<uint64_t>(getValueAsSint64())));
         memcpy(modbusBuffer_, &valueSint64, sizeof(int64_t));
         break;
     }
 
     case SunspecPointData_kUint64:
     {
-        const uint64_t valueUint64 = uint64_tToModbusRegisterFormat(getValueAsUint64());
+        const uint64_t valueUint64 = static_cast<uint64_t>(uint64_tToModbusRegisterFormat(getValueAsUint64()));
         memcpy(modbusBuffer_, &valueUint64, sizeof(uint64_t));
         break;
     }
     case SunspecPointData_kAcc64:
     {
-        const acc64_t valueAcc64 = uint64_tToModbusRegisterFormat(getValueAsAcc64());
+        const acc64_t valueAcc64 = static_cast<acc64_t>(uint64_tToModbusRegisterFormat(getValueAsAcc64()));
         memcpy(modbusBuffer_, &valueAcc64, sizeof(acc64_t));
         break;
     }
     case SunspecPointData_kBitfield64:
     {
-        const bit64_t valueBit64 = uint64_tToModbusRegisterFormat(getValueAsBit64());
-        memcpy(modbusBuffer_, &valueBit64, sizeof(bit64_t));
+        const bitfield64_t valueBit64 = static_cast<bitfield64_t>(uint64_tToModbusRegisterFormat(getValueAsBit64()));
+        memcpy(modbusBuffer_, &valueBit64, sizeof(bitfield64_t));
         break;
     }
 

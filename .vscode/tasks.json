@@ -6,14 +6,18 @@
             "type": "pickString",
             "description": "The test to be run",
             "options": [
+                "sunspec_point_reader",
+                "sunspec_group_reader",
+                "sunspec_model_reader",
+                "sunspec_device_reader",
                 "sunspec_init_writer",
                 "flatbuffer",
                 "sunspec_set_value_writer",
                 "pzem_temp",
-                "flatbuffer sunspec_init_writer sunspec_set_value_writer"
+                "flatbuffer sunspec_init_writer sunspec_set_value_writer sunspec_point_reader sunspec_group_reader sunspec_model_reader sunspec_device_reader"
                 
             ],
-            "default": "sunspec_init_writer"
+            "default": "sunspec_group_reader"
         }
     ],
     "tasks": [
