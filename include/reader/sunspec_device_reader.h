@@ -50,7 +50,7 @@ public:
 
     // std::string toJson(bool includeSf = false, bool includeUnits = false) const;
 
-    // SunspecModelReader *getModel(SunspecModelList id);
+    SunspecModelReader *getModel(SunspecModelList id);
 
     bool read(uint16_t addr, uint16_t *buf, size_t len);
 

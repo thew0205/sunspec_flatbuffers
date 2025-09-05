@@ -71,7 +71,7 @@ public:
     const SunspecGroupReader *getGroup(const string_view &groupId) const;
 
     void initPoints();
-    uint16_t initGroups();
+    uint16_t initGroups(uint16_t maxRegisterLength);
 
 private:
     SunspecModelReader &operator=(const SunspecModelReader &groupPoints) = delete;

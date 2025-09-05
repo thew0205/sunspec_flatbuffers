@@ -3,6 +3,7 @@ set(TEST_NAME sunspec_device_common_reader_test)
 
 set(SUNSPEC_TEST_SRC 
                         sunspec_device_reader_test.cpp
+                        sunspec_device_reader_fronius_test.cpp
                         )
 
 add_library(${TEST_NAME}

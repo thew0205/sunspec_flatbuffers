@@ -74,7 +74,7 @@ TEST(Sunspec_Group_Reader_Model1, ReadModel1_After_SubLevel_Init)
 
     SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)nullptr};
     group.initPoints();
-    group.initGroups();
+    group.initGroups(10000);
     LONGS_EQUAL(9, group.pointLength());
     LONGS_EQUAL(0, group.groupLength());
     LONGS_EQUAL(68, group.registerLength());
@@ -103,7 +103,7 @@ IGNORE_TEST(Sunspec_Group_Reader_Model160, ReadModel1_After_SubLevel_Init)
 
     SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)&model};
     group.initPoints();
-    group.initGroups();
+    group.initGroups(1000);
     LONGS_EQUAL(9, group.pointLength());
     LONGS_EQUAL(2, group.groupLength());
     LONGS_EQUAL(68, group.registerLength());

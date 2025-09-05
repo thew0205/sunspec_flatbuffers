@@ -59,7 +59,7 @@ public:
     }
 
     void initPoints();
-    uint16_t initGroups();
+    uint16_t initGroups(uint16_t maxRegisterLength);
     // void readAndSetFromDevice();
 
     // void setAllFromBuffer(uint16_t *buf);

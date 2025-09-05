@@ -39,16 +39,16 @@ SunspecDeviceReader::~SunspecDeviceReader()
     models_.clear();
 }
 
-// SunspecModelReader *SunspecDeviceReader::getModel(SunspecModelList id)
-// {
-//     for (auto &model : models_)
-//     {
-//         if (model.def().id() == id)
-//             return &model;
-//     }
+SunspecModelReader *SunspecDeviceReader::getModel(SunspecModelList id)
+{
+    for (auto &model : models_)
+    {
+        if (model.def().id() == id)
+            return &model;
+    }
 
-//     return nullptr;
-// }
+    return nullptr;
+}
 uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecModelList> &supportedModels)
 {
     int count = 0;
@@ -100,11 +100,13 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecM
             offset += modelLengths[i];
         }
 
-        readBufferFromDevice();
-
-        for (auto &model : models_)
+        offset = 2;
+        for (size_t i = 0; i < count; i++)
         {
-            model.initGroups();
+            read(models_[i].address(), &modbusBuffer_[offset], modelLengths[i]);
+            offset += modelLengths[i];
+
+            models_[i].initGroups(modelLengths[i]);
         }
     }
     return count;

@@ -6,6 +6,7 @@
 #include "CppUTest/CommandLineTestRunner.h"
 
 IMPORT_TEST_GROUP(Sunspec_Device_Reader);
+IMPORT_TEST_GROUP(Sunspec_Device_Reader_Fronius);
 
 int main(int ac, char **av)
 {

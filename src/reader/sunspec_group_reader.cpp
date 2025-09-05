@@ -134,7 +134,7 @@ void SunspecGroupReader::initPoints()
     }
 }
 
-uint16_t SunspecGroupReader::initGroups()
+uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 {
 
     vector<size_t> groupCounts;
@@ -173,10 +173,11 @@ uint16_t SunspecGroupReader::initGroups()
         for (size_t i = 0; i < count; i++)
         {
             groups_.emplace_back(*groupDef, &modbusBuffer_[registerLength_], this).initPoints();
-            registerLength_ += groups_.back().initGroups();
+            registerLength_ += groups_.back().initGroups(0xFFFF);
         }
     }
 
+    registerLength_ = std::min(maxRegisterLength, registerLength_);
     return registerLength_;
 }
 

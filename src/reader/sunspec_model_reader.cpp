@@ -39,9 +39,9 @@ void SunspecModelReader::initPoints()
 {
     return topLevelGroupPoint_.initPoints();
 }
-uint16_t SunspecModelReader::initGroups()
+uint16_t SunspecModelReader::initGroups(uint16_t maxRegisterLength)
 {
-    return topLevelGroupPoint_.initGroups();
+    return topLevelGroupPoint_.initGroups(maxRegisterLength);
 }
 
 // std::string SunspecModelReader::toJson(bool includeSf, bool includeUnits) const

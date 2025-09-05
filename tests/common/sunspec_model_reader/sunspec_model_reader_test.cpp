@@ -72,7 +72,7 @@ TEST(Sunspec_Model_Reader_Model1, ReadModel1_After_Group_Init)
     CHECK(modelDef != nullptr);
     SunspecModelReader model(*modelDef, buffer, 0, *(SunspecDeviceReader *)nullptr);
     model.initPoints();
-    model.initGroups();
+    model.initGroups(1000);
     auto &group = model.topLevelGroupPoint();
     LONGS_EQUAL(9, group.pointLength());
     LONGS_EQUAL(0, group.groupLength());
@@ -100,7 +100,7 @@ TEST(Sunspec_Model_Reader_Model160, ReadModel1_After_Group_Init)
     CHECK(modelDef != nullptr);
     SunspecModelReader model{*modelDef, buffer,0, *(SunspecDeviceReader *)nullptr};
     model.initPoints();
-    model.initGroups();
+    model.initGroups(1000);
     auto &group = model.topLevelGroupPoint();
     LONGS_EQUAL(9, group.pointLength());
     LONGS_EQUAL(2, group.groupLength());
