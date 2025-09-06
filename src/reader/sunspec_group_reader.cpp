@@ -176,8 +176,12 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
             registerLength_ += groups_.back().initGroups(0xFFFF);
         }
     }
-
-    registerLength_ = std::min(maxRegisterLength, registerLength_);
+    // Clamp to the actually length read from the device incase some pad points are omitted.
+    // Could there be a case the max length be greater than teh registerlength calculated.
+    if (maxRegisterLength < registerLength_)
+    {
+        registerLength_ = maxRegisterLength;
+    }
     return registerLength_;
 }
 
