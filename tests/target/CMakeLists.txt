@@ -36,6 +36,7 @@ project(sunspec_pai_target_test C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
+add_compile_definitions(VIRTUAL_TEST=virtual)
 
 include(FetchContent)
 

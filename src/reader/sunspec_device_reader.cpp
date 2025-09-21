@@ -16,8 +16,8 @@ bool SunspecDeviceReader::scanforBaseAddress(uint8_t slaveId, ModbusMaster &clie
 {
     for (uint8_t i = 0; i < kSunspecBaseAddressListLength; i++)
     {
-        uint32_t sunsIden = readUint32Field(kSunspecBaseAddressList[i], slaveId, client);
-        if (kSunspecIdentifier == sunsIden)
+        uint32_t deviceSunspecIdentifier = readUint32Field(kSunspecBaseAddressList[i], slaveId, client);
+        if (kSunspecIdentifier == deviceSunspecIdentifier)
         {
             if (baseAddress != nullptr)
             {
@@ -129,8 +129,7 @@ void SunspecDeviceReader::readBufferFromDevice()
     uint16_t offset = 2;
     for (auto &model : models_)
     {
-        read(model.address(), &modbusBuffer_[offset], model.registerLength());
-        offset += model.registerLength();
+        model.read();
     }
 }
 
@@ -163,15 +162,6 @@ bool SunspecDeviceReader::read(uint16_t address, uint16_t *buf, size_t len)
     }
     return false;
 }
-
-// void SunspecDeviceReader::readBufferFromDevice()
-// {
-//     for (auto &model : models_)
-//     {
-
-//         model.readAndSetFromDevice();
-//     }
-// }
 
 // std::string SunspecDeviceReader::toJson(bool includeSf, bool includeUnits) const
 // {
@@ -224,27 +214,3 @@ uint32_t SunspecDeviceReader::readUint32Field(uint16_t address, uint16_t slaveId
     }
     return 0;
 }
-
-// extern const unsigned char modelDef112[];
-// extern const unsigned char modelDef113[];
-// const SunspecModelDef *SunspecDeviceReader::getModelDefinition(SunspecModelList id)
-// {
-
-//     switch (id)
-//     {
-//     case SunspecModelList_kModel112:
-
-//         return GetSunspecModelDef(modelDef112);
-//     case SunspecModelList_kModel113:
-
-//         return GetSunspecModelDef(modelDef113);
-
-//     default:
-//         return nullptr;
-//         break;
-//     }
-//     // TODO
-//     //  auto modelDefIte = std::find_if(modelDefList.cbegin(), modelDefList.cend(), [id](const SunspecModelDef *pModelDef)
-//     //                                  { return pModelDef->id() == id; });
-//     //  return modelDefIte == modelDefList.cend() ? nullptr : *modelDefIte;
-// }

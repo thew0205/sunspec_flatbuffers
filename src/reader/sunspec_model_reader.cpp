@@ -1,11 +1,11 @@
 #include "reader/sunspec_model_reader.h"
 
 #include "sunspec.h"
-// #include "reader/sunspec_device_reader.h"
+#include "reader/sunspec_device_reader.h"
 
 using std::to_string;
 
-SunspecModelReader::SunspecModelReader(const SunspecModelDef &def, const uint16_t *modbusBuffer, const uint16_t address, SunspecDeviceReader &device) : def_{def}, modbusBuffer_{modbusBuffer}, address_{address}, device_{device}, topLevelGroupPoint_{*def.group(), modbusBuffer, this}
+SunspecModelReader::SunspecModelReader(const SunspecModelDef &def, uint16_t *modbusBuffer, const uint16_t address, SunspecDeviceReader &device) : def_{def}, modbusBuffer_{modbusBuffer}, address_{address}, device_{device}, topLevelGroupPoint_{*def.group(), modbusBuffer, this}
 {
 }
 
@@ -29,12 +29,6 @@ const SunspecGroupReader *SunspecModelReader::getGroup(const string_view &groupI
     return topLevelGroupPoint_.getGroup(groupId);
 }
 
-// void SunspecModelReader::readAndSetFromDevice()
-// {
-
-//     topLevelGroupPoint_.readAndSetFromDevice();
-// }
-
 void SunspecModelReader::initPoints()
 {
     return topLevelGroupPoint_.initPoints();
@@ -44,6 +38,10 @@ uint16_t SunspecModelReader::initGroups(uint16_t maxRegisterLength)
     return topLevelGroupPoint_.initGroups(maxRegisterLength);
 }
 
+void SunspecModelReader::read()
+{
+    device().read(address_, modbusBuffer_, topLevelGroupPoint_.registerLength());
+}
 // std::string SunspecModelReader::toJson(bool includeSf, bool includeUnits) const
 // {
 //     std::string ret;

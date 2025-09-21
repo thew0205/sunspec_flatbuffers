@@ -13,7 +13,7 @@ target_link_libraries(${TEST_NAME}
         CppUTest
         CppUTestExt
         generic_lib
-        modbus_slave_lib
+        modbus_master_lib
         sunspec
 )
 

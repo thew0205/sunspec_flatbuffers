@@ -1,9 +1,9 @@
 
 set(TEST_NAME sunspec_init_writer_test)
 
-set(TEST_MAIN_SRC 
-                test_main.cpp
-                )
+set(TEST_MAIN_SRC
+        test_main.cpp
+)
 
 add_executable(${TEST_NAME}
         ${TEST_MAIN_SRC}

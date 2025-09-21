@@ -9,7 +9,9 @@ set(CMAKE_BUILD_TYPE Debug CACHE STRING "Choose the type of build." FORCE)
 
 project(sunspec_host_test C CXX ASM)
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
+
 add_compile_definitions(VIRTUAL_TEST=virtual)
+
 include(FetchContent)
 
 FetchContent_Declare(

@@ -14,8 +14,8 @@ target_link_libraries(${TEST_NAME}
         CppUTest
         CppUTestExt
         generic_lib
-        modbus_master_lib
         sunspec
+        fake_modbus_master
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE)
