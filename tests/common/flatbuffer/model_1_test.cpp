@@ -33,6 +33,10 @@ TEST_GROUP(Flatbuffer_Model1)
 TEST(Flatbuffer_Model1, ID)
 {
     LONGS_EQUAL(SunspecModelList_kModel1, model1->id());
+flatbuffers::FlatBufferBuilder builder(2048);
+ 
+  auto t = builder.CreateString("SunspecModelList_kModel1");
+  CreateSunspecGroupDef(builder);
 }
 
 TEST(Flatbuffer_Model1, POINT_ID_Uint16)

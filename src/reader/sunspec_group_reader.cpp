@@ -2,6 +2,7 @@
 
 #include "sunspec.h"
 #include "reader/sunspec_model_reader.h"
+#include "reader/sunspec_device_reader.h"
 
 using std::to_string;
 
@@ -184,68 +185,6 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
     }
     return registerLength_;
 }
-
-// void SunspecGroupReader::readAndSetFromDevice()
-// {
-
-//     uint16_t buf[len_];
-
-//     if (getDevice() != nullptr && getDevice()->read(address_, buf, len_))
-//     {
-//         uint16_t currOffset = 0;
-//         for (auto &point : points_)
-//         {
-//             point.setValueFromBuffer(buf + currOffset);
-//             currOffset += point.def().size();
-//         }
-//         for (auto &group : groupPoints_)
-//         {
-//             group.setAllFromBuffer(buf + currOffset);
-//             currOffset += group.len_;
-//         }
-//         setAllSf();
-//     }
-// }
-
-// void SunspecGroupReader::setAllSf()
-// {
-//     for (auto &point : points_)
-//     {
-//         if (!point.def().sf_id()->size())
-//         {
-
-//             SunspecPointReader *sfPoint = getPoint(point.def().sf_id()->c_str(), true);
-//             if (sfPoint != nullptr)
-//             {
-//                 point.setSf(sfPoint->valueSf());
-//             }
-//         }
-//     }
-//     for (auto &group : groupPoints_)
-//     {
-//         group.setAllSf();
-//     }
-// }
-// SunspecDeviceReader *SunspecGroupReader::getDevice() const
-// {
-//     return model() == nullptr ? nullptr : &(model()->device());
-// }
-
-// void SunspecGroupReader::setAllFromBuffer(uint16_t *buf)
-// {
-
-//     uint16_t currOffset = 0;
-//     for (auto &point : points_)
-//     {
-//         point.setValueFromBuffer(buf + currOffset);
-//         currOffset += point.size();
-//     }
-//     for (auto &group : groupPoints_)
-//     {
-//         group.setAllFromBuffer(buf + currOffset);
-//         currOffset += group.len_;
-//     }
-// }
 
 // std::string SunspecGroupReader::toJson(bool includeSf, bool includeUnits) const
 // {

@@ -159,21 +159,38 @@ TEST_GROUP(Sunspec_Model1_Reader_Read)
 
     uint16_t buffer[68] = {
         0x1, 0x42, 0x4672, 0x6f6e, 0x6975, 0x7300, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x4652, 0x4f4e, 0x4955, 0x5320, 0x4563, 0x6f20, 0x3237, 0x2e30, 0x2d33, 0x2d53, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x332e, 0x3237, 0x2e31, 0x2d33, 0x0, 0x0, 0x0, 0x0, 0x302e, 0x332e, 0x3238, 0x2e30, 0x0, 0x0, 0x0, 0x0, 0x3332, 0x3039, 0x3137, 0x3937, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x8000};
+    uint16_t modelBuffer[68];
+
     FakeModbusMaster client{};
 
-    SunspecDeviceReader device{1, client};
+    SunspecDeviceReader device{1, client, 0};
     const SunspecModelDef *modelDef = nullptr;
 
     void setup()
     {
+        memset(modelBuffer, 0, sizeof(modelBuffer));
         modelDef = GetSunspecModelDef(modelDefinition1);
         client.setFakeBuffer(buffer, sizeof(buffer) / sizeof(buffer[0]));
     }
 };
 
-TEST(Sunspec_Model1_Reader_Read, ReadModel1_Read)
+TEST(Sunspec_Model1_Reader_Read, ReadModel1_Before_Read)
 {
-    SunspecModelReader model{*modelDef, buffer, 0, device};
+    SunspecModelReader model{*modelDef, modelBuffer, 0, device};
+    model.initPoints();
+    model.initGroups(1000);
+    LONGS_EQUAL(0, model.address());
+    LONGS_EQUAL(68, model.registerLength());
+    LONGS_EQUAL(0, model.getPoint("ID")->valueAsUint16());
+    LONGS_EQUAL(0, model.getPoint("L")->valueAsUint16());
+    LONGS_EQUAL(0, model.getPoint("DA")->valueAsUint16());
+    CHECK_EQUAL("", model.getPoint("Mn")->valueAsString());
+
+}
+
+TEST(Sunspec_Model1_Reader_Read, ReadModel1_After_Read)
+{
+    SunspecModelReader model{*modelDef, modelBuffer, 0, device};
     model.initPoints();
     model.initGroups(1000);
     model.read();
@@ -188,10 +205,12 @@ TEST_GROUP(Sunspec_Model160_Reader_Read)
 {
     uint16_t buffer[50] = {
         0xa0, 0x30, 0xfffe, 0xfffe, 0x0, 0x0, 0x0, 0x0, 0x2, 0xffff, 0x1, 0x5374, 0x7269, 0x6e67, 0x2031, 0x0, 0x0, 0x0, 0x0, 0x981, 0xf17c, 0x3ac0, 0x179, 0xbf84, 0x3001, 0x3575, 0x8000, 0x4, 0xffff, 0xffff, 0x2, 0x5374, 0x7269, 0x6e67, 0x2032, 0x0, 0x0, 0x0, 0x0, 0x564, 0xf17c, 0x2153, 0xdb, 0xf339, 0x3001, 0x3575, 0x8000, 0x4, 0xffff};
+    uint16_t modelBuffer[50] = {
+        0xa0, 0x30, 0xfffe, 0xfffe, 0x0, 0x0, 0x0, 0x0, 0x2, 0xffff, 0x1, 0x5374, 0x7269, 0x6e67, 0x2031, 0x0, 0x0, 0x0, 0x0, 0x981, 0xf17c, 0x3ac0, 0x179, 0xbf84, 0x3001, 0x3575, 0x8000, 0x4, 0xffff, 0xffff, 0x2, 0x5374, 0x7269, 0x6e67, 0x2032, 0x0, 0x0, 0x0, 0x0, 0x564, 0xf17c, 0x2153, 0xdb, 0xf339, 0x3001, 0x3575, 0x8000, 0x4, 0xffff};
 
     FakeModbusMaster client{};
 
-    SunspecDeviceReader device{1, client};
+    SunspecDeviceReader device{1, client, 0};
     const SunspecModelDef *modelDef = nullptr;
 
     void setup()
@@ -201,11 +220,25 @@ TEST_GROUP(Sunspec_Model160_Reader_Read)
     }
 };
 
-TEST(Sunspec_Model160_Reader_Read, ReadModel1_Read)
+TEST(Sunspec_Model160_Reader_Read, ReadModel1_Before_Read)
 {
-    SunspecModelReader model{*modelDef, buffer, 0, device};
+    SunspecModelReader model{*modelDef, modelBuffer, 0, device};
     model.initPoints();
     model.initGroups(1000);
+    memset(modelBuffer, 0, sizeof(modelBuffer));
+    LONGS_EQUAL(0, model.address());
+    LONGS_EQUAL(50, model.registerLength());
+    LONGS_EQUAL(0, model.getPoint("ID")->valueAsUint16());
+    LONGS_EQUAL(0, model.getPoint("L")->valueAsUint16());
+    LONGS_EQUAL(0, model.getPoint("N")->valueAsUint16());
+}
+
+TEST(Sunspec_Model160_Reader_Read, ReadModel1_After_Read)
+{
+    SunspecModelReader model{*modelDef, modelBuffer, 0, device};
+    model.initPoints();
+    model.initGroups(1000);
+    memset(modelBuffer, 0, sizeof(modelBuffer));
     model.read();
     LONGS_EQUAL(0, model.address());
     LONGS_EQUAL(50, model.registerLength());

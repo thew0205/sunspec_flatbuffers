@@ -15,6 +15,7 @@ target_link_libraries(${TEST_NAME}
         generic_lib
         modbus_master_lib
         sunspec
+        fake_modbus_master
 )
 
 target_compile_definitions(${TEST_NAME} PRIVATE)

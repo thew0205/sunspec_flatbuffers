@@ -29,17 +29,17 @@
                 "name": "IVLen",
                 "size": 1,
                 "static": "D",
-                "type": "count"
+                "type": "uint16"
             },
             {
                 "desc": "Plane of Array Irradiance",
                 "label": "POA Irradiance",
                 "name": "Irr",
-				"sf": "Irr_SF",
+                "sf": "Irr_SF",
                 "size": 1,
                 "static": "S",
                 "type": "uint16",
-				"units": "W/m^2"
+                "units": "W/m^2"
             },
             {
                 "name": "Irr_SF",

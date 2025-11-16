@@ -13,6 +13,8 @@
 #include "CppUTest/CommandLineTestRunner.h"
 #include "reader/sunspec_group_reader.h"
 #include "reader/sunspec_model_reader.h"
+#include "reader/sunspec_device_reader.h"
+#include <fake_modbus_master.h>
 
 #define lowByte(w) ((uint8_t)((w) & 0xff))
 #define highByte(w) ((uint8_t)((w) >> 8))
@@ -36,9 +38,8 @@ const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string 
 
 TEST_GROUP(Sunspec_Group_Reader_Model1)
 {
-    const SunspecGroupDef *groupDef;
-    const uint16_t buffer[68] = {
-        0x1, 0x41, 0x4672, 0x6f6e, 0x6975, 0x7300, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x4652, 0x4f4e, 0x4955, 0x5320, 0x4563, 0x6f20, 0x3237, 0x2e30, 0x2d33, 0x2d53, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x332e, 0x3237, 0x2e31, 0x2d33, 0x0, 0x0, 0x0, 0x0, 0x302e, 0x332e, 0x3238, 0x2e30, 0x0, 0x0, 0x0, 0x0, 0x3332, 0x3039, 0x3137, 0x3937, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x8000};
+    const SunspecGroupDef *groupDef = nullptr;
+
     void setup()
     {
         groupDef = GetSunspecModelDef(modelDefinition1)->group();
@@ -52,7 +53,7 @@ TEST_GROUP(Sunspec_Group_Reader_Model1)
 TEST(Sunspec_Group_Reader_Model1, ReadModel1_Init)
 {
     CHECK(groupDef != nullptr);
-    SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)nullptr};
+    SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)nullptr};
     LONGS_EQUAL(0, group.pointLength());
     LONGS_EQUAL(0, group.groupLength());
     LONGS_EQUAL(0, group.registerLength());
@@ -61,7 +62,7 @@ TEST(Sunspec_Group_Reader_Model1, ReadModel1_Init)
 TEST(Sunspec_Group_Reader_Model1, ReadModel1_After_TopLevel_Init)
 {
     CHECK(groupDef != nullptr);
-    SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)nullptr};
+    SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)nullptr};
     group.initPoints();
     LONGS_EQUAL(9, group.pointLength());
     LONGS_EQUAL(0, group.groupLength());
@@ -72,7 +73,7 @@ TEST(Sunspec_Group_Reader_Model1, ReadModel1_After_SubLevel_Init)
 {
     CHECK(groupDef != nullptr);
 
-    SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)nullptr};
+    SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)nullptr};
     group.initPoints();
     group.initGroups(10000);
     LONGS_EQUAL(9, group.pointLength());
@@ -80,11 +81,21 @@ TEST(Sunspec_Group_Reader_Model1, ReadModel1_After_SubLevel_Init)
     LONGS_EQUAL(68, group.registerLength());
 }
 
+TEST(Sunspec_Group_Reader_Model1, ReadModel1_After_SubLevel_Init_Old)
+{
+    CHECK(groupDef != nullptr);
+
+    SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)nullptr};
+    group.initPoints();
+    group.initGroups(67);
+    LONGS_EQUAL(9, group.pointLength());
+    LONGS_EQUAL(0, group.groupLength());
+    LONGS_EQUAL(67, group.registerLength());
+}
+
 TEST_GROUP(Sunspec_Group_Reader_Model160)
 {
-    const SunspecGroupDef *groupDef;
-    uint16_t buffer[68] = {
-        0xa0, 0x30, 0xfffe, 0xfffe, 0x0, 0x0, 0x0, 0x0, 0x2, 0xffff, 0x1, 0x5374, 0x7269, 0x6e67, 0x2031, 0x0, 0x0, 0x0, 0x0, 0x981, 0xf17c, 0x3ac0, 0x179, 0xbf84, 0x3001, 0x3575, 0x8000, 0x4, 0xffff, 0xffff, 0x2, 0x5374, 0x7269, 0x6e67, 0x2032, 0x0, 0x0, 0x0, 0x0, 0x564, 0xf17c, 0x2153, 0xdb, 0xf339, 0x3001, 0x3575, 0x8000, 0x4, 0xffff};
+    const SunspecGroupDef *groupDef = nullptr;
     void setup()
     {
         groupDef = GetSunspecModelDef(modelDefinition160)->group();
@@ -99,9 +110,9 @@ IGNORE_TEST(Sunspec_Group_Reader_Model160, ReadModel1_After_SubLevel_Init)
 {
     CHECK(groupDef != nullptr);
     SunspecModelReader model{*GetSunspecModelDef(modelDefinition160),
-                             buffer, 0, *(SunspecDeviceReader *)nullptr};
+                             nullptr, 0, *(SunspecDeviceReader *)nullptr};
 
-    SunspecGroupReader group{*groupDef, buffer, (SunspecModelReader *)&model};
+    SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)&model};
     group.initPoints();
     group.initGroups(1000);
     LONGS_EQUAL(9, group.pointLength());

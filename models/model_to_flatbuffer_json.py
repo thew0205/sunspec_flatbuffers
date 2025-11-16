@@ -50,7 +50,8 @@ def get_flatbuffer_data_type(type):
         case "eui48" :
             return "kEui48" 
         case _:
-            raise "Invalid Type" 
+            raise ValueError("Invalid Type")
+        
 def get_unimplemented_value(type):
     match type:
         case "int16":
@@ -100,7 +101,7 @@ def get_unimplemented_value(type):
         case "eui48" :
             return "kEui48" 
         case _:
-            raise "Invalid Type"
+            raise ValueError("Invalid Type")
         
 def get_flatbuffer_data(type, value):
     if value == None:
@@ -161,7 +162,7 @@ def get_flatbuffer_size(size, type):
         case "eui48" :
             return 3
         case _:
-            raise "Invalid Type" 
+            raise ValueError("Invalid Type")
     
 def get_flatbuffer_access(access):
     match access:
@@ -170,7 +171,7 @@ def get_flatbuffer_access(access):
         case "R" | None:
             return "kR"
         case _:
-            raise "Invalid Access" 
+            raise ValueError("Invalid Access")
             
 def get_flatbuffer_mandatory(mandatory):
     match mandatory:
@@ -179,7 +180,7 @@ def get_flatbuffer_mandatory(mandatory):
         case "O" | None:
             return "kO"
         case _:
-            raise "Invalid Mandatory"      
+            raise ValueError("Invalid Mandatory")      
             
 def get_flatbuffer_sf(sf):
     if(isinstance(sf, int)):
@@ -199,7 +200,7 @@ def get_flatbuffer_count(count):
     elif count == None:
         return 1
     else:
-        raise "Invalid Count"
+        raise ValueError("Invalid Count")
     
 def get_flatbuffer_count_id(count_id):
     if(isinstance(count_id, str)):
@@ -207,7 +208,7 @@ def get_flatbuffer_count_id(count_id):
     elif count_id == None:
         return None
     else:
-        raise "Invalid Count_id"
+        raise ValueError("Invalid Count_id")
     
 def get_flatbuffer_point(point):
     new_point = {}
@@ -233,7 +234,7 @@ def get_flatbuffer_group_type(type):
         case "sync":
             return "kSync"
         case _:
-            raise "Invalid Group Type"      
+            raise ValueError("Invalid Group Type")      
  
     
 def get_flatbuffer_group(group):
@@ -254,8 +255,8 @@ def get_flatbuffer_group(group):
         
     
 
-model_ids = [1, 101, 102, 103, 111, 112, 113, 120, 126, 160]
-# model_ids = [id for id in range(0xffff)]
+# model_ids = [1, 101, 102, 103, 111, 112, 113, 120, 126, 160]
+model_ids = [id for id in range(0xffff)]
 for model_id in model_ids:
     new_model = {}
     
