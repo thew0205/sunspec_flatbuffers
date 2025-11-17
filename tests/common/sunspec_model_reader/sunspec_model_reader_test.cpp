@@ -5,8 +5,10 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
-#include "sunspec.h"
+#include "sunspec_adapter.h"
+
+#include "sunspec_adapter.h"
+
 #include "model_definitions.h"
 
 #include "CppUTest/TestHarness.h"
@@ -28,7 +30,7 @@ const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string 
     for (unsigned int i = 0; i < points->size(); ++i)
     {
         const auto &point = *points->Get(i);
-        if (FlatbufferStringToString(points->Get(i)->id()) == id)
+        if (FormatStringToString(points->Get(i)->id()) == id)
         {
             return &point;
         }
@@ -185,7 +187,6 @@ TEST(Sunspec_Model1_Reader_Read, ReadModel1_Before_Read)
     LONGS_EQUAL(0, model.getPoint("L")->valueAsUint16());
     LONGS_EQUAL(0, model.getPoint("DA")->valueAsUint16());
     CHECK_EQUAL("", model.getPoint("Mn")->valueAsString());
-
 }
 
 TEST(Sunspec_Model1_Reader_Read, ReadModel1_After_Read)

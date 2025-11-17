@@ -4,7 +4,9 @@
 
 #include <algorithm>
 
-#include "sunspec.h"
+#include "sunspec_adapter.h"
+         
+
 #include "writer/sunspec_group_writer.h"
 
 using std::string;
@@ -204,7 +206,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
 {
     string ret;
     ret += "\"";
-    ret += FlatbufferStringToString(def_.id());
+    ret += FormatStringToString(def_.id());
     ret += "\":";
 
     uint16_t tempBuf[def_.size()];
@@ -270,7 +272,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
     //     break;
 
     // case SunspecPointData_kStringx:
-    //     ret += valueFunction_.str == nullptr ? FlatbufferStringToString(def_.data_as_kStringx()->value()) : valueFunction_.str();
+    //     ret += valueFunction_.str == nullptr ? FormatStringToString(def_.data_as_kStringx()->value()) : valueFunction_.str();
     //     break;
 
     // TODO (Matthew): Implementation of variable length types
@@ -283,6 +285,6 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
         break;
     }
 
-    ret += includeUnits ? FlatbufferStringToString(def_.units()) : "";
+    ret += includeUnits ? FormatStringToString(def_.units()) : "";
     return ret;
 }

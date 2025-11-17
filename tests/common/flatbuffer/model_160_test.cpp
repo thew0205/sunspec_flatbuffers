@@ -5,8 +5,7 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
-#include "sunspec.h"
+#include "sunspec_adapter.h"
 #include "flatbuffer_test_utils.h"
 
 #include "CppUTest/TestHarness.h"
@@ -86,7 +85,7 @@ TEST(Flatbuffer_Model160, Sub_Group_Module_POINT_IDStr)
 {
     const auto &point = *model160->group()->groups()->Get(0)->points()->Get(1);
     CheckPoint(point, "IDStr", SunspecPointData_kStringx, 1, "", 8, 0, "", "", SunspecPointAccessType_kR, SunspecPointMandatoryType_kO, "Input ID String");
-    CHECK_EQUAL("", FlatbufferKStringxToString(point.data_as_kStringx()));
+    CHECK_EQUAL("", FormatSunspecPointDefToString(point));
     POINTERS_EQUAL(nullptr, point.count_point_id());
     POINTERS_EQUAL(nullptr, point.sf_id());
     POINTERS_EQUAL(nullptr, point.units());

@@ -354,59 +354,6 @@ inline const char *EnumNameSunspecGroupType(SunspecGroupType e) {
   return EnumNamesSunspecGroupType()[index];
 }
 
-enum SunspecModelList : uint16_t {
-  SunspecModelList_KModelInvalid = 0,
-  SunspecModelList_kModel1 = 1,
-  SunspecModelList_kModel101 = 101,
-  SunspecModelList_kModel102 = 102,
-  SunspecModelList_kModel103 = 103,
-  SunspecModelList_kModel111 = 111,
-  SunspecModelList_kModel112 = 112,
-  SunspecModelList_kModel113 = 113,
-  SunspecModelList_kModel120 = 120,
-  SunspecModelList_kModel126 = 126,
-  SunspecModelList_kModel160 = 160,
-  SunspecModelList_kModelEnd = 65535,
-  SunspecModelList_MIN = SunspecModelList_KModelInvalid,
-  SunspecModelList_MAX = SunspecModelList_kModelEnd
-};
-
-inline const SunspecModelList (&EnumValuesSunspecModelList())[12] {
-  static const SunspecModelList values[] = {
-    SunspecModelList_KModelInvalid,
-    SunspecModelList_kModel1,
-    SunspecModelList_kModel101,
-    SunspecModelList_kModel102,
-    SunspecModelList_kModel103,
-    SunspecModelList_kModel111,
-    SunspecModelList_kModel112,
-    SunspecModelList_kModel113,
-    SunspecModelList_kModel120,
-    SunspecModelList_kModel126,
-    SunspecModelList_kModel160,
-    SunspecModelList_kModelEnd
-  };
-  return values;
-}
-
-inline const char *EnumNameSunspecModelList(SunspecModelList e) {
-  switch (e) {
-    case SunspecModelList_KModelInvalid: return "KModelInvalid";
-    case SunspecModelList_kModel1: return "kModel1";
-    case SunspecModelList_kModel101: return "kModel101";
-    case SunspecModelList_kModel102: return "kModel102";
-    case SunspecModelList_kModel103: return "kModel103";
-    case SunspecModelList_kModel111: return "kModel111";
-    case SunspecModelList_kModel112: return "kModel112";
-    case SunspecModelList_kModel113: return "kModel113";
-    case SunspecModelList_kModel120: return "kModel120";
-    case SunspecModelList_kModel126: return "kModel126";
-    case SunspecModelList_kModel160: return "kModel160";
-    case SunspecModelList_kModelEnd: return "kModelEnd";
-    default: return "";
-  }
-}
-
 FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kSint16 FLATBUFFERS_FINAL_CLASS {
  private:
   int16_t value_;
@@ -1343,8 +1290,8 @@ struct SunspecModelDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
     VT_ID = 4,
     VT_GROUP = 6
   };
-  SunspecModelList id() const {
-    return static_cast<SunspecModelList>(GetField<uint16_t>(VT_ID, 0));
+  uint16_t id() const {
+    return GetField<uint16_t>(VT_ID, 65535);
   }
   const SunspecGroupDef *group() const {
     return GetPointer<const SunspecGroupDef *>(VT_GROUP);
@@ -1362,8 +1309,8 @@ struct SunspecModelDefBuilder {
   typedef SunspecModelDef Table;
   ::flatbuffers::FlatBufferBuilder &fbb_;
   ::flatbuffers::uoffset_t start_;
-  void add_id(SunspecModelList id) {
-    fbb_.AddElement<uint16_t>(SunspecModelDef::VT_ID, static_cast<uint16_t>(id), 0);
+  void add_id(uint16_t id) {
+    fbb_.AddElement<uint16_t>(SunspecModelDef::VT_ID, id, 65535);
   }
   void add_group(::flatbuffers::Offset<SunspecGroupDef> group) {
     fbb_.AddOffset(SunspecModelDef::VT_GROUP, group);
@@ -1381,7 +1328,7 @@ struct SunspecModelDefBuilder {
 
 inline ::flatbuffers::Offset<SunspecModelDef> CreateSunspecModelDef(
     ::flatbuffers::FlatBufferBuilder &_fbb,
-    SunspecModelList id = SunspecModelList_KModelInvalid,
+    uint16_t id = 65535,
     ::flatbuffers::Offset<SunspecGroupDef> group = 0) {
   SunspecModelDefBuilder builder_(_fbb);
   builder_.add_group(group);

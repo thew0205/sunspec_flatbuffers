@@ -5,8 +5,8 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
-#include "sunspec.h"
+#include "sunspec_adapter.h"
+
 #include "model_definitions.h"
 
 #include "CppUTest/TestHarness.h"
@@ -28,7 +28,7 @@ const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string 
     for (unsigned int i = 0; i < points->size(); ++i)
     {
         const auto &point = *points->Get(i);
-        if (FlatbufferStringToString(points->Get(i)->id()) == id)
+        if (FormatStringToString(points->Get(i)->id()) == id)
         {
             return &point;
         }

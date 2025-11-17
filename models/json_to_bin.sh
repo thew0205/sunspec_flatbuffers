@@ -17,7 +17,7 @@ do
     if [ -f "models/flatbuffer/json/model_${model}.json" ];
     then    
         ${FLATC_COMPILER} --binary -o models/flatbuffer/binary sunspec_model_definition.fbs "models/flatbuffer/json/model_${model}.json"
-        xxd -i -n modelDefinition${model} models/flatbuffer/binary/model_${model}.bin  > src/models/flatbuffer_array_model_${model}.cpp
+        xxd -i -n modelDefinition${model} models/flatbuffer/binary/model_${model}.bin  > src/models/flatbuffers/flatbuffers_array_model_${model}.cpp
     fi
 done
 ${FLATC_COMPILER} -o models/flatbuffer/ATT  --annotate  sunspec_model_definition.fbs models/flatbuffer/binary/model_1.bin

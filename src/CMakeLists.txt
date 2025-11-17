@@ -5,7 +5,7 @@ project(sunspec C CXX ASM)
 if(NOT DEFINED SUNSPEC_ROOT_DIR OR SUNSPEC_ROOT_DIR STREQUAL "" OR NOT EXISTS "${SUNSPEC_ROOT_DIR}/src")
         message(FATAL_ERROR "SUNSPEC_ROOT_DIR must be defined and must point to the root of the project where src folder and the include folders are located")
 endif()
-
+set(SUNSPEC_ADAPTER_IMPLEMENTATION FLATBUFFER CACHE STRING "The Sunspec adapter implementation to use (FLATBUFFER or NAKEDBYTES)" FORCE)
 
 set(SUNSPEC_FILES
         sunspec.cpp
@@ -24,16 +24,32 @@ set(SUNSPEC_FILES_WRITER
         writer/sunspec_model_writer.cpp
         writer/sunspec_device_writer.cpp
 )
+
+if(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL "FLATBUFFER")
 set(MODEL_FILES
-        models/flatbuffer_array_model_1.cpp
-        models/flatbuffer_array_model_101.cpp
-        models/flatbuffer_array_model_101.cpp
-        models/flatbuffer_array_model_112.cpp
-        models/flatbuffer_array_model_113.cpp
-        models/flatbuffer_array_model_120.cpp
-        models/flatbuffer_array_model_126.cpp
-        models/flatbuffer_array_model_160.cpp
+        models/flatbuffers/flatbuffers_array_model_1.cpp
+        models/flatbuffers/flatbuffers_array_model_101.cpp
+        models/flatbuffers/flatbuffers_array_model_101.cpp
+        models/flatbuffers/flatbuffers_array_model_112.cpp
+        models/flatbuffers/flatbuffers_array_model_113.cpp
+        models/flatbuffers/flatbuffers_array_model_120.cpp
+        models/flatbuffers/flatbuffers_array_model_126.cpp
+        models/flatbuffers/flatbuffers_array_model_160.cpp
 )
+elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL "NAKEDBYTES")
+set(MODEL_FILES
+        models/nakedbytes/nakedbytes_array_model_1.cpp
+        models/nakedbytes/nakedbytes_array_model_101.cpp
+        models/nakedbytes/nakedbytes_array_model_101.cpp
+        models/nakedbytes/nakedbytes_array_model_112.cpp
+        models/nakedbytes/nakedbytes_array_model_113.cpp
+        models/nakedbytes/nakedbytes_array_model_120.cpp
+        models/nakedbytes/nakedbytes_array_model_126.cpp
+        models/nakedbytes/nakedbytes_array_model_160.cpp
+)
+else()
+    message(FATAL_ERROR "SUNSPEC_ADAPTER_IMPLEMENTATION has an invalid value: ${SUNSPEC_ADAPTER_IMPLEMENTATION}. Valid values are FLATBUFFER and NAKEDBYTES.")
+endif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL "FLATBUFFER")
 
 add_library(${PROJECT_NAME}
         ${SUNSPEC_FILES}

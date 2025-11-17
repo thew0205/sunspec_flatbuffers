@@ -1,6 +1,7 @@
 #include "reader/sunspec_group_reader.h"
 
-#include "sunspec.h"
+#include "sunspec_adapter.h"
+
 #include "reader/sunspec_model_reader.h"
 #include "reader/sunspec_device_reader.h"
 
@@ -144,7 +145,7 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 
     for (const auto &groupDef : *def_.groups())
     {
-        std::string temp{FlatbufferStringToString(groupDef->id())};
+        std::string temp{FormatStringToString(groupDef->id())};
         uint16_t count = groupDef->count();
         if (0 == count)
         {

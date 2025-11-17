@@ -5,7 +5,8 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
+#include "sunspec_adapter.h"
+
 #include "sunspec.h"
 #include "model_definitions.h"
 
@@ -38,7 +39,7 @@ TEST_GROUP(Sunspec_Device_Reader)
 
     void setBaseAddress(uint16_t baseAddress)
     {
-       client.setBaseAddress(baseAddress);
+        client.setBaseAddress(baseAddress);
     }
 };
 

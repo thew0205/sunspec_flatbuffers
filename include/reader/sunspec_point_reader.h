@@ -4,8 +4,7 @@
 
 #include <string> /**< For std::string type */
 
-#include "sunspec.h"                            /**< SunSpec type definitions */
-#include "sunspec_model_definition_generated.h" /**< FlatBuffer generated model definitions */
+#include "sunspec_adapter.h"
 
 class SunspecGroupReader; /**< Forward declaration for group reader */
 

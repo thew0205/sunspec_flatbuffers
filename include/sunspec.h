@@ -13,8 +13,6 @@
 #include <string>
 #include <string_view>
 
-#include "sunspec_model_definition_generated.h"
-
 #ifndef VIRTUAL_TEST
 #define VIRTUAL_TEST
 #endif // VIRTUAL_TEST
@@ -132,294 +130,6 @@ constexpr uint32_t kFloat32UnimplementedValueAsUint32_t = 0x7FC00000;           
 const float kFloat32UnimplementedValue = *reinterpret_cast<const float *>(&kFloat32UnimplementedValueAsUint32_t);   /**< The sunspec unimplemented value for the float32 type. */
 constexpr uint64_t kFloat64UnimplementedValueAsUint64_t = 0x7FF8000000000000;                                       // NaN  /**< The sunspec unimplemented value for the float64 type (NaN), represented in the uint64 value. */
 const double kFloat64UnimplementedValue = *reinterpret_cast<const double *>(&kFloat64UnimplementedValueAsUint64_t); /**< The sunspec unimplemented value for the float64 type. */
-
-/**
- * @brief Converts a Flatbuffers kSint16 to a native int16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for int16_t. Otherwise, it retrieves the value from the kSint16 structure.
- *
- * @param sint16 Pointer to a Flatbuffers kSint16 structure.
- * @return int16_t The corresponding native int16_t value or the unimplemented value if input is nullptr.
- */
-inline int16_t FlatbufferKSint16toSint16_t(const kSint16 *sint16)
-{
-    return {sint16 == nullptr ? kSint16UnimplementedValue : sint16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kRaw16 to a native raw16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for raw16_t. Otherwise, it retrieves the value from the kRaw16 structure.
- *
- * @param raw16 Pointer to a Flatbuffers kRaw16 structure.
- * @return raw16_t The corresponding native raw16_t value or the unimplemented value if input is nullptr.
- */
-inline raw16_t FlatbufferKRaw16toRaw16_t(const kRaw16 *raw16)
-{
-    return {raw16 == nullptr ? kRaw16UnimplementedValue : raw16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kUint16 to a native uint16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for uint16_t. Otherwise, it retrieves the value from the kUint16 structure.
- *
- * @param uint16 Pointer to a Flatbuffers kUint16 structure.
- * @return uint16_t The corresponding native uint16_t value or the unimplemented value if input is nullptr.
- */
-inline bitfield16_t FlatbufferKBit16toBit16_t(const kBitfield16 *bit16)
-{
-    return {bit16 == nullptr ? kBit16UnimplementedValue : bit16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kAcc16 to a native acc16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for acc16_t. Otherwise, it retrieves the value from the kAcc16 structure.
- *
- * @param acc16 Pointer to a Flatbuffers kAcc16 structure.
- * @return acc16_t The corresponding native acc16_t value or the unimplemented value if input is nullptr.
- */
-inline acc16_t FlatbufferKAcc16toAcc16_t(const kAcc16 *acc16)
-{
-    return {acc16 == nullptr ? kAcc16UnimplementedValue : acc16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kEnum16 to a native enum16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for enum16_t. Otherwise, it retrieves the value from the kEnum16 structure.
- *
- * @param enum16 Pointer to a Flatbuffers kEnum16 structure.
- * @return enum16_t The corresponding native enum16_t value or the unimplemented value if input is nullptr.
- */
-inline enum16_t FlatbufferKEnum16toEnum16_t(const kEnum16 *enum16)
-{
-    return {enum16 == nullptr ? kEnum16UnimplementedValue : enum16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kSint32 to a native int32_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for int32_t. Otherwise, it retrieves the value from the kSint32 structure.
- *
- * @param sint32 Pointer to a Flatbuffers kSint32 structure.
- * @return int32_t The corresponding native int32_t value or the unimplemented value if input is nullptr.
- */
-inline int32_t FlatbufferKSint32toSint32_t(const kSint32 *sint32)
-{
-    return {sint32 == nullptr ? kSint32UnimplementedValue : sint32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kUint32 to a native uint32_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for uint32_t. Otherwise, it retrieves the value from the kUint32 structure.
- *
- * @param uint32 Pointer to a Flatbuffers kUint32 structure.
- * @return uint32_t The corresponding native uint32_t value or the unimplemented value if input is nullptr.
- */
-inline uint32_t FlatbufferKUint32toUint32_t(const kUint32 *uint32)
-{
-    return {uint32 == nullptr ? kUint32UnimplementedValue : uint32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers KAcc32 to a native acc32_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for acc32_t. Otherwise, it retrieves the value from the KAcc32 structure.
- *
- * @param acc32 Pointer to a Flatbuffers KAcc32 structure.
- * @return acc32_t The corresponding native acc32_t value or the unimplemented value if input is nullptr.
- */
-inline acc32_t FlatbufferKAcc32toAcc32_t(const KAcc32 *acc32)
-{
-    return {acc32 == nullptr ? kAcc32UnimplementedValue : acc32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kBit32 to a native bit32_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for bit32_t. Otherwise, it retrieves the value from the kBitfield32 structure.
- *
- * @param bit32 Pointer to a Flatbuffers kBitfield32 structure.
- * @return bit32_t The corresponding native bit32_t value or the unimplemented value if input is nullptr.
- */
-inline bitfield32_t FlatbufferKBit32toBit32_t(const kBitfield32 *bit32)
-{
-    return {bit32 == nullptr ? kBit32UnimplementedValue : bit32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kEnum32 to a native enum32_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for enum32_t. Otherwise, it retrieves the value from the kEnum32 structure.
- *
- * @param enum32 Pointer to a Flatbuffers kEnum32 structure.
- * @return enum32_t The corresponding native enum32_t value or the unimplemented value if input is nullptr.
- */
-inline enum32_t FlatbufferKEnum32toEnum32_t(const kEnum32 *enum32)
-{
-    return {enum32 == nullptr ? kEnum32UnimplementedValue : enum32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kSint64 to a native int64_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for int64_t. Otherwise, it retrieves the value from the kSint64 structure.
- * @param sint64 Pointer to a Flatbuffers kSint64 structure.
- * @return int64_t The corresponding native int64_t value or the unimplemented value if input is nullptr.
- */
-inline ipAddr_t FlatbufferKIpAddrtoIpAddr_t(const kIpAddr *ipAddr)
-{
-    if (ipAddr == nullptr)
-    {
-        return kIpAddrUnimplementedValue;
-    }
-    return {ipAddr->octet1(), ipAddr->octet2(), ipAddr->octet3(), ipAddr->octet4()};
-}
-
-/**
- * @brief Converts a Flatbuffers kSunsSf to a native sunsSf_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for sunsSf_t. Otherwise, it retrieves the value from the kSunsSf structure.
- *
- * @param sunsSf Pointer to a Flatbuffers kSunsSf structure.
- * @return sunsSf_t The corresponding native sunsSf_t value or the unimplemented value if input is nullptr.
- */
-inline sunsSf_t FlatbufferKSunsSftoSunsSf_t(const kSunsSf *sunsSf)
-{
-    return {sunsSf == nullptr ? kSunsSfUnimplementedValue : sunsSf->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kUint16 to a native uint16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for uint16_t. Otherwise, it retrieves the value from the kUint16 structure.
- *
- * @param uint16 Pointer to a Flatbuffers kUint16 structure.
- * @return uint16_t The corresponding native uint16_t value or the unimplemented value if input is nullptr.
- */
-inline uint16_t FlatbufferKUint16toUint16_t(const kUint16 *uint16)
-{
-    return {uint16 == nullptr ? kUint16UnimplementedValue : uint16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kPad16 to a native pad16_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for pad16_t. Otherwise, it retrieves the value from the kPad16 structure.
- *
- * @param pad16 Pointer to a Flatbuffers kPad16 structure.
- * @return pad16_t The corresponding native pad16_t value or the unimplemented value if input is nullptr.
- */
-inline pad16_t FlatbufferKPad16toPad16_t(const kPad16 *pad16)
-{
-    return {pad16 == nullptr ? kPad16UnimplementedValue : pad16->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kSint64 to a native int64_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for int64_t. Otherwise, it retrieves the value from the kSint64 structure.
- * @param sint64 Pointer to a Flatbuffers kSint64 structure.
- * @return int64_t The corresponding native int64_t value or the unimplemented value if input is nullptr.
- */
-inline int64_t FlatbufferKSint64toSint64_t(const kSint64 *sint64)
-{
-    return {sint64 == nullptr ? kSint64UnimplementedValue : sint64->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kUint64 to a native uint64_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for uint64_t. Otherwise, it retrieves the value from the kUint64 structure.
- *
- * @param uint64 Pointer to a Flatbuffers kUint64 structure.
- * @return uint64_t The corresponding native uint64_t value or the unimplemented value if input is nullptr.
- */
-inline uint64_t FlatbufferKUint64toUint64_t(const kUint64 *uint64)
-{
-    return {uint64 == nullptr ? kUint64UnimplementedValue : uint64->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kAcc64 to a native acc64_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for acc64_t. Otherwise, it retrieves the value from the kAcc64 structure.
- *
- * @param acc64 Pointer to a Flatbuffers kAcc64 structure.
- * @return acc64_t The corresponding native acc64_t value or the unimplemented value if input is nullptr.
- */
-inline acc64_t FlatbufferKAcc64toAcc64_t(const kAcc64 *acc64)
-{
-    return {acc64 == nullptr ? kAcc64UnimplementedValue : acc64->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kBit64 to a native bit64_t, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for bit64_t. Otherwise, it retrieves the value from the kBitfield64 structure.
- *
- * @param bit64 Pointer to a Flatbuffers kBitfield64 structure.
- * @return bit64_t The corresponding native bit64_t value or the unimplemented value if input is nullptr.
- */
-inline bitfield64_t FlatbufferKBit64toBit64_t(const kBitfield64 *bit64)
-{
-    return {bit64 == nullptr ? kBit64UnimplementedValue : bit64->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kFloat64 to a native double, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for double. Otherwise, it retrieves the value from the kFloat64 structure.
- *
- * @param float64 Pointer to a Flatbuffers kFloat64 structure.
- * @return double The corresponding native double value or the unimplemented value if input is nullptr.
- */
-inline double FlatbufferKFloat64toDouble(const kFloat64 *float64)
-{
-    return {float64 == nullptr ? kFloat64UnimplementedValue : float64->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers kFloat32 to a native float, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for float. Otherwise, it retrieves the value from the kFloat32 structure.
- *
- * @param float32 Pointer to a Flatbuffers kFloat32 structure.
- * @return float The corresponding native float value or the unimplemented value if input is nullptr.
- */
-inline float FlatbufferKFloat32toFloat(const kFloat32 *float32)
-{
-    return {float32 == nullptr ? kFloat32UnimplementedValue : float32->value()};
-}
-
-/**
- * @brief Converts a Flatbuffers String to a native std::string, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for std::string. Otherwise, it retrieves the C-style string from the Flatbuffers String and constructs a std::string from it.
- *
- * @param flatbufferSTring Pointer to a Flatbuffers String structure.
- * @return std::string The corresponding native std::string value or the unimplemented value if input is nullptr.
- */
-inline std::string FlatbufferStringToString(const flatbuffers::String *flatbufferSTring)
-{
-    return std::string{flatbufferSTring == nullptr ? kStringUnimplementedValue : flatbufferSTring->c_str()};
-}
-
-/**
- * @brief Converts a Flatbuffers kStringx to a native std::string, handling unimplemented values represented as nullptr.
- *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for std::string. Otherwise, it retrieves the value from the kStringx structure and constructs a std::string from it.
- *
- * @param stringx Pointer to a Flatbuffers kStringx structure.
- * @return std::string The corresponding native std::string value or the unimplemented value if input is nullptr.
- */
-inline std::string FlatbufferKStringxToString(const kStringx *stringx)
-{
-    return {stringx == nullptr ? "" : FlatbufferStringToString(stringx->value())};
-}
 
 /**
  * @brief Converts a uint16_t value to Modbus register format by swapping the uint16_t bytes order.
@@ -571,7 +281,7 @@ inline enum16_t modbusRegisterFormatToEnum16(const uint16_t *buffer)
 inline sunsSf_t modbusRegisterFormatToSunsSf(const uint16_t *buffer)
 {
     return static_cast<sunsSf_t>(modbusRegisterFormatToUint16(buffer));
-}  
+}
 
 inline pad16_t modbusRegisterFormatToPad16(const uint16_t *buffer)
 {
@@ -598,7 +308,7 @@ inline acc32_t modbusRegisterFormatToAcc32(const uint16_t *buffer)
 inline enum32_t modbusRegisterFormatToEnum32(const uint16_t *buffer)
 {
     return static_cast<enum32_t>(modbusRegisterFormatToUint32(buffer));
-}   
+}
 
 inline uint64_t modbusRegisterFormatToUint64(const uint16_t *buffer)
 {
@@ -667,6 +377,8 @@ inline std::string operator+(const std::string_view &str1, const std::string &st
 /**
  * @namespace Sunspec
  */
+struct SunspecModelDef;
+
 namespace Sunspec
 {
     /**
@@ -702,4 +414,11 @@ namespace Sunspec
      */
     uint64_t registersToUint64(uint16_t reg0, uint16_t reg1, uint16_t reg2, uint16_t reg3);
 
+    /**
+     * @brief Retrieves the model definition for a given model ID.
+     * This function looks up the model definition based on the provided model ID.
+     * @param [in] id The ID of the model to look up.
+     * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
+     */
+    const SunspecModelDef *getModelDefinition(uint16_t id);
 }; // namespace Sunspec

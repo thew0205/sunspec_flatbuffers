@@ -17,7 +17,7 @@ target_link_libraries(${TEST_NAME}
         sunspec
 )
 
-target_compile_definitions(${TEST_NAME} PRIVATE)
+target_compile_definitions(${TEST_NAME} PRIVATE SUNSPEC_ADAPTER_IMPLEMENTATION=${SUNSPEC_ADAPTER_IMPLEMENTATION})
 
 target_include_directories(${TEST_NAME} PRIVATE
 )

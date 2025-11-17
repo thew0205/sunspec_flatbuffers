@@ -61,9 +61,11 @@
         "Bitfield",
         "FLATC",
         "fronius",
+        "nakedbytes",
         "pzem",
         "Sint",
-        "Stringx"
+        "Stringx",
+        "sunssf"
     ],
     "files.associations": {
         "ostream": "cpp",

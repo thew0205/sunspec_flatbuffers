@@ -10,6 +10,8 @@
 #include <string>
 #include <vector>
 
+#include "sunspec_adapter.h"
+
 #include "reader/sunspec_point_reader.h"
 
 class SunspecModelReader;

@@ -263,27 +263,27 @@ table SunspecGroupDef{
     label:string;
 }
 
-enum SunspecModelList : uint16
-{
-    KModelInvalid = 0, /**< Invalid Model Id */
+// enum SunspecModelList : uint16
+// {
+//     KModelInvalid = 0, /**< Invalid Model Id */
 
-    kModel1 = 1,     /**< Definition for model1 */
-    kModel101 = 101, /**< Definition for model101 */
-    kModel102 = 102, /**< Definition for model102 */
-    kModel103 = 103, /**< Definition for model103 */
-    kModel111 = 111, /**< Definition for model111 */
-    kModel112 = 112, /**< Definition for model112 */
-    kModel113 = 113, /**< Definition for model113 */
-    kModel120 = 120, /**< Definition for model120 */
-    kModel126 = 126, /**< Definition for model126 */
-    kModel160 = 160, /**< Definition for model160 */
+//     kModel1 = 1,     /**< Definition for model1 */
+//     kModel101 = 101, /**< Definition for model101 */
+//     kModel102 = 102, /**< Definition for model102 */
+//     kModel103 = 103, /**< Definition for model103 */
+//     kModel111 = 111, /**< Definition for model111 */
+//     kModel112 = 112, /**< Definition for model112 */
+//     kModel113 = 113, /**< Definition for model113 */
+//     kModel120 = 120, /**< Definition for model120 */
+//     kModel126 = 126, /**< Definition for model126 */
+//     kModel160 = 160, /**< Definition for model160 */
 
-    kModelEnd = 0xFFFF, /**< Definition for end model Id */
+//     kModelEnd = 0xFFFF, /**< Definition for end model Id */
 
-}
+// }
 
 table SunspecModelDef{
-    id: SunspecModelList = KModelInvalid;
+    id: uint16 = 0xffff;
     group:SunspecGroupDef;
 }
 root_type SunspecModelDef;

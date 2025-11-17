@@ -11,8 +11,10 @@
 
 #include <string>
 
-#include "sunspec_model_definition_generated.h"
-#include "sunspec.h"
+#include "sunspec_adapter.h"
+
+#include "sunspec_adapter.h"
+         
 class SunspecGroupWriter;
 class SunspecDeviceWriter;
 
@@ -113,7 +115,7 @@ public:
      */
     int16_t getValueAsSint16() const
     {
-        return pointFunction_.sint16.function == nullptr ? FlatbufferKSint16toSint16_t(def_.data_as_kSint16()) : pointFunction_.sint16.call();
+        return pointFunction_.sint16.function == nullptr ? FormatSunspecPointDefToSint16_t(def_) : pointFunction_.sint16.call();
     }
 
     /**
@@ -122,7 +124,7 @@ public:
      */
     uint16_t getValueAsUint16() const
     {
-        return pointFunction_.uint16.function == nullptr ? FlatbufferKUint16toUint16_t(def_.data_as_kUint16()) : pointFunction_.uint16.call();
+        return pointFunction_.uint16.function == nullptr ? FormatSunspecPointDefToUint16_t(def_) : pointFunction_.uint16.call();
     }
 
     /**
@@ -131,7 +133,7 @@ public:
      */
     pad16_t getValueAsPad16() const
     {
-        return pointFunction_.pad16.function == nullptr ? FlatbufferKPad16toPad16_t(def_.data_as_kPad16()) : pointFunction_.pad16.call();
+        return pointFunction_.pad16.function == nullptr ? FormatSunspecPointDefToPad16_t(def_) : pointFunction_.pad16.call();
     }
 
     /**
@@ -140,11 +142,11 @@ public:
      */
     sunsSf_t getValueAsSunsSf() const
     {
-        return pointFunction_.sunsSf.function == nullptr ? FlatbufferKSunsSftoSunsSf_t(def_.data_as_kSunsSf()) : pointFunction_.sunsSf.call();
+        return pointFunction_.sunsSf.function == nullptr ? FormatSunspecPointDefToSunsSf_t(def_) : pointFunction_.sunsSf.call();
     }
     acc16_t getValueAsAcc16() const
     {
-        return pointFunction_.acc16.function == nullptr ? FlatbufferKAcc16toAcc16_t(def_.data_as_kAcc16()) : pointFunction_.acc16.call();
+        return pointFunction_.acc16.function == nullptr ? FormatSunspecPointDefToAcc16_t(def_) : pointFunction_.acc16.call();
     }
 
     /**
@@ -153,7 +155,7 @@ public:
      */
     bitfield16_t getValueAsBit16() const
     {
-        return pointFunction_.bit16.function == nullptr ? FlatbufferKBit16toBit16_t(def_.data_as_kBitfield16()) : pointFunction_.bit16.call();
+        return pointFunction_.bit16.function == nullptr ? FormatSunspecPointDefToBit16_t(def_) : pointFunction_.bit16.call();
     }
 
     /**
@@ -162,7 +164,7 @@ public:
      */
     enum16_t getValueAsEnum16() const
     {
-        return pointFunction_.enum16.function == nullptr ? FlatbufferKEnum16toEnum16_t(def_.data_as_kEnum16()) : pointFunction_.enum16.call();
+        return pointFunction_.enum16.function == nullptr ? FormatSunspecPointDefToEnum16_t(def_) : pointFunction_.enum16.call();
     }
 
     /**
@@ -171,7 +173,7 @@ public:
      */
     raw16_t getValueAsRaw16() const
     {
-        return pointFunction_.raw16.function == nullptr ? FlatbufferKRaw16toRaw16_t(def_.data_as_kRaw16()) : pointFunction_.raw16.call();
+        return pointFunction_.raw16.function == nullptr ? FormatSunspecPointDefTotoRaw16_t(def_) : pointFunction_.raw16.call();
     }
 
     /**
@@ -180,7 +182,7 @@ public:
      */
     int32_t getValueAsSint32() const
     {
-        return pointFunction_.sint32.function == nullptr ? FlatbufferKSint32toSint32_t(def_.data_as_kSint32()) : pointFunction_.sint32.call();
+        return pointFunction_.sint32.function == nullptr ? FormatSunspecPointDefToSint16_t(def_) : pointFunction_.sint32.call();
     }
 
     /**
@@ -189,7 +191,7 @@ public:
      */
     uint32_t getValueAsUint32() const
     {
-        return pointFunction_.uint32.function == nullptr ? FlatbufferKUint32toUint32_t(def_.data_as_kUint32()) : pointFunction_.uint32.call();
+        return pointFunction_.uint32.function == nullptr ? FormatSunspecPointDefToUint32_t(def_) : pointFunction_.uint32.call();
     }
 
     /**
@@ -198,7 +200,7 @@ public:
      */
     acc32_t getValueAsAcc32() const
     {
-        return pointFunction_.acc32.function == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_KAcc32()) : pointFunction_.acc32.call();
+        return pointFunction_.acc32.function == nullptr ? FormatSunspecPointDefToAcc32_t(def_) : pointFunction_.acc32.call();
     }
 
     /**
@@ -207,7 +209,7 @@ public:
      */
     bitfield32_t getValueAsBit32() const
     {
-        return pointFunction_.bit32.function == nullptr ? FlatbufferKBit32toBit32_t(def_.data_as_kBitfield32()) : pointFunction_.bit32.call();
+        return pointFunction_.bit32.function == nullptr ? FormatSunspecPointDefToBit32_t(def_) : pointFunction_.bit32.call();
     }
 
     /**
@@ -216,7 +218,7 @@ public:
      */
     enum32_t getValueAsEnum32() const
     {
-        return pointFunction_.enum32.function == nullptr ? FlatbufferKEnum32toEnum32_t(def_.data_as_kEnum32()) : pointFunction_.enum32.call();
+        return pointFunction_.enum32.function == nullptr ? FormatSunspecPointDefToEnum32_t(def_) : pointFunction_.enum32.call();
     }
 
     /**
@@ -225,7 +227,7 @@ public:
      */
     ipAddr_t getValueAsIpAddr() const
     {
-        return pointFunction_.ipAddr.function == nullptr ? FlatbufferKIpAddrtoIpAddr_t(def_.data_as_kIpAddr()) : pointFunction_.ipAddr.call();
+        return pointFunction_.ipAddr.function == nullptr ? FormatSunspecPointDefToIpAddr_t(def_) : pointFunction_.ipAddr.call();
     }
 
     /**
@@ -234,7 +236,7 @@ public:
      */
     float getValueAsFloat32() const
     {
-        return pointFunction_.float32.function == nullptr ? FlatbufferKFloat32toFloat(def_.data_as_kFloat32()) : pointFunction_.float32.call();
+        return pointFunction_.float32.function == nullptr ? FormatSunspecPointDefToFloat32(def_) : pointFunction_.float32.call();
     }
 
     /**
@@ -243,7 +245,7 @@ public:
      */
     double getValueAsFloat64() const
     {
-        return pointFunction_.float64.function == nullptr ? FlatbufferKFloat64toDouble(def_.data_as_kFloat64()) : pointFunction_.float64.call();
+        return pointFunction_.float64.function == nullptr ? FormatSunspecPointDefToFloat64(def_) : pointFunction_.float64.call();
     }
 
     /**
@@ -252,7 +254,7 @@ public:
      */
     int64_t getValueAsSint64() const
     {
-        return pointFunction_.sint64.function == nullptr ? FlatbufferKSint64toSint64_t(def_.data_as_kSint64()) : pointFunction_.sint64.call();
+        return pointFunction_.sint64.function == nullptr ? FormatSunspecPointDefToSint64_t(def_) : pointFunction_.sint64.call();
     }
 
     /**
@@ -261,7 +263,7 @@ public:
      */
     uint64_t getValueAsUint64() const
     {
-        return pointFunction_.uint64.function == nullptr ? FlatbufferKUint64toUint64_t(def_.data_as_kUint64()) : pointFunction_.uint64.call();
+        return pointFunction_.uint64.function == nullptr ? FormatSunspecPointDefToUint64_t(def_) : pointFunction_.uint64.call();
     }
 
     /**
@@ -270,7 +272,7 @@ public:
      */
     acc64_t getValueAsAcc64() const
     {
-        return pointFunction_.acc64.function == nullptr ? FlatbufferKAcc64toAcc64_t(def_.data_as_kAcc64()) : pointFunction_.acc64.call();
+        return pointFunction_.acc64.function == nullptr ? FormatSunspecPointDefToAcc64_t(def_) : pointFunction_.acc64.call();
     }
 
     /**
@@ -279,7 +281,7 @@ public:
      */
     bitfield64_t getValueAsBit64() const
     {
-        return pointFunction_.bit64.function == nullptr ? FlatbufferKBit64toBit64_t(def_.data_as_kBitfield64()) : pointFunction_.bit64.call();
+        return pointFunction_.bit64.function == nullptr ? FormatSunspecPointDefToBit64_t(def_) : pointFunction_.bit64.call();
     }
 
     /**
@@ -288,7 +290,7 @@ public:
      */
     string getValueAsString() const
     {
-        string tempString = pointFunction_.str.function == nullptr ? FlatbufferKStringxToString(def_.data_as_kStringx()) : pointFunction_.str.call();
+        string tempString = pointFunction_.str.function == nullptr ? string(FormatSunspecPointDefToString(def_)) : pointFunction_.str.call();
         std::size_t newLength = std::min(static_cast<size_t>((def_.size() * sizeof(uint16_t)) - 1), tempString.size());
 
         tempString.resize(newLength);

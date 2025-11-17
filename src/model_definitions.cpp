@@ -1,20 +1,19 @@
 #include "model_definitions.h"
 
-const SunspecModelDef *Sunspec::getModelDefinition(SunspecModelList id)
+const SunspecModelDef *Sunspec::getModelDefinition(uint16_t id)
 {
     // NOTE: Think of a better way to do this, maybe a map of some sort.
     switch (id)
     {
-    case SunspecModelList_kModel1:
+    case 1:
         return GetSunspecModelDef(modelDefinition1);
 
-    case SunspecModelList_kModel112:
-
+    case 112:
         return GetSunspecModelDef(modelDefinition112);
-    case SunspecModelList_kModel113:
+    case 113:
 
         return GetSunspecModelDef(modelDefinition113);
-    case SunspecModelList_kModel160:
+    case 160:
         return GetSunspecModelDef(modelDefinition160);
 
     default:
