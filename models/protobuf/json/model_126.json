@@ -1,0 +1,909 @@
+{
+    "id": 126,
+    "group": {
+        "id": "volt_var",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 126
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "ActCrv",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "ActCrv"
+            },
+            {
+                "id": "ModEna",
+                "data": {
+                    "bitfield16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "ModEna"
+            },
+            {
+                "id": "WinTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "WinTms"
+            },
+            {
+                "id": "RvrtTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "RvrtTms"
+            },
+            {
+                "id": "RmpTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "RmpTms"
+            },
+            {
+                "id": "NCrv",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "NCrv"
+            },
+            {
+                "id": "NPt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "NPt"
+            },
+            {
+                "id": "V_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "V_SF"
+            },
+            {
+                "id": "DeptRef_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "DeptRef_SF"
+            },
+            {
+                "id": "RmpIncDec_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            }
+        ],
+        "groups": [
+            {
+                "id": "curve",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "NPt",
+                "points": [
+                    {
+                        "id": "ActPt",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "ActPt"
+                    },
+                    {
+                        "id": "DeptRef",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "DeptRef"
+                    },
+                    {
+                        "id": "V1",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "V1"
+                    },
+                    {
+                        "id": "VAr1",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "VAr1"
+                    },
+                    {
+                        "id": "V2",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V2"
+                    },
+                    {
+                        "id": "VAr2",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr2"
+                    },
+                    {
+                        "id": "V3",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V3"
+                    },
+                    {
+                        "id": "VAr3",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr3"
+                    },
+                    {
+                        "id": "V4",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V4"
+                    },
+                    {
+                        "id": "VAr4",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr4"
+                    },
+                    {
+                        "id": "V5",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V5"
+                    },
+                    {
+                        "id": "VAr5",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr5"
+                    },
+                    {
+                        "id": "V6",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V6"
+                    },
+                    {
+                        "id": "VAr6",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr6"
+                    },
+                    {
+                        "id": "V7",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V7"
+                    },
+                    {
+                        "id": "VAr7",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr7"
+                    },
+                    {
+                        "id": "V8",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V8"
+                    },
+                    {
+                        "id": "VAr8",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr8"
+                    },
+                    {
+                        "id": "V9",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V9"
+                    },
+                    {
+                        "id": "VAr9",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr9"
+                    },
+                    {
+                        "id": "V10",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V10"
+                    },
+                    {
+                        "id": "VAr10",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr10"
+                    },
+                    {
+                        "id": "V11",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V11"
+                    },
+                    {
+                        "id": "VAr11",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr11"
+                    },
+                    {
+                        "id": "V12",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V12"
+                    },
+                    {
+                        "id": "VAr12",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr12"
+                    },
+                    {
+                        "id": "V13",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V13"
+                    },
+                    {
+                        "id": "VAr13",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr13"
+                    },
+                    {
+                        "id": "V14",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V14"
+                    },
+                    {
+                        "id": "VAr14",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr14"
+                    },
+                    {
+                        "id": "V15",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V15"
+                    },
+                    {
+                        "id": "VAr15",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr15"
+                    },
+                    {
+                        "id": "V16",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V16"
+                    },
+                    {
+                        "id": "VAr16",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr16"
+                    },
+                    {
+                        "id": "V17",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V17"
+                    },
+                    {
+                        "id": "VAr17",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr17"
+                    },
+                    {
+                        "id": "V18",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V18"
+                    },
+                    {
+                        "id": "VAr18",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr18"
+                    },
+                    {
+                        "id": "V19",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V19"
+                    },
+                    {
+                        "id": "VAr19",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr19"
+                    },
+                    {
+                        "id": "V20",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "% VRef",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "V20"
+                    },
+                    {
+                        "id": "VAr20",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DeptRef_SF",
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "VAr20"
+                    },
+                    {
+                        "id": "CrvNam",
+                        "data": {
+                            "stringx": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 8,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "CrvNam"
+                    },
+                    {
+                        "id": "RmpTms",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "Secs",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "RmpTms"
+                    },
+                    {
+                        "id": "RmpDecTmm",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "RmpIncDec_SF",
+                        "units": "% ref_value/min",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "RmpDecTmm"
+                    },
+                    {
+                        "id": "RmpIncTmm",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "RmpIncDec_SF",
+                        "units": "% ref_value/min",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "RmpIncTmm"
+                    },
+                    {
+                        "id": "ReadOnly",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "ReadOnly"
+                    }
+                ],
+                "groups": [],
+                "label": null
+            }
+        ],
+        "label": null
+    }
+}

@@ -1,0 +1,804 @@
+{
+    "id": 807,
+    "group": {
+        "id": "flow_battery_string",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 807
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Idx",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "String Index"
+            },
+            {
+                "id": "NMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Module Count"
+            },
+            {
+                "id": "NModCon",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Connected Module Count"
+            },
+            {
+                "id": "ModVMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "ModV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Max Module Voltage"
+            },
+            {
+                "id": "ModVMaxMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Max Module Voltage Module"
+            },
+            {
+                "id": "ModVMin",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "ModV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Min Module Voltage"
+            },
+            {
+                "id": "ModVMinMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Min Module Voltage Module"
+            },
+            {
+                "id": "ModVAvg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "ModV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Average Module Voltage"
+            },
+            {
+                "id": "CellVMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "CellV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Max Cell Voltage"
+            },
+            {
+                "id": "CellVMaxMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Max Cell Voltage Module"
+            },
+            {
+                "id": "CellVMaxStk",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Max Cell Voltage Stack"
+            },
+            {
+                "id": "CellVMin",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "CellV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Min Cell Voltage"
+            },
+            {
+                "id": "CellVMinMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Min Cell Voltage Module"
+            },
+            {
+                "id": "CellVMinStk",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Min Cell Voltage Stack"
+            },
+            {
+                "id": "CellVAvg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "CellV_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Average Cell Voltage"
+            },
+            {
+                "id": "TmpMax",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Tmp_SF",
+                "units": "C",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Max Temperature"
+            },
+            {
+                "id": "TmpMaxMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Max Temperature Module"
+            },
+            {
+                "id": "TmpMin",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Tmp_SF",
+                "units": "C",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Min Temperature"
+            },
+            {
+                "id": "TmpMinMod",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Min Temperature Module"
+            },
+            {
+                "id": "TmpAvg",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Tmp_SF",
+                "units": "C",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Average Temperature"
+            },
+            {
+                "id": "Evt1",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "String Event 1"
+            },
+            {
+                "id": "Evt2",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "String Event 2"
+            },
+            {
+                "id": "EvtVnd1",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Vendor Event Bitfield 1"
+            },
+            {
+                "id": "EvtVnd2",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Vendor Event Bitfield 2"
+            },
+            {
+                "id": "ModV_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "CellV_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "Tmp_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "SoC_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "OCV_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "Pad1",
+                "data": {
+                    "pad16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Pad"
+            }
+        ],
+        "groups": [
+            {
+                "id": "module",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "N",
+                "points": [
+                    {
+                        "id": "ModIdx",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Module Index"
+                    },
+                    {
+                        "id": "ModNStk",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Stack Count"
+                    },
+                    {
+                        "id": "ModSt",
+                        "data": {
+                            "bitfield32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Module Status"
+                    },
+                    {
+                        "id": "ModSoC",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "SoC_SF",
+                        "units": "%",
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Module State of Charge"
+                    },
+                    {
+                        "id": "ModOCV",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "OCV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Open Circuit Voltage"
+                    },
+                    {
+                        "id": "ModV",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "ModV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "External Voltage"
+                    },
+                    {
+                        "id": "ModCellVMax",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "CellV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Maximum Cell Voltage"
+                    },
+                    {
+                        "id": "ModCellVMaxCell",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Max Cell Voltage Cell"
+                    },
+                    {
+                        "id": "ModCellVMin",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "CellV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Minimum Cell Voltage"
+                    },
+                    {
+                        "id": "ModCellVMinCell",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Min Cell Voltage Cell"
+                    },
+                    {
+                        "id": "ModCellVAvg",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "CellV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Average Cell Voltage"
+                    },
+                    {
+                        "id": "ModAnoTmp",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "Tmp_SF",
+                        "units": "C",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Anolyte Temperature"
+                    },
+                    {
+                        "id": "ModCatTmp",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "Tmp_SF",
+                        "units": "C",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Catholyte Temperature"
+                    },
+                    {
+                        "id": "ModConSt",
+                        "data": {
+                            "bitfield32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Contactor Status"
+                    },
+                    {
+                        "id": "ModEvt1",
+                        "data": {
+                            "bitfield32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Module Event 1"
+                    },
+                    {
+                        "id": "ModEvt2",
+                        "data": {
+                            "bitfield32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Module Event 2"
+                    },
+                    {
+                        "id": "ModConFail",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Connection Failure Reason"
+                    },
+                    {
+                        "id": "ModSetEna",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Enable/Disable Module"
+                    },
+                    {
+                        "id": "ModSetCon",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Connect/Disconnect Module "
+                    },
+                    {
+                        "id": "ModDisRsn",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Disabled Reason"
+                    }
+                ],
+                "groups": [],
+                "label": null
+            }
+        ],
+        "label": null
+    }
+}

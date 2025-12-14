@@ -1,0 +1,403 @@
+{
+    "id": 123,
+    "group": {
+        "id": "controls",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 123
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Conn_WinTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Conn_WinTms"
+            },
+            {
+                "id": "Conn_RvrtTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Conn_RvrtTms"
+            },
+            {
+                "id": "Conn",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Conn"
+            },
+            {
+                "id": "WMaxLimPct",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "WMaxLimPct_SF",
+                "units": "% WMax",
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "WMaxLimPct"
+            },
+            {
+                "id": "WMaxLimPct_WinTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "WMaxLimPct_WinTms"
+            },
+            {
+                "id": "WMaxLimPct_RvrtTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "WMaxLimPct_RvrtTms"
+            },
+            {
+                "id": "WMaxLimPct_RmpTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "WMaxLimPct_RmpTms"
+            },
+            {
+                "id": "WMaxLim_Ena",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "WMaxLim_Ena"
+            },
+            {
+                "id": "OutPFSet",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "OutPFSet_SF",
+                "units": "cos()",
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "OutPFSet"
+            },
+            {
+                "id": "OutPFSet_WinTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "OutPFSet_WinTms"
+            },
+            {
+                "id": "OutPFSet_RvrtTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "OutPFSet_RvrtTms"
+            },
+            {
+                "id": "OutPFSet_RmpTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "OutPFSet_RmpTms"
+            },
+            {
+                "id": "OutPFSet_Ena",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "OutPFSet_Ena"
+            },
+            {
+                "id": "VArWMaxPct",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VArPct_SF",
+                "units": "% WMax",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArWMaxPct"
+            },
+            {
+                "id": "VArMaxPct",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VArPct_SF",
+                "units": "% VArMax",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArMaxPct"
+            },
+            {
+                "id": "VArAvalPct",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VArPct_SF",
+                "units": "% VArAval",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArAvalPct"
+            },
+            {
+                "id": "VArPct_WinTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArPct_WinTms"
+            },
+            {
+                "id": "VArPct_RvrtTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArPct_RvrtTms"
+            },
+            {
+                "id": "VArPct_RmpTms",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArPct_RmpTms"
+            },
+            {
+                "id": "VArPct_Mod",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "VArPct_Mod"
+            },
+            {
+                "id": "VArPct_Ena",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "VArPct_Ena"
+            },
+            {
+                "id": "WMaxLimPct_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "WMaxLimPct_SF"
+            },
+            {
+                "id": "OutPFSet_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "OutPFSet_SF"
+            },
+            {
+                "id": "VArPct_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VArPct_SF"
+            }
+        ],
+        "groups": [],
+        "label": "Immediate Controls"
+    }
+}

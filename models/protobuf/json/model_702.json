@@ -1,0 +1,778 @@
+{
+    "id": 702,
+    "group": {
+        "id": "DERCapacity",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 702
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": 50
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "WMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Active Power Max Rating"
+            },
+            {
+                "id": "WOvrExtRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Active Power (Over-Excited) Rating"
+            },
+            {
+                "id": "WOvrExtRtgPF",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Specified Over-Excited PF"
+            },
+            {
+                "id": "WUndExtRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Active Power (Under-Excited) Rating"
+            },
+            {
+                "id": "WUndExtRtgPF",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Specified Under-Excited PF"
+            },
+            {
+                "id": "VAMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Apparent Power Max Rating"
+            },
+            {
+                "id": "VarMaxInjRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Var_SF",
+                "units": "Var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Reactive Power Injected Rating"
+            },
+            {
+                "id": "VarMaxAbsRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Var_SF",
+                "units": "Var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Reactive Power Absorbed Rating"
+            },
+            {
+                "id": "WChaRteMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Charge Rate Max Rating"
+            },
+            {
+                "id": "WDisChaRteMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Discharge Rate Max Rating"
+            },
+            {
+                "id": "VAChaRteMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Charge Rate Max VA Rating"
+            },
+            {
+                "id": "VADisChaRteMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Discharge Rate Max VA Rating"
+            },
+            {
+                "id": "VNomRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "AC Voltage Nominal Rating"
+            },
+            {
+                "id": "VMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "AC Voltage Max Rating"
+            },
+            {
+                "id": "VMinRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "AC Voltage Min Rating"
+            },
+            {
+                "id": "AMaxRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "AC Current Max Rating"
+            },
+            {
+                "id": "PFOvrExtRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF Over-Excited Rating (Unused)"
+            },
+            {
+                "id": "PFUndExtRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF Under-Excited Rating (Unused)"
+            },
+            {
+                "id": "ReactSusceptRtg",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "S_SF",
+                "units": "S",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Reactive Susceptance"
+            },
+            {
+                "id": "NorOpCatRtg",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Normal Operating Category"
+            },
+            {
+                "id": "AbnOpCatRtg",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Abnormal Operating Category"
+            },
+            {
+                "id": "CtrlModes",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Supported Control Modes"
+            },
+            {
+                "id": "IntIslandCatRtg",
+                "data": {
+                    "bitfield16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Intentional Island Categories"
+            },
+            {
+                "id": "WMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Active Power Max Setting"
+            },
+            {
+                "id": "WMaxOvrExt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Active Power (Over-Excited) Setting"
+            },
+            {
+                "id": "WOvrExtPF",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Specified Over-Excited PF"
+            },
+            {
+                "id": "WMaxUndExt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Active Power (Under-Excited) Setting"
+            },
+            {
+                "id": "WUndExtPF",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Specified Under-Excited PF"
+            },
+            {
+                "id": "VAMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Apparent Power Max Setting"
+            },
+            {
+                "id": "VarMaxInj",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Var_SF",
+                "units": "Var",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Reactive Power Injected Setting"
+            },
+            {
+                "id": "VarMaxAbs",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Var_SF",
+                "units": "Var",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Reactive Power Absorbed Setting"
+            },
+            {
+                "id": "WChaRteMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Charge Rate Max Setting"
+            },
+            {
+                "id": "WDisChaRteMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Discharge Rate Max Setting"
+            },
+            {
+                "id": "VAChaRteMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Charge Rate Max VA Setting"
+            },
+            {
+                "id": "VADisChaRteMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Discharge Rate Max VA Setting"
+            },
+            {
+                "id": "VNom",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Nominal AC Voltage Setting"
+            },
+            {
+                "id": "VMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "AC Voltage Max Setting"
+            },
+            {
+                "id": "VMin",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "AC Voltage Min Setting"
+            },
+            {
+                "id": "AMax",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "AC Current Max Setting"
+            },
+            {
+                "id": "PFOvrExt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "PF Over-Excited Setting (Unused)"
+            },
+            {
+                "id": "PFUndExt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "PF Under-Excited Setting (Unused)"
+            },
+            {
+                "id": "IntIslandCat",
+                "data": {
+                    "bitfield16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Intentional Island Categories"
+            },
+            {
+                "id": "W_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Active Power Scale Factor"
+            },
+            {
+                "id": "PF_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Power Factor Scale Factor"
+            },
+            {
+                "id": "VA_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Apparent Power Scale Factor"
+            },
+            {
+                "id": "Var_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Reactive Power Scale Factor"
+            },
+            {
+                "id": "V_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Voltage Scale Factor"
+            },
+            {
+                "id": "A_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Current Scale Factor"
+            },
+            {
+                "id": "S_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Susceptance Scale Factor"
+            }
+        ],
+        "groups": [],
+        "label": "DER Capacity"
+    }
+}

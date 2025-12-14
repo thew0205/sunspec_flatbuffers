@@ -1,0 +1,148 @@
+{
+    "id": 64101,
+    "group": {
+        "id": "model_64101",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 64101
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Eltek_Country_Code",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_Feeding_Phase",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_APD_Method",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_APD_Power_Ref",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_RPS_Method",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_RPS_Q_Ref",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Eltek_RPS_CosPhi_Ref",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            }
+        ],
+        "groups": [],
+        "label": "Eltek Inverter Extension"
+    }
+}

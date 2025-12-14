@@ -32,8 +32,8 @@
 
 namespace Pin
 {
-    const uint8_t rxPin = 8;
-    const uint8_t txPin = 9;
+    const uint8_t rxPin = 0;
+    const uint8_t txPin = 1;
 }
 
 

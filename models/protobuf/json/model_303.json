@@ -1,0 +1,69 @@
+{
+    "id": 303,
+    "group": {
+        "id": "bom_temp",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 303
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            }
+        ],
+        "groups": [
+            {
+                "id": "temp",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "N",
+                "points": [
+                    {
+                        "id": "TmpBOM",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": -1,
+                        "sf_id": null,
+                        "units": "C",
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Temp"
+                    }
+                ],
+                "groups": [],
+                "label": null
+            }
+        ],
+        "label": null
+    }
+}

@@ -1,0 +1,163 @@
+{
+    "id": 14,
+    "group": {
+        "id": "model_14",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 14
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Nam",
+                "data": {
+                    "stringx": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 4,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "name"
+            },
+            {
+                "id": "Cap",
+                "data": {
+                    "bitfield16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Capabilities"
+            },
+            {
+                "id": "Cfg",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Config"
+            },
+            {
+                "id": "Typ",
+                "data": {
+                    "bitfield16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Type"
+            },
+            {
+                "id": "Addr",
+                "data": {
+                    "stringx": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 20,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Address"
+            },
+            {
+                "id": "Port",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Port"
+            },
+            {
+                "id": "User",
+                "data": {
+                    "stringx": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 12,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Username"
+            },
+            {
+                "id": "Pw",
+                "data": {
+                    "stringx": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 12,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Password"
+            }
+        ],
+        "groups": [],
+        "label": "Proxy Server"
+    }
+}

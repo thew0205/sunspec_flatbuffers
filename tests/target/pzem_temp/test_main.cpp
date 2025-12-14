@@ -18,7 +18,7 @@
 using std::cout;
 using std::endl;
 using std::string;
-ModbusRTUSlave modbus(Serial1, MAX485_CTRL);
+ModbusRTUSlave modbus(Serial0, MAX485_CTRL);
 
 PZEM004Tv30 pzem;
 
@@ -26,13 +26,18 @@ int main()
 {
 
     stdio_init_all();
-    pzem = PZEM004Tv30(Serial0, 1, 0, 1);
+    pzem = PZEM004Tv30(Serial1, 9, 8, 1);
+    while (1)
+    {
+        /* code */
+        printf("%f\n", pzem.voltage());
+    }
 
-    Serial1.begin(BAUD_9600, Pin::txPin, Pin::rxPin);
+    Serial0.begin(BAUD_9600, Pin::txPin, Pin::rxPin);
 
     modbus.begin(1, BAUD_9600, SERIAL_8N1);
 
-    SunspecDeviceWriter writer{ modbus};
+    SunspecDeviceWriter writer{modbus};
     writer.initAll({SunspecModelList_kModel1, SunspecModelList_kModel113});
     SunspecPointFunction functMn{.str = {.function = [](void *param) -> string
                                          { return "Matthew"; }}};
@@ -40,29 +45,29 @@ int main()
     writer.getModel(SunspecModelList_kModel1)->getPoint("Mn")->setPointFunction(functMn);
 
     writer.getModel(SunspecModelList_kModel1)->getPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
-                                                                                                  { return "Busoye Tolulope Matthew"; }}});
+                                                                                          { return "Busoye Tolulope Matthew"; }}});
     writer.getModel(SunspecModelList_kModel1)->getPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
-                                                                                                    { return 1; }}});
+                                                                                            { return 1; }}});
     writer.getModel(SunspecModelList_kModel1)->getPoint("Opt")->setPointFunction({.str = {.function = [](void *param) -> string
-                                                                                                  { return "Busoye Tolulope Matthew"; }}});
+                                                                                          { return "Busoye Tolulope Matthew"; }}});
     writer.getModel(SunspecModelList_kModel1)->getPoint("DA")->setPointFunction({.uint16 = {.function = [](void *param) -> uint16_t
-                                                                                                    { return 1; }}});
+                                                                                            { return 1; }}});
 
     writer.getModel(SunspecModelList_kModel113)->getPoint("A")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                      { return pzem.current(); }}});
+                                                                                              { return pzem.current(); }}});
     writer.getModel(SunspecModelList_kModel113)->getPoint("PhVphA")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                           { return pzem.voltage(); }}});
+                                                                                                   { return pzem.voltage(); }}});
 
     writer.getModel(SunspecModelList_kModel113)->getPoint("AphA")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                         { return pzem.current(); }}});
+                                                                                                 { return pzem.current(); }}});
     writer.getModel(SunspecModelList_kModel113)->getPoint("W")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                      { return pzem.power(); }}});
+                                                                                              { return pzem.power(); }}});
     writer.getModel(SunspecModelList_kModel113)->getPoint("Hz")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                       { return pzem.frequency(); }}});
+                                                                                               { return pzem.frequency(); }}});
     writer.getModel(SunspecModelList_kModel113)->getPoint("PF")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                       { return pzem.pf(); }}});
+                                                                                               { return pzem.pf(); }}});
     writer.getModel(SunspecModelList_kModel113)->getPoint("WH")->setPointFunction({.float32 = {.function = [](void *param)
-                                                                                                       { return pzem.energy(); }}});
+                                                                                               { return pzem.energy(); }}});
 
     while (1)
     {

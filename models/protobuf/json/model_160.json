@@ -1,0 +1,309 @@
+{
+    "id": 160,
+    "group": {
+        "id": "mppt",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 160
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "DCA_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Current Scale Factor"
+            },
+            {
+                "id": "DCV_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Voltage Scale Factor"
+            },
+            {
+                "id": "DCW_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Power Scale Factor"
+            },
+            {
+                "id": "DCWH_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Energy Scale Factor"
+            },
+            {
+                "id": "Evt",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Global Events"
+            },
+            {
+                "id": "N",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Number of Modules"
+            },
+            {
+                "id": "TmsPer",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Timestamp Period"
+            }
+        ],
+        "groups": [
+            {
+                "id": "module",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "N",
+                "points": [
+                    {
+                        "id": "ID",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Input ID"
+                    },
+                    {
+                        "id": "IDStr",
+                        "data": {
+                            "stringx": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 8,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Input ID String"
+                    },
+                    {
+                        "id": "DCA",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DCA_SF",
+                        "units": "A",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "DC Current"
+                    },
+                    {
+                        "id": "DCV",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DCV_SF",
+                        "units": "V",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "DC Voltage"
+                    },
+                    {
+                        "id": "DCW",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "DCW_SF",
+                        "units": "W",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "DC Power"
+                    },
+                    {
+                        "id": "DCWH",
+                        "data": {
+                            "acc32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": "DCWH_SF",
+                        "units": "Wh",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Lifetime Energy"
+                    },
+                    {
+                        "id": "Tms",
+                        "data": {
+                            "uint32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "Secs",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Timestamp"
+                    },
+                    {
+                        "id": "Tmp",
+                        "data": {
+                            "sint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "C",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Temperature"
+                    },
+                    {
+                        "id": "DCSt",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Operating State"
+                    },
+                    {
+                        "id": "DCEvt",
+                        "data": {
+                            "bitfield32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Module Events"
+                    }
+                ],
+                "groups": [],
+                "label": null
+            }
+        ],
+        "label": null
+    }
+}

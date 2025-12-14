@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+// package sunspec;
+
+/* =======================
+ * Enums
+ * ======================= */
+
+enum SunspecPointAccessType {
+  kR  = 0; // Read-only
+  kRW = 1; // Read-write
+}
+
+enum SunspecPointMandatoryType {
+  kM = 0; // Optional
+  kO = 1; // Mandatory
+}
+
+enum SunspecGroupType {
+  kGroup = 0;
+  kSync  = 1;
+}
+
+/* =======================
+ * Primitive wrapper messages
+ * ======================= */
+
+message Sint16  { int32  value = 1; }   // int16 stored in int32
+message Sint32  { int32  value = 1; }
+message Sint64  { int64  value = 1; }
+
+message Uint16  { uint32 value = 1; }   // uint16 stored in uint32
+message Uint32  { uint32 value = 1; }
+message Uint64  { uint64 value = 1; }
+
+message Raw16   { uint32 value = 1; }
+message Acc16   { uint32 value = 1; }
+message Acc32   { uint32 value = 1; }
+message Acc64   { uint64 value = 1; }
+
+message Bitfield16 { uint32 value = 1; }
+message Bitfield32 { uint32 value = 1; }
+message Bitfield64 { uint64 value = 1; }
+
+message Enum16 { uint32 value = 1; }
+message Enum32 { uint32 value = 1; }
+
+message Float32 { float  value = 1; }
+message Float64 { double value = 1; }
+
+message Stringx { string value = 1; }
+
+message SunsSf  { int32 value = 1; }   // scale factor (int16 → int32)
+
+message Pad16   { uint32 value = 1; }
+
+/* =======================
+ * Address types
+ * ======================= */
+
+message IpAddr {
+  uint32 octet1 = 1;
+  uint32 octet2 = 2;
+  uint32 octet3 = 3;
+  uint32 octet4 = 4;
+}
+
+message Ipv6Addr {
+  bytes value = 1; // exactly 16 bytes
+}
+
+message Eui48 {
+  bytes value = 1; // exactly 6 bytes
+}
+
+/* =======================
+ * Union → oneof
+ * ======================= */
+
+message SunspecPointData {
+  oneof kind {
+    int32      sint16      = 1;
+    int32      sint32      = 2;
+    int64      sint64      = 3;
+    uint32       raw16       = 4;
+    uint32      uint16      = 5;
+    uint32      uint32      = 6;
+    uint64      uint64      = 7;
+    uint32       acc16       = 8;
+    uint32       acc32       = 9;
+    uint64       acc64       = 10;
+    uint32  bitfield16  = 11;
+    uint32  bitfield32  = 12;
+    uint64  bitfield64  = 13;
+    uint32      enum16      = 14;
+    uint32      enum32      = 15;
+    float     float32     = 16;
+    double     float64     = 17;
+    string     stringx     = 18;
+    uint32      sunssf     = 19;
+    uint32       pad16       = 20;
+    IpAddr      ipaddr     = 21;
+    Ipv6Addr    ipv6addr   = 22;
+    Eui48       eui48       = 23;
+  }
+}
+
+/* =======================
+ * Point definition
+ * ======================= */
+
+message SunspecPointDef {
+  string id = 1;
+
+  SunspecPointData data = 2;
+
+  uint32 count = 3;                // default = 1
+  string count_point_id = 4;
+
+  uint32 size = 5;
+
+  int32 sf = 6;                    // scale factor
+  string sf_id = 7;
+
+  string units = 8;
+
+  SunspecPointAccessType access = 9;
+  SunspecPointMandatoryType mandatory = 10;
+
+  string label = 11;
+}
+
+/* =======================
+ * Group definition
+ * ======================= */
+
+message SunspecGroupDef {
+  string id = 1;
+
+  SunspecGroupType type = 2;
+
+  uint32 count = 3;
+  string count_point_id = 4;
+
+  repeated SunspecPointDef points = 5;
+  repeated SunspecGroupDef groups = 6;
+
+  string label = 7;
+}
+
+/* =======================
+ * Model definition
+ * ======================= */
+
+message SunspecModelDef {
+  uint32 id = 1; // uint16 stored as uint32
+  SunspecGroupDef group = 2;
+}

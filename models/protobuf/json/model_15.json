@@ -1,0 +1,238 @@
+{
+    "id": 15,
+    "group": {
+        "id": "model_15",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 15
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Clr",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Clear"
+            },
+            {
+                "id": "InCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Count"
+            },
+            {
+                "id": "InUcCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Unicast Count"
+            },
+            {
+                "id": "InNUcCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Non-Unicast Count"
+            },
+            {
+                "id": "InDscCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Discarded Count"
+            },
+            {
+                "id": "InErrCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Error Count"
+            },
+            {
+                "id": "InUnkCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Input Unknown Count"
+            },
+            {
+                "id": "OutCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Output Count"
+            },
+            {
+                "id": "OutUcCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Output Unicast Count"
+            },
+            {
+                "id": "OutNUcCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Output Non-Unicast Count"
+            },
+            {
+                "id": "OutDscCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Output Discarded Count"
+            },
+            {
+                "id": "OutErrCnt",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Output Error Count"
+            },
+            {
+                "id": "Pad",
+                "data": {
+                    "pad16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            }
+        ],
+        "groups": [],
+        "label": "Interface Counters Model"
+    }
+}

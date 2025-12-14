@@ -1,0 +1,395 @@
+{
+    "id": 705,
+    "group": {
+        "id": "DERVoltVar",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 705
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Ena",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "DER Volt-Var Module Enable"
+            },
+            {
+                "id": "AdptCrvReq",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Adopt Curve Request"
+            },
+            {
+                "id": "AdptCrvRslt",
+                "data": {
+                    "enum16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Adopt Curve Result"
+            },
+            {
+                "id": "NPt",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Number Of Points"
+            },
+            {
+                "id": "NCrv",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Stored Curve Count"
+            },
+            {
+                "id": "RvrtTms",
+                "data": {
+                    "uint32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Reversion Timeout"
+            },
+            {
+                "id": "RvrtRem",
+                "data": {
+                    "uint32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": "Secs",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Reversion Time Remaining"
+            },
+            {
+                "id": "RvrtCrv",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Reversion Curve"
+            },
+            {
+                "id": "V_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Voltage Scale Factor"
+            },
+            {
+                "id": "DeptRef_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Var Scale Factor"
+            },
+            {
+                "id": "RspTms_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Open-Loop Scale Factor"
+            }
+        ],
+        "groups": [
+            {
+                "id": "Crv",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "NCrv",
+                "points": [
+                    {
+                        "id": "ActPt",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "Active Points"
+                    },
+                    {
+                        "id": "DeptRef",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kM",
+                        "label": "Dependent Reference"
+                    },
+                    {
+                        "id": "Pri",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Power Priority"
+                    },
+                    {
+                        "id": "VRef",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "VNomPct",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Vref Adjustment"
+                    },
+                    {
+                        "id": "VRefAuto",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": "V_SF",
+                        "units": "VNomPct",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "Current Autonomous Vref"
+                    },
+                    {
+                        "id": "VRefAutoEna",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Autonomous Vref Enable"
+                    },
+                    {
+                        "id": "VRefAutoTms",
+                        "data": {
+                            "uint16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "Secs",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Auto Vref Time Constant"
+                    },
+                    {
+                        "id": "RspTms",
+                        "data": {
+                            "uint32": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 2,
+                        "sf": 0,
+                        "sf_id": "RspTms_SF",
+                        "units": "Secs",
+                        "access": "kRW",
+                        "mandatory": "kO",
+                        "label": "Open Loop Response Time"
+                    },
+                    {
+                        "id": "ReadOnly",
+                        "data": {
+                            "enum16": null
+                        },
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Curve Access"
+                    }
+                ],
+                "groups": [
+                    {
+                        "id": "Pt",
+                        "type": "kGroup",
+                        "count": 0,
+                        "count_point_id": "NPt",
+                        "points": [
+                            {
+                                "id": "V",
+                                "data": {
+                                    "uint16": null
+                                },
+                                "count": 1,
+                                "count_point_id": null,
+                                "size": 1,
+                                "sf": 0,
+                                "sf_id": "V_SF",
+                                "units": "VNomPct",
+                                "access": "kRW",
+                                "mandatory": "kO",
+                                "label": "Voltage Point"
+                            },
+                            {
+                                "id": "Var",
+                                "data": {
+                                    "sint16": null
+                                },
+                                "count": 1,
+                                "count_point_id": null,
+                                "size": 1,
+                                "sf": 0,
+                                "sf_id": "DeptRef_SF",
+                                "units": "DeptRef",
+                                "access": "kRW",
+                                "mandatory": "kO",
+                                "label": "Reactive Power Point"
+                            }
+                        ],
+                        "groups": [],
+                        "label": "Stored Curve Points"
+                    }
+                ],
+                "label": "Stored Curve Points"
+            }
+        ],
+        "label": "Stored Curves"
+    }
+}

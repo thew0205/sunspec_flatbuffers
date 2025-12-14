@@ -1,0 +1,163 @@
+{
+    "id": 145,
+    "group": {
+        "id": "ext_settings",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 145
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "NomRmpUpRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Ramp Up Rate"
+            },
+            {
+                "id": "NomRmpDnRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "NomRmpDnRte"
+            },
+            {
+                "id": "EmgRmpUpRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Emergency Ramp Up Rate"
+            },
+            {
+                "id": "EmgRmpDnRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Emergency Ramp Down Rate"
+            },
+            {
+                "id": "ConnRmpUpRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Connect Ramp Up Rate"
+            },
+            {
+                "id": "ConnRmpDnRte",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Connect Ramp Down Rate"
+            },
+            {
+                "id": "AGra",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Rmp_SF",
+                "units": "Pct",
+                "access": "kRW",
+                "mandatory": "kO",
+                "label": "Default Ramp Rate"
+            },
+            {
+                "id": "Rmp_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Ramp Rate Scale Factor"
+            }
+        ],
+        "groups": [],
+        "label": "Extended Settings"
+    }
+}

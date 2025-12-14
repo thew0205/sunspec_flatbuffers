@@ -1,0 +1,217 @@
+enum SunspecPointAccessType :uint8
+{
+    kR,  /**< Only access Read supported */
+    kRW, /**< Read and Write access supported */
+}
+
+/**
+ * @brief Enumeration of SunspecPoint mandatory types.
+ */
+enum SunspecPointMandatoryType: uint8
+{
+    kM, /**< Point must be implemented */
+    kO, /**< Point can be omitted */
+}
+
+struct kSint16
+{
+    value : int16;
+}
+  
+struct kSint32
+{
+    value : int32 ;
+}
+  
+struct kSint64
+{
+    value : int64;
+}
+  
+struct kRaw16
+{
+    value : uint16;
+}
+  
+struct kUint16
+{
+    value : uint16 ;
+
+}
+  
+struct kUint32
+{
+    value : uint32;
+
+}
+  
+struct kUint64
+{
+    value : uint64;
+
+}
+  
+struct kAcc16
+{
+    value : uint16;
+
+}
+  
+struct KAcc32
+{
+    value : uint32;
+
+}
+  
+struct kAcc64
+{
+    value : uint64;
+
+}
+  
+struct kBitfield16
+{
+    value : uint16;
+
+}
+  
+struct kBitfield32
+{
+    value : uint32;
+
+}
+  
+struct kBitfield64
+{
+    value : uint64;
+
+}
+  
+struct kEnum16
+{
+    value : uint16;
+
+}
+  
+struct kEnum32
+{
+    value : uint32;
+
+}
+  
+struct kFloat32
+{
+    value : float;
+
+}
+  
+struct kFloat64
+{
+    value : double;
+
+}
+  
+table kStringx
+{
+    value : string;
+
+}
+  
+struct kSunsSf
+{
+    value : uint16;
+
+}
+  
+struct kPad16
+{
+    value : uint16;
+
+}
+  
+struct kIpAddr
+{
+    octet1 : uint8;
+    octet2 : uint8;
+    octet3 : uint8;
+    octet4 : uint8;
+
+}
+  
+struct kIpv6Addr
+{
+    value : [uint8:24];
+
+}
+  
+struct kEui48
+{
+    value : [uint8:3];
+
+}
+
+union SunspecPointData
+{
+    // kUndefinedType = 0, /**< Undefined type */
+    kSint16,             /**< Signed 16-bit integer */
+    kSint32,             /**< Signed 32-bit integer */
+    kSint64,             /**< Signed 64-bit integer */
+    kRaw16,             /**< 16-bit raw value */
+    kUint16,            /**< Unsigned 16-bit integer */
+    kUint32,            /**< Unsigned 32-bit integer */
+    kUint64,            /**< Unsigned 64-bit integer */
+    kAcc16,             /**< Unsigned 16-bit accumulator(deprecated, in favor of uint16) */
+    KAcc32,             /**< Unsigned 32-bit accumulator (deprecated in favor of uint32) */
+    kAcc64,             /**< Unsigned 64-bit accumulator (deprecated in favor of uint64) */
+    kBitfield16,        /**< 16-bit bitfield */
+    kBitfield32,        /**< 32-bit bitfield */
+    kBitfield64,        /**< 64-bit bitfield */
+    kEnum16,            /**< 16-bit enumeration */
+    kEnum32,            /**< 32-bit enumeration */
+    kFloat32,           /**< 32-bit floating-point */
+    kFloat64,           /**< 64-bit floating-point */
+    kStringx,            /**< String (UTF-8 encoded) */
+    kSunsSf,            /**< Scale factor – Signed power of 10 multiplier (+) or divider (-) */
+    kPad16,               /**< 16-bit pad used for alignment */
+    kIpAddr,            /**< IP Address as an unsigned 32-bit. */
+    kIpv6Addr,          /**< 16-byte IP V6 address */
+    kEui48,             /**< 48-bit MAC address */
+}
+table SunspecPointDef{
+    id : string;
+    data: SunspecPointData;
+    // This is need because it can be specified as a constant in the model definition or in another point.
+    count:uint16= 1;
+    count_point_id : string;
+    size: uint16;
+    // This is need because it can be specified as a constant in the model definition or in another point.
+    sf : int16;
+    sf_id : string;
+    units : string;
+    access:SunspecPointAccessType = kR;
+    mandatory:SunspecPointMandatoryType = kO;
+    label : string;
+}
+
+
+enum SunspecGroupType:uint8
+{
+    kGroup,
+    kSync,
+}
+
+table SunspecGroupDef{
+    id: string;
+    type:SunspecGroupType = kGroup;
+    count:uint16= 1;
+    count_point_id:string;
+    points: [SunspecPointDef];
+    groups: [SunspecGroupDef];
+    label:string;
+}
+
+table SunspecModelDef{
+    id: uint16 = 0xffff;
+    group:SunspecGroupDef;
+}
+root_type SunspecModelDef;

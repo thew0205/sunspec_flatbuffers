@@ -1,0 +1,1123 @@
+{
+    "id": 202,
+    "group": {
+        "id": "ac_meter_abn",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 202
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "A",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Amps"
+            },
+            {
+                "id": "AphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Amps PhaseA"
+            },
+            {
+                "id": "AphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Amps PhaseB"
+            },
+            {
+                "id": "AphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "A_SF",
+                "units": "A",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Amps PhaseC"
+            },
+            {
+                "id": "A_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "PhV",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Voltage LN"
+            },
+            {
+                "id": "PhVphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Phase Voltage AN"
+            },
+            {
+                "id": "PhVphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Phase Voltage BN"
+            },
+            {
+                "id": "PhVphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Phase Voltage CN"
+            },
+            {
+                "id": "PPV",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Voltage LL"
+            },
+            {
+                "id": "PhVphAB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Phase Voltage AB"
+            },
+            {
+                "id": "PhVphBC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Phase Voltage BC"
+            },
+            {
+                "id": "PhVphCA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "V_SF",
+                "units": "V",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Phase Voltage CA"
+            },
+            {
+                "id": "V_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "Hz",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "Hz_SF",
+                "units": "Hz",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Hz"
+            },
+            {
+                "id": "Hz_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "W",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Watts"
+            },
+            {
+                "id": "WphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Watts phase A"
+            },
+            {
+                "id": "WphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Watts phase B"
+            },
+            {
+                "id": "WphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "W_SF",
+                "units": "W",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Watts phase C"
+            },
+            {
+                "id": "W_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "VA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VA"
+            },
+            {
+                "id": "VAphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VA phase A"
+            },
+            {
+                "id": "VAphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VA phase B"
+            },
+            {
+                "id": "VAphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VA_SF",
+                "units": "VA",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VA phase C"
+            },
+            {
+                "id": "VA_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "VAR",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VAR_SF",
+                "units": "var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VAR"
+            },
+            {
+                "id": "VARphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VAR_SF",
+                "units": "var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VAR phase A"
+            },
+            {
+                "id": "VARphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VAR_SF",
+                "units": "var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VAR phase B"
+            },
+            {
+                "id": "VARphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "VAR_SF",
+                "units": "var",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "VAR phase C"
+            },
+            {
+                "id": "VAR_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "PF",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": "Pct",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF"
+            },
+            {
+                "id": "PFphA",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": "Pct",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF phase A"
+            },
+            {
+                "id": "PFphB",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": "Pct",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF phase B"
+            },
+            {
+                "id": "PFphC",
+                "data": {
+                    "sint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": "PF_SF",
+                "units": "Pct",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "PF phase C"
+            },
+            {
+                "id": "PF_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "TotWhExp",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Total Watt-hours Exported"
+            },
+            {
+                "id": "TotWhExpPhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Exported phase A"
+            },
+            {
+                "id": "TotWhExpPhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Exported phase B"
+            },
+            {
+                "id": "TotWhExpPhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Exported phase C"
+            },
+            {
+                "id": "TotWhImp",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Total Watt-hours Imported"
+            },
+            {
+                "id": "TotWhImpPhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Imported phase A"
+            },
+            {
+                "id": "TotWhImpPhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Imported phase B"
+            },
+            {
+                "id": "TotWhImpPhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotWh_SF",
+                "units": "Wh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total Watt-hours Imported phase C"
+            },
+            {
+                "id": "TotWh_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": null
+            },
+            {
+                "id": "TotVAhExp",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Exported"
+            },
+            {
+                "id": "TotVAhExpPhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Exported phase A"
+            },
+            {
+                "id": "TotVAhExpPhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Exported phase B"
+            },
+            {
+                "id": "TotVAhExpPhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Exported phase C"
+            },
+            {
+                "id": "TotVAhImp",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Imported"
+            },
+            {
+                "id": "TotVAhImpPhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Imported phase A"
+            },
+            {
+                "id": "TotVAhImpPhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Imported phase B"
+            },
+            {
+                "id": "TotVAhImpPhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVAh_SF",
+                "units": "VAh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VA-hours Imported phase C"
+            },
+            {
+                "id": "TotVAh_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "TotVArhImpQ1",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAR-hours Imported Q1"
+            },
+            {
+                "id": "TotVArhImpQ1PhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q1 phase A"
+            },
+            {
+                "id": "TotVArhImpQ1PhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q1 phase B"
+            },
+            {
+                "id": "TotVArhImpQ1PhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q1 phase C"
+            },
+            {
+                "id": "TotVArhImpQ2",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q2"
+            },
+            {
+                "id": "TotVArhImpQ2PhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q2 phase A"
+            },
+            {
+                "id": "TotVArhImpQ2PhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q2 phase B"
+            },
+            {
+                "id": "TotVArhImpQ2PhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Imported Q2 phase C"
+            },
+            {
+                "id": "TotVArhExpQ3",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q3"
+            },
+            {
+                "id": "TotVArhExpQ3PhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q3 phase A"
+            },
+            {
+                "id": "TotVArhExpQ3PhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q3 phase B"
+            },
+            {
+                "id": "TotVArhExpQ3PhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q3 phase C"
+            },
+            {
+                "id": "TotVArhExpQ4",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q4"
+            },
+            {
+                "id": "TotVArhExpQ4PhA",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q4 Imported phase A"
+            },
+            {
+                "id": "TotVArhExpQ4PhB",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q4 Imported phase B"
+            },
+            {
+                "id": "TotVArhExpQ4PhC",
+                "data": {
+                    "acc32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": "TotVArh_SF",
+                "units": "varh",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Total VAr-hours Exported Q4 Imported phase C"
+            },
+            {
+                "id": "TotVArh_SF",
+                "data": {
+                    "sunssf": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kO",
+                "label": null
+            },
+            {
+                "id": "Evt",
+                "data": {
+                    "bitfield32": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 2,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Events"
+            }
+        ],
+        "groups": [],
+        "label": "split single phase (ABN) meter"
+    }
+}

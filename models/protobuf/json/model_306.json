@@ -1,0 +1,103 @@
+{
+    "id": 306,
+    "group": {
+        "id": "ref_point",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data": {
+                    "uint16": 306
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "GHI",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "W/m2",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "GHI"
+            },
+            {
+                "id": "A",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "W/m2",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Amps"
+            },
+            {
+                "id": "V",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "W/m2",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Voltage"
+            },
+            {
+                "id": "Tmp",
+                "data": {
+                    "uint16": null
+                },
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": "W/m2",
+                "access": "kR",
+                "mandatory": "kO",
+                "label": "Temperature"
+            }
+        ],
+        "groups": [],
+        "label": "Reference Point Model"
+    }
+}
