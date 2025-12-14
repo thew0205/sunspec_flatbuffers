@@ -24,8 +24,11 @@ do
     if [ -f "$ROOT_DIR/models/protobuf/json/model_${model}.json" ];
     then    
         python3 $ROOT_DIR/models/protobuf/sunspec_protobuf_json_to_binary.py "$ROOT_DIR/models/protobuf/json/model_${model}.json" $ROOT_DIR/models/protobuf/binary/model_${model}.bin
-        # ${PROTOBUF_COMPILER} --binary -o models/protobuf/binary sunspec_model_definition.fbs "models/protobuf/json/model_${model}.json"
-        xxd -i -n modelDefinition${model} models/protobuf/binary/model_${model}.bin  > src/models/protobuf/protobuf_array_model_${model}.cpp
+
+        xxd -i -n modelDefinition${model} $ROOT_DIR/models/protobuf/binary/model_${model}.bin  > $ROOT_DIR/src/models/protobuf/protobuf_array_model_${model}.cpp
+
+        sed -i 's/unsigned char/const unsigned char/g' "$ROOT_DIR/src/models/protobuf/protobuf_array_model_${model}.cpp"
+
     fi
 done
 # ${PROTOBUF_COMPILER} -o models/protobuf/ATT  --annotate  sunspec_model_definition.fbs models/protobuf/binary/model_1.bin

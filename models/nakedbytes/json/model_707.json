@@ -1,0 +1,354 @@
+{
+    "id": 707,
+    "group": {
+        "id": "DERTripLV",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data_type": "uint16",
+                "data": 707,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data_type": "uint16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            },
+            {
+                "id": "Ena",
+                "data_type": "enum16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "DER Trip LV Module Enable"
+            },
+            {
+                "id": "AdptCrvReq",
+                "data_type": "uint16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kRW",
+                "mandatory": "kM",
+                "label": "Adopt Curve Request"
+            },
+            {
+                "id": "AdptCrvRslt",
+                "data_type": "enum16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Adopt Curve Result"
+            },
+            {
+                "id": "NPt",
+                "data_type": "uint16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Number Of Points"
+            },
+            {
+                "id": "NCrvSet",
+                "data_type": "uint16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Stored Curve Count"
+            },
+            {
+                "id": "V_SF",
+                "data_type": "sunssf",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Voltage Scale Factor"
+            },
+            {
+                "id": "Tms_SF",
+                "data_type": "sunssf",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Time Point Scale Factor"
+            }
+        ],
+        "groups": [
+            {
+                "id": "Crv",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "NCrvSet",
+                "points": [
+                    {
+                        "id": "ReadOnly",
+                        "data_type": "enum16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": null,
+                        "access": "kR",
+                        "mandatory": "kM",
+                        "label": "Curve Access"
+                    }
+                ],
+                "groups": [
+                    {
+                        "id": "MustTrip",
+                        "type": "kGroup",
+                        "count": 1,
+                        "count_point_id": null,
+                        "points": [
+                            {
+                                "id": "ActPt",
+                                "data_type": "uint16",
+                                "data": null,
+                                "count": 1,
+                                "count_point_id": null,
+                                "size": 1,
+                                "sf": 0,
+                                "sf_id": null,
+                                "units": null,
+                                "access": "kRW",
+                                "mandatory": "kO",
+                                "label": "Number Of Active Points"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "id": "Pt",
+                                "type": "kGroup",
+                                "count": 0,
+                                "count_point_id": "NPt",
+                                "points": [
+                                    {
+                                        "id": "V",
+                                        "data_type": "uint16",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 1,
+                                        "sf": 0,
+                                        "sf_id": "V_SF",
+                                        "units": "VNomPct",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Voltage Point"
+                                    },
+                                    {
+                                        "id": "Tms",
+                                        "data_type": "uint32",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 2,
+                                        "sf": 0,
+                                        "sf_id": "Tms_SF",
+                                        "units": "Secs",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Time Point"
+                                    }
+                                ],
+                                "groups": [],
+                                "label": "Must Trip Curve Points"
+                            }
+                        ],
+                        "label": "Must Trip Curve Points"
+                    },
+                    {
+                        "id": "MayTrip",
+                        "type": "kGroup",
+                        "count": 1,
+                        "count_point_id": null,
+                        "points": [
+                            {
+                                "id": "ActPt",
+                                "data_type": "uint16",
+                                "data": null,
+                                "count": 1,
+                                "count_point_id": null,
+                                "size": 1,
+                                "sf": 0,
+                                "sf_id": null,
+                                "units": null,
+                                "access": "kRW",
+                                "mandatory": "kO",
+                                "label": "Number Of Active Points"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "id": "Pt",
+                                "type": "kGroup",
+                                "count": 0,
+                                "count_point_id": "NPt",
+                                "points": [
+                                    {
+                                        "id": "V",
+                                        "data_type": "uint16",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 1,
+                                        "sf": 0,
+                                        "sf_id": "V_SF",
+                                        "units": "VNomPct",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Voltage Point"
+                                    },
+                                    {
+                                        "id": "Tms",
+                                        "data_type": "uint32",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 2,
+                                        "sf": 0,
+                                        "sf_id": "Tms_SF",
+                                        "units": "Secs",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Time Point"
+                                    }
+                                ],
+                                "groups": [],
+                                "label": "May Trip Curve Points"
+                            }
+                        ],
+                        "label": "May Trip Curve Points"
+                    },
+                    {
+                        "id": "MomCess",
+                        "type": "kGroup",
+                        "count": 1,
+                        "count_point_id": null,
+                        "points": [
+                            {
+                                "id": "ActPt",
+                                "data_type": "uint16",
+                                "data": null,
+                                "count": 1,
+                                "count_point_id": null,
+                                "size": 1,
+                                "sf": 0,
+                                "sf_id": null,
+                                "units": null,
+                                "access": "kRW",
+                                "mandatory": "kO",
+                                "label": "Number Of Active Points"
+                            }
+                        ],
+                        "groups": [
+                            {
+                                "id": "Pt",
+                                "type": "kGroup",
+                                "count": 0,
+                                "count_point_id": "NPt",
+                                "points": [
+                                    {
+                                        "id": "V",
+                                        "data_type": "uint16",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 1,
+                                        "sf": 0,
+                                        "sf_id": "V_SF",
+                                        "units": "VNomPct",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Voltage Point"
+                                    },
+                                    {
+                                        "id": "Tms",
+                                        "data_type": "uint32",
+                                        "data": null,
+                                        "count": 1,
+                                        "count_point_id": null,
+                                        "size": 2,
+                                        "sf": 0,
+                                        "sf_id": "Tms_SF",
+                                        "units": "Secs",
+                                        "access": "kRW",
+                                        "mandatory": "kO",
+                                        "label": "Time Point"
+                                    }
+                                ],
+                                "groups": [],
+                                "label": "Mom Cessation Curve Points"
+                            }
+                        ],
+                        "label": "Mom Cessation Curve Points"
+                    }
+                ],
+                "label": "Momentary Cessation Curve"
+            }
+        ],
+        "label": "Stored Curves"
+    }
+}

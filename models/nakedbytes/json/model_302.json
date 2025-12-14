@@ -1,0 +1,122 @@
+{
+    "id": 302,
+    "group": {
+        "id": "irradiance",
+        "type": "kGroup",
+        "count": 1,
+        "count_point_id": null,
+        "points": [
+            {
+                "id": "ID",
+                "data_type": "uint16",
+                "data": 302,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model ID"
+            },
+            {
+                "id": "L",
+                "data_type": "uint16",
+                "data": null,
+                "count": 1,
+                "count_point_id": null,
+                "size": 1,
+                "sf": 0,
+                "sf_id": null,
+                "units": null,
+                "access": "kR",
+                "mandatory": "kM",
+                "label": "Model Length"
+            }
+        ],
+        "groups": [
+            {
+                "id": "repeating",
+                "type": "kGroup",
+                "count": 0,
+                "count_point_id": "N",
+                "points": [
+                    {
+                        "id": "GHI",
+                        "data_type": "uint16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "W/m2",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "GHI"
+                    },
+                    {
+                        "id": "POAI",
+                        "data_type": "uint16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "W/m2",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "POAI"
+                    },
+                    {
+                        "id": "DFI",
+                        "data_type": "uint16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "W/m2",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "DFI"
+                    },
+                    {
+                        "id": "DNI",
+                        "data_type": "uint16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "W/m2",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "DNI"
+                    },
+                    {
+                        "id": "OTI",
+                        "data_type": "uint16",
+                        "data": null,
+                        "count": 1,
+                        "count_point_id": null,
+                        "size": 1,
+                        "sf": 0,
+                        "sf_id": null,
+                        "units": "W/m2",
+                        "access": "kR",
+                        "mandatory": "kO",
+                        "label": "OTI"
+                    }
+                ],
+                "groups": [],
+                "label": null
+            }
+        ],
+        "label": null
+    }
+}

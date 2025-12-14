@@ -1,0 +1,429 @@
+{
+    "root_type": "SunspecModelDef",
+    "offset_size": 2,
+    "version": 10,
+    "types": [
+        {
+            "name": "SunspecPointData",
+            "type": "union",
+            "unions": [
+                {
+                    "name": "uint16",
+                    "type": "uint16"
+                },
+                {
+                    "name": "int16",
+                    "type": "int16"
+                },
+                {
+                    "name": "uint32",
+                    "type": "uint32"
+                },
+                {
+                    "name": "int32",
+                    "type": "int32"
+                },
+                {
+                    "name": "uint64",
+                    "type": "uint64"
+                },
+                {
+                    "name": "int64",
+                    "type": "int64"
+                },
+                {
+                    "name": "float32",
+                    "type": "float32"
+                },
+                {
+                    "name": "float64",
+                    "type": "float64"
+                },
+                {
+                    "name": "string",
+                    "type": "string"
+                },
+                {
+                    "name": "pad",
+                    "type": "pad"
+                },
+                {
+                    "name": "enum16",
+                    "type": "enum16"
+                },
+                {
+                    "name": "enum32",
+                    "type": "enum32"
+                },
+                {
+                    "name": "enum64",
+                    "type": "enum64"
+                },
+                {
+                    "name": "bitfield16",
+                    "type": "bitfield16"
+                },
+                {
+                    "name": "bitfield32",
+                    "type": "bitfield32"
+                },
+                {
+                    "name": "bitfield64",
+                    "type": "bitfield64"
+                },
+                {
+                    "name": "sunssf",
+                    "type": "sunssf"
+                },
+                {
+                    "name": "acc16",
+                    "type": "acc16"
+                },
+                {
+                    "name": "acc32",
+                    "type": "acc32"
+                },
+                {
+                    "name": "acc64",
+                    "type": "acc64"
+                },
+                {
+                    "name": "eui48",
+                    "type": "eui48"
+                },
+                {
+                    "name": "ipaddr",
+                    "type": "ipaddr"
+                },
+                {
+                    "name": "ipv6addr",
+                    "type": "ipv6addr"
+                }
+            ]
+        },
+        {
+            "name": "pad",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "enum16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "enum32",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "enum64",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "bitfield16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "bitfield32",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "bitfield64",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "sunssf",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "acc16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "acc32",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "acc64",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "eui48",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value0",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value1",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value2",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "ipaddr",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value0",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value1",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value2",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value3",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "ipv6addr",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value0",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value1",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value2",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value3",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value4",
+                    "type": "uint16"
+                },
+                {
+                    "name": "value5",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "SunspecPointAccessType",
+            "type": "enum",
+            "base_type": "uint8",
+            "enums": [
+                {
+                    "name": "kR",
+                    "value": 0
+                },
+                {
+                    "name": "kRW",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "SunspecPointMandatoryType",
+            "type": "enum",
+            "base_type": "uint8",
+            "enums": [
+                {
+                    "name": "kM",
+                    "value": 0
+                },
+                {
+                    "name": "kO",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "SunspecGroupType",
+            "type": "enum",
+            "base_type": "uint8",
+            "enums": [
+                {
+                    "name": "kGroup",
+                    "value": 0
+                },
+                {
+                    "name": "kSync",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "name": "SunspecPointDef",
+            "type": "struct_offset",
+            "members": [
+                {
+                    "name": "id",
+                    "type": "string"
+                },
+                {
+                    "name": "sf_id",
+                    "type": "string"
+                },
+                {
+                    "name": "units",
+                    "type": "string"
+                },
+                {
+                    "name": "label",
+                    "type": "string"
+                },
+                {
+                    "name": "data",
+                    "type": "SunspecPointData"
+                },
+                {
+                    "name": "count",
+                    "type": "uint8",
+                    "default": 1
+                },
+                {
+                    "name": "size",
+                    "type": "uint8"
+                },
+                {
+                    "name": "sf",
+                    "type": "int8"
+                },
+                {
+                    "name": "access",
+                    "type": "SunspecPointAccessType",
+                    "default": "kR"
+                },
+                {
+                    "name": "mandatory",
+                    "type": "SunspecPointMandatoryType",
+                    "default": "kO"
+                }
+            ]
+        },
+        {
+            "name": "SunspecGroupPointDef",
+            "type": "struct_offset",
+            "members": [
+                {
+                    "name": "id",
+                    "type": "string"
+                },
+                {
+                    "name": "count_point_id",
+                    "type": "string"
+                },
+                {
+                    "name": "points",
+                    "type": "vector[SunspecPointDef]"
+                },
+                {
+                    "name": "groups",
+                    "type": "vector[SunspecGroupPointDef]"
+                },
+                {
+                    "name": "label",
+                    "type": "string"
+                },
+                {
+                    "name": "count",
+                    "type": "uint8",
+                    "default": 1
+                },
+                {
+                    "name": "type",
+                    "type": "SunspecGroupType",
+                    "default": "kGroup"
+                }
+            ]
+        },
+        {
+            "name": "SunspecModelDef",
+            "type": "struct_offset",
+            "members": [
+                {
+                    "name": "id",
+                    "type": "uint16"
+                },
+                {
+                    "name": "group",
+                    "type": "SunspecGroupPointDef"
+                }
+            ]
+        }
+    ]
+}
