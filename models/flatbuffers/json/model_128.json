@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 128
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "ArGraMod",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "ArGraSag",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "ArGraSwell",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "ModEna",
-                "data_type": "kBitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "FilTms",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "DbVMin",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "DbVMax",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "BlkZnV",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "HysBlkZnV",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "BlkZnTmms",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +178,7 @@
             },
             {
                 "id": "HoldTmms",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -192,7 +192,7 @@
             },
             {
                 "id": "ArGra_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -206,7 +206,7 @@
             },
             {
                 "id": "VRefPct_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -220,7 +220,7 @@
             },
             {
                 "id": "Pad",
-                "data_type": "kPad16",
+                "data_type": "Pad16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 704
+                    "Uint16": {
+                        "value": 704
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": 65
+                    "Uint16": {
+                        "value": 65
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,7 @@
             {
                 "id": "PFWInjEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +58,7 @@
             {
                 "id": "PFWInjEnaRvrt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +73,7 @@
             {
                 "id": "PFWInjRvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +88,7 @@
             {
                 "id": "PFWInjRvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +103,7 @@
             {
                 "id": "PFWAbsEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +118,7 @@
             {
                 "id": "PFWAbsEnaRvrt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +133,7 @@
             {
                 "id": "PFWAbsRvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +148,7 @@
             {
                 "id": "PFWAbsRvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +163,7 @@
             {
                 "id": "WMaxLimPctEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +178,9 @@
             {
                 "id": "WMaxLimPct",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +195,9 @@
             {
                 "id": "WMaxLimPctRvrt",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +212,7 @@
             {
                 "id": "WMaxLimPctEnaRvrt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -219,7 +227,7 @@
             {
                 "id": "WMaxLimPctRvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +242,7 @@
             {
                 "id": "WMaxLimPctRvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -249,7 +257,7 @@
             {
                 "id": "WSetEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -264,7 +272,7 @@
             {
                 "id": "WSetMod",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -279,7 +287,7 @@
             {
                 "id": "WSet",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -294,7 +302,7 @@
             {
                 "id": "WSetRvrt",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -309,7 +317,7 @@
             {
                 "id": "WSetPct",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -324,7 +332,7 @@
             {
                 "id": "WSetPctRvrt",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -339,7 +347,7 @@
             {
                 "id": "WSetEnaRvrt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -354,7 +362,7 @@
             {
                 "id": "WSetRvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -369,7 +377,7 @@
             {
                 "id": "WSetRvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -384,7 +392,7 @@
             {
                 "id": "VarSetEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -399,7 +407,7 @@
             {
                 "id": "VarSetMod",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -414,7 +422,7 @@
             {
                 "id": "VarSetPri",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -429,7 +437,7 @@
             {
                 "id": "VarSet",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -444,7 +452,7 @@
             {
                 "id": "VarSetRvrt",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -459,7 +467,7 @@
             {
                 "id": "VarSetPct",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -474,7 +482,7 @@
             {
                 "id": "VarSetPctRvrt",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -489,7 +497,7 @@
             {
                 "id": "VarSetEnaRvrt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -504,7 +512,7 @@
             {
                 "id": "VarSetRvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -519,7 +527,7 @@
             {
                 "id": "VarSetRvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -534,7 +542,9 @@
             {
                 "id": "WRmp",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -549,7 +559,7 @@
             {
                 "id": "WRmpRef",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -564,7 +574,9 @@
             {
                 "id": "VarRmp",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -579,7 +591,7 @@
             {
                 "id": "AntiIslEna",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -594,7 +606,7 @@
             {
                 "id": "PF_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -609,7 +621,7 @@
             {
                 "id": "WMaxLimPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -624,7 +636,7 @@
             {
                 "id": "WSet_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -639,7 +651,7 @@
             {
                 "id": "WSetPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -654,7 +666,7 @@
             {
                 "id": "VarSet_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -669,7 +681,7 @@
             {
                 "id": "VarSetPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -692,7 +704,9 @@
                     {
                         "id": "PF",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -707,7 +721,7 @@
                     {
                         "id": "Ext",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -732,7 +746,9 @@
                     {
                         "id": "PF",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -747,7 +763,7 @@
                     {
                         "id": "Ext",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -772,7 +788,9 @@
                     {
                         "id": "PF",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -787,7 +805,7 @@
                     {
                         "id": "Ext",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -812,7 +830,9 @@
                     {
                         "id": "PF",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -827,7 +847,7 @@
                     {
                         "id": "Ext",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,

@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 809
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "StackTBD",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -60,7 +60,7 @@
                 "points": [
                     {
                         "id": "CellTBD",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

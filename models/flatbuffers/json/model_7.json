@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 7
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "RqSeq",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "Sts",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "Ts",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "Ms",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "Seq",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "Alm",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "Rsrvd",
-                "data_type": "kPad16",
+                "data_type": "Pad16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "Alg",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "N",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -172,7 +172,7 @@
                 "points": [
                     {
                         "id": "DS",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

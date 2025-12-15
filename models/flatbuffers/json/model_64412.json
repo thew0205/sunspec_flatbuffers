@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 64412
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "DAManipulation",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "FalsifyDeviceIdentity",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "MeasPAlwaysNameplate",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "MeasQAlwaysMinimum",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "MeasQAlwaysMaximum",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "MeasQAlwaysZero",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "MeasZeroP",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "MeasInvertQ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "MeasLowV",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "MeasHighV",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +178,7 @@
             },
             {
                 "id": "MeasLowL1V",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -192,7 +192,7 @@
             },
             {
                 "id": "MeasHighL1V",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -206,7 +206,7 @@
             },
             {
                 "id": "MeasLowF",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -220,7 +220,7 @@
             },
             {
                 "id": "MeasHighF",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +234,7 @@
             },
             {
                 "id": "MeasLowAmps",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -248,7 +248,7 @@
             },
             {
                 "id": "MeasHighAmps",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -262,7 +262,7 @@
             },
             {
                 "id": "MeasHighS",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -276,7 +276,7 @@
             },
             {
                 "id": "MeasLowS",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -290,7 +290,7 @@
             },
             {
                 "id": "MeasHighQ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -304,7 +304,7 @@
             },
             {
                 "id": "MeasLowQ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -318,7 +318,7 @@
             },
             {
                 "id": "MeasLowPF",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -332,7 +332,7 @@
             },
             {
                 "id": "MeasLowReversedPF",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -346,7 +346,7 @@
             },
             {
                 "id": "NameplateHighP",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -360,7 +360,7 @@
             },
             {
                 "id": "NameplateLowP",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -374,7 +374,7 @@
             },
             {
                 "id": "NameplateHighS",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +388,7 @@
             },
             {
                 "id": "NameplateLowS",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -402,7 +402,7 @@
             },
             {
                 "id": "NameplateHighQ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -416,7 +416,7 @@
             },
             {
                 "id": "NameplateLowQ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -430,7 +430,7 @@
             },
             {
                 "id": "NameplateHighNomV",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -444,7 +444,7 @@
             },
             {
                 "id": "NameplateLowNomV",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -458,7 +458,7 @@
             },
             {
                 "id": "NameplateLowAmps",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -472,7 +472,7 @@
             },
             {
                 "id": "NameplateLowVarmaxinj",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -486,7 +486,7 @@
             },
             {
                 "id": "NameplateLowVarmaxabs",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -500,7 +500,7 @@
             },
             {
                 "id": "NameplateLowPF",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -514,7 +514,7 @@
             },
             {
                 "id": "SettingsHighNomV",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -528,7 +528,7 @@
             },
             {
                 "id": "SettingsLowAmps",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -542,7 +542,7 @@
             },
             {
                 "id": "SettingsHighP",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -556,7 +556,7 @@
             },
             {
                 "id": "SettingsLowP",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -570,7 +570,7 @@
             },
             {
                 "id": "SettingsHighVAMax",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -584,7 +584,7 @@
             },
             {
                 "id": "SettingsHighVarmaxinj",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -598,7 +598,7 @@
             },
             {
                 "id": "SettingsHighVarmaxabs",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -612,7 +612,7 @@
             },
             {
                 "id": "ChangeCommonModelID",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -626,7 +626,7 @@
             },
             {
                 "id": "ChangeCommonModelLength",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

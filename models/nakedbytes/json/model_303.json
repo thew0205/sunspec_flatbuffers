@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 303,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 303
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -44,7 +46,7 @@
                 "points": [
                     {
                         "id": "TmpBOM",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 7
+                    "Uint16": {
+                        "value": 7
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "RqSeq",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,7 @@
             {
                 "id": "Sts",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,7 @@
             {
                 "id": "Ts",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +90,9 @@
             {
                 "id": "Ms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +107,9 @@
             {
                 "id": "Seq",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,7 @@
             {
                 "id": "Alm",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +139,9 @@
             {
                 "id": "Rsrvd",
                 "data": {
-                    "pad16": null
+                    "Pad16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +156,7 @@
             {
                 "id": "Alg",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +171,9 @@
             {
                 "id": "N",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -182,7 +196,9 @@
                     {
                         "id": "DS",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 220,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 220
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "A",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "A_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "PhV",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "Hz",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "Hz_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "W",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "W_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "VA",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +164,7 @@
             },
             {
                 "id": "VA_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +178,7 @@
             },
             {
                 "id": "VAR",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -190,7 +192,7 @@
             },
             {
                 "id": "VAR_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +206,7 @@
             },
             {
                 "id": "PF",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -218,7 +220,7 @@
             },
             {
                 "id": "PF_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -232,7 +234,7 @@
             },
             {
                 "id": "TotWhExp",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -246,7 +248,7 @@
             },
             {
                 "id": "TotWhImp",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -260,7 +262,7 @@
             },
             {
                 "id": "TotWh_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -274,7 +276,7 @@
             },
             {
                 "id": "TotVAhExp",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -288,7 +290,7 @@
             },
             {
                 "id": "TotVAhImp",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -302,7 +304,7 @@
             },
             {
                 "id": "TotVAh_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -316,7 +318,7 @@
             },
             {
                 "id": "TotVArhImpQ1",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -330,7 +332,7 @@
             },
             {
                 "id": "TotVArhImpQ2",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -344,7 +346,7 @@
             },
             {
                 "id": "TotVArhExpQ3",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -358,7 +360,7 @@
             },
             {
                 "id": "TotVArhExpQ4",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -372,7 +374,7 @@
             },
             {
                 "id": "TotVArh_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -386,7 +388,7 @@
             },
             {
                 "id": "Evt",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -400,7 +402,7 @@
             },
             {
                 "id": "Rsrvd",
-                "data_type": "pad",
+                "data_type": "Pad16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -414,7 +416,7 @@
             },
             {
                 "id": "Ts",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -428,7 +430,7 @@
             },
             {
                 "id": "Ms",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -442,7 +444,7 @@
             },
             {
                 "id": "Seq",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -456,7 +458,7 @@
             },
             {
                 "id": "Alg",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -470,7 +472,7 @@
             },
             {
                 "id": "N",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -492,7 +494,7 @@
                 "points": [
                     {
                         "id": "DS",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

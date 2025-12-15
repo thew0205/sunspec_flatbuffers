@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 502,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 502
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "A_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "W_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "Wh_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "Stat",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "StatVend",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "Evt",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "EvtVend",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "Ctl",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +164,7 @@
             },
             {
                 "id": "CtlVend",
-                "data_type": "enum32",
+                "data_type": "Enum32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +178,7 @@
             },
             {
                 "id": "CtlVal",
-                "data_type": "int32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -190,7 +192,7 @@
             },
             {
                 "id": "Tms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +206,7 @@
             },
             {
                 "id": "OutA",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -218,7 +220,7 @@
             },
             {
                 "id": "OutV",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -232,7 +234,7 @@
             },
             {
                 "id": "OutWh",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -246,7 +248,7 @@
             },
             {
                 "id": "OutPw",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -260,7 +262,7 @@
             },
             {
                 "id": "Tmp",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -274,7 +276,7 @@
             },
             {
                 "id": "InA",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -288,7 +290,7 @@
             },
             {
                 "id": "InV",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -302,7 +304,7 @@
             },
             {
                 "id": "InWh",
-                "data_type": "acc32",
+                "data_type": "Acc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -316,7 +318,7 @@
             },
             {
                 "id": "InW",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

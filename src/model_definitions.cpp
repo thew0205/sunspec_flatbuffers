@@ -1,23 +1,32 @@
-#include "model_definitions.h"
+#include "array_models_externs.h"
+#include "sunspec_adapter.h"
 
-const SunspecModelDef *Sunspec::getModelDefinition(uint16_t id)
+bool Sunspec::getModelDefinition(uint16_t id, SunspecModelDefWrapper * model_def)
 {
     // NOTE: Think of a better way to do this, maybe a map of some sort.
     switch (id)
     {
     case 1:
-        return GetSunspecModelDef(modelDefinition1);
+        *model_def = FormatSunspecModelBinaryToSunspecModelDef(modelDefinition1, modelDefinition1_len);
+        break;
 
     case 112:
-        return GetSunspecModelDef(modelDefinition112);
+        *model_def = FormatSunspecModelBinaryToSunspecModelDef(modelDefinition112, modelDefinition112_len);
+        break;
     case 113:
 
-        return GetSunspecModelDef(modelDefinition113);
+        *model_def = FormatSunspecModelBinaryToSunspecModelDef(modelDefinition113, modelDefinition113_len);
+        break;
+
     case 160:
-        return GetSunspecModelDef(modelDefinition160);
+        *model_def = FormatSunspecModelBinaryToSunspecModelDef(modelDefinition160, modelDefinition160_len);
+        break;
 
     default:
-        return nullptr;
+        // return nullptr;
+        assert(false);
+        return false;
         break;
     }
+    return true;
 }

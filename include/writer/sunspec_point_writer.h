@@ -14,7 +14,7 @@
 #include "sunspec_adapter.h"
 
 #include "sunspec_adapter.h"
-         
+
 class SunspecGroupWriter;
 class SunspecDeviceWriter;
 
@@ -37,7 +37,7 @@ public:
      *
      * The pointFunction will be set to nullptr, and the default value from the definition will be used.
      */
-    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint);
+    SunspecPointWriter(const SunspecPointDefWrapper &def, SunspecGroupWriter &groupPoint);
 
     /**
      * @brief Class constructor.
@@ -45,7 +45,7 @@ public:
      * @param [in] _groupPoint A reference to the parent SunspecGroupPoint.
      * @param [in] valueFunction The SunspecPointFunction to be used for this point.
      */
-    SunspecPointWriter(const SunspecPointDef &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction);
+    SunspecPointWriter(const SunspecPointDefWrapper &def, SunspecGroupWriter &groupPoint, SunspecPointFunction valueFunction);
 
     /**
      * @brief Copy constructor.
@@ -64,9 +64,9 @@ public:
 
     /**
      * @brief Returns the definition of the point.
-     * @return A const reference to the SunspecPointDef object.
+     * @return A const reference to the SunspecPointDefWrapper object.
      */
-    const SunspecPointDef &def() const
+    const SunspecPointDefWrapper &def() const
     {
         return def_;
     }
@@ -115,7 +115,7 @@ public:
      */
     int16_t getValueAsSint16() const
     {
-        return pointFunction_.sint16.function == nullptr ? FormatSunspecPointDefToSint16_t(def_) : pointFunction_.sint16.call();
+        return pointFunction_.sint16.function == nullptr ? def_.data_as_Sint16_t() : pointFunction_.sint16.call();
     }
 
     /**
@@ -124,7 +124,7 @@ public:
      */
     uint16_t getValueAsUint16() const
     {
-        return pointFunction_.uint16.function == nullptr ? FormatSunspecPointDefToUint16_t(def_) : pointFunction_.uint16.call();
+        return pointFunction_.uint16.function == nullptr ? def_.data_as_Uint16_t() : pointFunction_.uint16.call();
     }
 
     /**
@@ -133,7 +133,7 @@ public:
      */
     pad16_t getValueAsPad16() const
     {
-        return pointFunction_.pad16.function == nullptr ? FormatSunspecPointDefToPad16_t(def_) : pointFunction_.pad16.call();
+        return pointFunction_.pad16.function == nullptr ? def_.data_as_Pad16_t() : pointFunction_.pad16.call();
     }
 
     /**
@@ -142,11 +142,11 @@ public:
      */
     sunsSf_t getValueAsSunsSf() const
     {
-        return pointFunction_.sunsSf.function == nullptr ? FormatSunspecPointDefToSunsSf_t(def_) : pointFunction_.sunsSf.call();
+        return pointFunction_.sunsSf.function == nullptr ? def_.data_as_SunsSf_t() : pointFunction_.sunsSf.call();
     }
     acc16_t getValueAsAcc16() const
     {
-        return pointFunction_.acc16.function == nullptr ? FormatSunspecPointDefToAcc16_t(def_) : pointFunction_.acc16.call();
+        return pointFunction_.acc16.function == nullptr ? def_.data_as_Acc16_t() : pointFunction_.acc16.call();
     }
 
     /**
@@ -155,7 +155,7 @@ public:
      */
     bitfield16_t getValueAsBit16() const
     {
-        return pointFunction_.bit16.function == nullptr ? FormatSunspecPointDefToBit16_t(def_) : pointFunction_.bit16.call();
+        return pointFunction_.bit16.function == nullptr ? def_.data_as_Bit16_t() : pointFunction_.bit16.call();
     }
 
     /**
@@ -164,7 +164,7 @@ public:
      */
     enum16_t getValueAsEnum16() const
     {
-        return pointFunction_.enum16.function == nullptr ? FormatSunspecPointDefToEnum16_t(def_) : pointFunction_.enum16.call();
+        return pointFunction_.enum16.function == nullptr ? def_.data_as_Enum16_t() : pointFunction_.enum16.call();
     }
 
     /**
@@ -173,7 +173,7 @@ public:
      */
     raw16_t getValueAsRaw16() const
     {
-        return pointFunction_.raw16.function == nullptr ? FormatSunspecPointDefTotoRaw16_t(def_) : pointFunction_.raw16.call();
+        return pointFunction_.raw16.function == nullptr ? def_.data_as_Raw16_t() : pointFunction_.raw16.call();
     }
 
     /**
@@ -182,7 +182,7 @@ public:
      */
     int32_t getValueAsSint32() const
     {
-        return pointFunction_.sint32.function == nullptr ? FormatSunspecPointDefToSint16_t(def_) : pointFunction_.sint32.call();
+        return pointFunction_.sint32.function == nullptr ? def_.data_as_Sint16_t() : pointFunction_.sint32.call();
     }
 
     /**
@@ -191,7 +191,7 @@ public:
      */
     uint32_t getValueAsUint32() const
     {
-        return pointFunction_.uint32.function == nullptr ? FormatSunspecPointDefToUint32_t(def_) : pointFunction_.uint32.call();
+        return pointFunction_.uint32.function == nullptr ? def_.data_as_Uint32_t() : pointFunction_.uint32.call();
     }
 
     /**
@@ -200,7 +200,7 @@ public:
      */
     acc32_t getValueAsAcc32() const
     {
-        return pointFunction_.acc32.function == nullptr ? FormatSunspecPointDefToAcc32_t(def_) : pointFunction_.acc32.call();
+        return pointFunction_.acc32.function == nullptr ? def_.data_as_Acc32_t() : pointFunction_.acc32.call();
     }
 
     /**
@@ -209,7 +209,7 @@ public:
      */
     bitfield32_t getValueAsBit32() const
     {
-        return pointFunction_.bit32.function == nullptr ? FormatSunspecPointDefToBit32_t(def_) : pointFunction_.bit32.call();
+        return pointFunction_.bit32.function == nullptr ? def_.data_as_Bit32_t() : pointFunction_.bit32.call();
     }
 
     /**
@@ -218,7 +218,7 @@ public:
      */
     enum32_t getValueAsEnum32() const
     {
-        return pointFunction_.enum32.function == nullptr ? FormatSunspecPointDefToEnum32_t(def_) : pointFunction_.enum32.call();
+        return pointFunction_.enum32.function == nullptr ? def_.data_as_Enum32_t() : pointFunction_.enum32.call();
     }
 
     /**
@@ -227,7 +227,7 @@ public:
      */
     ipAddr_t getValueAsIpAddr() const
     {
-        return pointFunction_.ipAddr.function == nullptr ? FormatSunspecPointDefToIpAddr_t(def_) : pointFunction_.ipAddr.call();
+        return pointFunction_.ipAddr.function == nullptr ? def_.data_as_IpAddr_t() : pointFunction_.ipAddr.call();
     }
 
     /**
@@ -236,7 +236,7 @@ public:
      */
     float getValueAsFloat32() const
     {
-        return pointFunction_.float32.function == nullptr ? FormatSunspecPointDefToFloat32(def_) : pointFunction_.float32.call();
+        return pointFunction_.float32.function == nullptr ? def_.data_as_Float32() : pointFunction_.float32.call();
     }
 
     /**
@@ -245,7 +245,7 @@ public:
      */
     double getValueAsFloat64() const
     {
-        return pointFunction_.float64.function == nullptr ? FormatSunspecPointDefToFloat64(def_) : pointFunction_.float64.call();
+        return pointFunction_.float64.function == nullptr ? def_.data_as_Float64() : pointFunction_.float64.call();
     }
 
     /**
@@ -254,7 +254,7 @@ public:
      */
     int64_t getValueAsSint64() const
     {
-        return pointFunction_.sint64.function == nullptr ? FormatSunspecPointDefToSint64_t(def_) : pointFunction_.sint64.call();
+        return pointFunction_.sint64.function == nullptr ? def_.data_as_Sint64_t() : pointFunction_.sint64.call();
     }
 
     /**
@@ -263,7 +263,7 @@ public:
      */
     uint64_t getValueAsUint64() const
     {
-        return pointFunction_.uint64.function == nullptr ? FormatSunspecPointDefToUint64_t(def_) : pointFunction_.uint64.call();
+        return pointFunction_.uint64.function == nullptr ? def_.data_as_Uint64_t() : pointFunction_.uint64.call();
     }
 
     /**
@@ -272,7 +272,7 @@ public:
      */
     acc64_t getValueAsAcc64() const
     {
-        return pointFunction_.acc64.function == nullptr ? FormatSunspecPointDefToAcc64_t(def_) : pointFunction_.acc64.call();
+        return pointFunction_.acc64.function == nullptr ? def_.data_as_Acc64_t() : pointFunction_.acc64.call();
     }
 
     /**
@@ -281,7 +281,7 @@ public:
      */
     bitfield64_t getValueAsBit64() const
     {
-        return pointFunction_.bit64.function == nullptr ? FormatSunspecPointDefToBit64_t(def_) : pointFunction_.bit64.call();
+        return pointFunction_.bit64.function == nullptr ? def_.data_as_Bit64_t() : pointFunction_.bit64.call();
     }
 
     /**
@@ -290,7 +290,7 @@ public:
      */
     string getValueAsString() const
     {
-        string tempString = pointFunction_.str.function == nullptr ? string(FormatSunspecPointDefToString(def_)) : pointFunction_.str.call();
+        string tempString = pointFunction_.str.function == nullptr ? def_.data_as_String() : pointFunction_.str.call();
         std::size_t newLength = std::min(static_cast<size_t>((def_.size() * sizeof(uint16_t)) - 1), tempString.size());
 
         tempString.resize(newLength);
@@ -322,9 +322,9 @@ public:
 private:
     SunspecPointFunction pointFunction_; /**< The function of the point ensures the union member is initialised based on the type in the point definition. */
     // uint16_t relativeAddress_;
-    SunspecGroupWriter &group_;  /**< A reference to the parent group point of this point. */
-    uint16_t *modbusBuffer_;     /**< A pointer to the inplace modbus buffer where the point's data is to be stored. */
-    const SunspecPointDef &def_; /**< The sunspec point definition of this point. */
+    SunspecGroupWriter &group_;         /**< A reference to the parent group point of this point. */
+    uint16_t *modbusBuffer_;            /**< A pointer to the inplace modbus buffer where the point's data is to be stored. */
+    const SunspecPointDefWrapper &def_; /**< The sunspec point definition of this point. */
 
     // Disable assignment operators
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;

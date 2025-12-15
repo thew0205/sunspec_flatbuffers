@@ -4,51 +4,51 @@ import ctypes
 def get_flatbuffer_data_type(type):
     match type:
         case "int16":
-            return "kSint16"
+            return "Sint16"
         case "int32" :
-            return  "kSint32"
+            return  "Sint32"
         case "int64" :
-            return "kSint64"
+            return "Sint64"
         case "raw16" :
-            return "kRaw16"
+            return "Raw16"
         case "uint16" :
-            return "kUint16"
+            return "Uint16"
         case "uint32" :
-            return "kUint32"
+            return "Uint32"
         case "uint64" :
-            return "kUint64"
+            return "Uint64"
         case "acc16" :
-            return "kAcc16"
+            return "Acc16"
         case "acc32" :
-            return "KAcc32"
+            return "Acc32"
         case "acc64" :
-            return "kAcc64"
+            return "Acc64"
         case "bitfield16" :
-            return "kBitfield16"
+            return "Bitfield16"
         case "bitfield32" :
-            return "kBitfield32"
+            return "Bitfield32"
         case "bitfield64" :
-            return "kBitfield64"
+            return "Bitfield64"
         case "enum16" :
-            return "kEnum16"
+            return "Enum16"
         case "enum32" :
-            return "kEnum32"
+            return "Enum32"
         case "float32" :
-            return "kFloat32"
+            return "Float32"
         case "float64" :
-            return "kFloat64"
+            return "Float64"
         case "string" :
-            return "kStringx"
+            return "Stringx"
         case "sunssf" :
-            return "kSunsSf"
+            return "SunsSf"
         case "pad" :
-            return "kPad16"
+            return "Pad16"
         case "ipaddr" :
-            return "kIpAddr"
+            return "IpAddr"
         case "ipv6addr" :
-            return "kIpv6Addr"
+            return "Ipv6Addr"
         case "eui48" :
-            return "kEui48" 
+            return "Eui48" 
         case _:
             raise ValueError("Invalid Type")
         
@@ -108,10 +108,10 @@ def get_flatbuffer_data(type, value):
         return None
         # value = get_unimplemented_value(type)
         # IpAddr and Ipv6Addr and Eui48 are not implemented here
-    # data = {}
-    # data["value"] = value
-    # return data
-    return value
+    # return value
+    data = {}
+    data["value"] = value
+    return data
    
             
 def get_flatbuffer_size(size, type):
@@ -214,8 +214,8 @@ def get_flatbuffer_count_id(count_id):
 def get_flatbuffer_point(point):
     new_point = {}
     new_point["id"] = point["name"]
-    # new_point["data_type"] =get_flatbuffer_data_type( point["type"])
-    new_point["data_type"] = point["type"]
+    new_point["data_type"] =get_flatbuffer_data_type( point["type"])
+    # new_point["data_type"] = point["type"]
     new_point["data"] =get_flatbuffer_data( point["type"], point["value"] if "value" in  point else None)
     new_point["count"] =get_flatbuffer_count(point["count"] if "count" in  point else None)
     new_point["count_point_id"] = get_flatbuffer_count_id(point["count"] if "count" in  point else None)

@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 64413
+                    "Uint16": {
+                        "value": 64413
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "IVLen",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,9 @@
             {
                 "id": "Irr",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +77,7 @@
             {
                 "id": "Irr_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +100,7 @@
                     {
                         "id": "P",
                         "data": {
-                            "float32": null
+                            "Float32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -107,7 +115,7 @@
                     {
                         "id": "I",
                         "data": {
-                            "float32": null
+                            "Float32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -122,7 +130,7 @@
                     {
                         "id": "V",
                         "data": {
-                            "float32": null
+                            "Float32": null
                         },
                         "count": 1,
                         "count_point_id": null,

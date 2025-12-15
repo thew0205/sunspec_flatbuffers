@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 11,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 11
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "Spd",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "CfgSt",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "St",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "MAC",
-                "data_type": "eui48",
+                "data_type": "Eui48",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "Nam",
-                "data_type": "string",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "Ctl",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "FrcSpd",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

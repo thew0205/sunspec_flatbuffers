@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 134,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 134
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "ActCrv",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "ModEna",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "WinTms",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "RvrtTms",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "RmpTms",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "NCrv",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "NPt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "Hz_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "W_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +164,7 @@
             },
             {
                 "id": "RmpIncDec_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -184,7 +186,7 @@
                 "points": [
                     {
                         "id": "ActPt",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -198,7 +200,7 @@
                     },
                     {
                         "id": "Hz1",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -212,7 +214,7 @@
                     },
                     {
                         "id": "W1",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -226,7 +228,7 @@
                     },
                     {
                         "id": "Hz2",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -240,7 +242,7 @@
                     },
                     {
                         "id": "W2",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -254,7 +256,7 @@
                     },
                     {
                         "id": "Hz3",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -268,7 +270,7 @@
                     },
                     {
                         "id": "W3",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -282,7 +284,7 @@
                     },
                     {
                         "id": "Hz4",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -296,7 +298,7 @@
                     },
                     {
                         "id": "W4",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -310,7 +312,7 @@
                     },
                     {
                         "id": "Hz5",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -324,7 +326,7 @@
                     },
                     {
                         "id": "W5",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -338,7 +340,7 @@
                     },
                     {
                         "id": "Hz6",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -352,7 +354,7 @@
                     },
                     {
                         "id": "W6",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -366,7 +368,7 @@
                     },
                     {
                         "id": "Hz7",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -380,7 +382,7 @@
                     },
                     {
                         "id": "W7",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -394,7 +396,7 @@
                     },
                     {
                         "id": "Hz8",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -408,7 +410,7 @@
                     },
                     {
                         "id": "W8",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -422,7 +424,7 @@
                     },
                     {
                         "id": "Hz9",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -436,7 +438,7 @@
                     },
                     {
                         "id": "W9",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -450,7 +452,7 @@
                     },
                     {
                         "id": "Hz10",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -464,7 +466,7 @@
                     },
                     {
                         "id": "W10",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -478,7 +480,7 @@
                     },
                     {
                         "id": "Hz11",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -492,7 +494,7 @@
                     },
                     {
                         "id": "W11",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -506,7 +508,7 @@
                     },
                     {
                         "id": "Hz12",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -520,7 +522,7 @@
                     },
                     {
                         "id": "W12",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -534,7 +536,7 @@
                     },
                     {
                         "id": "Hz13",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -548,7 +550,7 @@
                     },
                     {
                         "id": "W13",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -562,7 +564,7 @@
                     },
                     {
                         "id": "Hz14",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -576,7 +578,7 @@
                     },
                     {
                         "id": "W14",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -590,7 +592,7 @@
                     },
                     {
                         "id": "Hz15",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -604,7 +606,7 @@
                     },
                     {
                         "id": "W15",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -618,7 +620,7 @@
                     },
                     {
                         "id": "Hz16",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -632,7 +634,7 @@
                     },
                     {
                         "id": "W16",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -646,7 +648,7 @@
                     },
                     {
                         "id": "Hz17",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -660,7 +662,7 @@
                     },
                     {
                         "id": "W17",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -674,7 +676,7 @@
                     },
                     {
                         "id": "Hz18",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -688,7 +690,7 @@
                     },
                     {
                         "id": "W18",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -702,7 +704,7 @@
                     },
                     {
                         "id": "Hz19",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -716,7 +718,7 @@
                     },
                     {
                         "id": "W19",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -730,7 +732,7 @@
                     },
                     {
                         "id": "Hz20",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -744,7 +746,7 @@
                     },
                     {
                         "id": "W20",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -758,7 +760,7 @@
                     },
                     {
                         "id": "CrvNam",
-                        "data_type": "string",
+                        "data_type": "Stringx",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -772,7 +774,7 @@
                     },
                     {
                         "id": "RmpPT1Tms",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -786,7 +788,7 @@
                     },
                     {
                         "id": "RmpDecTmm",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -800,7 +802,7 @@
                     },
                     {
                         "id": "RmpIncTmm",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -814,7 +816,7 @@
                     },
                     {
                         "id": "RmpRsUp",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -828,7 +830,7 @@
                     },
                     {
                         "id": "SnptW",
-                        "data_type": "bitfield16",
+                        "data_type": "Bitfield16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -842,7 +844,7 @@
                     },
                     {
                         "id": "WRef",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -856,7 +858,7 @@
                     },
                     {
                         "id": "WRefStrHz",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -870,7 +872,7 @@
                     },
                     {
                         "id": "WRefStopHz",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -884,7 +886,7 @@
                     },
                     {
                         "id": "ReadOnly",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

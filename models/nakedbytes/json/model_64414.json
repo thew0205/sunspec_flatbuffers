@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 64414,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 64414
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "Time",
-                "data_type": "string",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "Temperature",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "GridModelSource",
-                "data_type": "string",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "IrradianceModelSource",
-                "data_type": "string",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "Irradiance",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "GridVoltageA",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "GridVoltageB",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "GridVoltageC",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "GridFrequency",
-                "data_type": "float32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

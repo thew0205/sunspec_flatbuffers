@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 145
+                    "Uint16": {
+                        "value": 145
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "NomRmpUpRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,9 @@
             {
                 "id": "NomRmpDnRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +77,9 @@
             {
                 "id": "EmgRmpUpRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +94,9 @@
             {
                 "id": "EmgRmpDnRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +111,9 @@
             {
                 "id": "ConnRmpUpRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +128,9 @@
             {
                 "id": "ConnRmpDnRte",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +145,9 @@
             {
                 "id": "AGra",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +162,7 @@
             {
                 "id": "Rmp_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,

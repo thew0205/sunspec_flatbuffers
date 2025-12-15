@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 19
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "Nam",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "Rte",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "Bits",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "Pty",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "Dup",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "Flw",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "Auth",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "UsrNam",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "Pw",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "Pad",
-                "data_type": "kPad16",
+                "data_type": "Pad16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

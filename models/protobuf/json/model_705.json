@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 705
+                    "Uint16": {
+                        "value": 705
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,7 @@
             {
                 "id": "Ena",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +58,9 @@
             {
                 "id": "AdptCrvReq",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,7 @@
             {
                 "id": "AdptCrvRslt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +90,9 @@
             {
                 "id": "NPt",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +107,9 @@
             {
                 "id": "NCrv",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,7 @@
             {
                 "id": "RvrtTms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +139,7 @@
             {
                 "id": "RvrtRem",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +154,9 @@
             {
                 "id": "RvrtCrv",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +171,7 @@
             {
                 "id": "V_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +186,7 @@
             {
                 "id": "DeptRef_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +201,7 @@
             {
                 "id": "RspTms_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -212,7 +224,9 @@
                     {
                         "id": "ActPt",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -227,7 +241,7 @@
                     {
                         "id": "DeptRef",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -242,7 +256,7 @@
                     {
                         "id": "Pri",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -257,7 +271,9 @@
                     {
                         "id": "VRef",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -272,7 +288,9 @@
                     {
                         "id": "VRefAuto",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -287,7 +305,7 @@
                     {
                         "id": "VRefAutoEna",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -302,7 +320,9 @@
                     {
                         "id": "VRefAutoTms",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -317,7 +337,7 @@
                     {
                         "id": "RspTms",
                         "data": {
-                            "uint32": null
+                            "Uint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -332,7 +352,7 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -355,7 +375,9 @@
                             {
                                 "id": "V",
                                 "data": {
-                                    "uint16": null
+                                    "Uint16": {
+                                        "value": null
+                                    }
                                 },
                                 "count": 1,
                                 "count_point_id": null,
@@ -370,7 +392,7 @@
                             {
                                 "id": "Var",
                                 "data": {
-                                    "sint16": null
+                                    "Sint16": null
                                 },
                                 "count": 1,
                                 "count_point_id": null,

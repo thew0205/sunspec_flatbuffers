@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 130
+                    "Uint16": {
+                        "value": 130
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "ActCrv",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,7 @@
             {
                 "id": "ModEna",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,9 @@
             {
                 "id": "WinTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +92,9 @@
             {
                 "id": "RvrtTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +109,9 @@
             {
                 "id": "RmpTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +126,9 @@
             {
                 "id": "NCrv",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +143,9 @@
             {
                 "id": "NPt",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +160,7 @@
             {
                 "id": "Tms_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +175,7 @@
             {
                 "id": "V_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +190,9 @@
             {
                 "id": "Pad",
                 "data": {
-                    "pad16": null
+                    "Pad16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -197,7 +215,9 @@
                     {
                         "id": "ActPt",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -212,7 +232,9 @@
                     {
                         "id": "Tms1",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -227,7 +249,9 @@
                     {
                         "id": "V1",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -242,7 +266,9 @@
                     {
                         "id": "Tms2",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -257,7 +283,9 @@
                     {
                         "id": "V2",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -272,7 +300,9 @@
                     {
                         "id": "Tms3",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -287,7 +317,9 @@
                     {
                         "id": "V3",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -302,7 +334,9 @@
                     {
                         "id": "Tms4",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -317,7 +351,9 @@
                     {
                         "id": "V4",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -332,7 +368,9 @@
                     {
                         "id": "Tms5",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -347,7 +385,9 @@
                     {
                         "id": "V5",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -362,7 +402,9 @@
                     {
                         "id": "Tms6",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -377,7 +419,9 @@
                     {
                         "id": "V6",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -392,7 +436,9 @@
                     {
                         "id": "Tms7",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -407,7 +453,9 @@
                     {
                         "id": "V7",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -422,7 +470,9 @@
                     {
                         "id": "Tms8",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -437,7 +487,9 @@
                     {
                         "id": "V8",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -452,7 +504,9 @@
                     {
                         "id": "Tms9",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -467,7 +521,9 @@
                     {
                         "id": "V9",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -482,7 +538,9 @@
                     {
                         "id": "Tms10",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -497,7 +555,9 @@
                     {
                         "id": "V10",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -512,7 +572,9 @@
                     {
                         "id": "Tms11",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -527,7 +589,9 @@
                     {
                         "id": "V11",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -542,7 +606,9 @@
                     {
                         "id": "Tms12",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -557,7 +623,9 @@
                     {
                         "id": "V12",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -572,7 +640,9 @@
                     {
                         "id": "Tms13",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -587,7 +657,9 @@
                     {
                         "id": "V13",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -602,7 +674,9 @@
                     {
                         "id": "Tms14",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -617,7 +691,9 @@
                     {
                         "id": "V14",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -632,7 +708,9 @@
                     {
                         "id": "Tms15",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -647,7 +725,9 @@
                     {
                         "id": "V15",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -662,7 +742,9 @@
                     {
                         "id": "Tms16",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -677,7 +759,9 @@
                     {
                         "id": "V16",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -692,7 +776,9 @@
                     {
                         "id": "Tms17",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -707,7 +793,9 @@
                     {
                         "id": "V17",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -722,7 +810,9 @@
                     {
                         "id": "Tms18",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -737,7 +827,9 @@
                     {
                         "id": "V18",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -752,7 +844,9 @@
                     {
                         "id": "Tms19",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -767,7 +861,9 @@
                     {
                         "id": "V19",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -782,7 +878,9 @@
                     {
                         "id": "Tms20",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -797,7 +895,9 @@
                     {
                         "id": "V20",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -812,7 +912,9 @@
                     {
                         "id": "CrvNam",
                         "data": {
-                            "stringx": null
+                            "Stringx": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -827,7 +929,7 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,

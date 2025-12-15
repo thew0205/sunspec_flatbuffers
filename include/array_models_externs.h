@@ -1,3 +1,10 @@
+#pragma once
+
+extern unsigned int modelDefinition1_len;
+extern unsigned int modelDefinition112_len;
+extern unsigned int modelDefinition113_len;
+extern unsigned int modelDefinition160_len;
+
 extern const unsigned char modelDefinition1[]; 
 extern const unsigned char modelDefinition2[]; 
 extern const unsigned char modelDefinition3[]; 

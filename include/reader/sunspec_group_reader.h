@@ -44,7 +44,7 @@ public:
      * @param modbusBuffer Pointer to Modbus buffer
      * @param model Pointer to parent model reader
      */
-    SunspecGroupReader(const SunspecGroupDef &def, const uint16_t *modbusBuffer, SunspecModelReader *model);
+    SunspecGroupReader(const SunspecGroupDefWrapper &def, const uint16_t *modbusBuffer, SunspecModelReader *model);
 
     /**
      * @brief Constructs a group reader for a nested group.
@@ -52,7 +52,7 @@ public:
      * @param modbusBuffer Pointer to Modbus buffer
      * @param group Pointer to parent group reader
      */
-    SunspecGroupReader(const SunspecGroupDef &def, const uint16_t *modbusBuffer, SunspecGroupReader *group);
+    SunspecGroupReader(const SunspecGroupDefWrapper &def, const uint16_t *modbusBuffer, SunspecGroupReader *group);
 
     /**
      * @brief Copy constructor
@@ -73,7 +73,7 @@ public:
      * @brief Returns the group definition
      * @return Reference to SunspecGroupDef
      */
-    const SunspecGroupDef &def() const
+    const SunspecGroupDefWrapper &def() const
     {
         return def_;
     }
@@ -171,7 +171,7 @@ private:
 
     SunspecModelReader *const model_;   /**< Pointer to parent model reader */
     SunspecGroupReader *const group_;   /**< Pointer to parent group reader (if nested) */
-    const SunspecGroupDef &def_;        /**< Reference to group definition */
+    const SunspecGroupDefWrapper &def_;        /**< Reference to group definition */
     vector<SunspecPointReader> points_; /**< List of points in the group */
     vector<SunspecGroupReader> groups_; /**< List of nested groups */
 

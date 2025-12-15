@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 123
+                    "Uint16": {
+                        "value": 123
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "Conn_WinTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,9 @@
             {
                 "id": "Conn_RvrtTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +77,7 @@
             {
                 "id": "Conn",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +92,9 @@
             {
                 "id": "WMaxLimPct",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +109,9 @@
             {
                 "id": "WMaxLimPct_WinTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +126,9 @@
             {
                 "id": "WMaxLimPct_RvrtTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +143,9 @@
             {
                 "id": "WMaxLimPct_RmpTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +160,7 @@
             {
                 "id": "WMaxLim_Ena",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +175,7 @@
             {
                 "id": "OutPFSet",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +190,9 @@
             {
                 "id": "OutPFSet_WinTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +207,9 @@
             {
                 "id": "OutPFSet_RvrtTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +224,9 @@
             {
                 "id": "OutPFSet_RmpTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -219,7 +241,7 @@
             {
                 "id": "OutPFSet_Ena",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +256,7 @@
             {
                 "id": "VArWMaxPct",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -249,7 +271,7 @@
             {
                 "id": "VArMaxPct",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -264,7 +286,7 @@
             {
                 "id": "VArAvalPct",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -279,7 +301,9 @@
             {
                 "id": "VArPct_WinTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -294,7 +318,9 @@
             {
                 "id": "VArPct_RvrtTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -309,7 +335,9 @@
             {
                 "id": "VArPct_RmpTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -324,7 +352,7 @@
             {
                 "id": "VArPct_Mod",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -339,7 +367,7 @@
             {
                 "id": "VArPct_Ena",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -354,7 +382,7 @@
             {
                 "id": "WMaxLimPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -369,7 +397,7 @@
             {
                 "id": "OutPFSet_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -384,7 +412,7 @@
             {
                 "id": "VArPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,

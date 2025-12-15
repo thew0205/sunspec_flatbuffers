@@ -91,7 +91,7 @@ TEST(Sunspec_Device_Reader, Device_ScanAddress_Init_2_Models)
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    LONGS_EQUAL(2, device.initAllModels({SunspecModelList_kModel1, SunspecModelList_kModel113}));
+    LONGS_EQUAL(2, device.initAllModels({1, 113}));
     LONGS_EQUAL(2, device.modelLength());
 }
 
@@ -100,7 +100,7 @@ TEST(Sunspec_Device_Reader, Device_ScanAddress_Not_supported_Models)
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    LONGS_EQUAL(0, device.initAllModels({SunspecModelList_kModel103, SunspecModelList_kModel102}));
+    LONGS_EQUAL(0, device.initAllModels({103, 102}));
     LONGS_EQUAL(0, device.modelLength());
 }
 
@@ -109,7 +109,7 @@ TEST(Sunspec_Device_Reader, Device_ScanAddress_Init_Buffer_Read)
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    device.initAllModels({SunspecModelList_kModel1, SunspecModelList_kModel113});
+    device.initAllModels({1, 113});
     auto &model1 = device.models()[0];
     LONGS_EQUAL(40002, model1.address());
     LONGS_EQUAL(68, model1.registerLength());

@@ -17,6 +17,11 @@ do
     if [ -f "$ROOT_DIR/models/nakedbytes/json/model_${model}.json"  ]
     then
         python3 $NAKEDBYTES_SCRIPT $ROOT_DIR/models/nakedbytes/sunspec_model_definition.json --binary "$ROOT_DIR/models/nakedbytes/json/model_${model}.json" --outbin $ROOT_DIR/models/nakedbytes/binary 
+
         xxd -i -n modelDefinition${model} $ROOT_DIR/models/nakedbytes/binary/model_${model}.bin   > $ROOT_DIR/src/models/nakedbytes/nakedbytes_array_model_${model}.cpp
+        sed -i 's/unsigned char/const unsigned char/g' "$ROOT_DIR/src/models/nakedbytes/nakedbytes_array_model_${model}.cpp"
+
+        sed -i '1i#include "array_models_externs.h"\n' "$ROOT_DIR/src/models/nakedbytes/nakedbytes_array_model_${model}.cpp"
+
     fi
 done

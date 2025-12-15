@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 16
+                    "Uint16": {
+                        "value": 16
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "Nam",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,7 @@
             {
                 "id": "Cfg",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,7 @@
             {
                 "id": "Ctl",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +90,9 @@
             {
                 "id": "Addr",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +107,9 @@
             {
                 "id": "Msk",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,9 @@
             {
                 "id": "Gw",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +141,9 @@
             {
                 "id": "DNS1",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +158,9 @@
             {
                 "id": "DNS2",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +175,7 @@
             {
                 "id": "MAC",
                 "data": {
-                    "eui48": null
+                    "Eui48": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +190,7 @@
             {
                 "id": "LnkCtl",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +205,9 @@
             {
                 "id": "Pad",
                 "data": {
-                    "pad16": null
+                    "Pad16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

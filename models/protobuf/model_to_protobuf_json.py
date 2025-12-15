@@ -111,53 +111,53 @@ def get_flatbuffer_data(type, value):
     data = {}
     match type:
         case "int16":
-            data["sint16"] = value
+            data["Sint16"] = value
         case "int32":
-            data["sint32"] = value
+            data["Sint32"] = value
         case "int64":
-            data["sint64"] = value
+            data["Sint64"] = value
         case "raw16" :
-            data["raw16"] = value
+            data["Raw16"] = value
         case "uint16":
-            data["uint16"] = value
+            data["Uint16"] = {"value":value}
         case "uint32":
-            data["uint32"] = value
+            data["Uint32"] = value
         case "uint64":
-            data["uint64"] = value
+            data["Uint64"] = value
         case "raw16" :
-            data["raw16"] = value
+            data["Raw16"] = value
         case "acc16" :
-            data["acc16"] = value
+            data["Acc16"] = value
         case "acc32" :
-            data["acc32"] = value
+            data["Acc32"] = value
         case "acc64" :
-            data["acc64"] = value
+            data["Acc64"] = value
         case "bitfield16" :
-            data["bitfield16"] = value
+            data["Bitfield16"] = value
         case "bitfield32" :
-            data["bitfield32"] = value
+            data["Bitfield32"] = value
         case "bitfield64" :
-            data["bitfield64"] = value
+            data["Bitfield64"] = value
         case "enum16" :
-            data["enum16"] = value
+            data["Enum16"] = value
         case "enum32" :
-            data["enum32"] = value
+            data["Enum32"] = value
         case "float32" :
-            data["float32"] = value
+            data["Float32"] = value
         case "float64" :
-            data["float64"] = value
+            data["Float64"] = value
         case "string" :
-            data["stringx"] = value
+            data["Stringx"] = {"value":value}
         case "sunssf" :
-            data["sunssf"] = value
+            data["SunsSf"] = value
         case "pad" :
-            data["pad16"] = value
+            data["Pad16"] = {"value":value}
         case "ipaddr" :
-            data["ipaddr"] = None
+            data["IpAddr"] = None
         case "ipv6addr" :
-            data["ipv6addr"] = None
+            data["Ipv6Addr"] = None
         case "eui48" :
-            data["eui48"] = None
+            data["Eui48"] = None
         case _:
             raise ValueError("Invalid Type")
     return data

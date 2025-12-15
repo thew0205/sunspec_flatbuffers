@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 715,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 715
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,8 +24,10 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
-                "data": 7,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 7
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -36,7 +40,7 @@
             },
             {
                 "id": "LocRemCtl",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +54,7 @@
             },
             {
                 "id": "DERHb",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +68,7 @@
             },
             {
                 "id": "ControllerHb",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +82,7 @@
             },
             {
                 "id": "AlarmReset",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +96,7 @@
             },
             {
                 "id": "OpCtl",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

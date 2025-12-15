@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 704
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 65
                 },
@@ -40,7 +40,7 @@
             },
             {
                 "id": "PFWInjEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +54,7 @@
             },
             {
                 "id": "PFWInjEnaRvrt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -68,7 +68,7 @@
             },
             {
                 "id": "PFWInjRvrtTms",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -82,7 +82,7 @@
             },
             {
                 "id": "PFWInjRvrtRem",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -96,7 +96,7 @@
             },
             {
                 "id": "PFWAbsEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -110,7 +110,7 @@
             },
             {
                 "id": "PFWAbsEnaRvrt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -124,7 +124,7 @@
             },
             {
                 "id": "PFWAbsRvrtTms",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -138,7 +138,7 @@
             },
             {
                 "id": "PFWAbsRvrtRem",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -152,7 +152,7 @@
             },
             {
                 "id": "WMaxLimPctEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -166,7 +166,7 @@
             },
             {
                 "id": "WMaxLimPct",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -180,7 +180,7 @@
             },
             {
                 "id": "WMaxLimPctRvrt",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -194,7 +194,7 @@
             },
             {
                 "id": "WMaxLimPctEnaRvrt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -208,7 +208,7 @@
             },
             {
                 "id": "WMaxLimPctRvrtTms",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -222,7 +222,7 @@
             },
             {
                 "id": "WMaxLimPctRvrtRem",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -236,7 +236,7 @@
             },
             {
                 "id": "WSetEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -250,7 +250,7 @@
             },
             {
                 "id": "WSetMod",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -264,7 +264,7 @@
             },
             {
                 "id": "WSet",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -278,7 +278,7 @@
             },
             {
                 "id": "WSetRvrt",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -292,7 +292,7 @@
             },
             {
                 "id": "WSetPct",
-                "data_type": "kSint16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -306,7 +306,7 @@
             },
             {
                 "id": "WSetPctRvrt",
-                "data_type": "kSint16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -320,7 +320,7 @@
             },
             {
                 "id": "WSetEnaRvrt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -334,7 +334,7 @@
             },
             {
                 "id": "WSetRvrtTms",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -348,7 +348,7 @@
             },
             {
                 "id": "WSetRvrtRem",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -362,7 +362,7 @@
             },
             {
                 "id": "VarSetEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -376,7 +376,7 @@
             },
             {
                 "id": "VarSetMod",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -390,7 +390,7 @@
             },
             {
                 "id": "VarSetPri",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -404,7 +404,7 @@
             },
             {
                 "id": "VarSet",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -418,7 +418,7 @@
             },
             {
                 "id": "VarSetRvrt",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -432,7 +432,7 @@
             },
             {
                 "id": "VarSetPct",
-                "data_type": "kSint16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -446,7 +446,7 @@
             },
             {
                 "id": "VarSetPctRvrt",
-                "data_type": "kSint16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -460,7 +460,7 @@
             },
             {
                 "id": "VarSetEnaRvrt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -474,7 +474,7 @@
             },
             {
                 "id": "VarSetRvrtTms",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -488,7 +488,7 @@
             },
             {
                 "id": "VarSetRvrtRem",
-                "data_type": "kUint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -502,7 +502,7 @@
             },
             {
                 "id": "WRmp",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -516,7 +516,7 @@
             },
             {
                 "id": "WRmpRef",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -530,7 +530,7 @@
             },
             {
                 "id": "VarRmp",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -544,7 +544,7 @@
             },
             {
                 "id": "AntiIslEna",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -558,7 +558,7 @@
             },
             {
                 "id": "PF_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -572,7 +572,7 @@
             },
             {
                 "id": "WMaxLimPct_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -586,7 +586,7 @@
             },
             {
                 "id": "WSet_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -600,7 +600,7 @@
             },
             {
                 "id": "WSetPct_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -614,7 +614,7 @@
             },
             {
                 "id": "VarSet_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -628,7 +628,7 @@
             },
             {
                 "id": "VarSetPct_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -650,7 +650,7 @@
                 "points": [
                     {
                         "id": "PF",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -664,7 +664,7 @@
                     },
                     {
                         "id": "Ext",
-                        "data_type": "kEnum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -688,7 +688,7 @@
                 "points": [
                     {
                         "id": "PF",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -702,7 +702,7 @@
                     },
                     {
                         "id": "Ext",
-                        "data_type": "kEnum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -726,7 +726,7 @@
                 "points": [
                     {
                         "id": "PF",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -740,7 +740,7 @@
                     },
                     {
                         "id": "Ext",
-                        "data_type": "kEnum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -764,7 +764,7 @@
                 "points": [
                     {
                         "id": "PF",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -778,7 +778,7 @@
                     },
                     {
                         "id": "Ext",
-                        "data_type": "kEnum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

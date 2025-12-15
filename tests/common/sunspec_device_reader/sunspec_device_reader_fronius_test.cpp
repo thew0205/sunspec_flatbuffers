@@ -52,7 +52,7 @@ TEST(Sunspec_Device_Reader_Fronius, Device_ScanAddress_Init_Buffer_Read)
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    device.initAllModels({SunspecModelList_kModel1, SunspecModelList_kModel113});
+    device.initAllModels({1, 113});
     auto &model1 = device.models()[0];
     LONGS_EQUAL(40002, model1.address());
     LONGS_EQUAL(67, model1.registerLength());
@@ -73,7 +73,7 @@ TEST(Sunspec_Device_Reader_Fronius, Device_ScanAddress_Read_Buffer)
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    device.initAllModels({SunspecModelList_kModel1, SunspecModelList_kModel113});
+    device.initAllModels({1, 113});
     device.readBufferFromDevice();
     auto &model1 = device.models()[0];
     LONGS_EQUAL(40002, model1.address());
@@ -95,7 +95,7 @@ TEST(Sunspec_Device_Reader_Fronius, Device_ScanAddress_1_113_160_Init_Buffer_Rea
     setBaseAddress(40000);
     uint16_t baseAddress = SunspecDeviceReader::kInvalidBaseAddress;
     SunspecDeviceReader device{1, client};
-    device.initAllModels({SunspecModelList_kModel1, SunspecModelList_kModel113, SunspecModelList_kModel160});
+    device.initAllModels({1, 113, 160});
     auto &model1 = device.models()[0];
     LONGS_EQUAL(40002, model1.address());
     LONGS_EQUAL(67, model1.registerLength());
@@ -110,7 +110,7 @@ TEST(Sunspec_Device_Reader_Fronius, Device_ScanAddress_1_113_160_Init_Buffer_Rea
     LONGS_EQUAL(60, model113.getPoint("L")->valueAsUint16());
     DOUBLES_EQUAL(240, model113.getPoint("PhVphA")->valueAsFloat32(), 10);
 
-    auto &model160 = *device.getModel(SunspecModelList_kModel160);
+    auto &model160 = *device.getModel(160);
     LONGS_EQUAL(40263, model160.address());
     LONGS_EQUAL(50, model160.registerLength());
 

@@ -59,7 +59,7 @@ TEST_GROUP(Sunspec_Init)
 
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_113)
 {
-    writer.initAll({SunspecModelList_kModel1, SunspecModelList_kModel113});
+    writer.initAll({1, 113});
 
     LONGS_EQUAL(0x5375, client.getValueHoldingRegister(0));
     LONGS_EQUAL(0x6E53, client.getValueHoldingRegister(1));
@@ -81,11 +81,11 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_113)
 
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
 {
-    writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
+    writer.initTopLevel({1, 160});
     SunspecPointFunction funct{.uint16 = {.function = [](void *param) -> uint16_t
                                           { return 2; }}};
 
-    writer.getModel(SunspecModelList_kModel160)->getPoint("N")->setPointFunction(funct);
+    writer.getModel(160)->getPoint("N")->setPointFunction(funct);
 
     writer.initSubLevels();
     writer.setAllValueToModbusBuffer();
@@ -111,7 +111,7 @@ TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160)
 
 TEST(Sunspec_Init, TestMemoryInitialisation_AfterSetBuffer_1_160_No_Count)
 {
-    writer.initTopLevel({SunspecModelList_kModel1, SunspecModelList_kModel160});
+    writer.initTopLevel({1, 160});
 
     writer.initSubLevels();
     writer.setAllValueToModbusBuffer();

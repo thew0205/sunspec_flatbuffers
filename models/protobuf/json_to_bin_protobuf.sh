@@ -29,6 +29,8 @@ do
 
         sed -i 's/unsigned char/const unsigned char/g' "$ROOT_DIR/src/models/protobuf/protobuf_array_model_${model}.cpp"
 
+        sed -i '1i#include "array_models_externs.h"\n' "$ROOT_DIR/src/models/protobuf/protobuf_array_model_${model}.cpp"
+
+
     fi
 done
-# ${PROTOBUF_COMPILER} -o models/protobuf/ATT  --annotate  sunspec_model_definition.fbs models/protobuf/binary/model_1.bin

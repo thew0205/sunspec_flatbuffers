@@ -8,101 +8,195 @@
             "type": "union",
             "unions": [
                 {
-                    "name": "uint16",
-                    "type": "uint16"
+                    "name": "Uint16",
+                    "type": "Uint16"
                 },
                 {
-                    "name": "int16",
+                    "name": "Sint16",
+                    "type": "Sint16"
+                },
+                {
+                    "name": "Uint32",
+                    "type": "Uint32"
+                },
+                {
+                    "name": "Sint32",
+                    "type": "Sint32"
+                },
+                {
+                    "name": "Uint64",
+                    "type": "Uint64"
+                },
+                {
+                    "name": "Sint64",
+                    "type": "Sint64"
+                },
+                {
+                    "name": "Float32",
+                    "type": "Float32"
+                },
+                {
+                    "name": "Float64",
+                    "type": "Float64"
+                },
+                {
+                    "name": "Stringx",
+                    "type": "Stringx"
+                },
+                {
+                    "name": "Pad16",
+                    "type": "Pad16"
+                },
+                {
+                    "name": "Raw16",
+                    "type": "Raw16"
+                },
+                {
+                    "name": "Enum16",
+                    "type": "Enum16"
+                },
+                {
+                    "name": "Enum32",
+                    "type": "Enum32"
+                },
+                {
+                    "name": "Enum64",
+                    "type": "Enum64"
+                },
+                {
+                    "name": "Bitfield16",
+                    "type": "Bitfield16"
+                },
+                {
+                    "name": "Bitfield32",
+                    "type": "Bitfield32"
+                },
+                {
+                    "name": "Bitfield64",
+                    "type": "Bitfield64"
+                },
+                {
+                    "name": "SunsSf",
+                    "type": "SunsSf"
+                },
+                {
+                    "name": "Acc16",
+                    "type": "Acc16"
+                },
+                {
+                    "name": "Acc32",
+                    "type": "Acc32"
+                },
+                {
+                    "name": "Acc64",
+                    "type": "Acc64"
+                },
+                {
+                    "name": "Eui48",
+                    "type": "Eui48"
+                },
+                {
+                    "name": "IpAddr",
+                    "type": "IpAddr"
+                },
+                {
+                    "name": "Ipv6Addr",
+                    "type": "Ipv6Addr"
+                }
+            ]
+        },
+        {
+            "name": "Uint16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "Sint16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
                     "type": "int16"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Uint32",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "uint32",
+                    "name": "value",
                     "type": "uint32"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Sint32",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "int32",
+                    "name": "value",
                     "type": "int32"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Uint64",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "uint64",
+                    "name": "value",
                     "type": "uint64"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Sint64",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "int64",
+                    "name": "value",
                     "type": "int64"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Float32",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "float32",
+                    "name": "value",
                     "type": "float32"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Float64",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "float64",
+                    "name": "value",
                     "type": "float64"
-                },
+                }
+            ]
+        },
+        {
+            "name": "Stringx",
+            "type": "struct",
+            "members": [
                 {
-                    "name": "string",
+                    "name": "value",
                     "type": "string"
-                },
-                {
-                    "name": "pad",
-                    "type": "pad"
-                },
-                {
-                    "name": "enum16",
-                    "type": "enum16"
-                },
-                {
-                    "name": "enum32",
-                    "type": "enum32"
-                },
-                {
-                    "name": "enum64",
-                    "type": "enum64"
-                },
-                {
-                    "name": "bitfield16",
-                    "type": "bitfield16"
-                },
-                {
-                    "name": "bitfield32",
-                    "type": "bitfield32"
-                },
-                {
-                    "name": "bitfield64",
-                    "type": "bitfield64"
-                },
-                {
-                    "name": "sunssf",
-                    "type": "sunssf"
-                },
-                {
-                    "name": "acc16",
-                    "type": "acc16"
-                },
-                {
-                    "name": "acc32",
-                    "type": "acc32"
-                },
-                {
-                    "name": "acc64",
-                    "type": "acc64"
-                },
-                {
-                    "name": "eui48",
-                    "type": "eui48"
-                },
-                {
-                    "name": "ipaddr",
-                    "type": "ipaddr"
-                },
-                {
-                    "name": "ipv6addr",
-                    "type": "ipv6addr"
                 }
             ]
         },
         {
-            "name": "pad",
+            "name": "Pad16",
             "type": "struct",
             "members": [
                 {
@@ -112,7 +206,7 @@
             ]
         },
         {
-            "name": "enum16",
+            "name": "Raw16",
             "type": "struct",
             "members": [
                 {
@@ -122,7 +216,17 @@
             ]
         },
         {
-            "name": "enum32",
+            "name": "Enum16",
+            "type": "struct",
+            "members": [
+                {
+                    "name": "value",
+                    "type": "uint16"
+                }
+            ]
+        },
+        {
+            "name": "Enum32",
             "type": "struct",
             "members": [
                 {
@@ -132,7 +236,7 @@
             ]
         },
         {
-            "name": "enum64",
+            "name": "Enum64",
             "type": "struct",
             "members": [
                 {
@@ -142,7 +246,7 @@
             ]
         },
         {
-            "name": "bitfield16",
+            "name": "Bitfield16",
             "type": "struct",
             "members": [
                 {
@@ -152,7 +256,7 @@
             ]
         },
         {
-            "name": "bitfield32",
+            "name": "Bitfield32",
             "type": "struct",
             "members": [
                 {
@@ -162,7 +266,7 @@
             ]
         },
         {
-            "name": "bitfield64",
+            "name": "Bitfield64",
             "type": "struct",
             "members": [
                 {
@@ -172,7 +276,7 @@
             ]
         },
         {
-            "name": "sunssf",
+            "name": "SunsSf",
             "type": "struct",
             "members": [
                 {
@@ -182,7 +286,7 @@
             ]
         },
         {
-            "name": "acc16",
+            "name": "Acc16",
             "type": "struct",
             "members": [
                 {
@@ -192,7 +296,7 @@
             ]
         },
         {
-            "name": "acc32",
+            "name": "Acc32",
             "type": "struct",
             "members": [
                 {
@@ -202,7 +306,7 @@
             ]
         },
         {
-            "name": "acc64",
+            "name": "Acc64",
             "type": "struct",
             "members": [
                 {
@@ -212,7 +316,7 @@
             ]
         },
         {
-            "name": "eui48",
+            "name": "Eui48",
             "type": "struct",
             "members": [
                 {
@@ -230,59 +334,59 @@
             ]
         },
         {
-            "name": "ipaddr",
+            "name": "IpAddr",
             "type": "struct",
             "members": [
                 {
-                    "name": "value0",
-                    "type": "uint16"
+                    "name": "octet1",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value1",
-                    "type": "uint16"
+                    "name": "octet2",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value2",
-                    "type": "uint16"
+                    "name": "octet3",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value3",
-                    "type": "uint16"
+                    "name": "octet4",
+                    "type": "uint8"
                 }
             ]
         },
         {
-            "name": "ipv6addr",
+            "name": "Ipv6Addr",
             "type": "struct",
             "members": [
                 {
-                    "name": "value0",
-                    "type": "uint16"
+                    "name": "octet0",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value1",
-                    "type": "uint16"
+                    "name": "octet1",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value2",
-                    "type": "uint16"
+                    "name": "octet2",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value3",
-                    "type": "uint16"
+                    "name": "octet3",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value4",
-                    "type": "uint16"
+                    "name": "octet4",
+                    "type": "uint8"
                 },
                 {
-                    "name": "value5",
-                    "type": "uint16"
+                    "name": "octet5",
+                    "type": "uint8"
                 }
             ]
         },
         {
-            "name": "SunspecPointAccessType",
+            "name": "SunspecPointAccess",
             "type": "enum",
             "base_type": "uint8",
             "enums": [
@@ -297,7 +401,7 @@
             ]
         },
         {
-            "name": "SunspecPointMandatoryType",
+            "name": "SunspecPointMandatory",
             "type": "enum",
             "base_type": "uint8",
             "enums": [
@@ -328,7 +432,7 @@
         },
         {
             "name": "SunspecPointDef",
-            "type": "struct_offset",
+            "type": "struct",
             "members": [
                 {
                     "name": "id",
@@ -356,6 +460,10 @@
                     "default": 1
                 },
                 {
+                    "name": "count_point_id",
+                    "type": "string"
+                },
+                {
                     "name": "size",
                     "type": "uint8"
                 },
@@ -365,19 +473,19 @@
                 },
                 {
                     "name": "access",
-                    "type": "SunspecPointAccessType",
+                    "type": "SunspecPointAccess",
                     "default": "kR"
                 },
                 {
                     "name": "mandatory",
-                    "type": "SunspecPointMandatoryType",
+                    "type": "SunspecPointMandatory",
                     "default": "kO"
                 }
             ]
         },
         {
-            "name": "SunspecGroupPointDef",
-            "type": "struct_offset",
+            "name": "SunspecGroupDef",
+            "type": "struct",
             "members": [
                 {
                     "name": "id",
@@ -393,7 +501,7 @@
                 },
                 {
                     "name": "groups",
-                    "type": "vector[SunspecGroupPointDef]"
+                    "type": "vector[SunspecGroupDef]"
                 },
                 {
                     "name": "label",
@@ -413,7 +521,7 @@
         },
         {
             "name": "SunspecModelDef",
-            "type": "struct_offset",
+            "type": "struct",
             "members": [
                 {
                     "name": "id",
@@ -421,7 +529,7 @@
                 },
                 {
                     "name": "group",
-                    "type": "SunspecGroupPointDef"
+                    "type": "SunspecGroupDef"
                 }
             ]
         }

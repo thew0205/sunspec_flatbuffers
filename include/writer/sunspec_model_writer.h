@@ -33,7 +33,7 @@ public:
      * @param [in] relativeAddress The starting address of the model in the register map.
      * @param [in] _device A reference to the parent SunspecDevice.
      */
-    SunspecModelWriter(const SunspecModelDef &_def, SunspecDeviceWriter &_device);
+    SunspecModelWriter(const SunspecModelDefWrapper &_def, SunspecDeviceWriter &_device);
 
     /**
      * @brief Copy constructor.
@@ -52,9 +52,9 @@ public:
 
     /**
      * @brief Returns the model's definition.
-     * @return A const reference to the SunspecModelDef object.
+     * @return A const reference to the SunspecModelDefWrapper object.
      */
-    const SunspecModelDef &def() const
+    const SunspecModelDefWrapper &def() const
     {
         return def_;
     }
@@ -166,7 +166,7 @@ private:
     SunspecDeviceWriter &device_; /**< A reference to the parent device of this model. */
 
     SunspecGroupWriter topLevelGroup_; /**< The top-level group of the model that contains all the point and subgroup of the model. */
-    const SunspecModelDef &def_;       /**< The sunspec model definition of this model. */
+    const SunspecModelDefWrapper &def_;       /**< The sunspec model definition of this model. */
     uint16_t *modbusBuffer_;           /**< A pointer to the inplace modbus buffer where the model's data is to be stored. */
     // uint16_t registerLength_;          /**< The length of the model in number of modbus registers, including the 2 registers for the model ID and length. */
 

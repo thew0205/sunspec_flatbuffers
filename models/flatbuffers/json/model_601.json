@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 601
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "Nam",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "Typ",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "DtLoc",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "TmLoc",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "Day",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "GlblElCtl",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "GlblAzCtl",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "GlblCtl",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "GlblAlm",
-                "data_type": "kBitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "Dgr_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +178,7 @@
             },
             {
                 "id": "N",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -200,7 +200,7 @@
                 "points": [
                     {
                         "id": "Id",
-                        "data_type": "kStringx",
+                        "data_type": "Stringx",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -214,7 +214,7 @@
                     },
                     {
                         "id": "ElTrgt",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -228,7 +228,7 @@
                     },
                     {
                         "id": "AzTrgt",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -242,7 +242,7 @@
                     },
                     {
                         "id": "ElPos",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -256,7 +256,7 @@
                     },
                     {
                         "id": "AzPos",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -270,7 +270,7 @@
                     },
                     {
                         "id": "ElCtl",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -284,7 +284,7 @@
                     },
                     {
                         "id": "AzCtl",
-                        "data_type": "kSint32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -298,7 +298,7 @@
                     },
                     {
                         "id": "Ctl",
-                        "data_type": "kEnum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -312,7 +312,7 @@
                     },
                     {
                         "id": "Alm",
-                        "data_type": "kBitfield16",
+                        "data_type": "Bitfield16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

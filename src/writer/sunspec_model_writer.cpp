@@ -5,7 +5,7 @@
 
 using std::to_string;
 
-SunspecModelWriter::SunspecModelWriter(const SunspecModelDef &def, SunspecDeviceWriter &device) : def_{def}, device_{device}, topLevelGroup_{*def.group(), this, nullptr}
+SunspecModelWriter::SunspecModelWriter(const SunspecModelDefWrapper &def, SunspecDeviceWriter &device) : def_{def}, device_{device}, topLevelGroup_{def.group(), this, nullptr}
 {
 }
 

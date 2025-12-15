@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 63002
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -46,7 +46,7 @@
                 "points": [
                     {
                         "id": "sunssf_1",
-                        "data_type": "kSunsSf",
+                        "data_type": "SunsSf",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -60,7 +60,7 @@
                     },
                     {
                         "id": "int16_1",
-                        "data_type": "kSint16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -74,7 +74,7 @@
                     },
                     {
                         "id": "int16_2",
-                        "data_type": "kSint16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -88,7 +88,7 @@
                     },
                     {
                         "id": "sunssf_2",
-                        "data_type": "kSunsSf",
+                        "data_type": "SunsSf",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 211
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "A",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "AphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "AphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "AphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "PhV",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "PhVphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "PhVphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "PhVphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "PPV",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "PPVphAB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +178,7 @@
             },
             {
                 "id": "PPVphBC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -192,7 +192,7 @@
             },
             {
                 "id": "PPVphCA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -206,7 +206,7 @@
             },
             {
                 "id": "Hz",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -220,7 +220,7 @@
             },
             {
                 "id": "W",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +234,7 @@
             },
             {
                 "id": "WphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -248,7 +248,7 @@
             },
             {
                 "id": "WphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -262,7 +262,7 @@
             },
             {
                 "id": "WphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -276,7 +276,7 @@
             },
             {
                 "id": "VA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -290,7 +290,7 @@
             },
             {
                 "id": "VAphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -304,7 +304,7 @@
             },
             {
                 "id": "VAphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -318,7 +318,7 @@
             },
             {
                 "id": "VAphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -332,7 +332,7 @@
             },
             {
                 "id": "VAR",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -346,7 +346,7 @@
             },
             {
                 "id": "VARphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -360,7 +360,7 @@
             },
             {
                 "id": "VARphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -374,7 +374,7 @@
             },
             {
                 "id": "VARphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +388,7 @@
             },
             {
                 "id": "PF",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -402,7 +402,7 @@
             },
             {
                 "id": "PFphA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -416,7 +416,7 @@
             },
             {
                 "id": "PFphB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -430,7 +430,7 @@
             },
             {
                 "id": "PFphC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -444,7 +444,7 @@
             },
             {
                 "id": "TotWhExp",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -458,7 +458,7 @@
             },
             {
                 "id": "TotWhExpPhA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -472,7 +472,7 @@
             },
             {
                 "id": "TotWhExpPhB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -486,7 +486,7 @@
             },
             {
                 "id": "TotWhExpPhC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -500,7 +500,7 @@
             },
             {
                 "id": "TotWhImp",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -514,7 +514,7 @@
             },
             {
                 "id": "TotWhImpPhA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -528,7 +528,7 @@
             },
             {
                 "id": "TotWhImpPhB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -542,7 +542,7 @@
             },
             {
                 "id": "TotWhImpPhC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -556,7 +556,7 @@
             },
             {
                 "id": "TotVAhExp",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -570,7 +570,7 @@
             },
             {
                 "id": "TotVAhExpPhA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -584,7 +584,7 @@
             },
             {
                 "id": "TotVAhExpPhB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -598,7 +598,7 @@
             },
             {
                 "id": "TotVAhExpPhC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -612,7 +612,7 @@
             },
             {
                 "id": "TotVAhImp",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -626,7 +626,7 @@
             },
             {
                 "id": "TotVAhImpPhA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -640,7 +640,7 @@
             },
             {
                 "id": "TotVAhImpPhB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -654,7 +654,7 @@
             },
             {
                 "id": "TotVAhImpPhC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -668,7 +668,7 @@
             },
             {
                 "id": "TotVArhImpQ1",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -682,7 +682,7 @@
             },
             {
                 "id": "TotVArhImpQ1phA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -696,7 +696,7 @@
             },
             {
                 "id": "TotVArhImpQ1phB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -710,7 +710,7 @@
             },
             {
                 "id": "TotVArhImpQ1phC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -724,7 +724,7 @@
             },
             {
                 "id": "TotVArhImpQ2",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -738,7 +738,7 @@
             },
             {
                 "id": "TotVArhImpQ2phA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -752,7 +752,7 @@
             },
             {
                 "id": "TotVArhImpQ2phB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -766,7 +766,7 @@
             },
             {
                 "id": "TotVArhImpQ2phC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -780,7 +780,7 @@
             },
             {
                 "id": "TotVArhExpQ3",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -794,7 +794,7 @@
             },
             {
                 "id": "TotVArhExpQ3phA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -808,7 +808,7 @@
             },
             {
                 "id": "TotVArhExpQ3phB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -822,7 +822,7 @@
             },
             {
                 "id": "TotVArhExpQ3phC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -836,7 +836,7 @@
             },
             {
                 "id": "TotVArhExpQ4",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -850,7 +850,7 @@
             },
             {
                 "id": "TotVArhExpQ4phA",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -864,7 +864,7 @@
             },
             {
                 "id": "TotVArhExpQ4phB",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -878,7 +878,7 @@
             },
             {
                 "id": "TotVArhExpQ4phC",
-                "data_type": "kFloat32",
+                "data_type": "Float32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -892,7 +892,7 @@
             },
             {
                 "id": "Evt",
-                "data_type": "kBitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

@@ -3,7 +3,7 @@
 #include <algorithm>
 
 #include "ModbusRTUSlave.h"
-#include "model_definitions.h"
+#include "array_models_externs.h"
 #include "writer/sunspec_point_writer.h"
 #include "writer/sunspec_group_writer.h"
 #include "sunspec.h"
@@ -24,7 +24,7 @@ SunspecDeviceWriter::~SunspecDeviceWriter()
     models_.clear();
 }
 
-SunspecModelWriter *SunspecDeviceWriter::getModel(SunspecModelList id)
+SunspecModelWriter *SunspecDeviceWriter::getModel(uint16_t id)
 {
     for (auto &model : models_)
     {
@@ -35,7 +35,7 @@ SunspecModelWriter *SunspecDeviceWriter::getModel(SunspecModelList id)
     return nullptr;
 }
 
-uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<SunspecModelList> &supportedModels)
+uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<uint16_t> &supportedModels)
 {
 
     registerLength_ = 0;
@@ -119,7 +119,7 @@ void SunspecDeviceWriter::setConstantIdentifiersInBuffer()
     uint16_t currentOffset = 0;
     memcpy(&modbusBuffer_[currentOffset], &kSunspecIdentifier, 2 * sizeof(uint16_t));
 
-    const uint16_t modelEndBuffer[2] = {SunspecModelList_kModelEnd, 0};
+    const uint16_t modelEndBuffer[2] = {0xffff, 0};
     currentOffset += 2;
 
     memcpy(&modbusBuffer_[registerLength_ - 2], modelEndBuffer, sizeof(uint16_t) * 2);
@@ -156,7 +156,7 @@ void SunspecDeviceWriter::setAllModbusBuffer()
     }
 }
 
-uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<SunspecModelList> &supportedModel)
+uint16_t SunspecDeviceWriter::initAll(const std::initializer_list<uint16_t> &supportedModel)
 {
 
     uint16_t count = initTopLevel(supportedModel);

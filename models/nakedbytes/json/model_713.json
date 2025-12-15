@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 713,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 713
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,8 +24,10 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
-                "data": 7,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 7
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -36,7 +40,7 @@
             },
             {
                 "id": "WHRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +54,7 @@
             },
             {
                 "id": "WHAvail",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +68,7 @@
             },
             {
                 "id": "SoC",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +82,7 @@
             },
             {
                 "id": "SoH",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +96,7 @@
             },
             {
                 "id": "Sta",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +110,7 @@
             },
             {
                 "id": "WH_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +124,7 @@
             },
             {
                 "id": "Pct_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

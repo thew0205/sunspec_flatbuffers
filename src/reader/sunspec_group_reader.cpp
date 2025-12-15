@@ -7,11 +7,11 @@
 
 using std::to_string;
 
-SunspecGroupReader::SunspecGroupReader(const SunspecGroupDef &def, const uint16_t *modbusBuffer, SunspecModelReader *model) : def_{def}, modbusBuffer_{modbusBuffer}, model_{model}, group_{nullptr}, registerLength_{0}, points_{}, groups_{}
+SunspecGroupReader::SunspecGroupReader(const SunspecGroupDefWrapper &def, const uint16_t *modbusBuffer, SunspecModelReader *model) : def_{def}, modbusBuffer_{modbusBuffer}, model_{model}, group_{nullptr}, registerLength_{0}, points_{}, groups_{}
 {
 }
 
-SunspecGroupReader::SunspecGroupReader(const SunspecGroupDef &def, const uint16_t *modbusBuffer, SunspecGroupReader *group) : def_{def}, modbusBuffer_{modbusBuffer}, model_{nullptr}, group_{group}, registerLength_{0}, points_{}, groups_{}
+SunspecGroupReader::SunspecGroupReader(const SunspecGroupDefWrapper &def, const uint16_t *modbusBuffer, SunspecGroupReader *group) : def_{def}, modbusBuffer_{modbusBuffer}, model_{nullptr}, group_{group}, registerLength_{0}, points_{}, groups_{}
 {
 }
 
@@ -40,7 +40,7 @@ SunspecPointReader *SunspecGroupReader::getPoint(const string_view pointId)
 {
     for (auto &point : points_)
     {
-        if (pointId == point.def().id()->c_str())
+        if (pointId == point.def().id())
         {
             return &point;
         }
@@ -52,7 +52,7 @@ const SunspecPointReader *SunspecGroupReader::getPoint(const string_view pointId
 {
     for (auto &point : points_)
     {
-        if (pointId == point.def().id()->c_str())
+        if (pointId == point.def().id())
         {
             return &point;
         }
@@ -65,7 +65,7 @@ SunspecGroupReader *SunspecGroupReader::getGroup(const string_view &groupId)
 {
     for (auto &groupPoint : groups_)
     {
-        if (groupId == groupPoint.def().id()->c_str())
+        if (groupId == groupPoint.def().id())
         {
             return &groupPoint;
         }
@@ -77,7 +77,7 @@ const SunspecGroupReader *SunspecGroupReader::getGroup(const string_view &groupI
 {
     for (auto &groupPoint : groups_)
     {
-        if (groupId == groupPoint.def().id()->c_str())
+        if (groupId == groupPoint.def().id())
         {
             return &groupPoint;
         }
@@ -93,19 +93,19 @@ void SunspecGroupReader::initPoints()
     groups_.clear();
 
     vector<size_t> pointCounts;
-    vector<const SunspecPointDef *> pointDefs;
+    vector<const SunspecPointDefWrapper *> pointDefs;
     size_t totalPointCount = 0;
 
-    for (const auto &pointDef : *def_.points())
+    for (const auto &pointDef : def_.points())
     {
-        uint16_t count = pointDef->count();
+        uint16_t count = pointDef.count();
         if (0 == count)
         {
             // NOTE Count is always in the top levelgroup
             // NOTE All toplevel points have fixed count
             assert(!isTopLevelGroupPoint());
 
-            SunspecPointReader *countPoint = getModel()->getPoint(pointDef->count_point_id()->c_str());
+            SunspecPointReader *countPoint = getModel()->getPoint(pointDef.count_point_id());
 
             count = countPoint == nullptr ? 0 : countPoint->valueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -113,7 +113,7 @@ void SunspecGroupReader::initPoints()
 
         totalPointCount += count;
         pointCounts.push_back(count);
-        pointDefs.push_back(pointDef);
+        pointDefs.push_back(&pointDef);
     }
     assert(pointCounts.size() == pointDefs.size() /*, "Internal error: pointCounts and pointDefs size mismatch"*/);
 
@@ -140,17 +140,17 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 {
 
     vector<size_t> groupCounts;
-    vector<const SunspecGroupDef *> groupDefs;
+    vector<const SunspecGroupDefWrapper *> groupDefs;
     size_t totalGroupCount = 0;
 
-    for (const auto &groupDef : *def_.groups())
+    for (const auto &groupDef : def_.groups())
     {
-        std::string temp{FormatStringToString(groupDef->id())};
-        uint16_t count = groupDef->count();
+        std::string temp{groupDef.id()};
+        uint16_t count = groupDef.count();
         if (0 == count)
         {
-            std::string temp3{groupDef->count_point_id()->c_str()};
-            SunspecPointReader *countPoint = getModel()->getPoint(groupDef->count_point_id()->c_str());
+            std::string temp3{groupDef.count_point_id()};
+            SunspecPointReader *countPoint = getModel()->getPoint(groupDef.count_point_id());
 
             count = (countPoint == nullptr) ? 0 : countPoint->valueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -158,7 +158,7 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 
         totalGroupCount += count;
         groupCounts.push_back(count);
-        groupDefs.push_back(groupDef);
+        groupDefs.push_back(&groupDef);
     }
 
     assert(groupCounts.size() == groupDefs.size() /*, "Internal error: groupCounts and groupDefs size mismatch"*/);

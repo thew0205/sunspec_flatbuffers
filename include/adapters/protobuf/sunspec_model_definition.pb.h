@@ -55,10 +55,10 @@ extern const ::google::protobuf::internal::DescriptorTable descriptor_table_suns
 }  // extern "C"
 enum SunspecGroupType : int;
 extern const uint32_t SunspecGroupType_internal_data_[];
-enum SunspecPointAccessType : int;
-extern const uint32_t SunspecPointAccessType_internal_data_[];
-enum SunspecPointMandatoryType : int;
-extern const uint32_t SunspecPointMandatoryType_internal_data_[];
+enum SunspecPointAccess : int;
+extern const uint32_t SunspecPointAccess_internal_data_[];
+enum SunspecPointMandatory : int;
+extern const uint32_t SunspecPointMandatory_internal_data_[];
 class Acc16;
 struct Acc16DefaultTypeInternal;
 extern Acc16DefaultTypeInternal _Acc16_default_instance_;
@@ -173,84 +173,84 @@ template <>
 internal::EnumTraitsT<::SunspecGroupType_internal_data_>
     internal::EnumTraitsImpl::value<::SunspecGroupType>;
 template <>
-internal::EnumTraitsT<::SunspecPointAccessType_internal_data_>
-    internal::EnumTraitsImpl::value<::SunspecPointAccessType>;
+internal::EnumTraitsT<::SunspecPointAccess_internal_data_>
+    internal::EnumTraitsImpl::value<::SunspecPointAccess>;
 template <>
-internal::EnumTraitsT<::SunspecPointMandatoryType_internal_data_>
-    internal::EnumTraitsImpl::value<::SunspecPointMandatoryType>;
+internal::EnumTraitsT<::SunspecPointMandatory_internal_data_>
+    internal::EnumTraitsImpl::value<::SunspecPointMandatory>;
 }  // namespace protobuf
 }  // namespace google
 
-enum SunspecPointAccessType : int {
+enum SunspecPointAccess : int {
   kR = 0,
   kRW = 1,
-  SunspecPointAccessType_INT_MIN_SENTINEL_DO_NOT_USE_ =
+  SunspecPointAccess_INT_MIN_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::min(),
-  SunspecPointAccessType_INT_MAX_SENTINEL_DO_NOT_USE_ =
+  SunspecPointAccess_INT_MAX_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::max(),
 };
 
-extern const uint32_t SunspecPointAccessType_internal_data_[];
-inline constexpr SunspecPointAccessType SunspecPointAccessType_MIN =
-    static_cast<SunspecPointAccessType>(0);
-inline constexpr SunspecPointAccessType SunspecPointAccessType_MAX =
-    static_cast<SunspecPointAccessType>(1);
-inline bool SunspecPointAccessType_IsValid(int value) {
+extern const uint32_t SunspecPointAccess_internal_data_[];
+inline constexpr SunspecPointAccess SunspecPointAccess_MIN =
+    static_cast<SunspecPointAccess>(0);
+inline constexpr SunspecPointAccess SunspecPointAccess_MAX =
+    static_cast<SunspecPointAccess>(1);
+inline bool SunspecPointAccess_IsValid(int value) {
   return 0 <= value && value <= 1;
 }
-inline constexpr int SunspecPointAccessType_ARRAYSIZE = 1 + 1;
-const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL SunspecPointAccessType_descriptor();
+inline constexpr int SunspecPointAccess_ARRAYSIZE = 1 + 1;
+const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL SunspecPointAccess_descriptor();
 template <typename T>
-const ::std::string& SunspecPointAccessType_Name(T value) {
-  static_assert(::std::is_same<T, SunspecPointAccessType>::value ||
+const ::std::string& SunspecPointAccess_Name(T value) {
+  static_assert(::std::is_same<T, SunspecPointAccess>::value ||
                     ::std::is_integral<T>::value,
-                "Incorrect type passed to SunspecPointAccessType_Name().");
-  return SunspecPointAccessType_Name(static_cast<SunspecPointAccessType>(value));
+                "Incorrect type passed to SunspecPointAccess_Name().");
+  return SunspecPointAccess_Name(static_cast<SunspecPointAccess>(value));
 }
 template <>
-inline const ::std::string& SunspecPointAccessType_Name(SunspecPointAccessType value) {
-  return ::google::protobuf::internal::NameOfDenseEnum<SunspecPointAccessType_descriptor, 0, 1>(
+inline const ::std::string& SunspecPointAccess_Name(SunspecPointAccess value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<SunspecPointAccess_descriptor, 0, 1>(
       static_cast<int>(value));
 }
-inline bool SunspecPointAccessType_Parse(
-    ::absl::string_view name, SunspecPointAccessType* PROTOBUF_NONNULL value) {
-  return ::google::protobuf::internal::ParseNamedEnum<SunspecPointAccessType>(SunspecPointAccessType_descriptor(), name,
+inline bool SunspecPointAccess_Parse(
+    ::absl::string_view name, SunspecPointAccess* PROTOBUF_NONNULL value) {
+  return ::google::protobuf::internal::ParseNamedEnum<SunspecPointAccess>(SunspecPointAccess_descriptor(), name,
                                            value);
 }
-enum SunspecPointMandatoryType : int {
+enum SunspecPointMandatory : int {
   kM = 0,
   kO = 1,
-  SunspecPointMandatoryType_INT_MIN_SENTINEL_DO_NOT_USE_ =
+  SunspecPointMandatory_INT_MIN_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::min(),
-  SunspecPointMandatoryType_INT_MAX_SENTINEL_DO_NOT_USE_ =
+  SunspecPointMandatory_INT_MAX_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::max(),
 };
 
-extern const uint32_t SunspecPointMandatoryType_internal_data_[];
-inline constexpr SunspecPointMandatoryType SunspecPointMandatoryType_MIN =
-    static_cast<SunspecPointMandatoryType>(0);
-inline constexpr SunspecPointMandatoryType SunspecPointMandatoryType_MAX =
-    static_cast<SunspecPointMandatoryType>(1);
-inline bool SunspecPointMandatoryType_IsValid(int value) {
+extern const uint32_t SunspecPointMandatory_internal_data_[];
+inline constexpr SunspecPointMandatory SunspecPointMandatory_MIN =
+    static_cast<SunspecPointMandatory>(0);
+inline constexpr SunspecPointMandatory SunspecPointMandatory_MAX =
+    static_cast<SunspecPointMandatory>(1);
+inline bool SunspecPointMandatory_IsValid(int value) {
   return 0 <= value && value <= 1;
 }
-inline constexpr int SunspecPointMandatoryType_ARRAYSIZE = 1 + 1;
-const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL SunspecPointMandatoryType_descriptor();
+inline constexpr int SunspecPointMandatory_ARRAYSIZE = 1 + 1;
+const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL SunspecPointMandatory_descriptor();
 template <typename T>
-const ::std::string& SunspecPointMandatoryType_Name(T value) {
-  static_assert(::std::is_same<T, SunspecPointMandatoryType>::value ||
+const ::std::string& SunspecPointMandatory_Name(T value) {
+  static_assert(::std::is_same<T, SunspecPointMandatory>::value ||
                     ::std::is_integral<T>::value,
-                "Incorrect type passed to SunspecPointMandatoryType_Name().");
-  return SunspecPointMandatoryType_Name(static_cast<SunspecPointMandatoryType>(value));
+                "Incorrect type passed to SunspecPointMandatory_Name().");
+  return SunspecPointMandatory_Name(static_cast<SunspecPointMandatory>(value));
 }
 template <>
-inline const ::std::string& SunspecPointMandatoryType_Name(SunspecPointMandatoryType value) {
-  return ::google::protobuf::internal::NameOfDenseEnum<SunspecPointMandatoryType_descriptor, 0, 1>(
+inline const ::std::string& SunspecPointMandatory_Name(SunspecPointMandatory value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<SunspecPointMandatory_descriptor, 0, 1>(
       static_cast<int>(value));
 }
-inline bool SunspecPointMandatoryType_Parse(
-    ::absl::string_view name, SunspecPointMandatoryType* PROTOBUF_NONNULL value) {
-  return ::google::protobuf::internal::ParseNamedEnum<SunspecPointMandatoryType>(SunspecPointMandatoryType_descriptor(), name,
+inline bool SunspecPointMandatory_Parse(
+    ::absl::string_view name, SunspecPointMandatory* PROTOBUF_NONNULL value) {
+  return ::google::protobuf::internal::ParseNamedEnum<SunspecPointMandatory>(SunspecPointMandatory_descriptor(), name,
                                            value);
 }
 enum SunspecGroupType : int {
@@ -4790,9 +4790,9 @@ class SunspecPointData final : public ::google::protobuf::Message
     kFloat32 = 16,
     kFloat64 = 17,
     kStringx = 18,
-    kSunssf = 19,
+    kSunsSf = 19,
     kPad16 = 20,
-    kIpaddr = 21,
+    kIpAddr = 21,
     kIpv6Addr = 22,
     kEui48 = 23,
     KIND_NOT_SET = 0,
@@ -4902,13 +4902,13 @@ class SunspecPointData final : public ::google::protobuf::Message
     kFloat32FieldNumber = 16,
     kFloat64FieldNumber = 17,
     kStringxFieldNumber = 18,
-    kSunssfFieldNumber = 19,
+    kSunsSfFieldNumber = 19,
     kPad16FieldNumber = 20,
-    kIpaddrFieldNumber = 21,
+    kIpAddrFieldNumber = 21,
     kIpv6AddrFieldNumber = 22,
     kEui48FieldNumber = 23,
   };
-  // int32 sint16 = 1;
+  // int32 Sint16 = 1;
   bool has_sint16() const;
   void clear_sint16() ;
   ::int32_t sint16() const;
@@ -4919,7 +4919,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_sint16(::int32_t value);
 
   public:
-  // int32 sint32 = 2;
+  // int32 Sint32 = 2;
   bool has_sint32() const;
   void clear_sint32() ;
   ::int32_t sint32() const;
@@ -4930,7 +4930,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_sint32(::int32_t value);
 
   public:
-  // int64 sint64 = 3;
+  // int64 Sint64 = 3;
   bool has_sint64() const;
   void clear_sint64() ;
   ::int64_t sint64() const;
@@ -4941,7 +4941,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_sint64(::int64_t value);
 
   public:
-  // uint32 raw16 = 4;
+  // uint32 Raw16 = 4;
   bool has_raw16() const;
   void clear_raw16() ;
   ::uint32_t raw16() const;
@@ -4952,18 +4952,26 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_raw16(::uint32_t value);
 
   public:
-  // uint32 uint16 = 5;
+  // .Uint16 Uint16 = 5;
   bool has_uint16() const;
-  void clear_uint16() ;
-  ::uint32_t uint16() const;
-  void set_uint16(::uint32_t value);
-
   private:
-  ::uint32_t _internal_uint16() const;
-  void _internal_set_uint16(::uint32_t value);
+  bool _internal_has_uint16() const;
 
   public:
-  // uint32 uint32 = 6;
+  void clear_uint16() ;
+  const ::Uint16& uint16() const;
+  [[nodiscard]] ::Uint16* PROTOBUF_NULLABLE release_uint16();
+  ::Uint16* PROTOBUF_NONNULL mutable_uint16();
+  void set_allocated_uint16(::Uint16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_uint16(::Uint16* PROTOBUF_NULLABLE value);
+  ::Uint16* PROTOBUF_NULLABLE unsafe_arena_release_uint16();
+
+  private:
+  const ::Uint16& _internal_uint16() const;
+  ::Uint16* PROTOBUF_NONNULL _internal_mutable_uint16();
+
+  public:
+  // uint32 Uint32 = 6;
   bool has_uint32() const;
   void clear_uint32() ;
   ::uint32_t uint32() const;
@@ -4974,7 +4982,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_uint32(::uint32_t value);
 
   public:
-  // uint64 uint64 = 7;
+  // uint64 Uint64 = 7;
   bool has_uint64() const;
   void clear_uint64() ;
   ::uint64_t uint64() const;
@@ -4985,7 +4993,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_uint64(::uint64_t value);
 
   public:
-  // uint32 acc16 = 8;
+  // uint32 Acc16 = 8;
   bool has_acc16() const;
   void clear_acc16() ;
   ::uint32_t acc16() const;
@@ -4996,7 +5004,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_acc16(::uint32_t value);
 
   public:
-  // uint32 acc32 = 9;
+  // uint32 Acc32 = 9;
   bool has_acc32() const;
   void clear_acc32() ;
   ::uint32_t acc32() const;
@@ -5007,7 +5015,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_acc32(::uint32_t value);
 
   public:
-  // uint64 acc64 = 10;
+  // uint64 Acc64 = 10;
   bool has_acc64() const;
   void clear_acc64() ;
   ::uint64_t acc64() const;
@@ -5018,7 +5026,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_acc64(::uint64_t value);
 
   public:
-  // uint32 bitfield16 = 11;
+  // uint32 Bitfield16 = 11;
   bool has_bitfield16() const;
   void clear_bitfield16() ;
   ::uint32_t bitfield16() const;
@@ -5029,7 +5037,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_bitfield16(::uint32_t value);
 
   public:
-  // uint32 bitfield32 = 12;
+  // uint32 Bitfield32 = 12;
   bool has_bitfield32() const;
   void clear_bitfield32() ;
   ::uint32_t bitfield32() const;
@@ -5040,7 +5048,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_bitfield32(::uint32_t value);
 
   public:
-  // uint64 bitfield64 = 13;
+  // uint64 Bitfield64 = 13;
   bool has_bitfield64() const;
   void clear_bitfield64() ;
   ::uint64_t bitfield64() const;
@@ -5051,7 +5059,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_bitfield64(::uint64_t value);
 
   public:
-  // uint32 enum16 = 14;
+  // uint32 Enum16 = 14;
   bool has_enum16() const;
   void clear_enum16() ;
   ::uint32_t enum16() const;
@@ -5062,7 +5070,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_enum16(::uint32_t value);
 
   public:
-  // uint32 enum32 = 15;
+  // uint32 Enum32 = 15;
   bool has_enum32() const;
   void clear_enum32() ;
   ::uint32_t enum32() const;
@@ -5073,7 +5081,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_enum32(::uint32_t value);
 
   public:
-  // float float32 = 16;
+  // float Float32 = 16;
   bool has_float32() const;
   void clear_float32() ;
   float float32() const;
@@ -5084,7 +5092,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_float32(float value);
 
   public:
-  // double float64 = 17;
+  // double Float64 = 17;
   bool has_float64() const;
   void clear_float64() ;
   double float64() const;
@@ -5095,23 +5103,26 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_float64(double value);
 
   public:
-  // string stringx = 18;
+  // .Stringx Stringx = 18;
   bool has_stringx() const;
-  void clear_stringx() ;
-  const ::std::string& stringx() const;
-  template <typename Arg_ = const ::std::string&, typename... Args_>
-  void set_stringx(Arg_&& arg, Args_... args);
-  ::std::string* PROTOBUF_NONNULL mutable_stringx();
-  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_stringx();
-  void set_allocated_stringx(::std::string* PROTOBUF_NULLABLE value);
-
   private:
-  const ::std::string& _internal_stringx() const;
-  PROTOBUF_ALWAYS_INLINE void _internal_set_stringx(const ::std::string& value);
-  ::std::string* PROTOBUF_NONNULL _internal_mutable_stringx();
+  bool _internal_has_stringx() const;
 
   public:
-  // uint32 sunssf = 19;
+  void clear_stringx() ;
+  const ::Stringx& stringx() const;
+  [[nodiscard]] ::Stringx* PROTOBUF_NULLABLE release_stringx();
+  ::Stringx* PROTOBUF_NONNULL mutable_stringx();
+  void set_allocated_stringx(::Stringx* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_stringx(::Stringx* PROTOBUF_NULLABLE value);
+  ::Stringx* PROTOBUF_NULLABLE unsafe_arena_release_stringx();
+
+  private:
+  const ::Stringx& _internal_stringx() const;
+  ::Stringx* PROTOBUF_NONNULL _internal_mutable_stringx();
+
+  public:
+  // uint32 SunsSf = 19;
   bool has_sunssf() const;
   void clear_sunssf() ;
   ::uint32_t sunssf() const;
@@ -5122,18 +5133,26 @@ class SunspecPointData final : public ::google::protobuf::Message
   void _internal_set_sunssf(::uint32_t value);
 
   public:
-  // uint32 pad16 = 20;
+  // .Pad16 Pad16 = 20;
   bool has_pad16() const;
-  void clear_pad16() ;
-  ::uint32_t pad16() const;
-  void set_pad16(::uint32_t value);
-
   private:
-  ::uint32_t _internal_pad16() const;
-  void _internal_set_pad16(::uint32_t value);
+  bool _internal_has_pad16() const;
 
   public:
-  // .IpAddr ipaddr = 21;
+  void clear_pad16() ;
+  const ::Pad16& pad16() const;
+  [[nodiscard]] ::Pad16* PROTOBUF_NULLABLE release_pad16();
+  ::Pad16* PROTOBUF_NONNULL mutable_pad16();
+  void set_allocated_pad16(::Pad16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_pad16(::Pad16* PROTOBUF_NULLABLE value);
+  ::Pad16* PROTOBUF_NULLABLE unsafe_arena_release_pad16();
+
+  private:
+  const ::Pad16& _internal_pad16() const;
+  ::Pad16* PROTOBUF_NONNULL _internal_mutable_pad16();
+
+  public:
+  // .IpAddr IpAddr = 21;
   bool has_ipaddr() const;
   private:
   bool _internal_has_ipaddr() const;
@@ -5152,7 +5171,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   ::IpAddr* PROTOBUF_NONNULL _internal_mutable_ipaddr();
 
   public:
-  // .Ipv6Addr ipv6addr = 22;
+  // .Ipv6Addr Ipv6Addr = 22;
   bool has_ipv6addr() const;
   private:
   bool _internal_has_ipv6addr() const;
@@ -5171,7 +5190,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   ::Ipv6Addr* PROTOBUF_NONNULL _internal_mutable_ipv6addr();
 
   public:
-  // .Eui48 eui48 = 23;
+  // .Eui48 Eui48 = 23;
   bool has_eui48() const;
   private:
   bool _internal_has_eui48() const;
@@ -5222,7 +5241,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   inline void clear_has_kind();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<0, 23,
-                                   3, 48,
+                                   6, 0,
                                    2>
       _table_;
 
@@ -5248,7 +5267,7 @@ class SunspecPointData final : public ::google::protobuf::Message
       ::int32_t sint32_;
       ::int64_t sint64_;
       ::uint32_t raw16_;
-      ::uint32_t uint16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE uint16_;
       ::uint32_t uint32_;
       ::uint64_t uint64_;
       ::uint32_t acc16_;
@@ -5261,9 +5280,9 @@ class SunspecPointData final : public ::google::protobuf::Message
       ::uint32_t enum32_;
       float float32_;
       double float64_;
-      ::google::protobuf::internal::ArenaStringPtr stringx_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE stringx_;
       ::uint32_t sunssf_;
-      ::uint32_t pad16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE pad16_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE ipaddr_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE ipv6addr_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE eui48_;
@@ -5553,24 +5572,24 @@ class SunspecPointDef final : public ::google::protobuf::Message
   void _internal_set_sf(::int32_t value);
 
   public:
-  // .SunspecPointAccessType access = 9;
+  // .SunspecPointAccess access = 9;
   void clear_access() ;
-  ::SunspecPointAccessType access() const;
-  void set_access(::SunspecPointAccessType value);
+  ::SunspecPointAccess access() const;
+  void set_access(::SunspecPointAccess value);
 
   private:
-  ::SunspecPointAccessType _internal_access() const;
-  void _internal_set_access(::SunspecPointAccessType value);
+  ::SunspecPointAccess _internal_access() const;
+  void _internal_set_access(::SunspecPointAccess value);
 
   public:
-  // .SunspecPointMandatoryType mandatory = 10;
+  // .SunspecPointMandatory mandatory = 10;
   void clear_mandatory() ;
-  ::SunspecPointMandatoryType mandatory() const;
-  void set_mandatory(::SunspecPointMandatoryType value);
+  ::SunspecPointMandatory mandatory() const;
+  void set_mandatory(::SunspecPointMandatory value);
 
   private:
-  ::SunspecPointMandatoryType _internal_mandatory() const;
-  void _internal_set_mandatory(::SunspecPointMandatoryType value);
+  ::SunspecPointMandatory _internal_mandatory() const;
+  void _internal_set_mandatory(::SunspecPointMandatory value);
 
   public:
   // @@protoc_insertion_point(class_scope:SunspecPointDef)
@@ -6994,7 +7013,7 @@ inline void Eui48::set_allocated_value(::std::string* PROTOBUF_NULLABLE value) {
 
 // SunspecPointData
 
-// int32 sint16 = 1;
+// int32 Sint16 = 1;
 inline bool SunspecPointData::has_sint16() const {
   return kind_case() == kSint16;
 }
@@ -7009,7 +7028,7 @@ inline void SunspecPointData::clear_sint16() {
   }
 }
 inline ::int32_t SunspecPointData::sint16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.sint16)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Sint16)
   return _internal_sint16();
 }
 inline void SunspecPointData::set_sint16(::int32_t value) {
@@ -7018,7 +7037,7 @@ inline void SunspecPointData::set_sint16(::int32_t value) {
     set_has_sint16();
   }
   _impl_.kind_.sint16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.sint16)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Sint16)
 }
 inline ::int32_t SunspecPointData::_internal_sint16() const {
   if (kind_case() == kSint16) {
@@ -7027,7 +7046,7 @@ inline ::int32_t SunspecPointData::_internal_sint16() const {
   return 0;
 }
 
-// int32 sint32 = 2;
+// int32 Sint32 = 2;
 inline bool SunspecPointData::has_sint32() const {
   return kind_case() == kSint32;
 }
@@ -7042,7 +7061,7 @@ inline void SunspecPointData::clear_sint32() {
   }
 }
 inline ::int32_t SunspecPointData::sint32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.sint32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Sint32)
   return _internal_sint32();
 }
 inline void SunspecPointData::set_sint32(::int32_t value) {
@@ -7051,7 +7070,7 @@ inline void SunspecPointData::set_sint32(::int32_t value) {
     set_has_sint32();
   }
   _impl_.kind_.sint32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.sint32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Sint32)
 }
 inline ::int32_t SunspecPointData::_internal_sint32() const {
   if (kind_case() == kSint32) {
@@ -7060,7 +7079,7 @@ inline ::int32_t SunspecPointData::_internal_sint32() const {
   return 0;
 }
 
-// int64 sint64 = 3;
+// int64 Sint64 = 3;
 inline bool SunspecPointData::has_sint64() const {
   return kind_case() == kSint64;
 }
@@ -7075,7 +7094,7 @@ inline void SunspecPointData::clear_sint64() {
   }
 }
 inline ::int64_t SunspecPointData::sint64() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.sint64)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Sint64)
   return _internal_sint64();
 }
 inline void SunspecPointData::set_sint64(::int64_t value) {
@@ -7084,7 +7103,7 @@ inline void SunspecPointData::set_sint64(::int64_t value) {
     set_has_sint64();
   }
   _impl_.kind_.sint64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.sint64)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Sint64)
 }
 inline ::int64_t SunspecPointData::_internal_sint64() const {
   if (kind_case() == kSint64) {
@@ -7093,7 +7112,7 @@ inline ::int64_t SunspecPointData::_internal_sint64() const {
   return ::int64_t{0};
 }
 
-// uint32 raw16 = 4;
+// uint32 Raw16 = 4;
 inline bool SunspecPointData::has_raw16() const {
   return kind_case() == kRaw16;
 }
@@ -7108,7 +7127,7 @@ inline void SunspecPointData::clear_raw16() {
   }
 }
 inline ::uint32_t SunspecPointData::raw16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.raw16)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Raw16)
   return _internal_raw16();
 }
 inline void SunspecPointData::set_raw16(::uint32_t value) {
@@ -7117,7 +7136,7 @@ inline void SunspecPointData::set_raw16(::uint32_t value) {
     set_has_raw16();
   }
   _impl_.kind_.raw16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.raw16)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Raw16)
 }
 inline ::uint32_t SunspecPointData::_internal_raw16() const {
   if (kind_case() == kRaw16) {
@@ -7126,8 +7145,11 @@ inline ::uint32_t SunspecPointData::_internal_raw16() const {
   return 0u;
 }
 
-// uint32 uint16 = 5;
+// .Uint16 Uint16 = 5;
 inline bool SunspecPointData::has_uint16() const {
+  return kind_case() == kUint16;
+}
+inline bool SunspecPointData::_internal_has_uint16() const {
   return kind_case() == kUint16;
 }
 inline void SunspecPointData::set_has_uint16() {
@@ -7136,30 +7158,76 @@ inline void SunspecPointData::set_has_uint16() {
 inline void SunspecPointData::clear_uint16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kUint16) {
-    _impl_.kind_.uint16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.uint16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.uint16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::uint16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.uint16)
+inline ::Uint16* PROTOBUF_NULLABLE SunspecPointData::release_uint16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Uint16)
+  if (kind_case() == kUint16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint16*>(_impl_.kind_.uint16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.uint16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Uint16& SunspecPointData::_internal_uint16() const {
+  return kind_case() == kUint16 ? static_cast<const ::Uint16&>(*reinterpret_cast<::Uint16*>(_impl_.kind_.uint16_))
+                     : reinterpret_cast<const ::Uint16&>(::_Uint16_default_instance_);
+}
+inline const ::Uint16& SunspecPointData::uint16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:SunspecPointData.Uint16)
   return _internal_uint16();
 }
-inline void SunspecPointData::set_uint16(::uint32_t value) {
+inline ::Uint16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_uint16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Uint16)
+  if (kind_case() == kUint16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint16*>(_impl_.kind_.uint16_);
+    _impl_.kind_.uint16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_uint16(
+    ::Uint16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_uint16();
+    _impl_.kind_.uint16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Uint16)
+}
+inline ::Uint16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_uint16() {
   if (kind_case() != kUint16) {
     clear_kind();
     set_has_uint16();
+    _impl_.kind_.uint16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Uint16>(GetArena()));
   }
-  _impl_.kind_.uint16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.uint16)
+  return reinterpret_cast<::Uint16*>(_impl_.kind_.uint16_);
 }
-inline ::uint32_t SunspecPointData::_internal_uint16() const {
-  if (kind_case() == kUint16) {
-    return _impl_.kind_.uint16_;
-  }
-  return 0u;
+inline ::Uint16* PROTOBUF_NONNULL SunspecPointData::mutable_uint16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Uint16* _msg = _internal_mutable_uint16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Uint16)
+  return _msg;
 }
 
-// uint32 uint32 = 6;
+// uint32 Uint32 = 6;
 inline bool SunspecPointData::has_uint32() const {
   return kind_case() == kUint32;
 }
@@ -7174,7 +7242,7 @@ inline void SunspecPointData::clear_uint32() {
   }
 }
 inline ::uint32_t SunspecPointData::uint32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.uint32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Uint32)
   return _internal_uint32();
 }
 inline void SunspecPointData::set_uint32(::uint32_t value) {
@@ -7183,7 +7251,7 @@ inline void SunspecPointData::set_uint32(::uint32_t value) {
     set_has_uint32();
   }
   _impl_.kind_.uint32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.uint32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Uint32)
 }
 inline ::uint32_t SunspecPointData::_internal_uint32() const {
   if (kind_case() == kUint32) {
@@ -7192,7 +7260,7 @@ inline ::uint32_t SunspecPointData::_internal_uint32() const {
   return 0u;
 }
 
-// uint64 uint64 = 7;
+// uint64 Uint64 = 7;
 inline bool SunspecPointData::has_uint64() const {
   return kind_case() == kUint64;
 }
@@ -7207,7 +7275,7 @@ inline void SunspecPointData::clear_uint64() {
   }
 }
 inline ::uint64_t SunspecPointData::uint64() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.uint64)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Uint64)
   return _internal_uint64();
 }
 inline void SunspecPointData::set_uint64(::uint64_t value) {
@@ -7216,7 +7284,7 @@ inline void SunspecPointData::set_uint64(::uint64_t value) {
     set_has_uint64();
   }
   _impl_.kind_.uint64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.uint64)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Uint64)
 }
 inline ::uint64_t SunspecPointData::_internal_uint64() const {
   if (kind_case() == kUint64) {
@@ -7225,7 +7293,7 @@ inline ::uint64_t SunspecPointData::_internal_uint64() const {
   return ::uint64_t{0u};
 }
 
-// uint32 acc16 = 8;
+// uint32 Acc16 = 8;
 inline bool SunspecPointData::has_acc16() const {
   return kind_case() == kAcc16;
 }
@@ -7240,7 +7308,7 @@ inline void SunspecPointData::clear_acc16() {
   }
 }
 inline ::uint32_t SunspecPointData::acc16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.acc16)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Acc16)
   return _internal_acc16();
 }
 inline void SunspecPointData::set_acc16(::uint32_t value) {
@@ -7249,7 +7317,7 @@ inline void SunspecPointData::set_acc16(::uint32_t value) {
     set_has_acc16();
   }
   _impl_.kind_.acc16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.acc16)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Acc16)
 }
 inline ::uint32_t SunspecPointData::_internal_acc16() const {
   if (kind_case() == kAcc16) {
@@ -7258,7 +7326,7 @@ inline ::uint32_t SunspecPointData::_internal_acc16() const {
   return 0u;
 }
 
-// uint32 acc32 = 9;
+// uint32 Acc32 = 9;
 inline bool SunspecPointData::has_acc32() const {
   return kind_case() == kAcc32;
 }
@@ -7273,7 +7341,7 @@ inline void SunspecPointData::clear_acc32() {
   }
 }
 inline ::uint32_t SunspecPointData::acc32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.acc32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Acc32)
   return _internal_acc32();
 }
 inline void SunspecPointData::set_acc32(::uint32_t value) {
@@ -7282,7 +7350,7 @@ inline void SunspecPointData::set_acc32(::uint32_t value) {
     set_has_acc32();
   }
   _impl_.kind_.acc32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.acc32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Acc32)
 }
 inline ::uint32_t SunspecPointData::_internal_acc32() const {
   if (kind_case() == kAcc32) {
@@ -7291,7 +7359,7 @@ inline ::uint32_t SunspecPointData::_internal_acc32() const {
   return 0u;
 }
 
-// uint64 acc64 = 10;
+// uint64 Acc64 = 10;
 inline bool SunspecPointData::has_acc64() const {
   return kind_case() == kAcc64;
 }
@@ -7306,7 +7374,7 @@ inline void SunspecPointData::clear_acc64() {
   }
 }
 inline ::uint64_t SunspecPointData::acc64() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.acc64)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Acc64)
   return _internal_acc64();
 }
 inline void SunspecPointData::set_acc64(::uint64_t value) {
@@ -7315,7 +7383,7 @@ inline void SunspecPointData::set_acc64(::uint64_t value) {
     set_has_acc64();
   }
   _impl_.kind_.acc64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.acc64)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Acc64)
 }
 inline ::uint64_t SunspecPointData::_internal_acc64() const {
   if (kind_case() == kAcc64) {
@@ -7324,7 +7392,7 @@ inline ::uint64_t SunspecPointData::_internal_acc64() const {
   return ::uint64_t{0u};
 }
 
-// uint32 bitfield16 = 11;
+// uint32 Bitfield16 = 11;
 inline bool SunspecPointData::has_bitfield16() const {
   return kind_case() == kBitfield16;
 }
@@ -7339,7 +7407,7 @@ inline void SunspecPointData::clear_bitfield16() {
   }
 }
 inline ::uint32_t SunspecPointData::bitfield16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.bitfield16)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield16)
   return _internal_bitfield16();
 }
 inline void SunspecPointData::set_bitfield16(::uint32_t value) {
@@ -7348,7 +7416,7 @@ inline void SunspecPointData::set_bitfield16(::uint32_t value) {
     set_has_bitfield16();
   }
   _impl_.kind_.bitfield16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.bitfield16)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield16)
 }
 inline ::uint32_t SunspecPointData::_internal_bitfield16() const {
   if (kind_case() == kBitfield16) {
@@ -7357,7 +7425,7 @@ inline ::uint32_t SunspecPointData::_internal_bitfield16() const {
   return 0u;
 }
 
-// uint32 bitfield32 = 12;
+// uint32 Bitfield32 = 12;
 inline bool SunspecPointData::has_bitfield32() const {
   return kind_case() == kBitfield32;
 }
@@ -7372,7 +7440,7 @@ inline void SunspecPointData::clear_bitfield32() {
   }
 }
 inline ::uint32_t SunspecPointData::bitfield32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.bitfield32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield32)
   return _internal_bitfield32();
 }
 inline void SunspecPointData::set_bitfield32(::uint32_t value) {
@@ -7381,7 +7449,7 @@ inline void SunspecPointData::set_bitfield32(::uint32_t value) {
     set_has_bitfield32();
   }
   _impl_.kind_.bitfield32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.bitfield32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield32)
 }
 inline ::uint32_t SunspecPointData::_internal_bitfield32() const {
   if (kind_case() == kBitfield32) {
@@ -7390,7 +7458,7 @@ inline ::uint32_t SunspecPointData::_internal_bitfield32() const {
   return 0u;
 }
 
-// uint64 bitfield64 = 13;
+// uint64 Bitfield64 = 13;
 inline bool SunspecPointData::has_bitfield64() const {
   return kind_case() == kBitfield64;
 }
@@ -7405,7 +7473,7 @@ inline void SunspecPointData::clear_bitfield64() {
   }
 }
 inline ::uint64_t SunspecPointData::bitfield64() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.bitfield64)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield64)
   return _internal_bitfield64();
 }
 inline void SunspecPointData::set_bitfield64(::uint64_t value) {
@@ -7414,7 +7482,7 @@ inline void SunspecPointData::set_bitfield64(::uint64_t value) {
     set_has_bitfield64();
   }
   _impl_.kind_.bitfield64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.bitfield64)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield64)
 }
 inline ::uint64_t SunspecPointData::_internal_bitfield64() const {
   if (kind_case() == kBitfield64) {
@@ -7423,7 +7491,7 @@ inline ::uint64_t SunspecPointData::_internal_bitfield64() const {
   return ::uint64_t{0u};
 }
 
-// uint32 enum16 = 14;
+// uint32 Enum16 = 14;
 inline bool SunspecPointData::has_enum16() const {
   return kind_case() == kEnum16;
 }
@@ -7438,7 +7506,7 @@ inline void SunspecPointData::clear_enum16() {
   }
 }
 inline ::uint32_t SunspecPointData::enum16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.enum16)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Enum16)
   return _internal_enum16();
 }
 inline void SunspecPointData::set_enum16(::uint32_t value) {
@@ -7447,7 +7515,7 @@ inline void SunspecPointData::set_enum16(::uint32_t value) {
     set_has_enum16();
   }
   _impl_.kind_.enum16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.enum16)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Enum16)
 }
 inline ::uint32_t SunspecPointData::_internal_enum16() const {
   if (kind_case() == kEnum16) {
@@ -7456,7 +7524,7 @@ inline ::uint32_t SunspecPointData::_internal_enum16() const {
   return 0u;
 }
 
-// uint32 enum32 = 15;
+// uint32 Enum32 = 15;
 inline bool SunspecPointData::has_enum32() const {
   return kind_case() == kEnum32;
 }
@@ -7471,7 +7539,7 @@ inline void SunspecPointData::clear_enum32() {
   }
 }
 inline ::uint32_t SunspecPointData::enum32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.enum32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Enum32)
   return _internal_enum32();
 }
 inline void SunspecPointData::set_enum32(::uint32_t value) {
@@ -7480,7 +7548,7 @@ inline void SunspecPointData::set_enum32(::uint32_t value) {
     set_has_enum32();
   }
   _impl_.kind_.enum32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.enum32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Enum32)
 }
 inline ::uint32_t SunspecPointData::_internal_enum32() const {
   if (kind_case() == kEnum32) {
@@ -7489,7 +7557,7 @@ inline ::uint32_t SunspecPointData::_internal_enum32() const {
   return 0u;
 }
 
-// float float32 = 16;
+// float Float32 = 16;
 inline bool SunspecPointData::has_float32() const {
   return kind_case() == kFloat32;
 }
@@ -7504,7 +7572,7 @@ inline void SunspecPointData::clear_float32() {
   }
 }
 inline float SunspecPointData::float32() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.float32)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Float32)
   return _internal_float32();
 }
 inline void SunspecPointData::set_float32(float value) {
@@ -7513,7 +7581,7 @@ inline void SunspecPointData::set_float32(float value) {
     set_has_float32();
   }
   _impl_.kind_.float32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.float32)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Float32)
 }
 inline float SunspecPointData::_internal_float32() const {
   if (kind_case() == kFloat32) {
@@ -7522,7 +7590,7 @@ inline float SunspecPointData::_internal_float32() const {
   return 0;
 }
 
-// double float64 = 17;
+// double Float64 = 17;
 inline bool SunspecPointData::has_float64() const {
   return kind_case() == kFloat64;
 }
@@ -7537,7 +7605,7 @@ inline void SunspecPointData::clear_float64() {
   }
 }
 inline double SunspecPointData::float64() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.float64)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Float64)
   return _internal_float64();
 }
 inline void SunspecPointData::set_float64(double value) {
@@ -7546,7 +7614,7 @@ inline void SunspecPointData::set_float64(double value) {
     set_has_float64();
   }
   _impl_.kind_.float64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.float64)
+  // @@protoc_insertion_point(field_set:SunspecPointData.Float64)
 }
 inline double SunspecPointData::_internal_float64() const {
   if (kind_case() == kFloat64) {
@@ -7555,8 +7623,11 @@ inline double SunspecPointData::_internal_float64() const {
   return 0;
 }
 
-// string stringx = 18;
+// .Stringx Stringx = 18;
 inline bool SunspecPointData::has_stringx() const {
+  return kind_case() == kStringx;
+}
+inline bool SunspecPointData::_internal_has_stringx() const {
   return kind_case() == kStringx;
 }
 inline void SunspecPointData::set_has_stringx() {
@@ -7565,110 +7636,113 @@ inline void SunspecPointData::set_has_stringx() {
 inline void SunspecPointData::clear_stringx() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kStringx) {
-    _impl_.kind_.stringx_.Destroy();
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.stringx_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.stringx_);
+    }
     clear_has_kind();
   }
 }
-inline const ::std::string& SunspecPointData::stringx() const
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:SunspecPointData.stringx)
-  return _internal_stringx();
-}
-template <typename Arg_, typename... Args_>
-PROTOBUF_ALWAYS_INLINE void SunspecPointData::set_stringx(Arg_&& arg, Args_... args) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (kind_case() != kStringx) {
-    clear_kind();
-
-    set_has_stringx();
-    _impl_.kind_.stringx_.InitDefault();
-  }
-  _impl_.kind_.stringx_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-  // @@protoc_insertion_point(field_set:SunspecPointData.stringx)
-}
-inline ::std::string* PROTOBUF_NONNULL SunspecPointData::mutable_stringx()
-    ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  if (kind_case() != kStringx) {
-    clear_kind();
-
-    set_has_stringx();
-    _impl_.kind_.stringx_.InitDefault();
-  }
-  ::std::string* _s = _internal_mutable_stringx();
-  // @@protoc_insertion_point(field_mutable:SunspecPointData.stringx)
-  return _s;
-}
-inline const ::std::string& SunspecPointData::_internal_stringx() const {
-  ::google::protobuf::internal::TSanRead(&_impl_);
-  if (kind_case() != kStringx) {
-    return ::google::protobuf::internal::GetEmptyStringAlreadyInited();
-  }
-  return _impl_.kind_.stringx_.Get();
-}
-inline void SunspecPointData::_internal_set_stringx(const ::std::string& value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  _impl_.kind_.stringx_.Set(value, GetArena());
-}
-inline ::std::string* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_stringx() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  return _impl_.kind_.stringx_.Mutable( GetArena());
-}
-inline ::std::string* PROTOBUF_NULLABLE SunspecPointData::release_stringx() {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  // @@protoc_insertion_point(field_release:SunspecPointData.stringx)
-  if (kind_case() != kStringx) {
+inline ::Stringx* PROTOBUF_NULLABLE SunspecPointData::release_stringx() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Stringx)
+  if (kind_case() == kStringx) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Stringx*>(_impl_.kind_.stringx_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.stringx_ = nullptr;
+    return temp;
+  } else {
     return nullptr;
   }
-  clear_has_kind();
-  return _impl_.kind_.stringx_.Release();
 }
-inline void SunspecPointData::set_allocated_stringx(::std::string* PROTOBUF_NULLABLE value) {
-  ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (has_kind()) {
-    clear_kind();
+inline const ::Stringx& SunspecPointData::_internal_stringx() const {
+  return kind_case() == kStringx ? static_cast<const ::Stringx&>(*reinterpret_cast<::Stringx*>(_impl_.kind_.stringx_))
+                     : reinterpret_cast<const ::Stringx&>(::_Stringx_default_instance_);
+}
+inline const ::Stringx& SunspecPointData::stringx() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:SunspecPointData.Stringx)
+  return _internal_stringx();
+}
+inline ::Stringx* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_stringx() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Stringx)
+  if (kind_case() == kStringx) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Stringx*>(_impl_.kind_.stringx_);
+    _impl_.kind_.stringx_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
   }
-  if (value != nullptr) {
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_stringx(
+    ::Stringx* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
     set_has_stringx();
-    _impl_.kind_.stringx_.InitAllocated(value, GetArena());
+    _impl_.kind_.stringx_ = reinterpret_cast<::google::protobuf::Message*>(value);
   }
-  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.stringx)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Stringx)
+}
+inline ::Stringx* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_stringx() {
+  if (kind_case() != kStringx) {
+    clear_kind();
+    set_has_stringx();
+    _impl_.kind_.stringx_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Stringx>(GetArena()));
+  }
+  return reinterpret_cast<::Stringx*>(_impl_.kind_.stringx_);
+}
+inline ::Stringx* PROTOBUF_NONNULL SunspecPointData::mutable_stringx()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Stringx* _msg = _internal_mutable_stringx();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Stringx)
+  return _msg;
 }
 
-// uint32 sunssf = 19;
+// uint32 SunsSf = 19;
 inline bool SunspecPointData::has_sunssf() const {
-  return kind_case() == kSunssf;
+  return kind_case() == kSunsSf;
 }
 inline void SunspecPointData::set_has_sunssf() {
-  _impl_._oneof_case_[0] = kSunssf;
+  _impl_._oneof_case_[0] = kSunsSf;
 }
 inline void SunspecPointData::clear_sunssf() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (kind_case() == kSunssf) {
+  if (kind_case() == kSunsSf) {
     _impl_.kind_.sunssf_ = 0u;
     clear_has_kind();
   }
 }
 inline ::uint32_t SunspecPointData::sunssf() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.sunssf)
+  // @@protoc_insertion_point(field_get:SunspecPointData.SunsSf)
   return _internal_sunssf();
 }
 inline void SunspecPointData::set_sunssf(::uint32_t value) {
-  if (kind_case() != kSunssf) {
+  if (kind_case() != kSunsSf) {
     clear_kind();
     set_has_sunssf();
   }
   _impl_.kind_.sunssf_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.sunssf)
+  // @@protoc_insertion_point(field_set:SunspecPointData.SunsSf)
 }
 inline ::uint32_t SunspecPointData::_internal_sunssf() const {
-  if (kind_case() == kSunssf) {
+  if (kind_case() == kSunsSf) {
     return _impl_.kind_.sunssf_;
   }
   return 0u;
 }
 
-// uint32 pad16 = 20;
+// .Pad16 Pad16 = 20;
 inline bool SunspecPointData::has_pad16() const {
+  return kind_case() == kPad16;
+}
+inline bool SunspecPointData::_internal_has_pad16() const {
   return kind_case() == kPad16;
 }
 inline void SunspecPointData::set_has_pad16() {
@@ -7677,42 +7751,88 @@ inline void SunspecPointData::set_has_pad16() {
 inline void SunspecPointData::clear_pad16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kPad16) {
-    _impl_.kind_.pad16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.pad16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.pad16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::pad16() const {
-  // @@protoc_insertion_point(field_get:SunspecPointData.pad16)
+inline ::Pad16* PROTOBUF_NULLABLE SunspecPointData::release_pad16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Pad16)
+  if (kind_case() == kPad16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Pad16*>(_impl_.kind_.pad16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.pad16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Pad16& SunspecPointData::_internal_pad16() const {
+  return kind_case() == kPad16 ? static_cast<const ::Pad16&>(*reinterpret_cast<::Pad16*>(_impl_.kind_.pad16_))
+                     : reinterpret_cast<const ::Pad16&>(::_Pad16_default_instance_);
+}
+inline const ::Pad16& SunspecPointData::pad16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:SunspecPointData.Pad16)
   return _internal_pad16();
 }
-inline void SunspecPointData::set_pad16(::uint32_t value) {
+inline ::Pad16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_pad16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Pad16)
+  if (kind_case() == kPad16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Pad16*>(_impl_.kind_.pad16_);
+    _impl_.kind_.pad16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_pad16(
+    ::Pad16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_pad16();
+    _impl_.kind_.pad16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Pad16)
+}
+inline ::Pad16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_pad16() {
   if (kind_case() != kPad16) {
     clear_kind();
     set_has_pad16();
+    _impl_.kind_.pad16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Pad16>(GetArena()));
   }
-  _impl_.kind_.pad16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.pad16)
+  return reinterpret_cast<::Pad16*>(_impl_.kind_.pad16_);
 }
-inline ::uint32_t SunspecPointData::_internal_pad16() const {
-  if (kind_case() == kPad16) {
-    return _impl_.kind_.pad16_;
-  }
-  return 0u;
+inline ::Pad16* PROTOBUF_NONNULL SunspecPointData::mutable_pad16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Pad16* _msg = _internal_mutable_pad16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Pad16)
+  return _msg;
 }
 
-// .IpAddr ipaddr = 21;
+// .IpAddr IpAddr = 21;
 inline bool SunspecPointData::has_ipaddr() const {
-  return kind_case() == kIpaddr;
+  return kind_case() == kIpAddr;
 }
 inline bool SunspecPointData::_internal_has_ipaddr() const {
-  return kind_case() == kIpaddr;
+  return kind_case() == kIpAddr;
 }
 inline void SunspecPointData::set_has_ipaddr() {
-  _impl_._oneof_case_[0] = kIpaddr;
+  _impl_._oneof_case_[0] = kIpAddr;
 }
 inline void SunspecPointData::clear_ipaddr() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (kind_case() == kIpaddr) {
+  if (kind_case() == kIpAddr) {
     if (GetArena() == nullptr) {
       delete _impl_.kind_.ipaddr_;
     } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
@@ -7722,8 +7842,8 @@ inline void SunspecPointData::clear_ipaddr() {
   }
 }
 inline ::IpAddr* PROTOBUF_NULLABLE SunspecPointData::release_ipaddr() {
-  // @@protoc_insertion_point(field_release:SunspecPointData.ipaddr)
-  if (kind_case() == kIpaddr) {
+  // @@protoc_insertion_point(field_release:SunspecPointData.IpAddr)
+  if (kind_case() == kIpAddr) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::IpAddr*>(_impl_.kind_.ipaddr_);
     if (GetArena() != nullptr) {
@@ -7736,16 +7856,16 @@ inline ::IpAddr* PROTOBUF_NULLABLE SunspecPointData::release_ipaddr() {
   }
 }
 inline const ::IpAddr& SunspecPointData::_internal_ipaddr() const {
-  return kind_case() == kIpaddr ? static_cast<const ::IpAddr&>(*reinterpret_cast<::IpAddr*>(_impl_.kind_.ipaddr_))
+  return kind_case() == kIpAddr ? static_cast<const ::IpAddr&>(*reinterpret_cast<::IpAddr*>(_impl_.kind_.ipaddr_))
                      : reinterpret_cast<const ::IpAddr&>(::_IpAddr_default_instance_);
 }
 inline const ::IpAddr& SunspecPointData::ipaddr() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:SunspecPointData.ipaddr)
+  // @@protoc_insertion_point(field_get:SunspecPointData.IpAddr)
   return _internal_ipaddr();
 }
 inline ::IpAddr* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_ipaddr() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.ipaddr)
-  if (kind_case() == kIpaddr) {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.IpAddr)
+  if (kind_case() == kIpAddr) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::IpAddr*>(_impl_.kind_.ipaddr_);
     _impl_.kind_.ipaddr_ = nullptr;
@@ -7764,10 +7884,10 @@ inline void SunspecPointData::unsafe_arena_set_allocated_ipaddr(
     set_has_ipaddr();
     _impl_.kind_.ipaddr_ = reinterpret_cast<::google::protobuf::Message*>(value);
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.ipaddr)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.IpAddr)
 }
 inline ::IpAddr* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_ipaddr() {
-  if (kind_case() != kIpaddr) {
+  if (kind_case() != kIpAddr) {
     clear_kind();
     set_has_ipaddr();
     _impl_.kind_.ipaddr_ = reinterpret_cast<::google::protobuf::Message*>(
@@ -7778,11 +7898,11 @@ inline ::IpAddr* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_ipaddr() {
 inline ::IpAddr* PROTOBUF_NONNULL SunspecPointData::mutable_ipaddr()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::IpAddr* _msg = _internal_mutable_ipaddr();
-  // @@protoc_insertion_point(field_mutable:SunspecPointData.ipaddr)
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.IpAddr)
   return _msg;
 }
 
-// .Ipv6Addr ipv6addr = 22;
+// .Ipv6Addr Ipv6Addr = 22;
 inline bool SunspecPointData::has_ipv6addr() const {
   return kind_case() == kIpv6Addr;
 }
@@ -7804,7 +7924,7 @@ inline void SunspecPointData::clear_ipv6addr() {
   }
 }
 inline ::Ipv6Addr* PROTOBUF_NULLABLE SunspecPointData::release_ipv6addr() {
-  // @@protoc_insertion_point(field_release:SunspecPointData.ipv6addr)
+  // @@protoc_insertion_point(field_release:SunspecPointData.Ipv6Addr)
   if (kind_case() == kIpv6Addr) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::Ipv6Addr*>(_impl_.kind_.ipv6addr_);
@@ -7822,11 +7942,11 @@ inline const ::Ipv6Addr& SunspecPointData::_internal_ipv6addr() const {
                      : reinterpret_cast<const ::Ipv6Addr&>(::_Ipv6Addr_default_instance_);
 }
 inline const ::Ipv6Addr& SunspecPointData::ipv6addr() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:SunspecPointData.ipv6addr)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Ipv6Addr)
   return _internal_ipv6addr();
 }
 inline ::Ipv6Addr* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_ipv6addr() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.ipv6addr)
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Ipv6Addr)
   if (kind_case() == kIpv6Addr) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::Ipv6Addr*>(_impl_.kind_.ipv6addr_);
@@ -7846,7 +7966,7 @@ inline void SunspecPointData::unsafe_arena_set_allocated_ipv6addr(
     set_has_ipv6addr();
     _impl_.kind_.ipv6addr_ = reinterpret_cast<::google::protobuf::Message*>(value);
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.ipv6addr)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Ipv6Addr)
 }
 inline ::Ipv6Addr* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_ipv6addr() {
   if (kind_case() != kIpv6Addr) {
@@ -7860,11 +7980,11 @@ inline ::Ipv6Addr* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_ipv6addr
 inline ::Ipv6Addr* PROTOBUF_NONNULL SunspecPointData::mutable_ipv6addr()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::Ipv6Addr* _msg = _internal_mutable_ipv6addr();
-  // @@protoc_insertion_point(field_mutable:SunspecPointData.ipv6addr)
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Ipv6Addr)
   return _msg;
 }
 
-// .Eui48 eui48 = 23;
+// .Eui48 Eui48 = 23;
 inline bool SunspecPointData::has_eui48() const {
   return kind_case() == kEui48;
 }
@@ -7886,7 +8006,7 @@ inline void SunspecPointData::clear_eui48() {
   }
 }
 inline ::Eui48* PROTOBUF_NULLABLE SunspecPointData::release_eui48() {
-  // @@protoc_insertion_point(field_release:SunspecPointData.eui48)
+  // @@protoc_insertion_point(field_release:SunspecPointData.Eui48)
   if (kind_case() == kEui48) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::Eui48*>(_impl_.kind_.eui48_);
@@ -7904,11 +8024,11 @@ inline const ::Eui48& SunspecPointData::_internal_eui48() const {
                      : reinterpret_cast<const ::Eui48&>(::_Eui48_default_instance_);
 }
 inline const ::Eui48& SunspecPointData::eui48() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:SunspecPointData.eui48)
+  // @@protoc_insertion_point(field_get:SunspecPointData.Eui48)
   return _internal_eui48();
 }
 inline ::Eui48* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_eui48() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.eui48)
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Eui48)
   if (kind_case() == kEui48) {
     clear_has_kind();
     auto* temp = reinterpret_cast<::Eui48*>(_impl_.kind_.eui48_);
@@ -7928,7 +8048,7 @@ inline void SunspecPointData::unsafe_arena_set_allocated_eui48(
     set_has_eui48();
     _impl_.kind_.eui48_ = reinterpret_cast<::google::protobuf::Message*>(value);
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.eui48)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Eui48)
 }
 inline ::Eui48* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_eui48() {
   if (kind_case() != kEui48) {
@@ -7942,7 +8062,7 @@ inline ::Eui48* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_eui48() {
 inline ::Eui48* PROTOBUF_NONNULL SunspecPointData::mutable_eui48()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
   ::Eui48* _msg = _internal_mutable_eui48();
-  // @@protoc_insertion_point(field_mutable:SunspecPointData.eui48)
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Eui48)
   return _msg;
 }
 
@@ -8393,52 +8513,52 @@ inline void SunspecPointDef::set_allocated_units(::std::string* PROTOBUF_NULLABL
   // @@protoc_insertion_point(field_set_allocated:SunspecPointDef.units)
 }
 
-// .SunspecPointAccessType access = 9;
+// .SunspecPointAccess access = 9;
 inline void SunspecPointDef::clear_access() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.access_ = 0;
   ClearHasBit(_impl_._has_bits_[0],
                   0x00000200U);
 }
-inline ::SunspecPointAccessType SunspecPointDef::access() const {
+inline ::SunspecPointAccess SunspecPointDef::access() const {
   // @@protoc_insertion_point(field_get:SunspecPointDef.access)
   return _internal_access();
 }
-inline void SunspecPointDef::set_access(::SunspecPointAccessType value) {
+inline void SunspecPointDef::set_access(::SunspecPointAccess value) {
   _internal_set_access(value);
   SetHasBit(_impl_._has_bits_[0], 0x00000200U);
   // @@protoc_insertion_point(field_set:SunspecPointDef.access)
 }
-inline ::SunspecPointAccessType SunspecPointDef::_internal_access() const {
+inline ::SunspecPointAccess SunspecPointDef::_internal_access() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::SunspecPointAccessType>(_impl_.access_);
+  return static_cast<::SunspecPointAccess>(_impl_.access_);
 }
-inline void SunspecPointDef::_internal_set_access(::SunspecPointAccessType value) {
+inline void SunspecPointDef::_internal_set_access(::SunspecPointAccess value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.access_ = value;
 }
 
-// .SunspecPointMandatoryType mandatory = 10;
+// .SunspecPointMandatory mandatory = 10;
 inline void SunspecPointDef::clear_mandatory() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mandatory_ = 0;
   ClearHasBit(_impl_._has_bits_[0],
                   0x00000400U);
 }
-inline ::SunspecPointMandatoryType SunspecPointDef::mandatory() const {
+inline ::SunspecPointMandatory SunspecPointDef::mandatory() const {
   // @@protoc_insertion_point(field_get:SunspecPointDef.mandatory)
   return _internal_mandatory();
 }
-inline void SunspecPointDef::set_mandatory(::SunspecPointMandatoryType value) {
+inline void SunspecPointDef::set_mandatory(::SunspecPointMandatory value) {
   _internal_set_mandatory(value);
   SetHasBit(_impl_._has_bits_[0], 0x00000400U);
   // @@protoc_insertion_point(field_set:SunspecPointDef.mandatory)
 }
-inline ::SunspecPointMandatoryType SunspecPointDef::_internal_mandatory() const {
+inline ::SunspecPointMandatory SunspecPointDef::_internal_mandatory() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::SunspecPointMandatoryType>(_impl_.mandatory_);
+  return static_cast<::SunspecPointMandatory>(_impl_.mandatory_);
 }
-inline void SunspecPointDef::_internal_set_mandatory(::SunspecPointMandatoryType value) {
+inline void SunspecPointDef::_internal_set_mandatory(::SunspecPointMandatory value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.mandatory_ = value;
 }
@@ -9008,16 +9128,16 @@ namespace google {
 namespace protobuf {
 
 template <>
-struct is_proto_enum<::SunspecPointAccessType> : std::true_type {};
+struct is_proto_enum<::SunspecPointAccess> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::SunspecPointAccessType>() {
-  return ::SunspecPointAccessType_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::SunspecPointAccess>() {
+  return ::SunspecPointAccess_descriptor();
 }
 template <>
-struct is_proto_enum<::SunspecPointMandatoryType> : std::true_type {};
+struct is_proto_enum<::SunspecPointMandatory> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::SunspecPointMandatoryType>() {
-  return ::SunspecPointMandatoryType_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::SunspecPointMandatory>() {
+  return ::SunspecPointMandatory_descriptor();
 }
 template <>
 struct is_proto_enum<::SunspecGroupType> : std::true_type {};

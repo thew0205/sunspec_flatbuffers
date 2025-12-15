@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 128
+                    "Uint16": {
+                        "value": 128
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,7 @@
             {
                 "id": "ArGraMod",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +58,9 @@
             {
                 "id": "ArGraSag",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,9 @@
             {
                 "id": "ArGraSwell",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +92,7 @@
             {
                 "id": "ModEna",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +107,9 @@
             {
                 "id": "FilTms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,9 @@
             {
                 "id": "DbVMin",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +141,9 @@
             {
                 "id": "DbVMax",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +158,9 @@
             {
                 "id": "BlkZnV",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +175,9 @@
             {
                 "id": "HysBlkZnV",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +192,9 @@
             {
                 "id": "BlkZnTmms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +209,9 @@
             {
                 "id": "HoldTmms",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +226,7 @@
             {
                 "id": "ArGra_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -219,7 +241,7 @@
             {
                 "id": "VRefPct_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +256,9 @@
             {
                 "id": "Pad",
                 "data": {
-                    "pad16": null
+                    "Pad16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

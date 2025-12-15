@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 64413
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "IVLen",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "Irr",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "Irr_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +88,7 @@
                 "points": [
                     {
                         "id": "P",
-                        "data_type": "kFloat32",
+                        "data_type": "Float32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -102,7 +102,7 @@
                     },
                     {
                         "id": "I",
-                        "data_type": "kFloat32",
+                        "data_type": "Float32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -116,7 +116,7 @@
                     },
                     {
                         "id": "V",
-                        "data_type": "kFloat32",
+                        "data_type": "Float32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

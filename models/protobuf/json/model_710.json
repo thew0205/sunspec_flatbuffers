@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 710
+                    "Uint16": {
+                        "value": 710
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,7 @@
             {
                 "id": "Ena",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +58,9 @@
             {
                 "id": "AdptCrvReq",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,7 @@
             {
                 "id": "AdptCrvRslt",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +90,9 @@
             {
                 "id": "NPt",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +107,9 @@
             {
                 "id": "NCrvSet",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,7 @@
             {
                 "id": "Hz_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +139,7 @@
             {
                 "id": "Tms_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -152,7 +162,7 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -175,7 +185,9 @@
                             {
                                 "id": "ActPt",
                                 "data": {
-                                    "uint16": null
+                                    "Uint16": {
+                                        "value": null
+                                    }
                                 },
                                 "count": 1,
                                 "count_point_id": null,
@@ -198,7 +210,7 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -213,7 +225,7 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -241,7 +253,9 @@
                             {
                                 "id": "ActPt",
                                 "data": {
-                                    "uint16": null
+                                    "Uint16": {
+                                        "value": null
+                                    }
                                 },
                                 "count": 1,
                                 "count_point_id": null,
@@ -264,7 +278,7 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -279,7 +293,7 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -307,7 +321,9 @@
                             {
                                 "id": "ActPt",
                                 "data": {
-                                    "uint16": null
+                                    "Uint16": {
+                                        "value": null
+                                    }
                                 },
                                 "count": 1,
                                 "count_point_id": null,
@@ -330,7 +346,7 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -345,7 +361,7 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "uint32": null
+                                            "Uint32": null
                                         },
                                         "count": 1,
                                         "count_point_id": null,

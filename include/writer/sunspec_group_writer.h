@@ -37,7 +37,7 @@ public:
      * @param [in] model A pointer to the parent SunspecModel.
      * @param [in] groupPoint A pointer to the parent SunspecGroupPoint (nullptr for top-level groups).
      */
-    SunspecGroupWriter(const SunspecGroupDef &def, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
+    SunspecGroupWriter(const SunspecGroupDefWrapper &def, SunspecModelWriter *model, SunspecGroupWriter *groupPoint);
 
     /**
      * @brief Copy constructor.
@@ -55,10 +55,10 @@ public:
     ~SunspecGroupWriter() = default;
 
     /**
-     * @brief Returns the SunspecGroupDef definition.
-     * @return A const reference to the SunspecGroupDef object.
+     * @brief Returns the SunspecGroupDefWrapper definition.
+     * @return A const reference to the SunspecGroupDefWrapper object.
      */
-    const SunspecGroupDef &def() const
+    const SunspecGroupDefWrapper &def() const
     {
         return def_;
     }
@@ -180,7 +180,7 @@ private:
         modbusBuffer_ = modbusBuffer;
     }
 
-    const SunspecGroupDef &def_; /**< The sunspec group definition of this group. */
+    const SunspecGroupDefWrapper &def_; /**< The sunspec group definition of this group. */
     uint16_t *modbusBuffer_;     /**< A pointer to the inplace modbus buffer where the group's data is to be stored. */
 
     /* Const pointer was used here rather than reference because the we are using the logic that if the group is not null, the it is not a top level point else the model will be not null and it is a toplevel point */

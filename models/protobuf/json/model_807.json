@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 807
+                    "Uint16": {
+                        "value": 807
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "Idx",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,9 @@
             {
                 "id": "NMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +77,9 @@
             {
                 "id": "NModCon",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +94,9 @@
             {
                 "id": "ModVMax",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +111,9 @@
             {
                 "id": "ModVMaxMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +128,9 @@
             {
                 "id": "ModVMin",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +145,9 @@
             {
                 "id": "ModVMinMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +162,9 @@
             {
                 "id": "ModVAvg",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +179,9 @@
             {
                 "id": "CellVMax",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +196,9 @@
             {
                 "id": "CellVMaxMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +213,9 @@
             {
                 "id": "CellVMaxStk",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +230,9 @@
             {
                 "id": "CellVMin",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -219,7 +247,9 @@
             {
                 "id": "CellVMinMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +264,9 @@
             {
                 "id": "CellVMinStk",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -249,7 +281,9 @@
             {
                 "id": "CellVAvg",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -264,7 +298,7 @@
             {
                 "id": "TmpMax",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -279,7 +313,9 @@
             {
                 "id": "TmpMaxMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -294,7 +330,7 @@
             {
                 "id": "TmpMin",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -309,7 +345,9 @@
             {
                 "id": "TmpMinMod",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -324,7 +362,7 @@
             {
                 "id": "TmpAvg",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -339,7 +377,7 @@
             {
                 "id": "Evt1",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -354,7 +392,7 @@
             {
                 "id": "Evt2",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -369,7 +407,7 @@
             {
                 "id": "EvtVnd1",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -384,7 +422,7 @@
             {
                 "id": "EvtVnd2",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -399,7 +437,7 @@
             {
                 "id": "ModV_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -414,7 +452,7 @@
             {
                 "id": "CellV_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -429,7 +467,7 @@
             {
                 "id": "Tmp_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -444,7 +482,7 @@
             {
                 "id": "SoC_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -459,7 +497,7 @@
             {
                 "id": "OCV_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -474,7 +512,9 @@
             {
                 "id": "Pad1",
                 "data": {
-                    "pad16": null
+                    "Pad16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -497,7 +537,9 @@
                     {
                         "id": "ModIdx",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -512,7 +554,9 @@
                     {
                         "id": "ModNStk",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -527,7 +571,7 @@
                     {
                         "id": "ModSt",
                         "data": {
-                            "bitfield32": null
+                            "Bitfield32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -542,7 +586,9 @@
                     {
                         "id": "ModSoC",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -557,7 +603,9 @@
                     {
                         "id": "ModOCV",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -572,7 +620,9 @@
                     {
                         "id": "ModV",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -587,7 +637,9 @@
                     {
                         "id": "ModCellVMax",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -602,7 +654,9 @@
                     {
                         "id": "ModCellVMaxCell",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -617,7 +671,9 @@
                     {
                         "id": "ModCellVMin",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -632,7 +688,9 @@
                     {
                         "id": "ModCellVMinCell",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -647,7 +705,9 @@
                     {
                         "id": "ModCellVAvg",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -662,7 +722,9 @@
                     {
                         "id": "ModAnoTmp",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -677,7 +739,9 @@
                     {
                         "id": "ModCatTmp",
                         "data": {
-                            "uint16": null
+                            "Uint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -692,7 +756,7 @@
                     {
                         "id": "ModConSt",
                         "data": {
-                            "bitfield32": null
+                            "Bitfield32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -707,7 +771,7 @@
                     {
                         "id": "ModEvt1",
                         "data": {
-                            "bitfield32": null
+                            "Bitfield32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -722,7 +786,7 @@
                     {
                         "id": "ModEvt2",
                         "data": {
-                            "bitfield32": null
+                            "Bitfield32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -737,7 +801,7 @@
                     {
                         "id": "ModConFail",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -752,7 +816,7 @@
                     {
                         "id": "ModSetEna",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -767,7 +831,7 @@
                     {
                         "id": "ModSetCon",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -782,7 +846,7 @@
                     {
                         "id": "ModDisRsn",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,

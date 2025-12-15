@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 703,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 703
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,8 +24,10 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
-                "data": 17,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 17
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -36,7 +40,7 @@
             },
             {
                 "id": "ES",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +54,7 @@
             },
             {
                 "id": "ESVHi",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +68,7 @@
             },
             {
                 "id": "ESVLo",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +82,7 @@
             },
             {
                 "id": "ESHzHi",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +96,7 @@
             },
             {
                 "id": "ESHzLo",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +110,7 @@
             },
             {
                 "id": "ESDlyTms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +124,7 @@
             },
             {
                 "id": "ESRndTms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +138,7 @@
             },
             {
                 "id": "ESRmpTms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +152,7 @@
             },
             {
                 "id": "ESDlyRemTms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +166,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +180,7 @@
             },
             {
                 "id": "Hz_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

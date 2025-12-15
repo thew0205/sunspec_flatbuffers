@@ -23,7 +23,7 @@ public:
      * @param modbusBuffer Pointer to Modbus buffer
      * @param groupPoint Reference to parent group reader
      */
-    SunspecPointReader(const SunspecPointDef &def, const uint16_t *modbusBuffer, SunspecGroupReader &groupPoint);
+    SunspecPointReader(const SunspecPointDefWrapper &def, const uint16_t *modbusBuffer, SunspecGroupReader &groupPoint);
 
     /**
      * @brief Copy constructor
@@ -44,7 +44,7 @@ public:
      * @brief Returns the point definition
      * @return Reference to SunspecPointDef
      */
-    const SunspecPointDef &def() const
+    const SunspecPointDefWrapper &def() const
     {
         return def_;
     }
@@ -257,7 +257,7 @@ public:
     // string toJson(bool includeSf = false, bool includeUnits = false) const;
 
 private:
-    const SunspecPointDef &def_;     /**< Reference to point definition */
+    const SunspecPointDefWrapper& def_;     /**< Reference to point definition */
     SunspecGroupReader &groupPoint_; /**< Reference to parent group reader */
     const uint16_t *modbusBuffer_;   /**< Pointer to Modbus buffer */
 

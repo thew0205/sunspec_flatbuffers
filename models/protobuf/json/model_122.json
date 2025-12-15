@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 122
+                    "Uint16": {
+                        "value": 122
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,7 @@
             {
                 "id": "PVConn",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +58,7 @@
             {
                 "id": "StorConn",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +73,7 @@
             {
                 "id": "ECPConn",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +88,7 @@
             {
                 "id": "ActWh",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +103,7 @@
             {
                 "id": "ActVAh",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +118,7 @@
             {
                 "id": "ActVArhQ1",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +133,7 @@
             {
                 "id": "ActVArhQ2",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +148,7 @@
             {
                 "id": "ActVArhQ3",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +163,7 @@
             {
                 "id": "ActVArhQ4",
                 "data": {
-                    "acc64": null
+                    "Acc64": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +178,7 @@
             {
                 "id": "VArAval",
                 "data": {
-                    "sint16": null
+                    "Sint16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +193,7 @@
             {
                 "id": "VArAval_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +208,9 @@
             {
                 "id": "WAval",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -219,7 +225,7 @@
             {
                 "id": "WAval_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +240,7 @@
             {
                 "id": "StSetLimMsk",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -249,7 +255,7 @@
             {
                 "id": "StActCtl",
                 "data": {
-                    "bitfield32": null
+                    "Bitfield32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -264,7 +270,9 @@
             {
                 "id": "TmSrc",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -279,7 +287,7 @@
             {
                 "id": "Tms",
                 "data": {
-                    "uint32": null
+                    "Uint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -294,7 +302,7 @@
             {
                 "id": "RtSt",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -309,7 +317,9 @@
             {
                 "id": "Ris",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -324,7 +334,7 @@
             {
                 "id": "Ris_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,

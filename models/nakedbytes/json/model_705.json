@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 705,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 705
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "Ena",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "AdptCrvReq",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "AdptCrvRslt",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "NPt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "NCrv",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "RvrtTms",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "RvrtRem",
-                "data_type": "uint32",
+                "data_type": "Uint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "RvrtCrv",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +164,7 @@
             },
             {
                 "id": "DeptRef_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +178,7 @@
             },
             {
                 "id": "RspTms_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -198,7 +200,7 @@
                 "points": [
                     {
                         "id": "ActPt",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -212,7 +214,7 @@
                     },
                     {
                         "id": "DeptRef",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -226,7 +228,7 @@
                     },
                     {
                         "id": "Pri",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -240,7 +242,7 @@
                     },
                     {
                         "id": "VRef",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -254,7 +256,7 @@
                     },
                     {
                         "id": "VRefAuto",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -268,7 +270,7 @@
                     },
                     {
                         "id": "VRefAutoEna",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -282,7 +284,7 @@
                     },
                     {
                         "id": "VRefAutoTms",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -296,7 +298,7 @@
                     },
                     {
                         "id": "RspTms",
-                        "data_type": "uint32",
+                        "data_type": "Uint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -310,7 +312,7 @@
                     },
                     {
                         "id": "ReadOnly",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -332,7 +334,7 @@
                         "points": [
                             {
                                 "id": "V",
-                                "data_type": "uint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -346,7 +348,7 @@
                             },
                             {
                                 "id": "Var",
-                                "data_type": "int16",
+                                "data_type": "Sint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,

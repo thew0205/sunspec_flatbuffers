@@ -8,7 +8,7 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": {
                     "value": 64411
                 },
@@ -24,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -38,7 +38,7 @@
             },
             {
                 "id": "Phases",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -52,7 +52,7 @@
             },
             {
                 "id": "PhaseAngle",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -66,7 +66,7 @@
             },
             {
                 "id": "VNom",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -80,7 +80,7 @@
             },
             {
                 "id": "VMax",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -94,7 +94,7 @@
             },
             {
                 "id": "IMax",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -108,7 +108,7 @@
             },
             {
                 "id": "Freq",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +122,7 @@
             },
             {
                 "id": "Output",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -136,7 +136,7 @@
             },
             {
                 "id": "Relay",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +150,7 @@
             },
             {
                 "id": "Regen",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -164,7 +164,7 @@
             },
             {
                 "id": "VSet",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +178,7 @@
             },
             {
                 "id": "VSetA",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -192,7 +192,7 @@
             },
             {
                 "id": "VSetB",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -206,7 +206,7 @@
             },
             {
                 "id": "VSetC",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -220,7 +220,7 @@
             },
             {
                 "id": "FreqSlew",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -234,7 +234,7 @@
             },
             {
                 "id": "VSlew",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -248,7 +248,7 @@
             },
             {
                 "id": "VA",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -262,7 +262,7 @@
             },
             {
                 "id": "VB",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -276,7 +276,7 @@
             },
             {
                 "id": "VC",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -290,7 +290,7 @@
             },
             {
                 "id": "Hz",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -304,7 +304,7 @@
             },
             {
                 "id": "IA",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -318,7 +318,7 @@
             },
             {
                 "id": "IB",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -332,7 +332,7 @@
             },
             {
                 "id": "IC",
-                "data_type": "kSint32",
+                "data_type": "Sint32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -346,7 +346,7 @@
             },
             {
                 "id": "VHarA",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -360,7 +360,7 @@
             },
             {
                 "id": "VHarB",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -374,7 +374,7 @@
             },
             {
                 "id": "VHarC",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +388,7 @@
             },
             {
                 "id": "IHarA",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -402,7 +402,7 @@
             },
             {
                 "id": "IHarB",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -416,7 +416,7 @@
             },
             {
                 "id": "IHarC",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -430,7 +430,7 @@
             },
             {
                 "id": "IIntHarA",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -444,7 +444,7 @@
             },
             {
                 "id": "IIntHarB",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -458,7 +458,7 @@
             },
             {
                 "id": "IIntHarC",
-                "data_type": "kStringx",
+                "data_type": "Stringx",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -472,7 +472,7 @@
             },
             {
                 "id": "VThdA",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -486,7 +486,7 @@
             },
             {
                 "id": "VThdB",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -500,7 +500,7 @@
             },
             {
                 "id": "VThdC",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -514,7 +514,7 @@
             },
             {
                 "id": "IThdA",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -528,7 +528,7 @@
             },
             {
                 "id": "IThdB",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -542,7 +542,7 @@
             },
             {
                 "id": "IThdC",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -556,7 +556,7 @@
             },
             {
                 "id": "EnaProf",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -570,7 +570,7 @@
             },
             {
                 "id": "ProfRslt",
-                "data_type": "kEnum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -584,7 +584,7 @@
             },
             {
                 "id": "NProf",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -598,7 +598,7 @@
             },
             {
                 "id": "NPt",
-                "data_type": "kUint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -612,7 +612,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -626,7 +626,7 @@
             },
             {
                 "id": "A_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -640,7 +640,7 @@
             },
             {
                 "id": "Tms_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -654,7 +654,7 @@
             },
             {
                 "id": "Hz_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -668,7 +668,7 @@
             },
             {
                 "id": "HzSlew_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -682,7 +682,7 @@
             },
             {
                 "id": "VSlew_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -696,7 +696,7 @@
             },
             {
                 "id": "THD_SF",
-                "data_type": "kSunsSf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -718,7 +718,7 @@
                 "points": [
                     {
                         "id": "Name",
-                        "data_type": "kStringx",
+                        "data_type": "Stringx",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -732,7 +732,7 @@
                     },
                     {
                         "id": "ActPt",
-                        "data_type": "kUint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -754,7 +754,7 @@
                         "points": [
                             {
                                 "id": "Tms",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -768,7 +768,7 @@
                             },
                             {
                                 "id": "VA",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -782,7 +782,7 @@
                             },
                             {
                                 "id": "VB",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -796,7 +796,7 @@
                             },
                             {
                                 "id": "VC",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -810,7 +810,7 @@
                             },
                             {
                                 "id": "Hz",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -824,7 +824,7 @@
                             },
                             {
                                 "id": "PhaseAngleA",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -838,7 +838,7 @@
                             },
                             {
                                 "id": "PhaseAngleB",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,
@@ -852,7 +852,7 @@
                             },
                             {
                                 "id": "PhaseAngleC",
-                                "data_type": "kUint16",
+                                "data_type": "Uint16",
                                 "data": null,
                                 "count": 1,
                                 "count_point_id": null,

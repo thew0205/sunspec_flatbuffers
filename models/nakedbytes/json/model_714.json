@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 714,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 714
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "PrtAlrms",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "NPrt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "DCA",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "DCW",
-                "data_type": "int16",
+                "data_type": "Sint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "DCWhInj",
-                "data_type": "uint64",
+                "data_type": "Uint64",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +108,7 @@
             },
             {
                 "id": "DCWhAbs",
-                "data_type": "uint64",
+                "data_type": "Uint64",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +122,7 @@
             },
             {
                 "id": "DCA_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +136,7 @@
             },
             {
                 "id": "DCV_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +150,7 @@
             },
             {
                 "id": "DCW_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +164,7 @@
             },
             {
                 "id": "DCWH_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +178,7 @@
             },
             {
                 "id": "Tmp_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -198,7 +200,7 @@
                 "points": [
                     {
                         "id": "PrtTyp",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -212,7 +214,7 @@
                     },
                     {
                         "id": "ID",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -226,7 +228,7 @@
                     },
                     {
                         "id": "IDStr",
-                        "data_type": "string",
+                        "data_type": "Stringx",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -240,7 +242,7 @@
                     },
                     {
                         "id": "DCA",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -254,7 +256,7 @@
                     },
                     {
                         "id": "DCV",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -268,7 +270,7 @@
                     },
                     {
                         "id": "DCW",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -282,7 +284,7 @@
                     },
                     {
                         "id": "DCWhInj",
-                        "data_type": "uint64",
+                        "data_type": "Uint64",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -296,7 +298,7 @@
                     },
                     {
                         "id": "DCWhAbs",
-                        "data_type": "uint64",
+                        "data_type": "Uint64",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -310,7 +312,7 @@
                     },
                     {
                         "id": "Tmp",
-                        "data_type": "int16",
+                        "data_type": "Sint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -324,7 +326,7 @@
                     },
                     {
                         "id": "DCSta",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -338,7 +340,7 @@
                     },
                     {
                         "id": "DCAlrm",
-                        "data_type": "bitfield32",
+                        "data_type": "Bitfield32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

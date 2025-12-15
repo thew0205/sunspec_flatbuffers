@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 305
+                    "Uint16": {
+                        "value": 305
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "Tm",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,9 @@
             {
                 "id": "Date",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +77,9 @@
             {
                 "id": "Loc",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +94,7 @@
             {
                 "id": "Lat",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +109,7 @@
             {
                 "id": "Long",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +124,7 @@
             {
                 "id": "Alt",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,

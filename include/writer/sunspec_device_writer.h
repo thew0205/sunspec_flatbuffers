@@ -77,7 +77,7 @@ public:
      * @param [in] id The ID of the model to retrieve.
      * @return A pointer to the SunspecModel object, or nullptr if not found.
      */
-    SunspecModelWriter *getModel(SunspecModelList id);
+    SunspecModelWriter *getModel(uint16_t id);
 
     /**
      * @brief Initializes the supported Sunspec models on the device.
@@ -86,7 +86,7 @@ public:
      * @return The number of models successfully initialized.
      */
     // For device with only fixed value models, we can use this function to get the model definition.
-    uint16_t initAll(const std::initializer_list<SunspecModelList> &supportedModel);
+    uint16_t initAll(const std::initializer_list<uint16_t> &supportedModel);
 
     /**
      * @brief Initializes the supported Sunspec models on the device.
@@ -95,7 +95,7 @@ public:
      * @return The number of models successfully initialized.
      */
     // For device with either fixed or variable models with variable length groups, we need to call this function after setting any dynamic group lengths.
-    uint16_t initTopLevel(const std::initializer_list<SunspecModelList> &supportedModel);
+    uint16_t initTopLevel(const std::initializer_list<uint16_t> &supportedModel);
 
     /**
      * @brief Initializes all sub-level groups of SunspecPointWriter in all models of the device.

@@ -5,7 +5,7 @@
 
 using std::to_string;
 
-SunspecModelReader::SunspecModelReader(const SunspecModelDef &def, uint16_t *modbusBuffer, const uint16_t address, SunspecDeviceReader &device) : def_{def}, modbusBuffer_{modbusBuffer}, address_{address}, device_{device}, topLevelGroupPoint_{*def.group(), modbusBuffer, this}
+SunspecModelReader::SunspecModelReader(const SunspecModelDefWrapper &def, uint16_t *modbusBuffer, const uint16_t address, SunspecDeviceReader &device) : def_{def}, modbusBuffer_{modbusBuffer}, address_{address}, device_{device}, topLevelGroupPoint_{def.group(), modbusBuffer, this}
 {
 }
 

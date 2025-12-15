@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 133,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 133
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,7 +24,7 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -36,7 +38,7 @@
             },
             {
                 "id": "ActSchd",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +52,7 @@
             },
             {
                 "id": "ModEna",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +66,7 @@
             },
             {
                 "id": "NSchd",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +80,7 @@
             },
             {
                 "id": "NPts",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +94,7 @@
             },
             {
                 "id": "Pad",
-                "data_type": "pad",
+                "data_type": "Pad16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +116,7 @@
                 "points": [
                     {
                         "id": "ActPts",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -128,7 +130,7 @@
                     },
                     {
                         "id": "StrTms",
-                        "data_type": "uint32",
+                        "data_type": "Uint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -142,7 +144,7 @@
                     },
                     {
                         "id": "RepPer",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -156,7 +158,7 @@
                     },
                     {
                         "id": "IntvTyp",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -170,7 +172,7 @@
                     },
                     {
                         "id": "XTyp",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -184,7 +186,7 @@
                     },
                     {
                         "id": "X_SF",
-                        "data_type": "sunssf",
+                        "data_type": "SunsSf",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -198,7 +200,7 @@
                     },
                     {
                         "id": "YTyp",
-                        "data_type": "enum16",
+                        "data_type": "Enum16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -212,7 +214,7 @@
                     },
                     {
                         "id": "Y_SF",
-                        "data_type": "sunssf",
+                        "data_type": "SunsSf",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -226,7 +228,7 @@
                     },
                     {
                         "id": "X1",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -240,7 +242,7 @@
                     },
                     {
                         "id": "Y1",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -254,7 +256,7 @@
                     },
                     {
                         "id": "X2",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -268,7 +270,7 @@
                     },
                     {
                         "id": "Y2",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -282,7 +284,7 @@
                     },
                     {
                         "id": "X3",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -296,7 +298,7 @@
                     },
                     {
                         "id": "Y3",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -310,7 +312,7 @@
                     },
                     {
                         "id": "X4",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -324,7 +326,7 @@
                     },
                     {
                         "id": "Y4",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -338,7 +340,7 @@
                     },
                     {
                         "id": "X5",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -352,7 +354,7 @@
                     },
                     {
                         "id": "Y5",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -366,7 +368,7 @@
                     },
                     {
                         "id": "X6",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -380,7 +382,7 @@
                     },
                     {
                         "id": "Y6",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -394,7 +396,7 @@
                     },
                     {
                         "id": "X7",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -408,7 +410,7 @@
                     },
                     {
                         "id": "Y7",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -422,7 +424,7 @@
                     },
                     {
                         "id": "X8",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -436,7 +438,7 @@
                     },
                     {
                         "id": "Y8",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -450,7 +452,7 @@
                     },
                     {
                         "id": "X9",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -464,7 +466,7 @@
                     },
                     {
                         "id": "Y9",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -478,7 +480,7 @@
                     },
                     {
                         "id": "X10",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -492,7 +494,7 @@
                     },
                     {
                         "id": "Y10",
-                        "data_type": "int32",
+                        "data_type": "Sint32",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -506,7 +508,7 @@
                     },
                     {
                         "id": "Nam",
-                        "data_type": "string",
+                        "data_type": "Stringx",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -520,7 +522,7 @@
                     },
                     {
                         "id": "WinTms",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -534,7 +536,7 @@
                     },
                     {
                         "id": "RmpTms",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,
@@ -548,7 +550,7 @@
                     },
                     {
                         "id": "ActIndx",
-                        "data_type": "uint16",
+                        "data_type": "Uint16",
                         "data": null,
                         "count": 1,
                         "count_point_id": null,

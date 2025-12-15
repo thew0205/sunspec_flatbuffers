@@ -20,9 +20,11 @@ do
     if [ -f "$ROOT_DIR/models/flatbuffers/json/model_${model}.json" ];
     then    
         ${FLATC_COMPILER} --binary -o $ROOT_DIR/models/flatbuffers/binary $ROOT_DIR/models/flatbuffers/sunspec_model_definition.fbs "$ROOT_DIR/models/flatbuffers/json/model_${model}.json"
+        
         xxd -i -n modelDefinition${model} $ROOT_DIR/models/flatbuffers/binary/model_${model}.bin  > $ROOT_DIR/src/models/flatbuffers/flatbuffers_array_model_${model}.cpp
 
         sed -i 's/unsigned char/const unsigned char/g' "$ROOT_DIR/src/models/flatbuffers/flatbuffers_array_model_${model}.cpp"
+        sed -i '1i#include "array_models_externs.h"\n' "$ROOT_DIR/src/models/flatbuffers/flatbuffers_array_model_${model}.cpp"
 
     fi
 done

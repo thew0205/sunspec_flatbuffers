@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 601
+                    "Uint16": {
+                        "value": 601
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -39,7 +43,9 @@
             {
                 "id": "Nam",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -54,7 +60,7 @@
             {
                 "id": "Typ",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -69,7 +75,9 @@
             {
                 "id": "DtLoc",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -84,7 +92,9 @@
             {
                 "id": "TmLoc",
                 "data": {
-                    "stringx": null
+                    "Stringx": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -99,7 +109,9 @@
             {
                 "id": "Day",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -114,7 +126,7 @@
             {
                 "id": "GlblElCtl",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -129,7 +141,7 @@
             {
                 "id": "GlblAzCtl",
                 "data": {
-                    "sint32": null
+                    "Sint32": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -144,7 +156,7 @@
             {
                 "id": "GlblCtl",
                 "data": {
-                    "enum16": null
+                    "Enum16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -159,7 +171,7 @@
             {
                 "id": "GlblAlm",
                 "data": {
-                    "bitfield16": null
+                    "Bitfield16": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -174,7 +186,7 @@
             {
                 "id": "Dgr_SF",
                 "data": {
-                    "sunssf": null
+                    "SunsSf": null
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -189,7 +201,9 @@
             {
                 "id": "N",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -212,7 +226,9 @@
                     {
                         "id": "Id",
                         "data": {
-                            "stringx": null
+                            "Stringx": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -227,7 +243,7 @@
                     {
                         "id": "ElTrgt",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -242,7 +258,7 @@
                     {
                         "id": "AzTrgt",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -257,7 +273,7 @@
                     {
                         "id": "ElPos",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -272,7 +288,7 @@
                     {
                         "id": "AzPos",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -287,7 +303,7 @@
                     {
                         "id": "ElCtl",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -302,7 +318,7 @@
                     {
                         "id": "AzCtl",
                         "data": {
-                            "sint32": null
+                            "Sint32": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -317,7 +333,7 @@
                     {
                         "id": "Ctl",
                         "data": {
-                            "enum16": null
+                            "Enum16": null
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -332,7 +348,7 @@
                     {
                         "id": "Alm",
                         "data": {
-                            "bitfield16": null
+                            "Bitfield16": null
                         },
                         "count": 1,
                         "count_point_id": null,

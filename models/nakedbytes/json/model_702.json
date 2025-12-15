@@ -8,8 +8,10 @@
         "points": [
             {
                 "id": "ID",
-                "data_type": "uint16",
-                "data": 702,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 702
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -22,8 +24,10 @@
             },
             {
                 "id": "L",
-                "data_type": "uint16",
-                "data": 50,
+                "data_type": "Uint16",
+                "data": {
+                    "value": 50
+                },
                 "count": 1,
                 "count_point_id": null,
                 "size": 1,
@@ -36,7 +40,7 @@
             },
             {
                 "id": "WMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -50,7 +54,7 @@
             },
             {
                 "id": "WOvrExtRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -64,7 +68,7 @@
             },
             {
                 "id": "WOvrExtRtgPF",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -78,7 +82,7 @@
             },
             {
                 "id": "WUndExtRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -92,7 +96,7 @@
             },
             {
                 "id": "WUndExtRtgPF",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -106,7 +110,7 @@
             },
             {
                 "id": "VAMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +124,7 @@
             },
             {
                 "id": "VarMaxInjRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -134,7 +138,7 @@
             },
             {
                 "id": "VarMaxAbsRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +152,7 @@
             },
             {
                 "id": "WChaRteMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +166,7 @@
             },
             {
                 "id": "WDisChaRteMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -176,7 +180,7 @@
             },
             {
                 "id": "VAChaRteMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -190,7 +194,7 @@
             },
             {
                 "id": "VADisChaRteMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -204,7 +208,7 @@
             },
             {
                 "id": "VNomRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -218,7 +222,7 @@
             },
             {
                 "id": "VMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -232,7 +236,7 @@
             },
             {
                 "id": "VMinRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -246,7 +250,7 @@
             },
             {
                 "id": "AMaxRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -260,7 +264,7 @@
             },
             {
                 "id": "PFOvrExtRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -274,7 +278,7 @@
             },
             {
                 "id": "PFUndExtRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -288,7 +292,7 @@
             },
             {
                 "id": "ReactSusceptRtg",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -302,7 +306,7 @@
             },
             {
                 "id": "NorOpCatRtg",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -316,7 +320,7 @@
             },
             {
                 "id": "AbnOpCatRtg",
-                "data_type": "enum16",
+                "data_type": "Enum16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -330,7 +334,7 @@
             },
             {
                 "id": "CtrlModes",
-                "data_type": "bitfield32",
+                "data_type": "Bitfield32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -344,7 +348,7 @@
             },
             {
                 "id": "IntIslandCatRtg",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -358,7 +362,7 @@
             },
             {
                 "id": "WMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -372,7 +376,7 @@
             },
             {
                 "id": "WMaxOvrExt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -386,7 +390,7 @@
             },
             {
                 "id": "WOvrExtPF",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -400,7 +404,7 @@
             },
             {
                 "id": "WMaxUndExt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -414,7 +418,7 @@
             },
             {
                 "id": "WUndExtPF",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -428,7 +432,7 @@
             },
             {
                 "id": "VAMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -442,7 +446,7 @@
             },
             {
                 "id": "VarMaxInj",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -456,7 +460,7 @@
             },
             {
                 "id": "VarMaxAbs",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -470,7 +474,7 @@
             },
             {
                 "id": "WChaRteMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -484,7 +488,7 @@
             },
             {
                 "id": "WDisChaRteMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -498,7 +502,7 @@
             },
             {
                 "id": "VAChaRteMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -512,7 +516,7 @@
             },
             {
                 "id": "VADisChaRteMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -526,7 +530,7 @@
             },
             {
                 "id": "VNom",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -540,7 +544,7 @@
             },
             {
                 "id": "VMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -554,7 +558,7 @@
             },
             {
                 "id": "VMin",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -568,7 +572,7 @@
             },
             {
                 "id": "AMax",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -582,7 +586,7 @@
             },
             {
                 "id": "PFOvrExt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -596,7 +600,7 @@
             },
             {
                 "id": "PFUndExt",
-                "data_type": "uint16",
+                "data_type": "Uint16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -610,7 +614,7 @@
             },
             {
                 "id": "IntIslandCat",
-                "data_type": "bitfield16",
+                "data_type": "Bitfield16",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -624,7 +628,7 @@
             },
             {
                 "id": "W_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -638,7 +642,7 @@
             },
             {
                 "id": "PF_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -652,7 +656,7 @@
             },
             {
                 "id": "VA_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -666,7 +670,7 @@
             },
             {
                 "id": "Var_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -680,7 +684,7 @@
             },
             {
                 "id": "V_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -694,7 +698,7 @@
             },
             {
                 "id": "A_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -708,7 +712,7 @@
             },
             {
                 "id": "S_SF",
-                "data_type": "sunssf",
+                "data_type": "SunsSf",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

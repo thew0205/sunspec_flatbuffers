@@ -9,7 +9,9 @@
             {
                 "id": "ID",
                 "data": {
-                    "uint16": 303
+                    "Uint16": {
+                        "value": 303
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -24,7 +26,9 @@
             {
                 "id": "L",
                 "data": {
-                    "uint16": null
+                    "Uint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -47,7 +51,7 @@
                     {
                         "id": "TmpBOM",
                         "data": {
-                            "sint16": null
+                            "Sint16": null
                         },
                         "count": 1,
                         "count_point_id": null,

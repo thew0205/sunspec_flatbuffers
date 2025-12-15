@@ -9,14 +9,19 @@
 
 #include <cmath>
 #include <stdint.h>
+#include <cassert>
 
 #include <string>
 #include <string_view>
 
+#include "array_models_externs.h"
+
 #ifndef VIRTUAL_TEST
 #define VIRTUAL_TEST
 #endif // VIRTUAL_TEST
-
+typedef int16_t sint16_t;
+typedef int32_t sint32_t;
+typedef int64_t sint64_t;
 typedef uint16_t raw16_t;
 typedef uint16_t acc16_t;
 typedef uint32_t acc32_t;
@@ -79,9 +84,9 @@ struct SunspecValueFunction
 union SunspecPointFunction
 {
 
-    SunspecValueFunction<int16_t> sint16;
-    SunspecValueFunction<int32_t> sint32;
-    SunspecValueFunction<int64_t> sint64;
+    SunspecValueFunction<sint16_t> sint16;
+    SunspecValueFunction<sint32_t> sint32;
+    SunspecValueFunction<sint64_t> sint64;
     SunspecValueFunction<raw16_t> raw16;
     SunspecValueFunction<uint16_t> uint16;
     SunspecValueFunction<uint32_t> uint32;
@@ -104,7 +109,7 @@ union SunspecPointFunction
     SunspecValueFunction<eui48_t> eui48;
 };
 
-constexpr int16_t kSint16UnimplementedValue = 0x8000;                    /**< The sunspec unimplemented type for int16 type. */
+constexpr sint16_t kSint16UnimplementedValue = 0x8000;                   /**< The sunspec unimplemented type for int16 type. */
 constexpr pad16_t kPad16UnimplementedValue = 0x8000;                     /**< The sunspec unimplemented value for the pad16 type. */
 constexpr sunsSf_t kSunsSfUnimplementedValue = 0x8000;                   /**< The sunspec unimplemented value for the sunsSf type. */
 constexpr uint16_t kUint16UnimplementedValue = 0xFFFF;                   /**< The sunspec unimplemented value for the uint16 type. */
@@ -112,19 +117,19 @@ constexpr raw16_t kRaw16UnimplementedValue = 0xFFFF;                     /**< Th
 constexpr bitfield16_t kBit16UnimplementedValue = 0xFFFF;                /**< The sunspec unimplemented value for the bitfield16 type. */
 constexpr acc16_t kAcc16UnimplementedValue = 0;                          /**< The sunspec unimplemented value for the acc16 type. */
 constexpr enum16_t kEnum16UnimplementedValue = 0xFFFF;                   /**< The sunspec unimplemented value for the enum16 type. */
-constexpr int32_t kSint32UnimplementedValue = 0x80000000;                /**< The sunspec unimplemented value for the int32 type. */
+constexpr sint32_t kSint32UnimplementedValue = 0x80000000;               /**< The sunspec unimplemented value for the int32 type. */
 constexpr uint32_t kUint32UnimplementedValue = 0xFFFFFFFF;               /**< The sunspec unimplemented value for the uint32 type. */
 constexpr bitfield32_t kBit32UnimplementedValue = 0xFFFFFFFF;            /**< The sunspec unimplemented value for the bit32 type. */
 constexpr acc32_t kAcc32UnimplementedValue = 0;                          /**< The sunspec unimplemented value for the acc32 type. */
 constexpr enum32_t kEnum32UnimplementedValue = 0xFFFFFFFF;               /**< The sunspec unimplemented value for the enum32 type. */
 constexpr ipAddr_t kIpAddrUnimplementedValue = {0x00, 0x00, 0x00, 0x00}; /**< The sunspec unimplemented value for the ipAddr type. */
 
-constexpr int64_t kSint64UnimplementedValue = 0x8000000000000000;     /**< The sunspec unimplemented value of the int64 type. */
+constexpr sint64_t kSint64UnimplementedValue = 0x8000000000000000;    /**< The sunspec unimplemented value of the int64 type. */
 constexpr uint64_t kUint64UnimplementedValue = 0xFFFFFFFFFFFFFFFF;    /**< The sunspec unimplemented value for the uint64 type. */
 constexpr bitfield64_t kBit64UnimplementedValue = 0xFFFFFFFFFFFFFFFF; /**< The sunspec unimplemented value for the bit64 type. */
 constexpr acc64_t kAcc64UnimplementedValue = 0;                       /**< The sunspec unimplemented value for the acc64 type. */
 
-constexpr std::string_view kStringUnimplementedValue{""}; /**< The sunspec unimplemented value for the string type. */
+constexpr const char *kStringUnimplementedValue{""}; /**< The sunspec unimplemented value for the string type. */
 
 constexpr uint32_t kFloat32UnimplementedValueAsUint32_t = 0x7FC00000;                                               // NaN /**< The sunspec unimplemented value for the float32 type(NaN), represented in the uint32 value. */
 const float kFloat32UnimplementedValue = *reinterpret_cast<const float *>(&kFloat32UnimplementedValueAsUint32_t);   /**< The sunspec unimplemented value for the float32 type. */
@@ -374,10 +379,56 @@ inline std::string operator+(const std::string_view &str1, const std::string &st
     return std::string{str1} + str2;
 }
 
+enum SunspecPointAccessType : uint8_t
+{
+    SunspecPointAccessType_kR = 0,
+    SunspecPointAccessType_kRW = 1,
+};
+
+enum SunspecPointMandatoryType : uint8_t
+{
+    SunspecPointMandatoryType_kM = 0,
+    SunspecPointMandatoryType_kO = 10,
+};
+
+enum SunspecGroupTypeType : uint8_t
+{
+    SunspecGroupTypeType_kGroup = 0,
+    SunspecGroupTypeType_kSync = 1,
+};
+
+enum SunspecPointDataType : uint8_t
+{
+    SunspecPointDataType_NONE = 0,
+    SunspecPointDataType_Sint16 = 1,
+    SunspecPointDataType_Sint32 = 2,
+    SunspecPointDataType_Sint64 = 3,
+    SunspecPointDataType_Raw16 = 4,
+    SunspecPointDataType_Uint16 = 5,
+    SunspecPointDataType_Uint32 = 6,
+    SunspecPointDataType_Uint64 = 7,
+    SunspecPointDataType_Acc16 = 8,
+    SunspecPointDataType_Acc32 = 9,
+    SunspecPointDataType_Acc64 = 10,
+    SunspecPointDataType_Bitfield16 = 11,
+    SunspecPointDataType_Bitfield32 = 12,
+    SunspecPointDataType_Bitfield64 = 13,
+    SunspecPointDataType_Enum16 = 14,
+    SunspecPointDataType_Enum32 = 15,
+    SunspecPointDataType_Float32 = 16,
+    SunspecPointDataType_Float64 = 17,
+    SunspecPointDataType_Stringx = 18,
+    SunspecPointDataType_SunsSf = 19,
+    SunspecPointDataType_Pad16 = 20,
+    SunspecPointDataType_IpAddr = 21,
+    SunspecPointDataType_Ipv6Addr = 22,
+    SunspecPointDataType_Eui48 = 23,
+};
+
 /**
  * @namespace Sunspec
  */
-struct SunspecModelDef;
+
 
 namespace Sunspec
 {
@@ -420,5 +471,4 @@ namespace Sunspec
      * @param [in] id The ID of the model to look up.
      * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
      */
-    const SunspecModelDef *getModelDefinition(uint16_t id);
 }; // namespace Sunspec
