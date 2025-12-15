@@ -51,7 +51,9 @@
                     {
                         "id": "sunssf_1",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -66,7 +68,9 @@
                     {
                         "id": "int16_1",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -81,7 +85,9 @@
                     {
                         "id": "int16_2",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -96,7 +102,9 @@
                     {
                         "id": "sunssf_2",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

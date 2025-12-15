@@ -60,7 +60,9 @@
             {
                 "id": "ModEna",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -160,7 +162,9 @@
             {
                 "id": "Hz_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -175,7 +179,9 @@
             {
                 "id": "W_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -190,7 +196,9 @@
             {
                 "id": "RmpIncDec_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -247,7 +255,9 @@
                     {
                         "id": "W1",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -279,7 +289,9 @@
                     {
                         "id": "W2",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -311,7 +323,9 @@
                     {
                         "id": "W3",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -343,7 +357,9 @@
                     {
                         "id": "W4",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -375,7 +391,9 @@
                     {
                         "id": "W5",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -407,7 +425,9 @@
                     {
                         "id": "W6",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -439,7 +459,9 @@
                     {
                         "id": "W7",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -471,7 +493,9 @@
                     {
                         "id": "W8",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -503,7 +527,9 @@
                     {
                         "id": "W9",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -535,7 +561,9 @@
                     {
                         "id": "W10",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -567,7 +595,9 @@
                     {
                         "id": "W11",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -599,7 +629,9 @@
                     {
                         "id": "W12",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -631,7 +663,9 @@
                     {
                         "id": "W13",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -663,7 +697,9 @@
                     {
                         "id": "W14",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -695,7 +731,9 @@
                     {
                         "id": "W15",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -727,7 +765,9 @@
                     {
                         "id": "W16",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -759,7 +799,9 @@
                     {
                         "id": "W17",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -791,7 +833,9 @@
                     {
                         "id": "W18",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -823,7 +867,9 @@
                     {
                         "id": "W19",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -855,7 +901,9 @@
                     {
                         "id": "W20",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -955,7 +1003,9 @@
                     {
                         "id": "SnptW",
                         "data": {
-                            "Bitfield16": null
+                            "Bitfield16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1021,7 +1071,9 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

@@ -43,7 +43,9 @@
             {
                 "id": "ActSchd",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "ModEna",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -149,7 +153,9 @@
                     {
                         "id": "StrTms",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -181,7 +187,9 @@
                     {
                         "id": "IntvTyp",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -196,7 +204,9 @@
                     {
                         "id": "XTyp",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -211,7 +221,9 @@
                     {
                         "id": "X_SF",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -226,7 +238,9 @@
                     {
                         "id": "YTyp",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -241,7 +255,9 @@
                     {
                         "id": "Y_SF",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -256,7 +272,9 @@
                     {
                         "id": "X1",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -271,7 +289,9 @@
                     {
                         "id": "Y1",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -286,7 +306,9 @@
                     {
                         "id": "X2",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -301,7 +323,9 @@
                     {
                         "id": "Y2",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -316,7 +340,9 @@
                     {
                         "id": "X3",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -331,7 +357,9 @@
                     {
                         "id": "Y3",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -346,7 +374,9 @@
                     {
                         "id": "X4",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -361,7 +391,9 @@
                     {
                         "id": "Y4",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -376,7 +408,9 @@
                     {
                         "id": "X5",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -391,7 +425,9 @@
                     {
                         "id": "Y5",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -406,7 +442,9 @@
                     {
                         "id": "X6",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -421,7 +459,9 @@
                     {
                         "id": "Y6",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -436,7 +476,9 @@
                     {
                         "id": "X7",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -451,7 +493,9 @@
                     {
                         "id": "Y7",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -466,7 +510,9 @@
                     {
                         "id": "X8",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -481,7 +527,9 @@
                     {
                         "id": "Y8",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -496,7 +544,9 @@
                     {
                         "id": "X9",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -511,7 +561,9 @@
                     {
                         "id": "Y9",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -526,7 +578,9 @@
                     {
                         "id": "X10",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -541,7 +595,9 @@
                     {
                         "id": "Y10",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

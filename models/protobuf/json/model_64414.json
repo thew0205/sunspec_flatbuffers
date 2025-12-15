@@ -60,7 +60,9 @@
             {
                 "id": "Temperature",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -109,7 +111,9 @@
             {
                 "id": "Irradiance",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -124,7 +128,9 @@
             {
                 "id": "GridVoltageA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -139,7 +145,9 @@
             {
                 "id": "GridVoltageB",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -154,7 +162,9 @@
             {
                 "id": "GridVoltageC",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -169,7 +179,9 @@
             {
                 "id": "GridFrequency",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

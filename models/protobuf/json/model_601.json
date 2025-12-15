@@ -60,7 +60,9 @@
             {
                 "id": "Typ",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -126,7 +128,9 @@
             {
                 "id": "GlblElCtl",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -141,7 +145,9 @@
             {
                 "id": "GlblAzCtl",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -156,7 +162,9 @@
             {
                 "id": "GlblCtl",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -171,7 +179,9 @@
             {
                 "id": "GlblAlm",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -186,7 +196,9 @@
             {
                 "id": "Dgr_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -243,7 +255,9 @@
                     {
                         "id": "ElTrgt",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -258,7 +272,9 @@
                     {
                         "id": "AzTrgt",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -273,7 +289,9 @@
                     {
                         "id": "ElPos",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -288,7 +306,9 @@
                     {
                         "id": "AzPos",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -303,7 +323,9 @@
                     {
                         "id": "ElCtl",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -318,7 +340,9 @@
                     {
                         "id": "AzCtl",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -333,7 +357,9 @@
                     {
                         "id": "Ctl",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -348,7 +374,9 @@
                     {
                         "id": "Alm",
                         "data": {
-                            "Bitfield16": null
+                            "Bitfield16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

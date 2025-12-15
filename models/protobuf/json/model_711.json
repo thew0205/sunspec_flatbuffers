@@ -43,7 +43,9 @@
             {
                 "id": "Ena",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -75,7 +77,9 @@
             {
                 "id": "AdptCtlRslt",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -107,7 +111,9 @@
             {
                 "id": "RvrtTms",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -122,7 +128,9 @@
             {
                 "id": "RvrtRem",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -154,7 +162,9 @@
             {
                 "id": "Db_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -169,7 +179,9 @@
             {
                 "id": "K_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -184,7 +196,9 @@
             {
                 "id": "RspTms_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -207,7 +221,9 @@
                     {
                         "id": "DbOf",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -222,7 +238,9 @@
                     {
                         "id": "DbUf",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -271,7 +289,9 @@
                     {
                         "id": "RspTms",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -286,7 +306,9 @@
                     {
                         "id": "PMin",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -301,7 +323,9 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

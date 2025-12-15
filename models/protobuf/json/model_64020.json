@@ -43,7 +43,9 @@
             {
                 "id": "Aux0Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "Aux1Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -73,7 +77,9 @@
             {
                 "id": "Aux2Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +94,9 @@
             {
                 "id": "Aux3Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -103,7 +111,9 @@
             {
                 "id": "Aux4Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -118,7 +128,9 @@
             {
                 "id": "ProbeTmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -133,7 +145,9 @@
             {
                 "id": "MainTmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +162,9 @@
             {
                 "id": "SensorV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -163,7 +179,9 @@
             {
                 "id": "SensorA_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +196,9 @@
             {
                 "id": "SensorHz_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -193,7 +213,9 @@
             {
                 "id": "Sensor1Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -208,7 +230,9 @@
             {
                 "id": "Sensor2Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -223,7 +247,9 @@
             {
                 "id": "Sensor3Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -238,7 +264,9 @@
             {
                 "id": "Sensor4Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -253,7 +281,9 @@
             {
                 "id": "Sensor5Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -268,7 +298,9 @@
             {
                 "id": "Sensor6Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -283,7 +315,9 @@
             {
                 "id": "Sensor7Voltage",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -298,7 +332,9 @@
             {
                 "id": "Sensor1Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -313,7 +349,9 @@
             {
                 "id": "Sensor2Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -328,7 +366,9 @@
             {
                 "id": "Sensor3Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -343,7 +383,9 @@
             {
                 "id": "Sensor4Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -358,7 +400,9 @@
             {
                 "id": "Sensor5Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -373,7 +417,9 @@
             {
                 "id": "Sensor6Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +434,9 @@
             {
                 "id": "Sensor7Current",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

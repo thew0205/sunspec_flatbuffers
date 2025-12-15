@@ -111,7 +111,9 @@
             {
                 "id": "Sta",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -126,7 +128,9 @@
             {
                 "id": "WH_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -141,7 +145,9 @@
             {
                 "id": "Pct_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

@@ -43,7 +43,9 @@
             {
                 "id": "Cmd",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -143,7 +145,9 @@
             {
                 "id": "Switch",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -192,7 +196,9 @@
             {
                 "id": "Status",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -207,7 +213,9 @@
             {
                 "id": "Config",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -290,7 +298,9 @@
             {
                 "id": "S1ID",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -373,7 +383,9 @@
             {
                 "id": "S2ID",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -456,7 +468,9 @@
             {
                 "id": "S3ID",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -539,7 +553,9 @@
             {
                 "id": "S4ID",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

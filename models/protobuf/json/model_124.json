@@ -94,7 +94,9 @@
             {
                 "id": "StorCtl_Mod",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -194,7 +196,9 @@
             {
                 "id": "ChaSt",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -209,7 +213,9 @@
             {
                 "id": "OutWRte",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -224,7 +230,9 @@
             {
                 "id": "InWRte",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -290,7 +298,9 @@
             {
                 "id": "ChaGriSet",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -305,7 +315,9 @@
             {
                 "id": "WChaMax_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -320,7 +332,9 @@
             {
                 "id": "WChaDisChaGra_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -335,7 +349,9 @@
             {
                 "id": "VAChaMax_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -350,7 +366,9 @@
             {
                 "id": "MinRsvPct_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -365,7 +383,9 @@
             {
                 "id": "ChaState_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -380,7 +400,9 @@
             {
                 "id": "StorAval_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -395,7 +417,9 @@
             {
                 "id": "InBatV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -410,7 +434,9 @@
             {
                 "id": "InOutWRte_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

@@ -111,45 +111,45 @@ def get_flatbuffer_data(type, value):
     data = {}
     match type:
         case "int16":
-            data["Sint16"] = value
+            data["Sint16"] = {"value" : value}
         case "int32":
-            data["Sint32"] = value
+            data["Sint32"] = {"value" : value}
         case "int64":
-            data["Sint64"] = value
+            data["Sint64"] = {"value" : value}
         case "raw16" :
-            data["Raw16"] = value
+            data["Raw16"] = {"value" : value}
         case "uint16":
-            data["Uint16"] = {"value":value}
+            data["Uint16"] = {"value" : value}
         case "uint32":
-            data["Uint32"] = value
+            data["Uint32"] = {"value" : value}
         case "uint64":
-            data["Uint64"] = value
+            data["Uint64"] = {"value" : value}
         case "raw16" :
-            data["Raw16"] = value
+            data["Raw16"] = {"value" : value}
         case "acc16" :
-            data["Acc16"] = value
+            data["Acc16"] = {"value" : value}
         case "acc32" :
-            data["Acc32"] = value
+            data["Acc32"] = {"value" : value}
         case "acc64" :
-            data["Acc64"] = value
+            data["Acc64"] = {"value" : value}
         case "bitfield16" :
-            data["Bitfield16"] = value
+            data["Bitfield16"] = {"value" : value}
         case "bitfield32" :
-            data["Bitfield32"] = value
+            data["Bitfield32"] = {"value" : value}
         case "bitfield64" :
-            data["Bitfield64"] = value
+            data["Bitfield64"] = {"value" : value}
         case "enum16" :
-            data["Enum16"] = value
+            data["Enum16"] = {"value" : value}
         case "enum32" :
-            data["Enum32"] = value
+            data["Enum32"] = {"value" : value}
         case "float32" :
-            data["Float32"] = value
+            data["Float32"] = {"value" : value}
         case "float64" :
-            data["Float64"] = value
+            data["Float64"] = {"value" : value}
         case "string" :
             data["Stringx"] = {"value":value}
         case "sunssf" :
-            data["SunsSf"] = value
+            data["SunsSf"] = {"value" : value}
         case "pad" :
             data["Pad16"] = {"value":value}
         case "ipaddr" :

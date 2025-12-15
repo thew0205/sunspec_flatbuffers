@@ -4908,48 +4908,80 @@ class SunspecPointData final : public ::google::protobuf::Message
     kIpv6AddrFieldNumber = 22,
     kEui48FieldNumber = 23,
   };
-  // int32 Sint16 = 1;
+  // .Sint16 Sint16 = 1;
   bool has_sint16() const;
+  private:
+  bool _internal_has_sint16() const;
+
+  public:
   void clear_sint16() ;
-  ::int32_t sint16() const;
-  void set_sint16(::int32_t value);
+  const ::Sint16& sint16() const;
+  [[nodiscard]] ::Sint16* PROTOBUF_NULLABLE release_sint16();
+  ::Sint16* PROTOBUF_NONNULL mutable_sint16();
+  void set_allocated_sint16(::Sint16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_sint16(::Sint16* PROTOBUF_NULLABLE value);
+  ::Sint16* PROTOBUF_NULLABLE unsafe_arena_release_sint16();
 
   private:
-  ::int32_t _internal_sint16() const;
-  void _internal_set_sint16(::int32_t value);
+  const ::Sint16& _internal_sint16() const;
+  ::Sint16* PROTOBUF_NONNULL _internal_mutable_sint16();
 
   public:
-  // int32 Sint32 = 2;
+  // .Sint32 Sint32 = 2;
   bool has_sint32() const;
+  private:
+  bool _internal_has_sint32() const;
+
+  public:
   void clear_sint32() ;
-  ::int32_t sint32() const;
-  void set_sint32(::int32_t value);
+  const ::Sint32& sint32() const;
+  [[nodiscard]] ::Sint32* PROTOBUF_NULLABLE release_sint32();
+  ::Sint32* PROTOBUF_NONNULL mutable_sint32();
+  void set_allocated_sint32(::Sint32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_sint32(::Sint32* PROTOBUF_NULLABLE value);
+  ::Sint32* PROTOBUF_NULLABLE unsafe_arena_release_sint32();
 
   private:
-  ::int32_t _internal_sint32() const;
-  void _internal_set_sint32(::int32_t value);
+  const ::Sint32& _internal_sint32() const;
+  ::Sint32* PROTOBUF_NONNULL _internal_mutable_sint32();
 
   public:
-  // int64 Sint64 = 3;
+  // .Sint64 Sint64 = 3;
   bool has_sint64() const;
-  void clear_sint64() ;
-  ::int64_t sint64() const;
-  void set_sint64(::int64_t value);
-
   private:
-  ::int64_t _internal_sint64() const;
-  void _internal_set_sint64(::int64_t value);
+  bool _internal_has_sint64() const;
 
   public:
-  // uint32 Raw16 = 4;
-  bool has_raw16() const;
-  void clear_raw16() ;
-  ::uint32_t raw16() const;
-  void set_raw16(::uint32_t value);
+  void clear_sint64() ;
+  const ::Sint64& sint64() const;
+  [[nodiscard]] ::Sint64* PROTOBUF_NULLABLE release_sint64();
+  ::Sint64* PROTOBUF_NONNULL mutable_sint64();
+  void set_allocated_sint64(::Sint64* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_sint64(::Sint64* PROTOBUF_NULLABLE value);
+  ::Sint64* PROTOBUF_NULLABLE unsafe_arena_release_sint64();
 
   private:
-  ::uint32_t _internal_raw16() const;
-  void _internal_set_raw16(::uint32_t value);
+  const ::Sint64& _internal_sint64() const;
+  ::Sint64* PROTOBUF_NONNULL _internal_mutable_sint64();
+
+  public:
+  // .Raw16 Raw16 = 4;
+  bool has_raw16() const;
+  private:
+  bool _internal_has_raw16() const;
+
+  public:
+  void clear_raw16() ;
+  const ::Raw16& raw16() const;
+  [[nodiscard]] ::Raw16* PROTOBUF_NULLABLE release_raw16();
+  ::Raw16* PROTOBUF_NONNULL mutable_raw16();
+  void set_allocated_raw16(::Raw16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_raw16(::Raw16* PROTOBUF_NULLABLE value);
+  ::Raw16* PROTOBUF_NULLABLE unsafe_arena_release_raw16();
+
+  private:
+  const ::Raw16& _internal_raw16() const;
+  ::Raw16* PROTOBUF_NONNULL _internal_mutable_raw16();
 
   public:
   // .Uint16 Uint16 = 5;
@@ -4971,136 +5003,232 @@ class SunspecPointData final : public ::google::protobuf::Message
   ::Uint16* PROTOBUF_NONNULL _internal_mutable_uint16();
 
   public:
-  // uint32 Uint32 = 6;
+  // .Uint32 Uint32 = 6;
   bool has_uint32() const;
+  private:
+  bool _internal_has_uint32() const;
+
+  public:
   void clear_uint32() ;
-  ::uint32_t uint32() const;
-  void set_uint32(::uint32_t value);
+  const ::Uint32& uint32() const;
+  [[nodiscard]] ::Uint32* PROTOBUF_NULLABLE release_uint32();
+  ::Uint32* PROTOBUF_NONNULL mutable_uint32();
+  void set_allocated_uint32(::Uint32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_uint32(::Uint32* PROTOBUF_NULLABLE value);
+  ::Uint32* PROTOBUF_NULLABLE unsafe_arena_release_uint32();
 
   private:
-  ::uint32_t _internal_uint32() const;
-  void _internal_set_uint32(::uint32_t value);
+  const ::Uint32& _internal_uint32() const;
+  ::Uint32* PROTOBUF_NONNULL _internal_mutable_uint32();
 
   public:
-  // uint64 Uint64 = 7;
+  // .Uint64 Uint64 = 7;
   bool has_uint64() const;
+  private:
+  bool _internal_has_uint64() const;
+
+  public:
   void clear_uint64() ;
-  ::uint64_t uint64() const;
-  void set_uint64(::uint64_t value);
+  const ::Uint64& uint64() const;
+  [[nodiscard]] ::Uint64* PROTOBUF_NULLABLE release_uint64();
+  ::Uint64* PROTOBUF_NONNULL mutable_uint64();
+  void set_allocated_uint64(::Uint64* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_uint64(::Uint64* PROTOBUF_NULLABLE value);
+  ::Uint64* PROTOBUF_NULLABLE unsafe_arena_release_uint64();
 
   private:
-  ::uint64_t _internal_uint64() const;
-  void _internal_set_uint64(::uint64_t value);
+  const ::Uint64& _internal_uint64() const;
+  ::Uint64* PROTOBUF_NONNULL _internal_mutable_uint64();
 
   public:
-  // uint32 Acc16 = 8;
+  // .Acc16 Acc16 = 8;
   bool has_acc16() const;
+  private:
+  bool _internal_has_acc16() const;
+
+  public:
   void clear_acc16() ;
-  ::uint32_t acc16() const;
-  void set_acc16(::uint32_t value);
+  const ::Acc16& acc16() const;
+  [[nodiscard]] ::Acc16* PROTOBUF_NULLABLE release_acc16();
+  ::Acc16* PROTOBUF_NONNULL mutable_acc16();
+  void set_allocated_acc16(::Acc16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_acc16(::Acc16* PROTOBUF_NULLABLE value);
+  ::Acc16* PROTOBUF_NULLABLE unsafe_arena_release_acc16();
 
   private:
-  ::uint32_t _internal_acc16() const;
-  void _internal_set_acc16(::uint32_t value);
+  const ::Acc16& _internal_acc16() const;
+  ::Acc16* PROTOBUF_NONNULL _internal_mutable_acc16();
 
   public:
-  // uint32 Acc32 = 9;
+  // .Acc32 Acc32 = 9;
   bool has_acc32() const;
+  private:
+  bool _internal_has_acc32() const;
+
+  public:
   void clear_acc32() ;
-  ::uint32_t acc32() const;
-  void set_acc32(::uint32_t value);
+  const ::Acc32& acc32() const;
+  [[nodiscard]] ::Acc32* PROTOBUF_NULLABLE release_acc32();
+  ::Acc32* PROTOBUF_NONNULL mutable_acc32();
+  void set_allocated_acc32(::Acc32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_acc32(::Acc32* PROTOBUF_NULLABLE value);
+  ::Acc32* PROTOBUF_NULLABLE unsafe_arena_release_acc32();
 
   private:
-  ::uint32_t _internal_acc32() const;
-  void _internal_set_acc32(::uint32_t value);
+  const ::Acc32& _internal_acc32() const;
+  ::Acc32* PROTOBUF_NONNULL _internal_mutable_acc32();
 
   public:
-  // uint64 Acc64 = 10;
+  // .Acc64 Acc64 = 10;
   bool has_acc64() const;
+  private:
+  bool _internal_has_acc64() const;
+
+  public:
   void clear_acc64() ;
-  ::uint64_t acc64() const;
-  void set_acc64(::uint64_t value);
+  const ::Acc64& acc64() const;
+  [[nodiscard]] ::Acc64* PROTOBUF_NULLABLE release_acc64();
+  ::Acc64* PROTOBUF_NONNULL mutable_acc64();
+  void set_allocated_acc64(::Acc64* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_acc64(::Acc64* PROTOBUF_NULLABLE value);
+  ::Acc64* PROTOBUF_NULLABLE unsafe_arena_release_acc64();
 
   private:
-  ::uint64_t _internal_acc64() const;
-  void _internal_set_acc64(::uint64_t value);
+  const ::Acc64& _internal_acc64() const;
+  ::Acc64* PROTOBUF_NONNULL _internal_mutable_acc64();
 
   public:
-  // uint32 Bitfield16 = 11;
+  // .Bitfield16 Bitfield16 = 11;
   bool has_bitfield16() const;
+  private:
+  bool _internal_has_bitfield16() const;
+
+  public:
   void clear_bitfield16() ;
-  ::uint32_t bitfield16() const;
-  void set_bitfield16(::uint32_t value);
+  const ::Bitfield16& bitfield16() const;
+  [[nodiscard]] ::Bitfield16* PROTOBUF_NULLABLE release_bitfield16();
+  ::Bitfield16* PROTOBUF_NONNULL mutable_bitfield16();
+  void set_allocated_bitfield16(::Bitfield16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_bitfield16(::Bitfield16* PROTOBUF_NULLABLE value);
+  ::Bitfield16* PROTOBUF_NULLABLE unsafe_arena_release_bitfield16();
 
   private:
-  ::uint32_t _internal_bitfield16() const;
-  void _internal_set_bitfield16(::uint32_t value);
+  const ::Bitfield16& _internal_bitfield16() const;
+  ::Bitfield16* PROTOBUF_NONNULL _internal_mutable_bitfield16();
 
   public:
-  // uint32 Bitfield32 = 12;
+  // .Bitfield32 Bitfield32 = 12;
   bool has_bitfield32() const;
+  private:
+  bool _internal_has_bitfield32() const;
+
+  public:
   void clear_bitfield32() ;
-  ::uint32_t bitfield32() const;
-  void set_bitfield32(::uint32_t value);
+  const ::Bitfield32& bitfield32() const;
+  [[nodiscard]] ::Bitfield32* PROTOBUF_NULLABLE release_bitfield32();
+  ::Bitfield32* PROTOBUF_NONNULL mutable_bitfield32();
+  void set_allocated_bitfield32(::Bitfield32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_bitfield32(::Bitfield32* PROTOBUF_NULLABLE value);
+  ::Bitfield32* PROTOBUF_NULLABLE unsafe_arena_release_bitfield32();
 
   private:
-  ::uint32_t _internal_bitfield32() const;
-  void _internal_set_bitfield32(::uint32_t value);
+  const ::Bitfield32& _internal_bitfield32() const;
+  ::Bitfield32* PROTOBUF_NONNULL _internal_mutable_bitfield32();
 
   public:
-  // uint64 Bitfield64 = 13;
+  // .Bitfield64 Bitfield64 = 13;
   bool has_bitfield64() const;
+  private:
+  bool _internal_has_bitfield64() const;
+
+  public:
   void clear_bitfield64() ;
-  ::uint64_t bitfield64() const;
-  void set_bitfield64(::uint64_t value);
+  const ::Bitfield64& bitfield64() const;
+  [[nodiscard]] ::Bitfield64* PROTOBUF_NULLABLE release_bitfield64();
+  ::Bitfield64* PROTOBUF_NONNULL mutable_bitfield64();
+  void set_allocated_bitfield64(::Bitfield64* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_bitfield64(::Bitfield64* PROTOBUF_NULLABLE value);
+  ::Bitfield64* PROTOBUF_NULLABLE unsafe_arena_release_bitfield64();
 
   private:
-  ::uint64_t _internal_bitfield64() const;
-  void _internal_set_bitfield64(::uint64_t value);
+  const ::Bitfield64& _internal_bitfield64() const;
+  ::Bitfield64* PROTOBUF_NONNULL _internal_mutable_bitfield64();
 
   public:
-  // uint32 Enum16 = 14;
+  // .Enum16 Enum16 = 14;
   bool has_enum16() const;
+  private:
+  bool _internal_has_enum16() const;
+
+  public:
   void clear_enum16() ;
-  ::uint32_t enum16() const;
-  void set_enum16(::uint32_t value);
+  const ::Enum16& enum16() const;
+  [[nodiscard]] ::Enum16* PROTOBUF_NULLABLE release_enum16();
+  ::Enum16* PROTOBUF_NONNULL mutable_enum16();
+  void set_allocated_enum16(::Enum16* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_enum16(::Enum16* PROTOBUF_NULLABLE value);
+  ::Enum16* PROTOBUF_NULLABLE unsafe_arena_release_enum16();
 
   private:
-  ::uint32_t _internal_enum16() const;
-  void _internal_set_enum16(::uint32_t value);
+  const ::Enum16& _internal_enum16() const;
+  ::Enum16* PROTOBUF_NONNULL _internal_mutable_enum16();
 
   public:
-  // uint32 Enum32 = 15;
+  // .Enum32 Enum32 = 15;
   bool has_enum32() const;
+  private:
+  bool _internal_has_enum32() const;
+
+  public:
   void clear_enum32() ;
-  ::uint32_t enum32() const;
-  void set_enum32(::uint32_t value);
+  const ::Enum32& enum32() const;
+  [[nodiscard]] ::Enum32* PROTOBUF_NULLABLE release_enum32();
+  ::Enum32* PROTOBUF_NONNULL mutable_enum32();
+  void set_allocated_enum32(::Enum32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_enum32(::Enum32* PROTOBUF_NULLABLE value);
+  ::Enum32* PROTOBUF_NULLABLE unsafe_arena_release_enum32();
 
   private:
-  ::uint32_t _internal_enum32() const;
-  void _internal_set_enum32(::uint32_t value);
+  const ::Enum32& _internal_enum32() const;
+  ::Enum32* PROTOBUF_NONNULL _internal_mutable_enum32();
 
   public:
-  // float Float32 = 16;
+  // .Float32 Float32 = 16;
   bool has_float32() const;
-  void clear_float32() ;
-  float float32() const;
-  void set_float32(float value);
-
   private:
-  float _internal_float32() const;
-  void _internal_set_float32(float value);
+  bool _internal_has_float32() const;
 
   public:
-  // double Float64 = 17;
-  bool has_float64() const;
-  void clear_float64() ;
-  double float64() const;
-  void set_float64(double value);
+  void clear_float32() ;
+  const ::Float32& float32() const;
+  [[nodiscard]] ::Float32* PROTOBUF_NULLABLE release_float32();
+  ::Float32* PROTOBUF_NONNULL mutable_float32();
+  void set_allocated_float32(::Float32* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_float32(::Float32* PROTOBUF_NULLABLE value);
+  ::Float32* PROTOBUF_NULLABLE unsafe_arena_release_float32();
 
   private:
-  double _internal_float64() const;
-  void _internal_set_float64(double value);
+  const ::Float32& _internal_float32() const;
+  ::Float32* PROTOBUF_NONNULL _internal_mutable_float32();
+
+  public:
+  // .Float64 Float64 = 17;
+  bool has_float64() const;
+  private:
+  bool _internal_has_float64() const;
+
+  public:
+  void clear_float64() ;
+  const ::Float64& float64() const;
+  [[nodiscard]] ::Float64* PROTOBUF_NULLABLE release_float64();
+  ::Float64* PROTOBUF_NONNULL mutable_float64();
+  void set_allocated_float64(::Float64* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_float64(::Float64* PROTOBUF_NULLABLE value);
+  ::Float64* PROTOBUF_NULLABLE unsafe_arena_release_float64();
+
+  private:
+  const ::Float64& _internal_float64() const;
+  ::Float64* PROTOBUF_NONNULL _internal_mutable_float64();
 
   public:
   // .Stringx Stringx = 18;
@@ -5122,15 +5250,23 @@ class SunspecPointData final : public ::google::protobuf::Message
   ::Stringx* PROTOBUF_NONNULL _internal_mutable_stringx();
 
   public:
-  // uint32 SunsSf = 19;
+  // .SunsSf SunsSf = 19;
   bool has_sunssf() const;
+  private:
+  bool _internal_has_sunssf() const;
+
+  public:
   void clear_sunssf() ;
-  ::uint32_t sunssf() const;
-  void set_sunssf(::uint32_t value);
+  const ::SunsSf& sunssf() const;
+  [[nodiscard]] ::SunsSf* PROTOBUF_NULLABLE release_sunssf();
+  ::SunsSf* PROTOBUF_NONNULL mutable_sunssf();
+  void set_allocated_sunssf(::SunsSf* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_sunssf(::SunsSf* PROTOBUF_NULLABLE value);
+  ::SunsSf* PROTOBUF_NULLABLE unsafe_arena_release_sunssf();
 
   private:
-  ::uint32_t _internal_sunssf() const;
-  void _internal_set_sunssf(::uint32_t value);
+  const ::SunsSf& _internal_sunssf() const;
+  ::SunsSf* PROTOBUF_NONNULL _internal_mutable_sunssf();
 
   public:
   // .Pad16 Pad16 = 20;
@@ -5241,7 +5377,7 @@ class SunspecPointData final : public ::google::protobuf::Message
   inline void clear_has_kind();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<0, 23,
-                                   6, 0,
+                                   23, 0,
                                    2>
       _table_;
 
@@ -5263,25 +5399,25 @@ class SunspecPointData final : public ::google::protobuf::Message
     union KindUnion {
       constexpr KindUnion() : _constinit_{} {}
       ::google::protobuf::internal::ConstantInitialized _constinit_;
-      ::int32_t sint16_;
-      ::int32_t sint32_;
-      ::int64_t sint64_;
-      ::uint32_t raw16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE sint16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE sint32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE sint64_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE raw16_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE uint16_;
-      ::uint32_t uint32_;
-      ::uint64_t uint64_;
-      ::uint32_t acc16_;
-      ::uint32_t acc32_;
-      ::uint64_t acc64_;
-      ::uint32_t bitfield16_;
-      ::uint32_t bitfield32_;
-      ::uint64_t bitfield64_;
-      ::uint32_t enum16_;
-      ::uint32_t enum32_;
-      float float32_;
-      double float64_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE uint32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE uint64_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE acc16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE acc32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE acc64_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE bitfield16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE bitfield32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE bitfield64_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE enum16_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE enum32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE float32_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE float64_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE stringx_;
-      ::uint32_t sunssf_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE sunssf_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE pad16_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE ipaddr_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE ipv6addr_;
@@ -7013,8 +7149,11 @@ inline void Eui48::set_allocated_value(::std::string* PROTOBUF_NULLABLE value) {
 
 // SunspecPointData
 
-// int32 Sint16 = 1;
+// .Sint16 Sint16 = 1;
 inline bool SunspecPointData::has_sint16() const {
+  return kind_case() == kSint16;
+}
+inline bool SunspecPointData::_internal_has_sint16() const {
   return kind_case() == kSint16;
 }
 inline void SunspecPointData::set_has_sint16() {
@@ -7023,31 +7162,80 @@ inline void SunspecPointData::set_has_sint16() {
 inline void SunspecPointData::clear_sint16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kSint16) {
-    _impl_.kind_.sint16_ = 0;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.sint16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint16_);
+    }
     clear_has_kind();
   }
 }
-inline ::int32_t SunspecPointData::sint16() const {
+inline ::Sint16* PROTOBUF_NULLABLE SunspecPointData::release_sint16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Sint16)
+  if (kind_case() == kSint16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint16*>(_impl_.kind_.sint16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.sint16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Sint16& SunspecPointData::_internal_sint16() const {
+  return kind_case() == kSint16 ? static_cast<const ::Sint16&>(*reinterpret_cast<::Sint16*>(_impl_.kind_.sint16_))
+                     : reinterpret_cast<const ::Sint16&>(::_Sint16_default_instance_);
+}
+inline const ::Sint16& SunspecPointData::sint16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Sint16)
   return _internal_sint16();
 }
-inline void SunspecPointData::set_sint16(::int32_t value) {
+inline ::Sint16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_sint16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Sint16)
+  if (kind_case() == kSint16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint16*>(_impl_.kind_.sint16_);
+    _impl_.kind_.sint16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_sint16(
+    ::Sint16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_sint16();
+    _impl_.kind_.sint16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Sint16)
+}
+inline ::Sint16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_sint16() {
   if (kind_case() != kSint16) {
     clear_kind();
     set_has_sint16();
+    _impl_.kind_.sint16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Sint16>(GetArena()));
   }
-  _impl_.kind_.sint16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Sint16)
+  return reinterpret_cast<::Sint16*>(_impl_.kind_.sint16_);
 }
-inline ::int32_t SunspecPointData::_internal_sint16() const {
-  if (kind_case() == kSint16) {
-    return _impl_.kind_.sint16_;
-  }
-  return 0;
+inline ::Sint16* PROTOBUF_NONNULL SunspecPointData::mutable_sint16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Sint16* _msg = _internal_mutable_sint16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Sint16)
+  return _msg;
 }
 
-// int32 Sint32 = 2;
+// .Sint32 Sint32 = 2;
 inline bool SunspecPointData::has_sint32() const {
+  return kind_case() == kSint32;
+}
+inline bool SunspecPointData::_internal_has_sint32() const {
   return kind_case() == kSint32;
 }
 inline void SunspecPointData::set_has_sint32() {
@@ -7056,31 +7244,80 @@ inline void SunspecPointData::set_has_sint32() {
 inline void SunspecPointData::clear_sint32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kSint32) {
-    _impl_.kind_.sint32_ = 0;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.sint32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint32_);
+    }
     clear_has_kind();
   }
 }
-inline ::int32_t SunspecPointData::sint32() const {
+inline ::Sint32* PROTOBUF_NULLABLE SunspecPointData::release_sint32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Sint32)
+  if (kind_case() == kSint32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint32*>(_impl_.kind_.sint32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.sint32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Sint32& SunspecPointData::_internal_sint32() const {
+  return kind_case() == kSint32 ? static_cast<const ::Sint32&>(*reinterpret_cast<::Sint32*>(_impl_.kind_.sint32_))
+                     : reinterpret_cast<const ::Sint32&>(::_Sint32_default_instance_);
+}
+inline const ::Sint32& SunspecPointData::sint32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Sint32)
   return _internal_sint32();
 }
-inline void SunspecPointData::set_sint32(::int32_t value) {
+inline ::Sint32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_sint32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Sint32)
+  if (kind_case() == kSint32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint32*>(_impl_.kind_.sint32_);
+    _impl_.kind_.sint32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_sint32(
+    ::Sint32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_sint32();
+    _impl_.kind_.sint32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Sint32)
+}
+inline ::Sint32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_sint32() {
   if (kind_case() != kSint32) {
     clear_kind();
     set_has_sint32();
+    _impl_.kind_.sint32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Sint32>(GetArena()));
   }
-  _impl_.kind_.sint32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Sint32)
+  return reinterpret_cast<::Sint32*>(_impl_.kind_.sint32_);
 }
-inline ::int32_t SunspecPointData::_internal_sint32() const {
-  if (kind_case() == kSint32) {
-    return _impl_.kind_.sint32_;
-  }
-  return 0;
+inline ::Sint32* PROTOBUF_NONNULL SunspecPointData::mutable_sint32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Sint32* _msg = _internal_mutable_sint32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Sint32)
+  return _msg;
 }
 
-// int64 Sint64 = 3;
+// .Sint64 Sint64 = 3;
 inline bool SunspecPointData::has_sint64() const {
+  return kind_case() == kSint64;
+}
+inline bool SunspecPointData::_internal_has_sint64() const {
   return kind_case() == kSint64;
 }
 inline void SunspecPointData::set_has_sint64() {
@@ -7089,31 +7326,80 @@ inline void SunspecPointData::set_has_sint64() {
 inline void SunspecPointData::clear_sint64() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kSint64) {
-    _impl_.kind_.sint64_ = ::int64_t{0};
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.sint64_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint64_);
+    }
     clear_has_kind();
   }
 }
-inline ::int64_t SunspecPointData::sint64() const {
+inline ::Sint64* PROTOBUF_NULLABLE SunspecPointData::release_sint64() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Sint64)
+  if (kind_case() == kSint64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint64*>(_impl_.kind_.sint64_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.sint64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Sint64& SunspecPointData::_internal_sint64() const {
+  return kind_case() == kSint64 ? static_cast<const ::Sint64&>(*reinterpret_cast<::Sint64*>(_impl_.kind_.sint64_))
+                     : reinterpret_cast<const ::Sint64&>(::_Sint64_default_instance_);
+}
+inline const ::Sint64& SunspecPointData::sint64() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Sint64)
   return _internal_sint64();
 }
-inline void SunspecPointData::set_sint64(::int64_t value) {
+inline ::Sint64* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_sint64() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Sint64)
+  if (kind_case() == kSint64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Sint64*>(_impl_.kind_.sint64_);
+    _impl_.kind_.sint64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_sint64(
+    ::Sint64* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_sint64();
+    _impl_.kind_.sint64_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Sint64)
+}
+inline ::Sint64* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_sint64() {
   if (kind_case() != kSint64) {
     clear_kind();
     set_has_sint64();
+    _impl_.kind_.sint64_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Sint64>(GetArena()));
   }
-  _impl_.kind_.sint64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Sint64)
+  return reinterpret_cast<::Sint64*>(_impl_.kind_.sint64_);
 }
-inline ::int64_t SunspecPointData::_internal_sint64() const {
-  if (kind_case() == kSint64) {
-    return _impl_.kind_.sint64_;
-  }
-  return ::int64_t{0};
+inline ::Sint64* PROTOBUF_NONNULL SunspecPointData::mutable_sint64()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Sint64* _msg = _internal_mutable_sint64();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Sint64)
+  return _msg;
 }
 
-// uint32 Raw16 = 4;
+// .Raw16 Raw16 = 4;
 inline bool SunspecPointData::has_raw16() const {
+  return kind_case() == kRaw16;
+}
+inline bool SunspecPointData::_internal_has_raw16() const {
   return kind_case() == kRaw16;
 }
 inline void SunspecPointData::set_has_raw16() {
@@ -7122,27 +7408,73 @@ inline void SunspecPointData::set_has_raw16() {
 inline void SunspecPointData::clear_raw16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kRaw16) {
-    _impl_.kind_.raw16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.raw16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.raw16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::raw16() const {
+inline ::Raw16* PROTOBUF_NULLABLE SunspecPointData::release_raw16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Raw16)
+  if (kind_case() == kRaw16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Raw16*>(_impl_.kind_.raw16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.raw16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Raw16& SunspecPointData::_internal_raw16() const {
+  return kind_case() == kRaw16 ? static_cast<const ::Raw16&>(*reinterpret_cast<::Raw16*>(_impl_.kind_.raw16_))
+                     : reinterpret_cast<const ::Raw16&>(::_Raw16_default_instance_);
+}
+inline const ::Raw16& SunspecPointData::raw16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Raw16)
   return _internal_raw16();
 }
-inline void SunspecPointData::set_raw16(::uint32_t value) {
+inline ::Raw16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_raw16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Raw16)
+  if (kind_case() == kRaw16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Raw16*>(_impl_.kind_.raw16_);
+    _impl_.kind_.raw16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_raw16(
+    ::Raw16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_raw16();
+    _impl_.kind_.raw16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Raw16)
+}
+inline ::Raw16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_raw16() {
   if (kind_case() != kRaw16) {
     clear_kind();
     set_has_raw16();
+    _impl_.kind_.raw16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Raw16>(GetArena()));
   }
-  _impl_.kind_.raw16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Raw16)
+  return reinterpret_cast<::Raw16*>(_impl_.kind_.raw16_);
 }
-inline ::uint32_t SunspecPointData::_internal_raw16() const {
-  if (kind_case() == kRaw16) {
-    return _impl_.kind_.raw16_;
-  }
-  return 0u;
+inline ::Raw16* PROTOBUF_NONNULL SunspecPointData::mutable_raw16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Raw16* _msg = _internal_mutable_raw16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Raw16)
+  return _msg;
 }
 
 // .Uint16 Uint16 = 5;
@@ -7227,8 +7559,11 @@ inline ::Uint16* PROTOBUF_NONNULL SunspecPointData::mutable_uint16()
   return _msg;
 }
 
-// uint32 Uint32 = 6;
+// .Uint32 Uint32 = 6;
 inline bool SunspecPointData::has_uint32() const {
+  return kind_case() == kUint32;
+}
+inline bool SunspecPointData::_internal_has_uint32() const {
   return kind_case() == kUint32;
 }
 inline void SunspecPointData::set_has_uint32() {
@@ -7237,31 +7572,80 @@ inline void SunspecPointData::set_has_uint32() {
 inline void SunspecPointData::clear_uint32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kUint32) {
-    _impl_.kind_.uint32_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.uint32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.uint32_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::uint32() const {
+inline ::Uint32* PROTOBUF_NULLABLE SunspecPointData::release_uint32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Uint32)
+  if (kind_case() == kUint32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint32*>(_impl_.kind_.uint32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.uint32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Uint32& SunspecPointData::_internal_uint32() const {
+  return kind_case() == kUint32 ? static_cast<const ::Uint32&>(*reinterpret_cast<::Uint32*>(_impl_.kind_.uint32_))
+                     : reinterpret_cast<const ::Uint32&>(::_Uint32_default_instance_);
+}
+inline const ::Uint32& SunspecPointData::uint32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Uint32)
   return _internal_uint32();
 }
-inline void SunspecPointData::set_uint32(::uint32_t value) {
+inline ::Uint32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_uint32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Uint32)
+  if (kind_case() == kUint32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint32*>(_impl_.kind_.uint32_);
+    _impl_.kind_.uint32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_uint32(
+    ::Uint32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_uint32();
+    _impl_.kind_.uint32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Uint32)
+}
+inline ::Uint32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_uint32() {
   if (kind_case() != kUint32) {
     clear_kind();
     set_has_uint32();
+    _impl_.kind_.uint32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Uint32>(GetArena()));
   }
-  _impl_.kind_.uint32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Uint32)
+  return reinterpret_cast<::Uint32*>(_impl_.kind_.uint32_);
 }
-inline ::uint32_t SunspecPointData::_internal_uint32() const {
-  if (kind_case() == kUint32) {
-    return _impl_.kind_.uint32_;
-  }
-  return 0u;
+inline ::Uint32* PROTOBUF_NONNULL SunspecPointData::mutable_uint32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Uint32* _msg = _internal_mutable_uint32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Uint32)
+  return _msg;
 }
 
-// uint64 Uint64 = 7;
+// .Uint64 Uint64 = 7;
 inline bool SunspecPointData::has_uint64() const {
+  return kind_case() == kUint64;
+}
+inline bool SunspecPointData::_internal_has_uint64() const {
   return kind_case() == kUint64;
 }
 inline void SunspecPointData::set_has_uint64() {
@@ -7270,31 +7654,80 @@ inline void SunspecPointData::set_has_uint64() {
 inline void SunspecPointData::clear_uint64() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kUint64) {
-    _impl_.kind_.uint64_ = ::uint64_t{0u};
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.uint64_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.uint64_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint64_t SunspecPointData::uint64() const {
+inline ::Uint64* PROTOBUF_NULLABLE SunspecPointData::release_uint64() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Uint64)
+  if (kind_case() == kUint64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint64*>(_impl_.kind_.uint64_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.uint64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Uint64& SunspecPointData::_internal_uint64() const {
+  return kind_case() == kUint64 ? static_cast<const ::Uint64&>(*reinterpret_cast<::Uint64*>(_impl_.kind_.uint64_))
+                     : reinterpret_cast<const ::Uint64&>(::_Uint64_default_instance_);
+}
+inline const ::Uint64& SunspecPointData::uint64() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Uint64)
   return _internal_uint64();
 }
-inline void SunspecPointData::set_uint64(::uint64_t value) {
+inline ::Uint64* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_uint64() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Uint64)
+  if (kind_case() == kUint64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Uint64*>(_impl_.kind_.uint64_);
+    _impl_.kind_.uint64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_uint64(
+    ::Uint64* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_uint64();
+    _impl_.kind_.uint64_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Uint64)
+}
+inline ::Uint64* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_uint64() {
   if (kind_case() != kUint64) {
     clear_kind();
     set_has_uint64();
+    _impl_.kind_.uint64_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Uint64>(GetArena()));
   }
-  _impl_.kind_.uint64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Uint64)
+  return reinterpret_cast<::Uint64*>(_impl_.kind_.uint64_);
 }
-inline ::uint64_t SunspecPointData::_internal_uint64() const {
-  if (kind_case() == kUint64) {
-    return _impl_.kind_.uint64_;
-  }
-  return ::uint64_t{0u};
+inline ::Uint64* PROTOBUF_NONNULL SunspecPointData::mutable_uint64()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Uint64* _msg = _internal_mutable_uint64();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Uint64)
+  return _msg;
 }
 
-// uint32 Acc16 = 8;
+// .Acc16 Acc16 = 8;
 inline bool SunspecPointData::has_acc16() const {
+  return kind_case() == kAcc16;
+}
+inline bool SunspecPointData::_internal_has_acc16() const {
   return kind_case() == kAcc16;
 }
 inline void SunspecPointData::set_has_acc16() {
@@ -7303,31 +7736,80 @@ inline void SunspecPointData::set_has_acc16() {
 inline void SunspecPointData::clear_acc16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kAcc16) {
-    _impl_.kind_.acc16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.acc16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::acc16() const {
+inline ::Acc16* PROTOBUF_NULLABLE SunspecPointData::release_acc16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Acc16)
+  if (kind_case() == kAcc16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc16*>(_impl_.kind_.acc16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.acc16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Acc16& SunspecPointData::_internal_acc16() const {
+  return kind_case() == kAcc16 ? static_cast<const ::Acc16&>(*reinterpret_cast<::Acc16*>(_impl_.kind_.acc16_))
+                     : reinterpret_cast<const ::Acc16&>(::_Acc16_default_instance_);
+}
+inline const ::Acc16& SunspecPointData::acc16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Acc16)
   return _internal_acc16();
 }
-inline void SunspecPointData::set_acc16(::uint32_t value) {
+inline ::Acc16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_acc16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Acc16)
+  if (kind_case() == kAcc16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc16*>(_impl_.kind_.acc16_);
+    _impl_.kind_.acc16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_acc16(
+    ::Acc16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_acc16();
+    _impl_.kind_.acc16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Acc16)
+}
+inline ::Acc16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_acc16() {
   if (kind_case() != kAcc16) {
     clear_kind();
     set_has_acc16();
+    _impl_.kind_.acc16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Acc16>(GetArena()));
   }
-  _impl_.kind_.acc16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Acc16)
+  return reinterpret_cast<::Acc16*>(_impl_.kind_.acc16_);
 }
-inline ::uint32_t SunspecPointData::_internal_acc16() const {
-  if (kind_case() == kAcc16) {
-    return _impl_.kind_.acc16_;
-  }
-  return 0u;
+inline ::Acc16* PROTOBUF_NONNULL SunspecPointData::mutable_acc16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Acc16* _msg = _internal_mutable_acc16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Acc16)
+  return _msg;
 }
 
-// uint32 Acc32 = 9;
+// .Acc32 Acc32 = 9;
 inline bool SunspecPointData::has_acc32() const {
+  return kind_case() == kAcc32;
+}
+inline bool SunspecPointData::_internal_has_acc32() const {
   return kind_case() == kAcc32;
 }
 inline void SunspecPointData::set_has_acc32() {
@@ -7336,31 +7818,80 @@ inline void SunspecPointData::set_has_acc32() {
 inline void SunspecPointData::clear_acc32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kAcc32) {
-    _impl_.kind_.acc32_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.acc32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc32_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::acc32() const {
+inline ::Acc32* PROTOBUF_NULLABLE SunspecPointData::release_acc32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Acc32)
+  if (kind_case() == kAcc32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc32*>(_impl_.kind_.acc32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.acc32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Acc32& SunspecPointData::_internal_acc32() const {
+  return kind_case() == kAcc32 ? static_cast<const ::Acc32&>(*reinterpret_cast<::Acc32*>(_impl_.kind_.acc32_))
+                     : reinterpret_cast<const ::Acc32&>(::_Acc32_default_instance_);
+}
+inline const ::Acc32& SunspecPointData::acc32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Acc32)
   return _internal_acc32();
 }
-inline void SunspecPointData::set_acc32(::uint32_t value) {
+inline ::Acc32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_acc32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Acc32)
+  if (kind_case() == kAcc32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc32*>(_impl_.kind_.acc32_);
+    _impl_.kind_.acc32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_acc32(
+    ::Acc32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_acc32();
+    _impl_.kind_.acc32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Acc32)
+}
+inline ::Acc32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_acc32() {
   if (kind_case() != kAcc32) {
     clear_kind();
     set_has_acc32();
+    _impl_.kind_.acc32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Acc32>(GetArena()));
   }
-  _impl_.kind_.acc32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Acc32)
+  return reinterpret_cast<::Acc32*>(_impl_.kind_.acc32_);
 }
-inline ::uint32_t SunspecPointData::_internal_acc32() const {
-  if (kind_case() == kAcc32) {
-    return _impl_.kind_.acc32_;
-  }
-  return 0u;
+inline ::Acc32* PROTOBUF_NONNULL SunspecPointData::mutable_acc32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Acc32* _msg = _internal_mutable_acc32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Acc32)
+  return _msg;
 }
 
-// uint64 Acc64 = 10;
+// .Acc64 Acc64 = 10;
 inline bool SunspecPointData::has_acc64() const {
+  return kind_case() == kAcc64;
+}
+inline bool SunspecPointData::_internal_has_acc64() const {
   return kind_case() == kAcc64;
 }
 inline void SunspecPointData::set_has_acc64() {
@@ -7369,31 +7900,80 @@ inline void SunspecPointData::set_has_acc64() {
 inline void SunspecPointData::clear_acc64() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kAcc64) {
-    _impl_.kind_.acc64_ = ::uint64_t{0u};
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.acc64_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc64_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint64_t SunspecPointData::acc64() const {
+inline ::Acc64* PROTOBUF_NULLABLE SunspecPointData::release_acc64() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Acc64)
+  if (kind_case() == kAcc64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc64*>(_impl_.kind_.acc64_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.acc64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Acc64& SunspecPointData::_internal_acc64() const {
+  return kind_case() == kAcc64 ? static_cast<const ::Acc64&>(*reinterpret_cast<::Acc64*>(_impl_.kind_.acc64_))
+                     : reinterpret_cast<const ::Acc64&>(::_Acc64_default_instance_);
+}
+inline const ::Acc64& SunspecPointData::acc64() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Acc64)
   return _internal_acc64();
 }
-inline void SunspecPointData::set_acc64(::uint64_t value) {
+inline ::Acc64* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_acc64() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Acc64)
+  if (kind_case() == kAcc64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Acc64*>(_impl_.kind_.acc64_);
+    _impl_.kind_.acc64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_acc64(
+    ::Acc64* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_acc64();
+    _impl_.kind_.acc64_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Acc64)
+}
+inline ::Acc64* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_acc64() {
   if (kind_case() != kAcc64) {
     clear_kind();
     set_has_acc64();
+    _impl_.kind_.acc64_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Acc64>(GetArena()));
   }
-  _impl_.kind_.acc64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Acc64)
+  return reinterpret_cast<::Acc64*>(_impl_.kind_.acc64_);
 }
-inline ::uint64_t SunspecPointData::_internal_acc64() const {
-  if (kind_case() == kAcc64) {
-    return _impl_.kind_.acc64_;
-  }
-  return ::uint64_t{0u};
+inline ::Acc64* PROTOBUF_NONNULL SunspecPointData::mutable_acc64()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Acc64* _msg = _internal_mutable_acc64();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Acc64)
+  return _msg;
 }
 
-// uint32 Bitfield16 = 11;
+// .Bitfield16 Bitfield16 = 11;
 inline bool SunspecPointData::has_bitfield16() const {
+  return kind_case() == kBitfield16;
+}
+inline bool SunspecPointData::_internal_has_bitfield16() const {
   return kind_case() == kBitfield16;
 }
 inline void SunspecPointData::set_has_bitfield16() {
@@ -7402,31 +7982,80 @@ inline void SunspecPointData::set_has_bitfield16() {
 inline void SunspecPointData::clear_bitfield16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kBitfield16) {
-    _impl_.kind_.bitfield16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.bitfield16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::bitfield16() const {
+inline ::Bitfield16* PROTOBUF_NULLABLE SunspecPointData::release_bitfield16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Bitfield16)
+  if (kind_case() == kBitfield16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield16*>(_impl_.kind_.bitfield16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.bitfield16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Bitfield16& SunspecPointData::_internal_bitfield16() const {
+  return kind_case() == kBitfield16 ? static_cast<const ::Bitfield16&>(*reinterpret_cast<::Bitfield16*>(_impl_.kind_.bitfield16_))
+                     : reinterpret_cast<const ::Bitfield16&>(::_Bitfield16_default_instance_);
+}
+inline const ::Bitfield16& SunspecPointData::bitfield16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield16)
   return _internal_bitfield16();
 }
-inline void SunspecPointData::set_bitfield16(::uint32_t value) {
+inline ::Bitfield16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_bitfield16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Bitfield16)
+  if (kind_case() == kBitfield16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield16*>(_impl_.kind_.bitfield16_);
+    _impl_.kind_.bitfield16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_bitfield16(
+    ::Bitfield16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_bitfield16();
+    _impl_.kind_.bitfield16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Bitfield16)
+}
+inline ::Bitfield16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_bitfield16() {
   if (kind_case() != kBitfield16) {
     clear_kind();
     set_has_bitfield16();
+    _impl_.kind_.bitfield16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Bitfield16>(GetArena()));
   }
-  _impl_.kind_.bitfield16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield16)
+  return reinterpret_cast<::Bitfield16*>(_impl_.kind_.bitfield16_);
 }
-inline ::uint32_t SunspecPointData::_internal_bitfield16() const {
-  if (kind_case() == kBitfield16) {
-    return _impl_.kind_.bitfield16_;
-  }
-  return 0u;
+inline ::Bitfield16* PROTOBUF_NONNULL SunspecPointData::mutable_bitfield16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Bitfield16* _msg = _internal_mutable_bitfield16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Bitfield16)
+  return _msg;
 }
 
-// uint32 Bitfield32 = 12;
+// .Bitfield32 Bitfield32 = 12;
 inline bool SunspecPointData::has_bitfield32() const {
+  return kind_case() == kBitfield32;
+}
+inline bool SunspecPointData::_internal_has_bitfield32() const {
   return kind_case() == kBitfield32;
 }
 inline void SunspecPointData::set_has_bitfield32() {
@@ -7435,31 +8064,80 @@ inline void SunspecPointData::set_has_bitfield32() {
 inline void SunspecPointData::clear_bitfield32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kBitfield32) {
-    _impl_.kind_.bitfield32_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.bitfield32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield32_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::bitfield32() const {
+inline ::Bitfield32* PROTOBUF_NULLABLE SunspecPointData::release_bitfield32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Bitfield32)
+  if (kind_case() == kBitfield32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield32*>(_impl_.kind_.bitfield32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.bitfield32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Bitfield32& SunspecPointData::_internal_bitfield32() const {
+  return kind_case() == kBitfield32 ? static_cast<const ::Bitfield32&>(*reinterpret_cast<::Bitfield32*>(_impl_.kind_.bitfield32_))
+                     : reinterpret_cast<const ::Bitfield32&>(::_Bitfield32_default_instance_);
+}
+inline const ::Bitfield32& SunspecPointData::bitfield32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield32)
   return _internal_bitfield32();
 }
-inline void SunspecPointData::set_bitfield32(::uint32_t value) {
+inline ::Bitfield32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_bitfield32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Bitfield32)
+  if (kind_case() == kBitfield32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield32*>(_impl_.kind_.bitfield32_);
+    _impl_.kind_.bitfield32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_bitfield32(
+    ::Bitfield32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_bitfield32();
+    _impl_.kind_.bitfield32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Bitfield32)
+}
+inline ::Bitfield32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_bitfield32() {
   if (kind_case() != kBitfield32) {
     clear_kind();
     set_has_bitfield32();
+    _impl_.kind_.bitfield32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Bitfield32>(GetArena()));
   }
-  _impl_.kind_.bitfield32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield32)
+  return reinterpret_cast<::Bitfield32*>(_impl_.kind_.bitfield32_);
 }
-inline ::uint32_t SunspecPointData::_internal_bitfield32() const {
-  if (kind_case() == kBitfield32) {
-    return _impl_.kind_.bitfield32_;
-  }
-  return 0u;
+inline ::Bitfield32* PROTOBUF_NONNULL SunspecPointData::mutable_bitfield32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Bitfield32* _msg = _internal_mutable_bitfield32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Bitfield32)
+  return _msg;
 }
 
-// uint64 Bitfield64 = 13;
+// .Bitfield64 Bitfield64 = 13;
 inline bool SunspecPointData::has_bitfield64() const {
+  return kind_case() == kBitfield64;
+}
+inline bool SunspecPointData::_internal_has_bitfield64() const {
   return kind_case() == kBitfield64;
 }
 inline void SunspecPointData::set_has_bitfield64() {
@@ -7468,31 +8146,80 @@ inline void SunspecPointData::set_has_bitfield64() {
 inline void SunspecPointData::clear_bitfield64() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kBitfield64) {
-    _impl_.kind_.bitfield64_ = ::uint64_t{0u};
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.bitfield64_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield64_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint64_t SunspecPointData::bitfield64() const {
+inline ::Bitfield64* PROTOBUF_NULLABLE SunspecPointData::release_bitfield64() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Bitfield64)
+  if (kind_case() == kBitfield64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield64*>(_impl_.kind_.bitfield64_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.bitfield64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Bitfield64& SunspecPointData::_internal_bitfield64() const {
+  return kind_case() == kBitfield64 ? static_cast<const ::Bitfield64&>(*reinterpret_cast<::Bitfield64*>(_impl_.kind_.bitfield64_))
+                     : reinterpret_cast<const ::Bitfield64&>(::_Bitfield64_default_instance_);
+}
+inline const ::Bitfield64& SunspecPointData::bitfield64() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Bitfield64)
   return _internal_bitfield64();
 }
-inline void SunspecPointData::set_bitfield64(::uint64_t value) {
+inline ::Bitfield64* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_bitfield64() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Bitfield64)
+  if (kind_case() == kBitfield64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Bitfield64*>(_impl_.kind_.bitfield64_);
+    _impl_.kind_.bitfield64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_bitfield64(
+    ::Bitfield64* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_bitfield64();
+    _impl_.kind_.bitfield64_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Bitfield64)
+}
+inline ::Bitfield64* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_bitfield64() {
   if (kind_case() != kBitfield64) {
     clear_kind();
     set_has_bitfield64();
+    _impl_.kind_.bitfield64_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Bitfield64>(GetArena()));
   }
-  _impl_.kind_.bitfield64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Bitfield64)
+  return reinterpret_cast<::Bitfield64*>(_impl_.kind_.bitfield64_);
 }
-inline ::uint64_t SunspecPointData::_internal_bitfield64() const {
-  if (kind_case() == kBitfield64) {
-    return _impl_.kind_.bitfield64_;
-  }
-  return ::uint64_t{0u};
+inline ::Bitfield64* PROTOBUF_NONNULL SunspecPointData::mutable_bitfield64()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Bitfield64* _msg = _internal_mutable_bitfield64();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Bitfield64)
+  return _msg;
 }
 
-// uint32 Enum16 = 14;
+// .Enum16 Enum16 = 14;
 inline bool SunspecPointData::has_enum16() const {
+  return kind_case() == kEnum16;
+}
+inline bool SunspecPointData::_internal_has_enum16() const {
   return kind_case() == kEnum16;
 }
 inline void SunspecPointData::set_has_enum16() {
@@ -7501,31 +8228,80 @@ inline void SunspecPointData::set_has_enum16() {
 inline void SunspecPointData::clear_enum16() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kEnum16) {
-    _impl_.kind_.enum16_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.enum16_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.enum16_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::enum16() const {
+inline ::Enum16* PROTOBUF_NULLABLE SunspecPointData::release_enum16() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Enum16)
+  if (kind_case() == kEnum16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Enum16*>(_impl_.kind_.enum16_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.enum16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Enum16& SunspecPointData::_internal_enum16() const {
+  return kind_case() == kEnum16 ? static_cast<const ::Enum16&>(*reinterpret_cast<::Enum16*>(_impl_.kind_.enum16_))
+                     : reinterpret_cast<const ::Enum16&>(::_Enum16_default_instance_);
+}
+inline const ::Enum16& SunspecPointData::enum16() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Enum16)
   return _internal_enum16();
 }
-inline void SunspecPointData::set_enum16(::uint32_t value) {
+inline ::Enum16* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_enum16() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Enum16)
+  if (kind_case() == kEnum16) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Enum16*>(_impl_.kind_.enum16_);
+    _impl_.kind_.enum16_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_enum16(
+    ::Enum16* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_enum16();
+    _impl_.kind_.enum16_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Enum16)
+}
+inline ::Enum16* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_enum16() {
   if (kind_case() != kEnum16) {
     clear_kind();
     set_has_enum16();
+    _impl_.kind_.enum16_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Enum16>(GetArena()));
   }
-  _impl_.kind_.enum16_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Enum16)
+  return reinterpret_cast<::Enum16*>(_impl_.kind_.enum16_);
 }
-inline ::uint32_t SunspecPointData::_internal_enum16() const {
-  if (kind_case() == kEnum16) {
-    return _impl_.kind_.enum16_;
-  }
-  return 0u;
+inline ::Enum16* PROTOBUF_NONNULL SunspecPointData::mutable_enum16()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Enum16* _msg = _internal_mutable_enum16();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Enum16)
+  return _msg;
 }
 
-// uint32 Enum32 = 15;
+// .Enum32 Enum32 = 15;
 inline bool SunspecPointData::has_enum32() const {
+  return kind_case() == kEnum32;
+}
+inline bool SunspecPointData::_internal_has_enum32() const {
   return kind_case() == kEnum32;
 }
 inline void SunspecPointData::set_has_enum32() {
@@ -7534,31 +8310,80 @@ inline void SunspecPointData::set_has_enum32() {
 inline void SunspecPointData::clear_enum32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kEnum32) {
-    _impl_.kind_.enum32_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.enum32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.enum32_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::enum32() const {
+inline ::Enum32* PROTOBUF_NULLABLE SunspecPointData::release_enum32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Enum32)
+  if (kind_case() == kEnum32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Enum32*>(_impl_.kind_.enum32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.enum32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Enum32& SunspecPointData::_internal_enum32() const {
+  return kind_case() == kEnum32 ? static_cast<const ::Enum32&>(*reinterpret_cast<::Enum32*>(_impl_.kind_.enum32_))
+                     : reinterpret_cast<const ::Enum32&>(::_Enum32_default_instance_);
+}
+inline const ::Enum32& SunspecPointData::enum32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Enum32)
   return _internal_enum32();
 }
-inline void SunspecPointData::set_enum32(::uint32_t value) {
+inline ::Enum32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_enum32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Enum32)
+  if (kind_case() == kEnum32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Enum32*>(_impl_.kind_.enum32_);
+    _impl_.kind_.enum32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_enum32(
+    ::Enum32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_enum32();
+    _impl_.kind_.enum32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Enum32)
+}
+inline ::Enum32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_enum32() {
   if (kind_case() != kEnum32) {
     clear_kind();
     set_has_enum32();
+    _impl_.kind_.enum32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Enum32>(GetArena()));
   }
-  _impl_.kind_.enum32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Enum32)
+  return reinterpret_cast<::Enum32*>(_impl_.kind_.enum32_);
 }
-inline ::uint32_t SunspecPointData::_internal_enum32() const {
-  if (kind_case() == kEnum32) {
-    return _impl_.kind_.enum32_;
-  }
-  return 0u;
+inline ::Enum32* PROTOBUF_NONNULL SunspecPointData::mutable_enum32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Enum32* _msg = _internal_mutable_enum32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Enum32)
+  return _msg;
 }
 
-// float Float32 = 16;
+// .Float32 Float32 = 16;
 inline bool SunspecPointData::has_float32() const {
+  return kind_case() == kFloat32;
+}
+inline bool SunspecPointData::_internal_has_float32() const {
   return kind_case() == kFloat32;
 }
 inline void SunspecPointData::set_has_float32() {
@@ -7567,31 +8392,80 @@ inline void SunspecPointData::set_has_float32() {
 inline void SunspecPointData::clear_float32() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kFloat32) {
-    _impl_.kind_.float32_ = 0;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.float32_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.float32_);
+    }
     clear_has_kind();
   }
 }
-inline float SunspecPointData::float32() const {
+inline ::Float32* PROTOBUF_NULLABLE SunspecPointData::release_float32() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Float32)
+  if (kind_case() == kFloat32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Float32*>(_impl_.kind_.float32_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.float32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Float32& SunspecPointData::_internal_float32() const {
+  return kind_case() == kFloat32 ? static_cast<const ::Float32&>(*reinterpret_cast<::Float32*>(_impl_.kind_.float32_))
+                     : reinterpret_cast<const ::Float32&>(::_Float32_default_instance_);
+}
+inline const ::Float32& SunspecPointData::float32() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Float32)
   return _internal_float32();
 }
-inline void SunspecPointData::set_float32(float value) {
+inline ::Float32* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_float32() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Float32)
+  if (kind_case() == kFloat32) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Float32*>(_impl_.kind_.float32_);
+    _impl_.kind_.float32_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_float32(
+    ::Float32* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_float32();
+    _impl_.kind_.float32_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Float32)
+}
+inline ::Float32* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_float32() {
   if (kind_case() != kFloat32) {
     clear_kind();
     set_has_float32();
+    _impl_.kind_.float32_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Float32>(GetArena()));
   }
-  _impl_.kind_.float32_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Float32)
+  return reinterpret_cast<::Float32*>(_impl_.kind_.float32_);
 }
-inline float SunspecPointData::_internal_float32() const {
-  if (kind_case() == kFloat32) {
-    return _impl_.kind_.float32_;
-  }
-  return 0;
+inline ::Float32* PROTOBUF_NONNULL SunspecPointData::mutable_float32()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Float32* _msg = _internal_mutable_float32();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Float32)
+  return _msg;
 }
 
-// double Float64 = 17;
+// .Float64 Float64 = 17;
 inline bool SunspecPointData::has_float64() const {
+  return kind_case() == kFloat64;
+}
+inline bool SunspecPointData::_internal_has_float64() const {
   return kind_case() == kFloat64;
 }
 inline void SunspecPointData::set_has_float64() {
@@ -7600,27 +8474,73 @@ inline void SunspecPointData::set_has_float64() {
 inline void SunspecPointData::clear_float64() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kFloat64) {
-    _impl_.kind_.float64_ = 0;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.float64_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.float64_);
+    }
     clear_has_kind();
   }
 }
-inline double SunspecPointData::float64() const {
+inline ::Float64* PROTOBUF_NULLABLE SunspecPointData::release_float64() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.Float64)
+  if (kind_case() == kFloat64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Float64*>(_impl_.kind_.float64_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.float64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::Float64& SunspecPointData::_internal_float64() const {
+  return kind_case() == kFloat64 ? static_cast<const ::Float64&>(*reinterpret_cast<::Float64*>(_impl_.kind_.float64_))
+                     : reinterpret_cast<const ::Float64&>(::_Float64_default_instance_);
+}
+inline const ::Float64& SunspecPointData::float64() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.Float64)
   return _internal_float64();
 }
-inline void SunspecPointData::set_float64(double value) {
+inline ::Float64* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_float64() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.Float64)
+  if (kind_case() == kFloat64) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::Float64*>(_impl_.kind_.float64_);
+    _impl_.kind_.float64_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_float64(
+    ::Float64* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_float64();
+    _impl_.kind_.float64_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.Float64)
+}
+inline ::Float64* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_float64() {
   if (kind_case() != kFloat64) {
     clear_kind();
     set_has_float64();
+    _impl_.kind_.float64_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::Float64>(GetArena()));
   }
-  _impl_.kind_.float64_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.Float64)
+  return reinterpret_cast<::Float64*>(_impl_.kind_.float64_);
 }
-inline double SunspecPointData::_internal_float64() const {
-  if (kind_case() == kFloat64) {
-    return _impl_.kind_.float64_;
-  }
-  return 0;
+inline ::Float64* PROTOBUF_NONNULL SunspecPointData::mutable_float64()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::Float64* _msg = _internal_mutable_float64();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.Float64)
+  return _msg;
 }
 
 // .Stringx Stringx = 18;
@@ -7705,8 +8625,11 @@ inline ::Stringx* PROTOBUF_NONNULL SunspecPointData::mutable_stringx()
   return _msg;
 }
 
-// uint32 SunsSf = 19;
+// .SunsSf SunsSf = 19;
 inline bool SunspecPointData::has_sunssf() const {
+  return kind_case() == kSunsSf;
+}
+inline bool SunspecPointData::_internal_has_sunssf() const {
   return kind_case() == kSunsSf;
 }
 inline void SunspecPointData::set_has_sunssf() {
@@ -7715,27 +8638,73 @@ inline void SunspecPointData::set_has_sunssf() {
 inline void SunspecPointData::clear_sunssf() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   if (kind_case() == kSunsSf) {
-    _impl_.kind_.sunssf_ = 0u;
+    if (GetArena() == nullptr) {
+      delete _impl_.kind_.sunssf_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sunssf_);
+    }
     clear_has_kind();
   }
 }
-inline ::uint32_t SunspecPointData::sunssf() const {
+inline ::SunsSf* PROTOBUF_NULLABLE SunspecPointData::release_sunssf() {
+  // @@protoc_insertion_point(field_release:SunspecPointData.SunsSf)
+  if (kind_case() == kSunsSf) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::SunsSf*>(_impl_.kind_.sunssf_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.kind_.sunssf_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::SunsSf& SunspecPointData::_internal_sunssf() const {
+  return kind_case() == kSunsSf ? static_cast<const ::SunsSf&>(*reinterpret_cast<::SunsSf*>(_impl_.kind_.sunssf_))
+                     : reinterpret_cast<const ::SunsSf&>(::_SunsSf_default_instance_);
+}
+inline const ::SunsSf& SunspecPointData::sunssf() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
   // @@protoc_insertion_point(field_get:SunspecPointData.SunsSf)
   return _internal_sunssf();
 }
-inline void SunspecPointData::set_sunssf(::uint32_t value) {
+inline ::SunsSf* PROTOBUF_NULLABLE SunspecPointData::unsafe_arena_release_sunssf() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SunspecPointData.SunsSf)
+  if (kind_case() == kSunsSf) {
+    clear_has_kind();
+    auto* temp = reinterpret_cast<::SunsSf*>(_impl_.kind_.sunssf_);
+    _impl_.kind_.sunssf_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void SunspecPointData::unsafe_arena_set_allocated_sunssf(
+    ::SunsSf* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_kind();
+  if (value) {
+    set_has_sunssf();
+    _impl_.kind_.sunssf_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SunspecPointData.SunsSf)
+}
+inline ::SunsSf* PROTOBUF_NONNULL SunspecPointData::_internal_mutable_sunssf() {
   if (kind_case() != kSunsSf) {
     clear_kind();
     set_has_sunssf();
+    _impl_.kind_.sunssf_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::SunsSf>(GetArena()));
   }
-  _impl_.kind_.sunssf_ = value;
-  // @@protoc_insertion_point(field_set:SunspecPointData.SunsSf)
+  return reinterpret_cast<::SunsSf*>(_impl_.kind_.sunssf_);
 }
-inline ::uint32_t SunspecPointData::_internal_sunssf() const {
-  if (kind_case() == kSunsSf) {
-    return _impl_.kind_.sunssf_;
-  }
-  return 0u;
+inline ::SunsSf* PROTOBUF_NONNULL SunspecPointData::mutable_sunssf()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::SunsSf* _msg = _internal_mutable_sunssf();
+  // @@protoc_insertion_point(field_mutable:SunspecPointData.SunsSf)
+  return _msg;
 }
 
 // .Pad16 Pad16 = 20;

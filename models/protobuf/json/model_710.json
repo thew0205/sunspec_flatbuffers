@@ -43,7 +43,9 @@
             {
                 "id": "Ena",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -75,7 +77,9 @@
             {
                 "id": "AdptCrvRslt",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -124,7 +128,9 @@
             {
                 "id": "Hz_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -139,7 +145,9 @@
             {
                 "id": "Tms_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -162,7 +170,9 @@
                     {
                         "id": "ReadOnly",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -210,7 +220,9 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -225,7 +237,9 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -278,7 +292,9 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -293,7 +309,9 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -346,7 +364,9 @@
                                     {
                                         "id": "Hz",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,
@@ -361,7 +381,9 @@
                                     {
                                         "id": "Tms",
                                         "data": {
-                                            "Uint32": null
+                                            "Uint32": {
+                                                "value": null
+                                            }
                                         },
                                         "count": 1,
                                         "count_point_id": null,

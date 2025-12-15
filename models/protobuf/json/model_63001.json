@@ -43,7 +43,9 @@
             {
                 "id": "sunssf_1",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "sunssf_2",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -73,7 +77,9 @@
             {
                 "id": "sunssf_3",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +94,9 @@
             {
                 "id": "sunssf_4",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -103,7 +111,9 @@
             {
                 "id": "int16_1",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -118,7 +128,9 @@
             {
                 "id": "int16_2",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -133,7 +145,9 @@
             {
                 "id": "int16_3",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +162,9 @@
             {
                 "id": "int16_4",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -163,7 +179,9 @@
             {
                 "id": "int16_5",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +196,9 @@
             {
                 "id": "int16_u",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -295,7 +315,9 @@
             {
                 "id": "acc16",
                 "data": {
-                    "Acc16": null
+                    "Acc16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -310,7 +332,9 @@
             {
                 "id": "acc16_u",
                 "data": {
-                    "Acc16": null
+                    "Acc16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -325,7 +349,9 @@
             {
                 "id": "enum16",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -340,7 +366,9 @@
             {
                 "id": "enum16_u",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -355,7 +383,9 @@
             {
                 "id": "bitfield16",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -370,7 +400,9 @@
             {
                 "id": "bitfield16_u",
                 "data": {
-                    "Bitfield16": null
+                    "Bitfield16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -385,7 +417,9 @@
             {
                 "id": "int32_1",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -400,7 +434,9 @@
             {
                 "id": "int32_2",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -415,7 +451,9 @@
             {
                 "id": "int32_3",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -430,7 +468,9 @@
             {
                 "id": "int32_4",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -445,7 +485,9 @@
             {
                 "id": "int32_5",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -460,7 +502,9 @@
             {
                 "id": "int32_u",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -475,7 +519,9 @@
             {
                 "id": "uint32_1",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -490,7 +536,9 @@
             {
                 "id": "uint32_2",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -505,7 +553,9 @@
             {
                 "id": "uint32_3",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -520,7 +570,9 @@
             {
                 "id": "uint32_4",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -535,7 +587,9 @@
             {
                 "id": "uint32_5",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -550,7 +604,9 @@
             {
                 "id": "uint32_u",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -565,7 +621,9 @@
             {
                 "id": "acc32",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -580,7 +638,9 @@
             {
                 "id": "acc32_u",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -595,7 +655,9 @@
             {
                 "id": "enum32",
                 "data": {
-                    "Enum32": null
+                    "Enum32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -610,7 +672,9 @@
             {
                 "id": "enum32_u",
                 "data": {
-                    "Enum32": null
+                    "Enum32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -625,7 +689,9 @@
             {
                 "id": "bitfield32",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -640,7 +706,9 @@
             {
                 "id": "bitfield32_u",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -685,7 +753,9 @@
             {
                 "id": "int64",
                 "data": {
-                    "Sint64": null
+                    "Sint64": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -700,7 +770,9 @@
             {
                 "id": "int64_u",
                 "data": {
-                    "Sint64": null
+                    "Sint64": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -715,7 +787,9 @@
             {
                 "id": "acc64",
                 "data": {
-                    "Acc64": null
+                    "Acc64": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -730,7 +804,9 @@
             {
                 "id": "acc64_u",
                 "data": {
-                    "Acc64": null
+                    "Acc64": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -775,7 +851,9 @@
             {
                 "id": "float32",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -790,7 +868,9 @@
             {
                 "id": "float32_u",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -839,7 +919,9 @@
             {
                 "id": "sunssf_5",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -854,7 +936,9 @@
             {
                 "id": "sunssf_6",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -869,7 +953,9 @@
             {
                 "id": "sunssf_7",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -909,7 +995,9 @@
                     {
                         "id": "sunssf_8",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -924,7 +1012,9 @@
                     {
                         "id": "int16_11",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -939,7 +1029,9 @@
                     {
                         "id": "int16_12",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -954,7 +1046,9 @@
                     {
                         "id": "int16_u",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1037,7 +1131,9 @@
                     {
                         "id": "int32",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1052,7 +1148,9 @@
                     {
                         "id": "int32_u",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1067,7 +1165,9 @@
                     {
                         "id": "uint32",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1082,7 +1182,9 @@
                     {
                         "id": "uint32_u",
                         "data": {
-                            "Uint32": null
+                            "Uint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -1097,7 +1199,9 @@
                     {
                         "id": "sunssf_9",
                         "data": {
-                            "SunsSf": null
+                            "SunsSf": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

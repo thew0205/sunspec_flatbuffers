@@ -7,7 +7,6 @@
 
 #include "sunspec_adapter.h"
 
-#include "model_definitions.h"
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"

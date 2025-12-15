@@ -42,12 +42,12 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<uint16_t>
     models_.clear(); // Clear any previously initialized models.
     int modelCount = 0;
 
-    std::vector<const SunspecModelDef *> modelDefList;
+    std::vector<SunspecModelDefWrapper> modelDefList;
     for (const auto &modelId : supportedModels)
     {
-        const SunspecModelDef *const modelDef = Sunspec::getModelDefinition(modelId);
+        SunspecModelDefWrapper modelDef;
         // The models not supported will return nullptr.
-        if (nullptr != modelDef)
+        if (Sunspec::getModelDefinition(modelId, &modelDef))
         {
             modelDefList.push_back(modelDef);
             modelCount++;
@@ -56,7 +56,7 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<uint16_t>
     models_.reserve(modelCount);
     for (size_t i = 0; i < modelCount; i++)
     {
-        models_.emplace_back(*modelDefList[i], *this).initTopLevel();
+        models_.emplace_back(modelDefList[i], *this).initTopLevel();
     }
     return modelCount;
 }

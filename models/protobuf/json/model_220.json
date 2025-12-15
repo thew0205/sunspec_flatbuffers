@@ -43,7 +43,9 @@
             {
                 "id": "A",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "A_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -73,7 +77,9 @@
             {
                 "id": "PhV",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +94,9 @@
             {
                 "id": "V_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -103,7 +111,9 @@
             {
                 "id": "Hz",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -118,7 +128,9 @@
             {
                 "id": "Hz_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -133,7 +145,9 @@
             {
                 "id": "W",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +162,9 @@
             {
                 "id": "W_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -163,7 +179,9 @@
             {
                 "id": "VA",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +196,9 @@
             {
                 "id": "VA_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -193,7 +213,9 @@
             {
                 "id": "VAR",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -208,7 +230,9 @@
             {
                 "id": "VAR_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -223,7 +247,9 @@
             {
                 "id": "PF",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -238,7 +264,9 @@
             {
                 "id": "PF_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -253,7 +281,9 @@
             {
                 "id": "TotWhExp",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -268,7 +298,9 @@
             {
                 "id": "TotWhImp",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -283,7 +315,9 @@
             {
                 "id": "TotWh_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -298,7 +332,9 @@
             {
                 "id": "TotVAhExp",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -313,7 +349,9 @@
             {
                 "id": "TotVAhImp",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -328,7 +366,9 @@
             {
                 "id": "TotVAh_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -343,7 +383,9 @@
             {
                 "id": "TotVArhImpQ1",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -358,7 +400,9 @@
             {
                 "id": "TotVArhImpQ2",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -373,7 +417,9 @@
             {
                 "id": "TotVArhExpQ3",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +434,9 @@
             {
                 "id": "TotVArhExpQ4",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -403,7 +451,9 @@
             {
                 "id": "TotVArh_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -418,7 +468,9 @@
             {
                 "id": "Evt",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -450,7 +502,9 @@
             {
                 "id": "Ts",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -499,7 +553,9 @@
             {
                 "id": "Alg",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

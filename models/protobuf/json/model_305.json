@@ -94,7 +94,9 @@
             {
                 "id": "Lat",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -109,7 +111,9 @@
             {
                 "id": "Long",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -124,7 +128,9 @@
             {
                 "id": "Alt",
                 "data": {
-                    "Sint32": null
+                    "Sint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

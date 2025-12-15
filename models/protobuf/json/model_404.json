@@ -43,7 +43,9 @@
             {
                 "id": "DCA_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "DCAhr_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -73,7 +77,9 @@
             {
                 "id": "DCV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +94,9 @@
             {
                 "id": "DCW_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -103,7 +111,9 @@
             {
                 "id": "DCWh_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -152,7 +162,9 @@
             {
                 "id": "Evt",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -167,7 +179,9 @@
             {
                 "id": "EvtVnd",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -182,7 +196,9 @@
             {
                 "id": "DCA",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -197,7 +213,9 @@
             {
                 "id": "DCAhr",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -212,7 +230,9 @@
             {
                 "id": "DCV",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -227,7 +247,9 @@
             {
                 "id": "Tmp",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -242,7 +264,9 @@
             {
                 "id": "DCW",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -257,7 +281,9 @@
             {
                 "id": "DCPR",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -272,7 +298,9 @@
             {
                 "id": "DCWh",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -287,7 +315,9 @@
             {
                 "id": "InDCA_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -302,7 +332,9 @@
             {
                 "id": "InDCAhr_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -317,7 +349,9 @@
             {
                 "id": "InDCV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -332,7 +366,9 @@
             {
                 "id": "InDCW_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -347,7 +383,9 @@
             {
                 "id": "InDCWh_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -387,7 +425,9 @@
                     {
                         "id": "InEvt",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -402,7 +442,9 @@
                     {
                         "id": "InEvtVnd",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -417,7 +459,9 @@
                     {
                         "id": "InDCA",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -432,7 +476,9 @@
                     {
                         "id": "InDCAhr",
                         "data": {
-                            "Acc32": null
+                            "Acc32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -447,7 +493,9 @@
                     {
                         "id": "InDCV",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -462,7 +510,9 @@
                     {
                         "id": "InDCW",
                         "data": {
-                            "Sint16": null
+                            "Sint16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -477,7 +527,9 @@
                     {
                         "id": "InDCWh",
                         "data": {
-                            "Acc32": null
+                            "Acc32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

@@ -79,25 +79,25 @@ message Eui48 {
 
 message SunspecPointData {
   oneof kind {
-    int32      Sint16      = 1;
-    int32      Sint32      = 2;
-    int64      Sint64      = 3;
-    uint32       Raw16       = 4;
+    Sint16      Sint16      = 1;
+    Sint32      Sint32      = 2;
+    Sint64      Sint64      = 3;
+    Raw16       Raw16       = 4;
     Uint16      Uint16      = 5;
-    uint32      Uint32      = 6;
-    uint64      Uint64      = 7;
-    uint32       Acc16       = 8;
-    uint32       Acc32       = 9;
-    uint64       Acc64       = 10;
-    uint32  Bitfield16  = 11;
-    uint32  Bitfield32  = 12;
-    uint64  Bitfield64  = 13;
-    uint32      Enum16      = 14;
-    uint32      Enum32      = 15;
-    float     Float32     = 16;
-    double     Float64     = 17;
+    Uint32      Uint32      = 6;
+    Uint64      Uint64      = 7;
+    Acc16       Acc16       = 8;
+    Acc32       Acc32       = 9;
+    Acc64       Acc64       = 10;
+    Bitfield16  Bitfield16  = 11;
+    Bitfield32  Bitfield32  = 12;
+    Bitfield64  Bitfield64  = 13;
+    Enum16      Enum16      = 14;
+    Enum32      Enum32      = 15;
+    Float32     Float32     = 16;
+    Float64     Float64     = 17;
     Stringx     Stringx     = 18;
-    uint32      SunsSf     = 19;
+    SunsSf      SunsSf     = 19;
     Pad16       Pad16       = 20;
     IpAddr      IpAddr     = 21;
     Ipv6Addr    Ipv6Addr   = 22;

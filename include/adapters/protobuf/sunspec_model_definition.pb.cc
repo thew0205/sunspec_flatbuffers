@@ -1024,42 +1024,46 @@ const char descriptor_table_protodef_sunspec_5fmodel_5fdefinition_2eproto[] ABSL
     "\n\005Pad16\022\r\n\005value\030\001 \001(\r\"H\n\006IpAddr\022\016\n\006octe"
     "t1\030\001 \001(\r\022\016\n\006octet2\030\002 \001(\r\022\016\n\006octet3\030\003 \001(\r"
     "\022\016\n\006octet4\030\004 \001(\r\"\031\n\010Ipv6Addr\022\r\n\005value\030\001 "
-    "\001(\014\"\026\n\005Eui48\022\r\n\005value\030\001 \001(\014\"\372\003\n\020SunspecP"
-    "ointData\022\020\n\006Sint16\030\001 \001(\005H\000\022\020\n\006Sint32\030\002 \001"
-    "(\005H\000\022\020\n\006Sint64\030\003 \001(\003H\000\022\017\n\005Raw16\030\004 \001(\rH\000\022"
-    "\031\n\006Uint16\030\005 \001(\0132\007.Uint16H\000\022\020\n\006Uint32\030\006 \001"
-    "(\rH\000\022\020\n\006Uint64\030\007 \001(\004H\000\022\017\n\005Acc16\030\010 \001(\rH\000\022"
-    "\017\n\005Acc32\030\t \001(\rH\000\022\017\n\005Acc64\030\n \001(\004H\000\022\024\n\nBit"
-    "field16\030\013 \001(\rH\000\022\024\n\nBitfield32\030\014 \001(\rH\000\022\024\n"
-    "\nBitfield64\030\r \001(\004H\000\022\020\n\006Enum16\030\016 \001(\rH\000\022\020\n"
-    "\006Enum32\030\017 \001(\rH\000\022\021\n\007Float32\030\020 \001(\002H\000\022\021\n\007Fl"
-    "oat64\030\021 \001(\001H\000\022\033\n\007Stringx\030\022 \001(\0132\010.Stringx"
-    "H\000\022\020\n\006SunsSf\030\023 \001(\rH\000\022\027\n\005Pad16\030\024 \001(\0132\006.Pa"
-    "d16H\000\022\031\n\006IpAddr\030\025 \001(\0132\007.IpAddrH\000\022\035\n\010Ipv6"
-    "Addr\030\026 \001(\0132\t.Ipv6AddrH\000\022\027\n\005Eui48\030\027 \001(\0132\006"
-    ".Eui48H\000B\006\n\004kind\"\374\001\n\017SunspecPointDef\022\n\n\002"
-    "id\030\001 \001(\t\022\037\n\004data\030\002 \001(\0132\021.SunspecPointDat"
-    "a\022\r\n\005count\030\003 \001(\r\022\026\n\016count_point_id\030\004 \001(\t"
-    "\022\014\n\004size\030\005 \001(\r\022\n\n\002sf\030\006 \001(\005\022\r\n\005sf_id\030\007 \001("
-    "\t\022\r\n\005units\030\010 \001(\t\022#\n\006access\030\t \001(\0162\023.Sunsp"
-    "ecPointAccess\022)\n\tmandatory\030\n \001(\0162\026.Sunsp"
-    "ecPointMandatory\022\r\n\005label\030\013 \001(\t\"\270\001\n\017Suns"
-    "pecGroupDef\022\n\n\002id\030\001 \001(\t\022\037\n\004type\030\002 \001(\0162\021."
-    "SunspecGroupType\022\r\n\005count\030\003 \001(\r\022\026\n\016count"
-    "_point_id\030\004 \001(\t\022 \n\006points\030\005 \003(\0132\020.Sunspe"
-    "cPointDef\022 \n\006groups\030\006 \003(\0132\020.SunspecGroup"
-    "Def\022\r\n\005label\030\007 \001(\t\">\n\017SunspecModelDef\022\n\n"
-    "\002id\030\001 \001(\r\022\037\n\005group\030\002 \001(\0132\020.SunspecGroupD"
-    "ef*%\n\022SunspecPointAccess\022\006\n\002kR\020\000\022\007\n\003kRW\020"
-    "\001*\'\n\025SunspecPointMandatory\022\006\n\002kM\020\000\022\006\n\002kO"
-    "\020\001*)\n\020SunspecGroupType\022\n\n\006kGroup\020\000\022\t\n\005kS"
-    "ync\020\001b\006proto3"
+    "\001(\014\"\026\n\005Eui48\022\r\n\005value\030\001 \001(\014\"\235\005\n\020SunspecP"
+    "ointData\022\031\n\006Sint16\030\001 \001(\0132\007.Sint16H\000\022\031\n\006S"
+    "int32\030\002 \001(\0132\007.Sint32H\000\022\031\n\006Sint64\030\003 \001(\0132\007"
+    ".Sint64H\000\022\027\n\005Raw16\030\004 \001(\0132\006.Raw16H\000\022\031\n\006Ui"
+    "nt16\030\005 \001(\0132\007.Uint16H\000\022\031\n\006Uint32\030\006 \001(\0132\007."
+    "Uint32H\000\022\031\n\006Uint64\030\007 \001(\0132\007.Uint64H\000\022\027\n\005A"
+    "cc16\030\010 \001(\0132\006.Acc16H\000\022\027\n\005Acc32\030\t \001(\0132\006.Ac"
+    "c32H\000\022\027\n\005Acc64\030\n \001(\0132\006.Acc64H\000\022!\n\nBitfie"
+    "ld16\030\013 \001(\0132\013.Bitfield16H\000\022!\n\nBitfield32\030"
+    "\014 \001(\0132\013.Bitfield32H\000\022!\n\nBitfield64\030\r \001(\013"
+    "2\013.Bitfield64H\000\022\031\n\006Enum16\030\016 \001(\0132\007.Enum16"
+    "H\000\022\031\n\006Enum32\030\017 \001(\0132\007.Enum32H\000\022\033\n\007Float32"
+    "\030\020 \001(\0132\010.Float32H\000\022\033\n\007Float64\030\021 \001(\0132\010.Fl"
+    "oat64H\000\022\033\n\007Stringx\030\022 \001(\0132\010.StringxH\000\022\031\n\006"
+    "SunsSf\030\023 \001(\0132\007.SunsSfH\000\022\027\n\005Pad16\030\024 \001(\0132\006"
+    ".Pad16H\000\022\031\n\006IpAddr\030\025 \001(\0132\007.IpAddrH\000\022\035\n\010I"
+    "pv6Addr\030\026 \001(\0132\t.Ipv6AddrH\000\022\027\n\005Eui48\030\027 \001("
+    "\0132\006.Eui48H\000B\006\n\004kind\"\374\001\n\017SunspecPointDef\022"
+    "\n\n\002id\030\001 \001(\t\022\037\n\004data\030\002 \001(\0132\021.SunspecPoint"
+    "Data\022\r\n\005count\030\003 \001(\r\022\026\n\016count_point_id\030\004 "
+    "\001(\t\022\014\n\004size\030\005 \001(\r\022\n\n\002sf\030\006 \001(\005\022\r\n\005sf_id\030\007"
+    " \001(\t\022\r\n\005units\030\010 \001(\t\022#\n\006access\030\t \001(\0162\023.Su"
+    "nspecPointAccess\022)\n\tmandatory\030\n \001(\0162\026.Su"
+    "nspecPointMandatory\022\r\n\005label\030\013 \001(\t\"\270\001\n\017S"
+    "unspecGroupDef\022\n\n\002id\030\001 \001(\t\022\037\n\004type\030\002 \001(\016"
+    "2\021.SunspecGroupType\022\r\n\005count\030\003 \001(\r\022\026\n\016co"
+    "unt_point_id\030\004 \001(\t\022 \n\006points\030\005 \003(\0132\020.Sun"
+    "specPointDef\022 \n\006groups\030\006 \003(\0132\020.SunspecGr"
+    "oupDef\022\r\n\005label\030\007 \001(\t\">\n\017SunspecModelDef"
+    "\022\n\n\002id\030\001 \001(\r\022\037\n\005group\030\002 \001(\0132\020.SunspecGro"
+    "upDef*%\n\022SunspecPointAccess\022\006\n\002kR\020\000\022\007\n\003k"
+    "RW\020\001*\'\n\025SunspecPointMandatory\022\006\n\002kM\020\000\022\006\n"
+    "\002kO\020\001*)\n\020SunspecGroupType\022\n\n\006kGroup\020\000\022\t\n"
+    "\005kSync\020\001b\006proto3"
 };
 static ::absl::once_flag descriptor_table_sunspec_5fmodel_5fdefinition_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_sunspec_5fmodel_5fdefinition_2eproto = {
     false,
     false,
-    1813,
+    1976,
     descriptor_table_protodef_sunspec_5fmodel_5fdefinition_2eproto,
     "sunspec_model_definition.proto",
     &descriptor_table_sunspec_5fmodel_5fdefinition_2eproto_once,
@@ -6970,6 +6974,58 @@ class SunspecPointData::_Internal {
       PROTOBUF_FIELD_OFFSET(::SunspecPointData, _impl_._oneof_case_);
 };
 
+void SunspecPointData::set_allocated_sint16(::Sint16* PROTOBUF_NULLABLE sint16) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (sint16) {
+    ::google::protobuf::Arena* submessage_arena = sint16->GetArena();
+    if (message_arena != submessage_arena) {
+      sint16 = ::google::protobuf::internal::GetOwnedMessage(message_arena, sint16, submessage_arena);
+    }
+    set_has_sint16();
+    _impl_.kind_.sint16_ = sint16;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Sint16)
+}
+void SunspecPointData::set_allocated_sint32(::Sint32* PROTOBUF_NULLABLE sint32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (sint32) {
+    ::google::protobuf::Arena* submessage_arena = sint32->GetArena();
+    if (message_arena != submessage_arena) {
+      sint32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, sint32, submessage_arena);
+    }
+    set_has_sint32();
+    _impl_.kind_.sint32_ = sint32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Sint32)
+}
+void SunspecPointData::set_allocated_sint64(::Sint64* PROTOBUF_NULLABLE sint64) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (sint64) {
+    ::google::protobuf::Arena* submessage_arena = sint64->GetArena();
+    if (message_arena != submessage_arena) {
+      sint64 = ::google::protobuf::internal::GetOwnedMessage(message_arena, sint64, submessage_arena);
+    }
+    set_has_sint64();
+    _impl_.kind_.sint64_ = sint64;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Sint64)
+}
+void SunspecPointData::set_allocated_raw16(::Raw16* PROTOBUF_NULLABLE raw16) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (raw16) {
+    ::google::protobuf::Arena* submessage_arena = raw16->GetArena();
+    if (message_arena != submessage_arena) {
+      raw16 = ::google::protobuf::internal::GetOwnedMessage(message_arena, raw16, submessage_arena);
+    }
+    set_has_raw16();
+    _impl_.kind_.raw16_ = raw16;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Raw16)
+}
 void SunspecPointData::set_allocated_uint16(::Uint16* PROTOBUF_NULLABLE uint16) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_kind();
@@ -6983,6 +7039,162 @@ void SunspecPointData::set_allocated_uint16(::Uint16* PROTOBUF_NULLABLE uint16) 
   }
   // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Uint16)
 }
+void SunspecPointData::set_allocated_uint32(::Uint32* PROTOBUF_NULLABLE uint32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (uint32) {
+    ::google::protobuf::Arena* submessage_arena = uint32->GetArena();
+    if (message_arena != submessage_arena) {
+      uint32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, uint32, submessage_arena);
+    }
+    set_has_uint32();
+    _impl_.kind_.uint32_ = uint32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Uint32)
+}
+void SunspecPointData::set_allocated_uint64(::Uint64* PROTOBUF_NULLABLE uint64) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (uint64) {
+    ::google::protobuf::Arena* submessage_arena = uint64->GetArena();
+    if (message_arena != submessage_arena) {
+      uint64 = ::google::protobuf::internal::GetOwnedMessage(message_arena, uint64, submessage_arena);
+    }
+    set_has_uint64();
+    _impl_.kind_.uint64_ = uint64;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Uint64)
+}
+void SunspecPointData::set_allocated_acc16(::Acc16* PROTOBUF_NULLABLE acc16) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (acc16) {
+    ::google::protobuf::Arena* submessage_arena = acc16->GetArena();
+    if (message_arena != submessage_arena) {
+      acc16 = ::google::protobuf::internal::GetOwnedMessage(message_arena, acc16, submessage_arena);
+    }
+    set_has_acc16();
+    _impl_.kind_.acc16_ = acc16;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Acc16)
+}
+void SunspecPointData::set_allocated_acc32(::Acc32* PROTOBUF_NULLABLE acc32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (acc32) {
+    ::google::protobuf::Arena* submessage_arena = acc32->GetArena();
+    if (message_arena != submessage_arena) {
+      acc32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, acc32, submessage_arena);
+    }
+    set_has_acc32();
+    _impl_.kind_.acc32_ = acc32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Acc32)
+}
+void SunspecPointData::set_allocated_acc64(::Acc64* PROTOBUF_NULLABLE acc64) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (acc64) {
+    ::google::protobuf::Arena* submessage_arena = acc64->GetArena();
+    if (message_arena != submessage_arena) {
+      acc64 = ::google::protobuf::internal::GetOwnedMessage(message_arena, acc64, submessage_arena);
+    }
+    set_has_acc64();
+    _impl_.kind_.acc64_ = acc64;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Acc64)
+}
+void SunspecPointData::set_allocated_bitfield16(::Bitfield16* PROTOBUF_NULLABLE bitfield16) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (bitfield16) {
+    ::google::protobuf::Arena* submessage_arena = bitfield16->GetArena();
+    if (message_arena != submessage_arena) {
+      bitfield16 = ::google::protobuf::internal::GetOwnedMessage(message_arena, bitfield16, submessage_arena);
+    }
+    set_has_bitfield16();
+    _impl_.kind_.bitfield16_ = bitfield16;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Bitfield16)
+}
+void SunspecPointData::set_allocated_bitfield32(::Bitfield32* PROTOBUF_NULLABLE bitfield32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (bitfield32) {
+    ::google::protobuf::Arena* submessage_arena = bitfield32->GetArena();
+    if (message_arena != submessage_arena) {
+      bitfield32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, bitfield32, submessage_arena);
+    }
+    set_has_bitfield32();
+    _impl_.kind_.bitfield32_ = bitfield32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Bitfield32)
+}
+void SunspecPointData::set_allocated_bitfield64(::Bitfield64* PROTOBUF_NULLABLE bitfield64) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (bitfield64) {
+    ::google::protobuf::Arena* submessage_arena = bitfield64->GetArena();
+    if (message_arena != submessage_arena) {
+      bitfield64 = ::google::protobuf::internal::GetOwnedMessage(message_arena, bitfield64, submessage_arena);
+    }
+    set_has_bitfield64();
+    _impl_.kind_.bitfield64_ = bitfield64;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Bitfield64)
+}
+void SunspecPointData::set_allocated_enum16(::Enum16* PROTOBUF_NULLABLE enum16) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (enum16) {
+    ::google::protobuf::Arena* submessage_arena = enum16->GetArena();
+    if (message_arena != submessage_arena) {
+      enum16 = ::google::protobuf::internal::GetOwnedMessage(message_arena, enum16, submessage_arena);
+    }
+    set_has_enum16();
+    _impl_.kind_.enum16_ = enum16;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Enum16)
+}
+void SunspecPointData::set_allocated_enum32(::Enum32* PROTOBUF_NULLABLE enum32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (enum32) {
+    ::google::protobuf::Arena* submessage_arena = enum32->GetArena();
+    if (message_arena != submessage_arena) {
+      enum32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, enum32, submessage_arena);
+    }
+    set_has_enum32();
+    _impl_.kind_.enum32_ = enum32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Enum32)
+}
+void SunspecPointData::set_allocated_float32(::Float32* PROTOBUF_NULLABLE float32) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (float32) {
+    ::google::protobuf::Arena* submessage_arena = float32->GetArena();
+    if (message_arena != submessage_arena) {
+      float32 = ::google::protobuf::internal::GetOwnedMessage(message_arena, float32, submessage_arena);
+    }
+    set_has_float32();
+    _impl_.kind_.float32_ = float32;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Float32)
+}
+void SunspecPointData::set_allocated_float64(::Float64* PROTOBUF_NULLABLE float64) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (float64) {
+    ::google::protobuf::Arena* submessage_arena = float64->GetArena();
+    if (message_arena != submessage_arena) {
+      float64 = ::google::protobuf::internal::GetOwnedMessage(message_arena, float64, submessage_arena);
+    }
+    set_has_float64();
+    _impl_.kind_.float64_ = float64;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Float64)
+}
 void SunspecPointData::set_allocated_stringx(::Stringx* PROTOBUF_NULLABLE stringx) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_kind();
@@ -6995,6 +7207,19 @@ void SunspecPointData::set_allocated_stringx(::Stringx* PROTOBUF_NULLABLE string
     _impl_.kind_.stringx_ = stringx;
   }
   // @@protoc_insertion_point(field_set_allocated:SunspecPointData.Stringx)
+}
+void SunspecPointData::set_allocated_sunssf(::SunsSf* PROTOBUF_NULLABLE sunssf) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_kind();
+  if (sunssf) {
+    ::google::protobuf::Arena* submessage_arena = sunssf->GetArena();
+    if (message_arena != submessage_arena) {
+      sunssf = ::google::protobuf::internal::GetOwnedMessage(message_arena, sunssf, submessage_arena);
+    }
+    set_has_sunssf();
+    _impl_.kind_.sunssf_ = sunssf;
+  }
+  // @@protoc_insertion_point(field_set_allocated:SunspecPointData.SunsSf)
 }
 void SunspecPointData::set_allocated_pad16(::Pad16* PROTOBUF_NULLABLE pad16) {
   ::google::protobuf::Arena* message_arena = GetArena();
@@ -7082,61 +7307,61 @@ SunspecPointData::SunspecPointData(
     case KIND_NOT_SET:
       break;
       case kSint16:
-        _impl_.kind_.sint16_ = from._impl_.kind_.sint16_;
+        _impl_.kind_.sint16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint16_);
         break;
       case kSint32:
-        _impl_.kind_.sint32_ = from._impl_.kind_.sint32_;
+        _impl_.kind_.sint32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint32_);
         break;
       case kSint64:
-        _impl_.kind_.sint64_ = from._impl_.kind_.sint64_;
+        _impl_.kind_.sint64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint64_);
         break;
       case kRaw16:
-        _impl_.kind_.raw16_ = from._impl_.kind_.raw16_;
+        _impl_.kind_.raw16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.raw16_);
         break;
       case kUint16:
         _impl_.kind_.uint16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.uint16_);
         break;
       case kUint32:
-        _impl_.kind_.uint32_ = from._impl_.kind_.uint32_;
+        _impl_.kind_.uint32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.uint32_);
         break;
       case kUint64:
-        _impl_.kind_.uint64_ = from._impl_.kind_.uint64_;
+        _impl_.kind_.uint64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.uint64_);
         break;
       case kAcc16:
-        _impl_.kind_.acc16_ = from._impl_.kind_.acc16_;
+        _impl_.kind_.acc16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc16_);
         break;
       case kAcc32:
-        _impl_.kind_.acc32_ = from._impl_.kind_.acc32_;
+        _impl_.kind_.acc32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc32_);
         break;
       case kAcc64:
-        _impl_.kind_.acc64_ = from._impl_.kind_.acc64_;
+        _impl_.kind_.acc64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc64_);
         break;
       case kBitfield16:
-        _impl_.kind_.bitfield16_ = from._impl_.kind_.bitfield16_;
+        _impl_.kind_.bitfield16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield16_);
         break;
       case kBitfield32:
-        _impl_.kind_.bitfield32_ = from._impl_.kind_.bitfield32_;
+        _impl_.kind_.bitfield32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield32_);
         break;
       case kBitfield64:
-        _impl_.kind_.bitfield64_ = from._impl_.kind_.bitfield64_;
+        _impl_.kind_.bitfield64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield64_);
         break;
       case kEnum16:
-        _impl_.kind_.enum16_ = from._impl_.kind_.enum16_;
+        _impl_.kind_.enum16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.enum16_);
         break;
       case kEnum32:
-        _impl_.kind_.enum32_ = from._impl_.kind_.enum32_;
+        _impl_.kind_.enum32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.enum32_);
         break;
       case kFloat32:
-        _impl_.kind_.float32_ = from._impl_.kind_.float32_;
+        _impl_.kind_.float32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.float32_);
         break;
       case kFloat64:
-        _impl_.kind_.float64_ = from._impl_.kind_.float64_;
+        _impl_.kind_.float64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.float64_);
         break;
       case kStringx:
         _impl_.kind_.stringx_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.stringx_);
         break;
       case kSunsSf:
-        _impl_.kind_.sunssf_ = from._impl_.kind_.sunssf_;
+        _impl_.kind_.sunssf_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sunssf_);
         break;
       case kPad16:
         _impl_.kind_.pad16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.pad16_);
@@ -7186,19 +7411,35 @@ void SunspecPointData::clear_kind() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   switch (kind_case()) {
     case kSint16: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.sint16_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint16_);
+      }
       break;
     }
     case kSint32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.sint32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint32_);
+      }
       break;
     }
     case kSint64: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.sint64_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sint64_);
+      }
       break;
     }
     case kRaw16: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.raw16_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.raw16_);
+      }
       break;
     }
     case kUint16: {
@@ -7210,51 +7451,99 @@ void SunspecPointData::clear_kind() {
       break;
     }
     case kUint32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.uint32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.uint32_);
+      }
       break;
     }
     case kUint64: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.uint64_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.uint64_);
+      }
       break;
     }
     case kAcc16: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.acc16_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc16_);
+      }
       break;
     }
     case kAcc32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.acc32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc32_);
+      }
       break;
     }
     case kAcc64: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.acc64_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.acc64_);
+      }
       break;
     }
     case kBitfield16: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.bitfield16_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield16_);
+      }
       break;
     }
     case kBitfield32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.bitfield32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield32_);
+      }
       break;
     }
     case kBitfield64: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.bitfield64_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.bitfield64_);
+      }
       break;
     }
     case kEnum16: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.enum16_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.enum16_);
+      }
       break;
     }
     case kEnum32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.enum32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.enum32_);
+      }
       break;
     }
     case kFloat32: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.float32_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.float32_);
+      }
       break;
     }
     case kFloat64: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.float64_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.float64_);
+      }
       break;
     }
     case kStringx: {
@@ -7266,7 +7555,11 @@ void SunspecPointData::clear_kind() {
       break;
     }
     case kSunsSf: {
-      // No need to clear
+      if (GetArena() == nullptr) {
+        delete _impl_.kind_.sunssf_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.kind_.sunssf_);
+      }
       break;
     }
     case kPad16: {
@@ -7352,7 +7645,7 @@ SunspecPointData::GetClassData() const {
   return SunspecPointData_class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 23, 6, 0, 2>
+const ::_pbi::TcParseTable<0, 23, 23, 0, 2>
 SunspecPointData::_table_ = {
   {
     0,  // no _has_bits_
@@ -7362,7 +7655,7 @@ SunspecPointData::_table_ = {
     4286578688,  // skipmap
     offsetof(decltype(_table_), field_entries),
     23,  // num_field_entries
-    6,  // num_aux_entries
+    23,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     SunspecPointData_class_data_.base(),
     nullptr,  // post_loop_handler
@@ -7375,56 +7668,73 @@ SunspecPointData::_table_ = {
   }}, {{
     65535, 65535
   }}, {{
-    // int32 Sint16 = 1;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kInt32)},
-    // int32 Sint32 = 2;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kInt32)},
-    // int64 Sint64 = 3;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint64_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kInt64)},
-    // uint32 Raw16 = 4;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.raw16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
+    // .Sint16 Sint16 = 1;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Sint32 Sint32 = 2;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint32_), _Internal::kOneofCaseOffset + 0, 1, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Sint64 Sint64 = 3;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sint64_), _Internal::kOneofCaseOffset + 0, 2, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Raw16 Raw16 = 4;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.raw16_), _Internal::kOneofCaseOffset + 0, 3, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .Uint16 Uint16 = 5;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // uint32 Uint32 = 6;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint64 Uint64 = 7;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint64_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt64)},
-    // uint32 Acc16 = 8;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint32 Acc32 = 9;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint64 Acc64 = 10;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc64_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt64)},
-    // uint32 Bitfield16 = 11;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint32 Bitfield32 = 12;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint64 Bitfield64 = 13;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield64_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt64)},
-    // uint32 Enum16 = 14;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.enum16_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // uint32 Enum32 = 15;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.enum32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
-    // float Float32 = 16;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.float32_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kFloat)},
-    // double Float64 = 17;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.float64_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kDouble)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint16_), _Internal::kOneofCaseOffset + 0, 4, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Uint32 Uint32 = 6;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint32_), _Internal::kOneofCaseOffset + 0, 5, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Uint64 Uint64 = 7;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.uint64_), _Internal::kOneofCaseOffset + 0, 6, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Acc16 Acc16 = 8;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc16_), _Internal::kOneofCaseOffset + 0, 7, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Acc32 Acc32 = 9;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc32_), _Internal::kOneofCaseOffset + 0, 8, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Acc64 Acc64 = 10;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.acc64_), _Internal::kOneofCaseOffset + 0, 9, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Bitfield16 Bitfield16 = 11;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield16_), _Internal::kOneofCaseOffset + 0, 10, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Bitfield32 Bitfield32 = 12;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield32_), _Internal::kOneofCaseOffset + 0, 11, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Bitfield64 Bitfield64 = 13;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.bitfield64_), _Internal::kOneofCaseOffset + 0, 12, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Enum16 Enum16 = 14;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.enum16_), _Internal::kOneofCaseOffset + 0, 13, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Enum32 Enum32 = 15;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.enum32_), _Internal::kOneofCaseOffset + 0, 14, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Float32 Float32 = 16;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.float32_), _Internal::kOneofCaseOffset + 0, 15, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .Float64 Float64 = 17;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.float64_), _Internal::kOneofCaseOffset + 0, 16, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .Stringx Stringx = 18;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.stringx_), _Internal::kOneofCaseOffset + 0, 1, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // uint32 SunsSf = 19;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sunssf_), _Internal::kOneofCaseOffset + 0, 0, (0 | ::_fl::kFcOneof | ::_fl::kUInt32)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.stringx_), _Internal::kOneofCaseOffset + 0, 17, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .SunsSf SunsSf = 19;
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.sunssf_), _Internal::kOneofCaseOffset + 0, 18, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .Pad16 Pad16 = 20;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.pad16_), _Internal::kOneofCaseOffset + 0, 2, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.pad16_), _Internal::kOneofCaseOffset + 0, 19, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .IpAddr IpAddr = 21;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.ipaddr_), _Internal::kOneofCaseOffset + 0, 3, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.ipaddr_), _Internal::kOneofCaseOffset + 0, 20, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .Ipv6Addr Ipv6Addr = 22;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.ipv6addr_), _Internal::kOneofCaseOffset + 0, 4, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.ipv6addr_), _Internal::kOneofCaseOffset + 0, 21, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .Eui48 Eui48 = 23;
-    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.eui48_), _Internal::kOneofCaseOffset + 0, 5, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    {PROTOBUF_FIELD_OFFSET(SunspecPointData, _impl_.kind_.eui48_), _Internal::kOneofCaseOffset + 0, 22, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
   }},
   {{
+      {::_pbi::TcParser::GetTable<::Sint16>()},
+      {::_pbi::TcParser::GetTable<::Sint32>()},
+      {::_pbi::TcParser::GetTable<::Sint64>()},
+      {::_pbi::TcParser::GetTable<::Raw16>()},
       {::_pbi::TcParser::GetTable<::Uint16>()},
+      {::_pbi::TcParser::GetTable<::Uint32>()},
+      {::_pbi::TcParser::GetTable<::Uint64>()},
+      {::_pbi::TcParser::GetTable<::Acc16>()},
+      {::_pbi::TcParser::GetTable<::Acc32>()},
+      {::_pbi::TcParser::GetTable<::Acc64>()},
+      {::_pbi::TcParser::GetTable<::Bitfield16>()},
+      {::_pbi::TcParser::GetTable<::Bitfield32>()},
+      {::_pbi::TcParser::GetTable<::Bitfield64>()},
+      {::_pbi::TcParser::GetTable<::Enum16>()},
+      {::_pbi::TcParser::GetTable<::Enum32>()},
+      {::_pbi::TcParser::GetTable<::Float32>()},
+      {::_pbi::TcParser::GetTable<::Float64>()},
       {::_pbi::TcParser::GetTable<::Stringx>()},
+      {::_pbi::TcParser::GetTable<::SunsSf>()},
       {::_pbi::TcParser::GetTable<::Pad16>()},
       {::_pbi::TcParser::GetTable<::IpAddr>()},
       {::_pbi::TcParser::GetTable<::Ipv6Addr>()},
@@ -7464,27 +7774,27 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
 
   switch (this_.kind_case()) {
     case kSint16: {
-      target =
-          ::google::protobuf::internal::WireFormatLite::WriteInt32ToArrayWithField<1>(
-              stream, this_._internal_sint16(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          1, *this_._impl_.kind_.sint16_, this_._impl_.kind_.sint16_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kSint32: {
-      target =
-          ::google::protobuf::internal::WireFormatLite::WriteInt32ToArrayWithField<2>(
-              stream, this_._internal_sint32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          2, *this_._impl_.kind_.sint32_, this_._impl_.kind_.sint32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kSint64: {
-      target =
-          ::google::protobuf::internal::WireFormatLite::WriteInt64ToArrayWithField<3>(
-              stream, this_._internal_sint64(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          3, *this_._impl_.kind_.sint64_, this_._impl_.kind_.sint64_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kRaw16: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          4, this_._internal_raw16(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          4, *this_._impl_.kind_.raw16_, this_._impl_.kind_.raw16_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kUint16: {
@@ -7494,75 +7804,75 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
       break;
     }
     case kUint32: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          6, this_._internal_uint32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          6, *this_._impl_.kind_.uint32_, this_._impl_.kind_.uint32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kUint64: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
-          7, this_._internal_uint64(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          7, *this_._impl_.kind_.uint64_, this_._impl_.kind_.uint64_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kAcc16: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          8, this_._internal_acc16(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          8, *this_._impl_.kind_.acc16_, this_._impl_.kind_.acc16_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kAcc32: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          9, this_._internal_acc32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          9, *this_._impl_.kind_.acc32_, this_._impl_.kind_.acc32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kAcc64: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
-          10, this_._internal_acc64(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          10, *this_._impl_.kind_.acc64_, this_._impl_.kind_.acc64_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kBitfield16: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          11, this_._internal_bitfield16(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          11, *this_._impl_.kind_.bitfield16_, this_._impl_.kind_.bitfield16_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kBitfield32: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          12, this_._internal_bitfield32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          12, *this_._impl_.kind_.bitfield32_, this_._impl_.kind_.bitfield32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kBitfield64: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
-          13, this_._internal_bitfield64(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          13, *this_._impl_.kind_.bitfield64_, this_._impl_.kind_.bitfield64_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kEnum16: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          14, this_._internal_enum16(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          14, *this_._impl_.kind_.enum16_, this_._impl_.kind_.enum16_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kEnum32: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          15, this_._internal_enum32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          15, *this_._impl_.kind_.enum32_, this_._impl_.kind_.enum32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kFloat32: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteFloatToArray(
-          16, this_._internal_float32(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          16, *this_._impl_.kind_.float32_, this_._impl_.kind_.float32_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kFloat64: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteDoubleToArray(
-          17, this_._internal_float64(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          17, *this_._impl_.kind_.float64_, this_._impl_.kind_.float64_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kStringx: {
@@ -7572,9 +7882,9 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
       break;
     }
     case kSunsSf: {
-      target = stream->EnsureSpace(target);
-      target = ::_pbi::WireFormatLite::WriteUInt32ToArray(
-          19, this_._internal_sunssf(), target);
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          19, *this_._impl_.kind_.sunssf_, this_._impl_.kind_.sunssf_->GetCachedSize(), target,
+          stream);
       break;
     }
     case kPad16: {
@@ -7628,28 +7938,28 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
   (void)cached_has_bits;
 
   switch (this_.kind_case()) {
-    // int32 Sint16 = 1;
+    // .Sint16 Sint16 = 1;
     case kSint16: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-          this_._internal_sint16());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.sint16_);
       break;
     }
-    // int32 Sint32 = 2;
+    // .Sint32 Sint32 = 2;
     case kSint32: {
-      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-          this_._internal_sint32());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.sint32_);
       break;
     }
-    // int64 Sint64 = 3;
+    // .Sint64 Sint64 = 3;
     case kSint64: {
-      total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
-          this_._internal_sint64());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.sint64_);
       break;
     }
-    // uint32 Raw16 = 4;
+    // .Raw16 Raw16 = 4;
     case kRaw16: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_raw16());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.raw16_);
       break;
     }
     // .Uint16 Uint16 = 5;
@@ -7658,74 +7968,76 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.uint16_);
       break;
     }
-    // uint32 Uint32 = 6;
+    // .Uint32 Uint32 = 6;
     case kUint32: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_uint32());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.uint32_);
       break;
     }
-    // uint64 Uint64 = 7;
+    // .Uint64 Uint64 = 7;
     case kUint64: {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
-          this_._internal_uint64());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.uint64_);
       break;
     }
-    // uint32 Acc16 = 8;
+    // .Acc16 Acc16 = 8;
     case kAcc16: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_acc16());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.acc16_);
       break;
     }
-    // uint32 Acc32 = 9;
+    // .Acc32 Acc32 = 9;
     case kAcc32: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_acc32());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.acc32_);
       break;
     }
-    // uint64 Acc64 = 10;
+    // .Acc64 Acc64 = 10;
     case kAcc64: {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
-          this_._internal_acc64());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.acc64_);
       break;
     }
-    // uint32 Bitfield16 = 11;
+    // .Bitfield16 Bitfield16 = 11;
     case kBitfield16: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_bitfield16());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.bitfield16_);
       break;
     }
-    // uint32 Bitfield32 = 12;
+    // .Bitfield32 Bitfield32 = 12;
     case kBitfield32: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_bitfield32());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.bitfield32_);
       break;
     }
-    // uint64 Bitfield64 = 13;
+    // .Bitfield64 Bitfield64 = 13;
     case kBitfield64: {
-      total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
-          this_._internal_bitfield64());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.bitfield64_);
       break;
     }
-    // uint32 Enum16 = 14;
+    // .Enum16 Enum16 = 14;
     case kEnum16: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_enum16());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.enum16_);
       break;
     }
-    // uint32 Enum32 = 15;
+    // .Enum32 Enum32 = 15;
     case kEnum32: {
-      total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(
-          this_._internal_enum32());
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.enum32_);
       break;
     }
-    // float Float32 = 16;
+    // .Float32 Float32 = 16;
     case kFloat32: {
-      total_size += 6;
+      total_size += 2 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.float32_);
       break;
     }
-    // double Float64 = 17;
+    // .Float64 Float64 = 17;
     case kFloat64: {
-      total_size += 10;
+      total_size += 2 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.float64_);
       break;
     }
     // .Stringx Stringx = 18;
@@ -7734,10 +8046,10 @@ PROTOBUF_NOINLINE void SunspecPointData::Clear() {
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.stringx_);
       break;
     }
-    // uint32 SunsSf = 19;
+    // .SunsSf SunsSf = 19;
     case kSunsSf: {
-      total_size += 2 + ::_pbi::WireFormatLite::UInt32Size(
-                                      this_._internal_sunssf());
+      total_size += 2 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.kind_.sunssf_);
       break;
     }
     // .Pad16 Pad16 = 20;
@@ -7799,19 +8111,35 @@ void SunspecPointData::MergeImpl(::google::protobuf::MessageLite& to_msg,
 
     switch (oneof_from_case) {
       case kSint16: {
-        _this->_impl_.kind_.sint16_ = from._impl_.kind_.sint16_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.sint16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint16_);
+        } else {
+          _this->_impl_.kind_.sint16_->MergeFrom(*from._impl_.kind_.sint16_);
+        }
         break;
       }
       case kSint32: {
-        _this->_impl_.kind_.sint32_ = from._impl_.kind_.sint32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.sint32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint32_);
+        } else {
+          _this->_impl_.kind_.sint32_->MergeFrom(*from._impl_.kind_.sint32_);
+        }
         break;
       }
       case kSint64: {
-        _this->_impl_.kind_.sint64_ = from._impl_.kind_.sint64_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.sint64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sint64_);
+        } else {
+          _this->_impl_.kind_.sint64_->MergeFrom(*from._impl_.kind_.sint64_);
+        }
         break;
       }
       case kRaw16: {
-        _this->_impl_.kind_.raw16_ = from._impl_.kind_.raw16_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.raw16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.raw16_);
+        } else {
+          _this->_impl_.kind_.raw16_->MergeFrom(*from._impl_.kind_.raw16_);
+        }
         break;
       }
       case kUint16: {
@@ -7823,51 +8151,99 @@ void SunspecPointData::MergeImpl(::google::protobuf::MessageLite& to_msg,
         break;
       }
       case kUint32: {
-        _this->_impl_.kind_.uint32_ = from._impl_.kind_.uint32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.uint32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.uint32_);
+        } else {
+          _this->_impl_.kind_.uint32_->MergeFrom(*from._impl_.kind_.uint32_);
+        }
         break;
       }
       case kUint64: {
-        _this->_impl_.kind_.uint64_ = from._impl_.kind_.uint64_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.uint64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.uint64_);
+        } else {
+          _this->_impl_.kind_.uint64_->MergeFrom(*from._impl_.kind_.uint64_);
+        }
         break;
       }
       case kAcc16: {
-        _this->_impl_.kind_.acc16_ = from._impl_.kind_.acc16_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.acc16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc16_);
+        } else {
+          _this->_impl_.kind_.acc16_->MergeFrom(*from._impl_.kind_.acc16_);
+        }
         break;
       }
       case kAcc32: {
-        _this->_impl_.kind_.acc32_ = from._impl_.kind_.acc32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.acc32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc32_);
+        } else {
+          _this->_impl_.kind_.acc32_->MergeFrom(*from._impl_.kind_.acc32_);
+        }
         break;
       }
       case kAcc64: {
-        _this->_impl_.kind_.acc64_ = from._impl_.kind_.acc64_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.acc64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.acc64_);
+        } else {
+          _this->_impl_.kind_.acc64_->MergeFrom(*from._impl_.kind_.acc64_);
+        }
         break;
       }
       case kBitfield16: {
-        _this->_impl_.kind_.bitfield16_ = from._impl_.kind_.bitfield16_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.bitfield16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield16_);
+        } else {
+          _this->_impl_.kind_.bitfield16_->MergeFrom(*from._impl_.kind_.bitfield16_);
+        }
         break;
       }
       case kBitfield32: {
-        _this->_impl_.kind_.bitfield32_ = from._impl_.kind_.bitfield32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.bitfield32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield32_);
+        } else {
+          _this->_impl_.kind_.bitfield32_->MergeFrom(*from._impl_.kind_.bitfield32_);
+        }
         break;
       }
       case kBitfield64: {
-        _this->_impl_.kind_.bitfield64_ = from._impl_.kind_.bitfield64_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.bitfield64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.bitfield64_);
+        } else {
+          _this->_impl_.kind_.bitfield64_->MergeFrom(*from._impl_.kind_.bitfield64_);
+        }
         break;
       }
       case kEnum16: {
-        _this->_impl_.kind_.enum16_ = from._impl_.kind_.enum16_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.enum16_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.enum16_);
+        } else {
+          _this->_impl_.kind_.enum16_->MergeFrom(*from._impl_.kind_.enum16_);
+        }
         break;
       }
       case kEnum32: {
-        _this->_impl_.kind_.enum32_ = from._impl_.kind_.enum32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.enum32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.enum32_);
+        } else {
+          _this->_impl_.kind_.enum32_->MergeFrom(*from._impl_.kind_.enum32_);
+        }
         break;
       }
       case kFloat32: {
-        _this->_impl_.kind_.float32_ = from._impl_.kind_.float32_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.float32_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.float32_);
+        } else {
+          _this->_impl_.kind_.float32_->MergeFrom(*from._impl_.kind_.float32_);
+        }
         break;
       }
       case kFloat64: {
-        _this->_impl_.kind_.float64_ = from._impl_.kind_.float64_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.float64_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.float64_);
+        } else {
+          _this->_impl_.kind_.float64_->MergeFrom(*from._impl_.kind_.float64_);
+        }
         break;
       }
       case kStringx: {
@@ -7879,7 +8255,11 @@ void SunspecPointData::MergeImpl(::google::protobuf::MessageLite& to_msg,
         break;
       }
       case kSunsSf: {
-        _this->_impl_.kind_.sunssf_ = from._impl_.kind_.sunssf_;
+        if (oneof_needs_init) {
+          _this->_impl_.kind_.sunssf_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.kind_.sunssf_);
+        } else {
+          _this->_impl_.kind_.sunssf_->MergeFrom(*from._impl_.kind_.sunssf_);
+        }
         break;
       }
       case kPad16: {

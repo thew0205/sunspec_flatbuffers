@@ -298,7 +298,9 @@
             {
                 "id": "TmpMax",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -330,7 +332,9 @@
             {
                 "id": "TmpMin",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -362,7 +366,9 @@
             {
                 "id": "TmpAvg",
                 "data": {
-                    "Sint16": null
+                    "Sint16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -377,7 +383,9 @@
             {
                 "id": "Evt1",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -392,7 +400,9 @@
             {
                 "id": "Evt2",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -407,7 +417,9 @@
             {
                 "id": "EvtVnd1",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -422,7 +434,9 @@
             {
                 "id": "EvtVnd2",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -437,7 +451,9 @@
             {
                 "id": "ModV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -452,7 +468,9 @@
             {
                 "id": "CellV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -467,7 +485,9 @@
             {
                 "id": "Tmp_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -482,7 +502,9 @@
             {
                 "id": "SoC_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -497,7 +519,9 @@
             {
                 "id": "OCV_SF",
                 "data": {
-                    "SunsSf": null
+                    "SunsSf": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -571,7 +595,9 @@
                     {
                         "id": "ModSt",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -756,7 +782,9 @@
                     {
                         "id": "ModConSt",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -771,7 +799,9 @@
                     {
                         "id": "ModEvt1",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -786,7 +816,9 @@
                     {
                         "id": "ModEvt2",
                         "data": {
-                            "Bitfield32": null
+                            "Bitfield32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -801,7 +833,9 @@
                     {
                         "id": "ModConFail",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -816,7 +850,9 @@
                     {
                         "id": "ModSetEna",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -831,7 +867,9 @@
                     {
                         "id": "ModSetCon",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -846,7 +884,9 @@
                     {
                         "id": "ModDisRsn",
                         "data": {
-                            "Enum16": null
+                            "Enum16": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

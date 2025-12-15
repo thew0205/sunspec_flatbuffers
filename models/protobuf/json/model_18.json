@@ -60,7 +60,9 @@
             {
                 "id": "IMEI",
                 "data": {
-                    "Uint32": null
+                    "Uint32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

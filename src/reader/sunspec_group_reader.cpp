@@ -93,10 +93,10 @@ void SunspecGroupReader::initPoints()
     groups_.clear();
 
     vector<size_t> pointCounts;
-    vector<const SunspecPointDefWrapper *> pointDefs;
+    vector< SunspecPointDefWrapper > pointDefs;
     size_t totalPointCount = 0;
 
-    for (const auto &pointDef : def_.points())
+    for (const auto pointDef : def_.points())
     {
         uint16_t count = pointDef.count();
         if (0 == count)
@@ -113,7 +113,7 @@ void SunspecGroupReader::initPoints()
 
         totalPointCount += count;
         pointCounts.push_back(count);
-        pointDefs.push_back(&pointDef);
+        pointDefs.push_back(pointDef);
     }
     assert(pointCounts.size() == pointDefs.size() /*, "Internal error: pointCounts and pointDefs size mismatch"*/);
 
@@ -130,8 +130,8 @@ void SunspecGroupReader::initPoints()
 
         for (size_t i = 0; i < count; i++)
         {
-            points_.emplace_back(*pointDef, &modbusBuffer_[registerLength_], *this);
-            registerLength_ += pointDef->size();
+            points_.emplace_back(pointDef, &modbusBuffer_[registerLength_], *this);
+            registerLength_ += pointDef.size();
         }
     }
 }
@@ -140,10 +140,10 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 {
 
     vector<size_t> groupCounts;
-    vector<const SunspecGroupDefWrapper *> groupDefs;
+    vector< SunspecGroupDefWrapper > groupDefs;
     size_t totalGroupCount = 0;
 
-    for (const auto &groupDef : def_.groups())
+    for (const auto groupDef : def_.groups())
     {
         std::string temp{groupDef.id()};
         uint16_t count = groupDef.count();
@@ -158,7 +158,7 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 
         totalGroupCount += count;
         groupCounts.push_back(count);
-        groupDefs.push_back(&groupDef);
+        groupDefs.push_back(groupDef);
     }
 
     assert(groupCounts.size() == groupDefs.size() /*, "Internal error: groupCounts and groupDefs size mismatch"*/);
@@ -174,7 +174,7 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
         }
         for (size_t i = 0; i < count; i++)
         {
-            groups_.emplace_back(*groupDef, &modbusBuffer_[registerLength_], this).initPoints();
+            groups_.emplace_back(groupDef, &modbusBuffer_[registerLength_], this).initPoints();
             registerLength_ += groups_.back().initGroups(0xFFFF);
         }
     }

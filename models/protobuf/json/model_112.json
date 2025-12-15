@@ -43,7 +43,9 @@
             {
                 "id": "A",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -58,7 +60,9 @@
             {
                 "id": "AphA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -73,7 +77,9 @@
             {
                 "id": "AphB",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -88,7 +94,9 @@
             {
                 "id": "AphC",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -103,7 +111,9 @@
             {
                 "id": "PPVphAB",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -118,7 +128,9 @@
             {
                 "id": "PPVphBC",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -133,7 +145,9 @@
             {
                 "id": "PPVphCA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -148,7 +162,9 @@
             {
                 "id": "PhVphA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -163,7 +179,9 @@
             {
                 "id": "PhVphB",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -178,7 +196,9 @@
             {
                 "id": "PhVphC",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -193,7 +213,9 @@
             {
                 "id": "W",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -208,7 +230,9 @@
             {
                 "id": "Hz",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -223,7 +247,9 @@
             {
                 "id": "VA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -238,7 +264,9 @@
             {
                 "id": "VAr",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -253,7 +281,9 @@
             {
                 "id": "PF",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -268,7 +298,9 @@
             {
                 "id": "WH",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -283,7 +315,9 @@
             {
                 "id": "DCA",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -298,7 +332,9 @@
             {
                 "id": "DCV",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -313,7 +349,9 @@
             {
                 "id": "DCW",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -328,7 +366,9 @@
             {
                 "id": "TmpCab",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -343,7 +383,9 @@
             {
                 "id": "TmpSnk",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -358,7 +400,9 @@
             {
                 "id": "TmpTrns",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -373,7 +417,9 @@
             {
                 "id": "TmpOt",
                 "data": {
-                    "Float32": null
+                    "Float32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -388,7 +434,9 @@
             {
                 "id": "St",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -403,7 +451,9 @@
             {
                 "id": "StVnd",
                 "data": {
-                    "Enum16": null
+                    "Enum16": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -418,7 +468,9 @@
             {
                 "id": "Evt1",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -433,7 +485,9 @@
             {
                 "id": "Evt2",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -448,7 +502,9 @@
             {
                 "id": "EvtVnd1",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -463,7 +519,9 @@
             {
                 "id": "EvtVnd2",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -478,7 +536,9 @@
             {
                 "id": "EvtVnd3",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -493,7 +553,9 @@
             {
                 "id": "EvtVnd4",
                 "data": {
-                    "Bitfield32": null
+                    "Bitfield32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

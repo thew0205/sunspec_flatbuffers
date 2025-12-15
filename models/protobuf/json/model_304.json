@@ -51,7 +51,9 @@
                     {
                         "id": "Inclx",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -66,7 +68,9 @@
                     {
                         "id": "Incly",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,
@@ -81,7 +85,9 @@
                     {
                         "id": "Inclz",
                         "data": {
-                            "Sint32": null
+                            "Sint32": {
+                                "value": null
+                            }
                         },
                         "count": 1,
                         "count_point_id": null,

@@ -60,7 +60,9 @@
             {
                 "id": "InCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -75,7 +77,9 @@
             {
                 "id": "InUcCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -90,7 +94,9 @@
             {
                 "id": "InNUcCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -105,7 +111,9 @@
             {
                 "id": "InDscCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -120,7 +128,9 @@
             {
                 "id": "InErrCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -135,7 +145,9 @@
             {
                 "id": "InUnkCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -150,7 +162,9 @@
             {
                 "id": "OutCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -165,7 +179,9 @@
             {
                 "id": "OutUcCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -180,7 +196,9 @@
             {
                 "id": "OutNUcCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -195,7 +213,9 @@
             {
                 "id": "OutDscCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,
@@ -210,7 +230,9 @@
             {
                 "id": "OutErrCnt",
                 "data": {
-                    "Acc32": null
+                    "Acc32": {
+                        "value": null
+                    }
                 },
                 "count": 1,
                 "count_point_id": null,

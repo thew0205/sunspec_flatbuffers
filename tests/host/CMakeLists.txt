@@ -34,8 +34,8 @@ add_subdirectory(third_party/modbus_slave)
 add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/common ${CMAKE_BINARY_DIR}/common)
 
 add_subdirectory(flatbuffer)
-# add_subdirectory(sunspec_init_writer)
-# add_subdirectory(sunspec_set_value_writer)
+add_subdirectory(sunspec_init_writer)
+add_subdirectory(sunspec_set_value_writer)
 
 # add_subdirectory(sunspec_point_reader)
 # add_subdirectory(sunspec_group_reader)

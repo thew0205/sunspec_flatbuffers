@@ -13,7 +13,7 @@ inline sint16_t FormatSunspecPointDefToSint16_t(const SunspecPointDef &def)
     return {sint16.type() == SunspecPointData_enum_Sint16 ? static_cast<sint16_t>(sint16.data_as_Sint16().value().value()) : kSint16UnimplementedValue};
 }
 
-inline raw16_t FormatSunspecPointDefTotoRaw16_t(const SunspecPointDef &def)
+inline raw16_t FormatSunspecPointDefToRaw16_t(const SunspecPointDef &def)
 {
     const SunspecPointData &raw16 = def.data();
     return {raw16.type() == SunspecPointData_enum_Raw16 ? static_cast<raw16_t>(raw16.data_as_Raw16().value().value()) : kRaw16UnimplementedValue};
@@ -295,7 +295,7 @@ struct SunspecPointDefWrapper
         return {sint16.type() == SunspecPointData_enum_Sint16 ? static_cast<sint16_t>(sint16.data_as_Sint16().value().value()) : kSint16UnimplementedValue};
     }
 
-    inline raw16_t data_as_toRaw16_t() const
+    inline raw16_t data_as_Raw16_t() const
     {
         const SunspecPointData &raw16 = def_.data();
         return {raw16.type() == SunspecPointData_enum_Raw16 ? static_cast<raw16_t>(raw16.data_as_Raw16().value().value()) : kRaw16UnimplementedValue};
