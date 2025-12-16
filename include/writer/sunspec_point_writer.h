@@ -324,7 +324,7 @@ private:
     // uint16_t relativeAddress_;
     SunspecGroupWriter &group_;         /**< A reference to the parent group point of this point. */
     uint16_t *modbusBuffer_;            /**< A pointer to the inplace modbus buffer where the point's data is to be stored. */
-    const SunspecPointDefWrapper &def_; /**< The sunspec point definition of this point. */
+    const SunspecPointDefWrapper def_; /**< The sunspec point definition of this point. */
 
     // Disable assignment operators
     SunspecPointWriter &operator=(const SunspecPointWriter &_point) = delete;

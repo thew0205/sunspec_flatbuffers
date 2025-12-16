@@ -257,9 +257,9 @@ public:
     // string toJson(bool includeSf = false, bool includeUnits = false) const;
 
 private:
-    const SunspecPointDefWrapper& def_;     /**< Reference to point definition */
-    SunspecGroupReader &groupPoint_; /**< Reference to parent group reader */
-    const uint16_t *modbusBuffer_;   /**< Pointer to Modbus buffer */
+    const SunspecPointDefWrapper def_; /**< Reference to point definition */
+    SunspecGroupReader &groupPoint_;   /**< Reference to parent group reader */
+    const uint16_t *modbusBuffer_;     /**< Pointer to Modbus buffer */
 
     SunspecPointReader &operator=(const SunspecPointReader &_point) = delete; /**< Copy assignment deleted */
     SunspecPointReader &operator=(SunspecPointReader &&_point) = delete;      /**< Move assignment deleted */

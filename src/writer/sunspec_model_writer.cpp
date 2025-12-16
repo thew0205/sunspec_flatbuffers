@@ -35,7 +35,6 @@ void SunspecModelWriter::initTopLevel()
 
     return topLevelGroup_.initPoints();
 
-    ;
 }
 
 uint16_t SunspecModelWriter::initSubLevels()

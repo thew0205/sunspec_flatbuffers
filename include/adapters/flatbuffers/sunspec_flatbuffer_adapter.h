@@ -262,17 +262,16 @@ inline SunspecGroupTypeType FormatSunspecGroupType(const SunspecGroupType group_
 }
 
 template <typename T>
-inline size_t vector_size(const T& vec)
+inline size_t vector_size(const T &vec)
 {
     return vec.size();
 }
 
 template <typename T>
-inline size_t vector_size(const T* vec)
+inline size_t vector_size(const T *vec)
 {
     return vec->size();
 }
-
 
 struct SunspecPointDefWrapper
 {
@@ -471,41 +470,41 @@ private:
 
 struct SunspecGroupDefWrapper
 {
-    SunspecGroupDefWrapper(const SunspecGroupDef &def) : def_{def} {}
+    SunspecGroupDefWrapper(const SunspecGroupDef *def) : def_{def} {}
 
     inline const char *id() const
     {
-        return FormatStringToString(def_.id());
+        return FormatStringToString(def_->id());
     }
 
     inline SunspecGroupTypeType type() const
     {
-        return FormatSunspecGroupType(def_.type());
+        return FormatSunspecGroupType(def_->type());
     }
 
     inline uint16_t count() const
     {
-        return def_.count();
+        return def_->count();
     }
 
     inline const char *count_point_id() const
     {
-        return FormatStringToString(def_.count_point_id());
+        return FormatStringToString(def_->count_point_id());
     }
 
     inline const char *label() const
     {
-        return FormatStringToString(def_.label());
+        return FormatStringToString(def_->label());
     }
 
     inline const std::vector<SunspecPointDefWrapper> points() const
     {
 
-        const size_t size = vector_size(def_.points());
+        const size_t size = vector_size(def_->points());
         std::vector<SunspecPointDefWrapper> ret_vec;
         ret_vec.reserve(size);
 
-        for (const auto &point : *def_.points())
+        for (const auto &point : *def_->points())
         {
             ret_vec.emplace_back(*point);
         }
@@ -515,19 +514,19 @@ struct SunspecGroupDefWrapper
     inline const std::vector<SunspecGroupDefWrapper> groups() const
     {
 
-        const size_t size = vector_size(def_.groups());
+        const size_t size = vector_size(def_->groups());
         std::vector<SunspecGroupDefWrapper> ret_vec;
         ret_vec.reserve(size);
 
-        for (const auto &group : *def_.groups())
+        for (const auto &group : *def_->groups())
         {
-            ret_vec.emplace_back(*group);
+            ret_vec.emplace_back(group);
         }
         return ret_vec;
     }
 
 private:
-    const SunspecGroupDef &def_;
+    const SunspecGroupDef *def_;
 };
 
 struct SunspecModelDefWrapper
@@ -542,15 +541,17 @@ struct SunspecModelDefWrapper
 
     inline const SunspecGroupDefWrapper group() const
     {
-        return *def_->group();
+        auto a = def_->group();
+
+        return SunspecGroupDefWrapper{a};
     }
 
 private:
     const SunspecModelDef *def_;
 };
 
-inline  SunspecModelDefWrapper FormatSunspecModelBinaryToSunspecModelDef(const unsigned char *buffer, const size_t size)
+inline SunspecModelDefWrapper FormatSunspecModelBinaryToSunspecModelDef(const unsigned char *buffer, const size_t size)
 {
-    sizeof(SunspecModelDef);
-    return *GetSunspecModelDef(buffer);
+    auto a = GetSunspecModelDef(buffer);
+    return SunspecModelDefWrapper{*a};
 }

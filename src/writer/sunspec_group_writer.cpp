@@ -5,7 +5,7 @@
 
 using std::to_string;
 
-SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupDefWrapper &def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groups_{}, modbusBuffer_{nullptr}
+SunspecGroupWriter::SunspecGroupWriter(const SunspecGroupDefWrapper def, SunspecModelWriter *model, SunspecGroupWriter *group) : def_{def}, model_{model}, group_{group}, registerLength_{0}, points_{}, groups_{}, modbusBuffer_{nullptr}
 {
     // Either model or group must be non-null, but not both.
     assert(group_ == nullptr ^ model_ == nullptr);

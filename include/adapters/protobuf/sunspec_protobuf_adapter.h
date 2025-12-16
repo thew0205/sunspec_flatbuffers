@@ -461,7 +461,7 @@ struct SunspecPointDefWrapper
     }
 
 private:
-    const SunspecPointDef &def_;
+    const SunspecPointDef def_;
 };
 
 struct SunspecGroupDefWrapper
@@ -523,14 +523,14 @@ struct SunspecGroupDefWrapper
     }
 
 private:
-    const SunspecGroupDef &def_;
+    const SunspecGroupDef def_;
 };
 
 struct SunspecModelDefWrapper
 {
     SunspecModelDefWrapper() {}
 
-    SunspecModelDefWrapper(SunspecModelDef &def) : def_{def} {}
+    SunspecModelDefWrapper(const SunspecModelDef &def) : def_{def} {}
 
     inline uint16_t id() const
     {

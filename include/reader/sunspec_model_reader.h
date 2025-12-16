@@ -155,7 +155,7 @@ public:
 private:
     SunspecDeviceReader &device_;           /**< Reference to parent device reader */
     SunspecGroupReader topLevelGroupPoint_; /**< Top-level group of points */
-    const SunspecModelDefWrapper &def_;            /**< Reference to model definition */
+    const SunspecModelDefWrapper def_;            /**< Reference to model definition */
     uint16_t *modbusBuffer_;                /**< Pointer to Modbus buffer */
     uint16_t address_;                      /**< Modbus address of the model */
 

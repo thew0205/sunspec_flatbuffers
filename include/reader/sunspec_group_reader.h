@@ -171,7 +171,7 @@ private:
 
     SunspecModelReader *const model_;   /**< Pointer to parent model reader */
     SunspecGroupReader *const group_;   /**< Pointer to parent group reader (if nested) */
-    const SunspecGroupDefWrapper &def_;        /**< Reference to group definition */
+    const SunspecGroupDefWrapper def_;        /**< Reference to group definition */
     vector<SunspecPointReader> points_; /**< List of points in the group */
     vector<SunspecGroupReader> groups_; /**< List of nested groups */
 
