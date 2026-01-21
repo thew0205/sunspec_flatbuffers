@@ -6,6 +6,8 @@
 #include "adapters/nakedbytes/sunspec_nakedbytes_adapter.h"
 #elif SUNSPEC_ADAPTER_IMPLEMENTATION == SUNSPEC_PROTOBUF_IMPLEMENTATION
 #include "adapters/protobuf/sunspec_protobuf_adapter.h"
+#elif SUNSPEC_ADAPTER_IMPLEMENTATION == SUNSPEC_NANOPB_IMPLEMENTATION
+#include "adapters/nanopb/sunspec_nanopb_adapter.h"
 #else
 #error "SUNSPEC_ADAPTER_IMPLEMENTATION is not defined or has an invalid value."
 #endif

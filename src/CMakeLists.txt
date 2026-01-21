@@ -8,7 +8,8 @@ endif()
 set(SUNSPEC_FLATBUFFERS_IMPLEMENTATION 1)
 set(SUNSPEC_NAKEDBYTES_IMPLEMENTATION 2)
 set(SUNSPEC_PROTOBUF_IMPLEMENTATION 3)
-set(SUNSPEC_ADAPTER_IMPLEMENTATION ${SUNSPEC_NAKEDBYTES_IMPLEMENTATION} CACHE STRING "The Sunspec adapter implementation to use (FLATBUFFER or NAKEDBYTES)" FORCE)
+set(SUNSPEC_NANOPB_IMPLEMENTATION 4)
+set(SUNSPEC_ADAPTER_IMPLEMENTATION ${SUNSPEC_FLATBUFFERS_IMPLEMENTATION} CACHE STRING "The Sunspec adapter implementation to use (FLATBUFFER or NAKEDBYTES)" FORCE)
 
 set(SUNSPEC_FILES
         sunspec.cpp
@@ -50,9 +51,8 @@ elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_NAKEDBYTES_IMPLEMENTATION
                 models/nakedbytes/nakedbytes_array_model_126.cpp
                 models/nakedbytes/nakedbytes_array_model_160.cpp
         )
-elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_PROTOBUF_IMPLEMENTATION)
+elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_PROTOBUF_IMPLEMENTATION OR SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_NANOPB_IMPLEMENTATION)
         set(MODEL_FILES
-                ${SUNSPEC_ROOT_DIR}/include/adapters/protobuf/sunspec_model_definition.pb.cc
                 models/protobuf/protobuf_array_model_1.cpp
                 models/protobuf/protobuf_array_model_101.cpp
                 models/protobuf/protobuf_array_model_101.cpp
@@ -62,10 +62,28 @@ elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_PROTOBUF_IMPLEMENTATION)
                 models/protobuf/protobuf_array_model_126.cpp
                 models/protobuf/protobuf_array_model_160.cpp
         )
+        if(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_PROTOBUF_IMPLEMENTATION)
+                find_package(Protobuf CONFIG QUIET)
+                set(SUNSPEC_LINK_LIBRARY protobuf::libprotobuf ${SUNSPEC_LINK_LIBRARY})
 
-        find_package(Protobuf CONFIG QUIET)
+                set(MODEL_FILES
+                        ${MODEL_FILES}
+                        ${SUNSPEC_ROOT_DIR}/include/adapters/protobuf/sunspec_model_definition.pb.cc
+                )
+        elseif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_NANOPB_IMPLEMENTATION)
+                add_library(nanopb STATIC
+                        ${SUNSPEC_ROOT_DIR}/third_party/nanopb/pb_decode.c
+                        ${SUNSPEC_ROOT_DIR}/third_party/nanopb/pb_encode.c
+                        ${SUNSPEC_ROOT_DIR}/third_party/nanopb/pb_common.c
+                )
+                target_include_directories(nanopb PUBLIC ${SUNSPEC_ROOT_DIR}/third_party/nanopb/)
+                set(SUNSPEC_LINK_LIBRARY nanopb ${SUNSPEC_LINK_LIBRARY})
 
-        set(SUNSPEC_LINK_LIBRARY protobuf::libprotobuf)
+                set(MODEL_FILES
+                        ${MODEL_FILES}
+                        ${SUNSPEC_ROOT_DIR}/include/adapters/nanopb/sunspec_model_definition.pb.c
+                )
+        endif(SUNSPEC_ADAPTER_IMPLEMENTATION STREQUAL SUNSPEC_PROTOBUF_IMPLEMENTATION)
 
 else()
         message(FATAL_ERROR "SUNSPEC_ADAPTER_IMPLEMENTATION has an invalid value: ${SUNSPEC_ADAPTER_IMPLEMENTATION}. Valid values are FLATBUFFER and NAKEDBYTES.")
@@ -90,6 +108,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${SUNSPEC_LINK_LIBRARY})
 # Add the standard include files to the build
 target_include_directories(${PROJECT_NAME} PUBLIC
         ${SUNSPEC_ROOT_DIR}/
+        ${SUNSPEC_ROOT_DIR}/include/adapters/flatbuffers
         ${SUNSPEC_ROOT_DIR}/include
         ${SUNSPEC_ROOT_DIR}/third_party/modbus_slave/include
         ${SUNSPEC_ROOT_DIR}/third_party/modbus_master/include

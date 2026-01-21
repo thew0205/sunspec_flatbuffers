@@ -14,6 +14,12 @@ mkdir -p $ROOT_DIR/models/protobuf/annotate_binary
 
 ${PROTOBUF_COMPILER} --cpp_out="$ROOT_DIR/include/adapters/protobuf" -I=$ROOT_DIR/models/protobuf $ROOT_DIR/models/protobuf/sunspec_model_definition.proto
 
+source $ROOT_DIR/models/protobuf/protobuf/bin/activate 
+
+${PROTOBUF_COMPILER} --plugin=protoc-gen-nanopb=$ROOT_DIR/third_party/nanopb/generator/protoc-gen-nanopb --nanopb_out=$ROOT_DIR/include/adapters/nanopb -I=$ROOT_DIR/models/protobuf $ROOT_DIR/models/protobuf/sunspec_model_definition.proto
+
+deactivate
+
 python3 $ROOT_DIR/models/protobuf/model_to_protobuf_json.py
 
 ${PROTOBUF_COMPILER} --python_out="$ROOT_DIR/models/protobuf" -I=$ROOT_DIR/models/protobuf $ROOT_DIR/models/protobuf/sunspec_model_definition.proto

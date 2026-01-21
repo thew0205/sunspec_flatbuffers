@@ -38,19 +38,19 @@ pico_sdk_init()
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 add_compile_definitions(VIRTUAL_TEST=virtual)
 
-include(FetchContent)
+# include(FetchContent)
 
-FetchContent_Declare(
-    CppUTest
-    GIT_REPOSITORY https://github.com/cpputest/cpputest.git
-    GIT_TAG v4.0
-)
+# FetchContent_Declare(
+#     CppUTest
+#     GIT_REPOSITORY https://github.com/cpputest/cpputest.git
+#     GIT_TAG v4.0
+# )
 
-FetchContent_MakeAvailable(CppUTest)
+# FetchContent_MakeAvailable(CppUTest)
 
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 
-# add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
+add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
