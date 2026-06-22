@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['kinvalidbaseaddress_0',['kinvalidbaseaddress',['../dd/df6/classSunspecDeviceWriter.html#a08d2c9a224898962fba2886c3d5506af',1,'SunspecDeviceWriter::kInvalidBaseAddress'],['../d1/da3/classSunspecDeviceReader.html#a5f292983a716c17d59d570ee9444dda6',1,'SunspecDeviceReader::kInvalidBaseAddress']]],
+  ['kmaxmodbusreadlength_1',['kmaxmodbusreadlength',['../dd/df6/classSunspecDeviceWriter.html#ace2de03fa075fea19bf60be49237a164',1,'SunspecDeviceWriter::kMaxModbusReadLength'],['../d1/da3/classSunspecDeviceReader.html#af096f4abb4fec892da26dde2c32e4265',1,'SunspecDeviceReader::kMaxModbusReadLength']]],
+  ['kmodbusmaxretries_2',['kmodbusmaxretries',['../dd/df6/classSunspecDeviceWriter.html#a51151d6946e576ed9d6781e9e1dc5a41',1,'SunspecDeviceWriter::kModbusMaxRetries'],['../d1/da3/classSunspecDeviceReader.html#a3e9222b19e1f2caef85b8af089ba5e41',1,'SunspecDeviceReader::kModbusMaxRetries']]],
+  ['ksunspecbaseaddresslist_3',['ksunspecbaseaddresslist',['../dd/df6/classSunspecDeviceWriter.html#a620da005c88bb0f0f0b048ba2728e9da',1,'SunspecDeviceWriter::kSunspecBaseAddressList'],['../d1/da3/classSunspecDeviceReader.html#ae3c47f520fbf7db59de143d86d330bc9',1,'SunspecDeviceReader::kSunspecBaseAddressList']]],
+  ['ksunspecbaseaddresslistlength_4',['ksunspecbaseaddresslistlength',['../dd/df6/classSunspecDeviceWriter.html#a71aa5210709cefccc756c537d72a93d0',1,'SunspecDeviceWriter::kSunspecBaseAddressListLength'],['../d1/da3/classSunspecDeviceReader.html#a7df5312a7927eadf2ab438fc5b41073d',1,'SunspecDeviceReader::kSunspecBaseAddressListLength']]],
+  ['ksunspecidentifier_5',['ksunspecidentifier',['../dd/df6/classSunspecDeviceWriter.html#a360bacd5754fc95b6138ccbb0a73c7c5',1,'SunspecDeviceWriter::kSunspecIdentifier'],['../d1/da3/classSunspecDeviceReader.html#a9ccb2e525e1654c6dc0a737011ee02f9',1,'SunspecDeviceReader::kSunspecIdentifier']]]
+];

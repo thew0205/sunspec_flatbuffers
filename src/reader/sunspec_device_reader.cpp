@@ -2,29 +2,43 @@
 
 #include <algorithm>
 
-#include "modbus.h"
+#include "modbus_master.h"
 #include "reader/sunspec_point_reader.h"
 #include "reader/sunspec_group_reader.h"
-#include "sunspec_utils.h"
+#include "sunspec.h"
+#include <model_definitions.h>
 
 using namespace Sunspec;
 
-bool SunspecDeviceReader::scanforBaseAddress(uint8_t slaveId, ModbusMaster &client, uint16_t *baseAddr)
+SunspecDeviceReader::SunspecDeviceReader(uint8_t slaveId, ModbusMaster &client, uint16_t baseAddress) : slaveId_(slaveId), client_{client}, baseAddress_{baseAddress}, registerLength_{0} {}
+
+bool SunspecDeviceReader::scanforBaseAddress(uint8_t slaveId, ModbusMaster &client, uint16_t *baseAddress)
 {
     for (uint8_t i = 0; i < kSunspecBaseAddressListLength; i++)
     {
-        uint32_t sunsIden = readUint32Field(kSunspecBaseAddressList[i], slaveId, client);
-        if (kSunspecIdentifier == sunsIden)
+        uint32_t deviceSunspecIdentifier = readUint32Field(kSunspecBaseAddressList[i], slaveId, client);
+        if (kSunspecIdentifier == deviceSunspecIdentifier)
         {
-            if (baseAddr != nullptr)
+            if (baseAddress != nullptr)
             {
-                *baseAddr = kSunspecBaseAddressList[i];
+                *baseAddress = kSunspecBaseAddressList[i];
             }
             return true;
         }
     }
     return false;
 }
+
+SunspecDeviceReader::~SunspecDeviceReader()
+{
+    if (modbusBuffer_)
+    {
+        delete[] modbusBuffer_;
+        modbusBuffer_ = nullptr;
+    }
+    models_.clear();
+}
+
 SunspecModelReader *SunspecDeviceReader::getModel(SunspecModelList id)
 {
     for (auto &model : models_)
@@ -48,6 +62,8 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecM
     {
         uint16_t address = baseAddress_ + 2;
         std::vector<uint16_t> availableModelsAddr{};
+        registerLength_ = 2;
+        std::vector<uint16_t> modelLengths{};
         std::vector<const SunspecModelDef *> availableModelsDef{};
         while (true)
         {
@@ -59,23 +75,62 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecM
                 break;
             }
 
-            const SunspecModelDef *const modelDef = SunspecDeviceReader::getModelDefinition(modelId);
+            const SunspecModelDef *const modelDef = Sunspec::getModelDefinition(modelId);
 
             if (nullptr != modelDef && std::find(supportedModels.begin(), supportedModels.end(), modelId) != supportedModels.end())
             {
+                modelLengths.emplace_back(len + 2);
+                registerLength_ += len + 2;
+
                 availableModelsAddr.emplace_back(address);
                 availableModelsDef.emplace_back(modelDef);
-
                 count++;
             }
             address += len + 2;
         }
+        registerLength_ += 2;
+        assert(modelLengths.size() == availableModelsAddr.size());
+        assignBuffer();
+        models_.reserve(count);
+        size_t offset = 2;
         for (size_t i = 0; i < count; i++)
         {
-            models_.emplace_back(*availableModelsDef[i], availableModelsAddr[i], *this);
+            models_.emplace_back(*availableModelsDef[i], &modbusBuffer_[offset], availableModelsAddr[i], *this).initPoints();
+
+            offset += modelLengths[i];
+        }
+
+        offset = 2;
+        for (size_t i = 0; i < count; i++)
+        {
+            read(models_[i].address(), &modbusBuffer_[offset], modelLengths[i]);
+            offset += modelLengths[i];
+
+            models_[i].initGroups(modelLengths[i]);
         }
     }
     return count;
+}
+
+void SunspecDeviceReader::assignBuffer()
+{
+    if (modbusBuffer_)
+    {
+        delete[] modbusBuffer_;
+        modbusBuffer_ = nullptr;
+    }
+    modbusBuffer_ = new uint16_t[registerLength_];
+    return;
+}
+
+void SunspecDeviceReader::readBufferFromDevice()
+{
+
+    uint16_t offset = 2;
+    for (auto &model : models_)
+    {
+        model.read();
+    }
 }
 
 bool SunspecDeviceReader::read(uint16_t address, uint16_t *buf, size_t len)
@@ -108,40 +163,29 @@ bool SunspecDeviceReader::read(uint16_t address, uint16_t *buf, size_t len)
     return false;
 }
 
-void SunspecDeviceReader::readBufferFromDevice()
-{
-    for (auto &model : models_)
-    {
+// std::string SunspecDeviceReader::toJson(bool includeSf, bool includeUnits) const
+// {
+//     std::string ret;
+//     ret += "{ \"baseAddress\":" + std::to_string(baseAddress_) + ",";
+//     ret += "\"deviceId\" : " + std::to_string(slaveId_) + ",";
+//     if (!models_.empty())
+//     {
+//         ret += "\"models\":[";
+//         for (auto &model : models_)
+//         {
+//             ret += model.toJson(includeSf, includeUnits);
+//             ret += ",";
+//         }
+//         if (!ret.empty() && ret.back() == ',')
+//         {
+//             ret.pop_back(); // Remove the last comma
+//         }
+//         ret += "]";
+//     }
 
-        model.readAndSetFromDevice();
-    }
-}
-
-std::string SunspecDeviceReader::toJson(bool includeSf, bool includeUnits) const
-{
-    std::string ret;
-    ret += "{ \"baseAddress\":" + std::to_string(baseAddress_) + ",";
-    ret += "\"deviceId\" : " + std::to_string(slaveId_) + ",";
-    if (!models_.empty())
-    {
-        ret += "\"models\":[";
-        for (auto &model : models_)
-        {
-            ret += model.toJson(includeSf, includeUnits);
-            ret += ",";
-        }
-        if (!ret.empty() && ret.back() == ',')
-        {
-            ret.pop_back(); // Remove the last comma
-        }
-        ret += "]";
-    }
-
-    ret += "}";
-    return ret;
-}
-
-SunspecDeviceReader::SunspecDeviceReader(uint8_t slaveId, ModbusMaster &client, uint16_t baseAddress) : slaveId_(slaveId), client_{client}, baseAddress_{baseAddress} {}
+//     ret += "}";
+//     return ret;
+// }
 
 float SunspecDeviceReader::readFloatField(uint16_t address, uint16_t slaveId, ModbusMaster &client)
 {
@@ -169,28 +213,4 @@ uint32_t SunspecDeviceReader::readUint32Field(uint16_t address, uint16_t slaveId
         return registersToUint32(client.getResponseBuffer(0), client.getResponseBuffer(1));
     }
     return 0;
-}
-
-extern const  unsigned char modelDef112[];
-extern const unsigned char modelDef113[];
-const SunspecModelDef *SunspecDeviceReader::getModelDefinition(SunspecModelList id)
-{
-
-    switch (id)
-    {
-    case SunspecModelList_kModel112:
-
-        return GetSunspecModelDef(modelDef112);
-    case SunspecModelList_kModel113:
-
-        return GetSunspecModelDef(modelDef113);
-
-    default:
-        return nullptr;
-        break;
-    }
-    // TODO
-    //  auto modelDefIte = std::find_if(modelDefList.cbegin(), modelDefList.cend(), [id](const SunspecModelDef *pModelDef)
-    //                                  { return pModelDef->id() == id; });
-    //  return modelDefIte == modelDefList.cend() ? nullptr : *modelDefIte;
 }

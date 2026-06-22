@@ -6,10 +6,14 @@
             "type": "pickString",
             "description": "The test to be run",
             "options": [
-                "sunspec_init",
+                "sunspec_point_reader",
+                "sunspec_group_reader",
+                "sunspec_model_reader",
+                "sunspec_init_writer",
+                "sunspec_device_reader",
                 "flatbuffer",
-                "sunspec_set_value",
-                "modbus_rtu"
+                "sunspec_set_value_writer",
+                "pzem_temp"
             ],
             "default": "sunspec_init"
         },

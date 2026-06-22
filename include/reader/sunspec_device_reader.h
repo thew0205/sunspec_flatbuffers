@@ -1,38 +1,45 @@
-/**
- * @file sunspec_device.h
- * @brief This file defines the SunspecDevice class, which is a sunspec device that can hold a variety of SunspecModel within it.
- *
- * @author Tolulope Matthew Busoye PowerLabs
- */
 
-#pragma once
 
-#include <stdint.h>
+#pragma once // Ensure the header is included only once
 
-#include <initializer_list>
-#include <list>
-#include <string>
+#include <stdint.h> // Standard integer types
 
-#include "reader/sunspec_model_reader.h"
+#include <initializer_list> // For list initialization
+#include <vector>           // For std::vector
+#include <string>           // For std::string
 
-class ModbusMaster;
+#include "reader/sunspec_model_reader.h" // Dependency for model reading
+
+class ModbusMaster; // Forward declaration for Modbus communication
 
 /**
- * @class SunspecDevice
- * @brief Represents a physical device that supports the Sunspec protocol over Modbus.
- *
- * This class manages the connection to a Modbus device, scans for its Sunspec base address,
- * initializes supported models, and provides methods to read data and convert it to JSON.
+ * @brief Class to read and manage SunSpec device models via Modbus.
  */
 class SunspecDeviceReader
 {
+    /**
+     * @brief Alias for std::vector for internal use.
+     */
     template <typename T>
-    using list = std::list<T>;
+    using vector = std::vector<T>;
 
 public:
     /**
-     * @brief Returns the number of models initialized on this device.
-     * @return The size of the models list.
+     * @brief Constructor: initializes with slave ID, Modbus client, and optional base address.
+     * @param slaveId Modbus slave ID
+     * @param _client Reference to Modbus client
+     * @param _baseAddr Optional base address (default: kInvalidBaseAddress)
+     */
+    SunspecDeviceReader(uint8_t slaveId, ModbusMaster &_client, uint16_t _baseAddr = kInvalidBaseAddress);
+
+    /**
+     * @brief Destructor
+     */
+    ~SunspecDeviceReader();
+
+    /**
+     * @brief Returns the number of models detected
+     * @return Number of models
      */
     size_t modelLength() const
     {
@@ -40,8 +47,8 @@ public:
     }
 
     /**
-     * @brief Returns the slave Id of this device.
-     * @return The slave Id of this device.
+     * @brief Returns the Modbus slave ID
+     * @return Slave ID
      */
     uint8_t slaveId() const
     {
@@ -49,122 +56,142 @@ public:
     }
 
     /**
-     * @brief Returns the number of models initialized on this device.
-     * @return The size of the models list.
+     * @brief Returns the base address used for SunSpec data
+     * @return Base address
      */
-    const list<SunspecModelReader> &models() const
+    uint16_t baseAddress() const
+    {
+        return baseAddress_;
+    }
+
+    /**
+     * @brief Returns a const reference to the vector of SunSpec model readers
+     * @return Vector of SunSpecModelReader
+     */
+    const vector<SunspecModelReader> &models() const
     {
         return models_;
     }
 
     /**
-     * @brief Scans for the Sunspec base address on a device.
-     *
-     * This method attempts to find the "SunS" identifier at predefined base addresses.
-     * @param [in] slaveId The Modbus slave ID of the device.
-     * @param [in] client The ModbusMaster client to use for communication.
-     * @param [out] baseAddr A pointer to a uint16_t to store the found base address.
-     * @return true if the base address is found, false otherwise.
+     * @brief Scans for the SunSpec base address on a device
+     * @param slaveId Modbus slave ID
+     * @param client Reference to Modbus client
+     * @param baseAddr Optional pointer to store found base address
+     * @return True if found, false otherwise
      */
     static bool scanforBaseAddress(uint8_t slaveId, ModbusMaster &client, uint16_t *baseAddr = nullptr);
 
     /**
-     * @brief Initializes the supported Sunspec models on the device.
-     *
-     * This method reads the model information from the device starting at the base address
-     * and initializes the corresponding SunspecModel objects.
-     * @param [in] supportedModel An initializer list of model IDs that should be initialized.
-     * @return The number of models successfully initialized.
+     * @brief Initializes all supported SunSpec models
+     * @param supportedModel List of supported models
+     * @return Number of models initialized
      */
     uint16_t initAllModels(const std::initializer_list<SunspecModelList> &supportedModel);
 
     /**
-     * @brief Reads all data from the device for all initialized models.
+     * @brief Assigns the buffer for Modbus data
+     */
+    void assignBuffer();
+
+    /**
+     * @brief Reads the buffer from the device
      */
     void readBufferFromDevice();
 
     /**
-     * @brief Generates a JSON representation of all initialized models and their data.
-     * @param [in] includeSf Whether to include scale factors in the JSON output.
-     * @param [in] includeUnits Whether to include units in the JSON output.
-     * @return A string containing the JSON representation.
+     * @brief Converts device data to JSON format
+     * @param includeSf Include scale factors
+     * @param includeUnits Include units
+     * @return JSON string
      */
     std::string toJson(bool includeSf = false, bool includeUnits = false) const;
 
     /**
-     * @brief Retrieves a pointer to an initialized model by its ID.
-     * @param [in] id The ID of the model to retrieve.
-     * @return A pointer to the SunspecModel object, or nullptr if not found.
+     * @brief Gets a pointer to a model by its ID
+     * @param id Model ID
+     * @return Pointer to SunspecModelReader
      */
     SunspecModelReader *getModel(SunspecModelList id);
 
     /**
-     * @brief Reads a block of registers from the device.
-     * @param [in] addr The starting address of the registers to read.
-     * @param [out] buf A buffer to store the read data.
-     * @param [in] len The number of registers to read.
-     * @return true if the read operation was successful, false otherwise.
+     * @brief Reads data from the device at a given address into a buffer
+     * @param addr Address to read from
+     * @param buf Buffer to store data
+     * @param len Number of registers to read
+     * @return True if successful
      */
     bool read(uint16_t addr, uint16_t *buf, size_t len);
 
-    /** Maximum length for a single Modbus read operation in registers. */
+    /**
+     * @brief Maximum length for a Modbus read operation
+     */
     static constexpr int kMaxModbusReadLength = 120;
-    /** The number of standard base addresses to check during a scan. */
+
+    /**
+     * @brief Number of possible SunSpec base addresses
+     */
     static constexpr uint8_t kSunspecBaseAddressListLength = 3;
-    /** An array of standard Sunspec base addresses. */
+
+    /**
+     * @brief List of possible SunSpec base addresses
+     */
     static constexpr uint16_t kSunspecBaseAddressList[kSunspecBaseAddressListLength] = {40000, 0, 50000};
-    /** A special value used to indicate an invalid or un-found base address. */
+
+    /**
+     * @brief Value representing an invalid base address
+     */
     static constexpr uint16_t kInvalidBaseAddress = 0XFFFF;
-    /** The maximum number of retries for a Modbus operation. */
+
+    /**
+     * @brief Maximum number of retries for Modbus operations
+     */
     static constexpr uint8_t kModbusMaxRetries = 10;
-    /** The 32-bit "SunS" magic number identifier for Sunspec. */
+
+    /**
+     * @brief SunSpec identifier value
+     */
     static constexpr uint32_t kSunspecIdentifier = 0x53756E53;
 
     /**
-     * @brief Class constructor.
-     * @param [in] slaveId The Modbus slave ID of the device.
-     * @param [in] _client A reference to the ModbusMaster client.
-     * @param [in] _baseAddr The known base address of the device. If kInvalidBaseAddress, a scan will be performed.
-     */
-    SunspecDeviceReader(uint8_t slaveId, ModbusMaster &_client, uint16_t _baseAddr = kInvalidBaseAddress);
-
-    /**
-     * @brief Retrieves a static model definition by its ID.
-     * @param [in] id The ID of the Sunspec model to retrieve.
-     * @return A pointer to the requested SunspecModelDef, or nullptr if not found.
+     * @brief Gets the model definition for a given model ID
+     * @param id Model ID
+     * @return Pointer to SunspecModelDef
      */
     static const SunspecModelDef *getModelDefinition(SunspecModelList id);
 
 private:
-    uint8_t slaveId_{0};
-    uint16_t baseAddress_{kInvalidBaseAddress};
-    list<SunspecModelReader> models_;
-    ModbusMaster &client_;
+    uint8_t slaveId_{0};                /**< Modbus slave ID */
+    uint16_t baseAddress_;              /**< SunSpec base address */
+    uint16_t registerLength_{0};        /**< Length of Modbus register block */
+    uint16_t *modbusBuffer_{nullptr};   /**< Buffer for Modbus data */
+    vector<SunspecModelReader> models_; /**< List of SunSpec models */
+    ModbusMaster &client_;              /**< Reference to Modbus client */
 
     /**
-     * @brief Reads a single 16-bit field from a device.
-     * @param [in] addr The address to read from.
-     * @param [in] slaveId The device's slave ID.
-     * @param [in] client The Modbus client.
-     * @return The 16-bit value read from the device.
+     * @brief Reads a 16-bit unsigned field from the device
+     * @param addr Address to read from
+     * @param slaveId Modbus slave ID
+     * @param client Reference to Modbus client
+     * @return 16-bit unsigned value
      */
     static uint16_t readUint16Field(uint16_t addr, uint16_t slaveId, ModbusMaster &client);
 
     /**
-     * @brief Reads a single 32-bit field from a device.
-     * @param [in] addr The address to read from.
-     * @param [in] slaveId The device's slave ID.
-     * @param [in] client The Modbus client.
-     * @return The 32-bit value read from the device.
+     * @brief Reads a 32-bit unsigned field from the device
+     * @param addr Address to read from
+     * @param slaveId Modbus slave ID
+     * @param client Reference to Modbus client
+     * @return 32-bit unsigned value
      */
     static uint32_t readUint32Field(uint16_t addr, uint16_t slaveId, ModbusMaster &client);
 
     /**
-     * @brief Reads a single 32-bit floating-point field from a device.
-     * @param [in] addr The address to read from.
-     * @param [in] slaveId The device's slave ID.
-     * @param [in] client The Modbus client.
-     * @return The 32-bit float value read from the device.
+     * @brief Reads a float field from the device
+     * @param addr Address to read from
+     * @param slaveId Modbus slave ID
+     * @param client Reference to Modbus client
+     * @return Float value
      */
     static float readFloatField(uint16_t addr, uint16_t slaveId, ModbusMaster &client);
 };

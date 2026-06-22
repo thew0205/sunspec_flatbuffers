@@ -26,7 +26,7 @@ if (EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
 # ====================================================================================
-set(PICO_BOARD pico2 CACHE STRING "Board type")
+set(PICO_BOARD pico CACHE STRING "Board type")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
@@ -36,6 +36,7 @@ project(sunspec_pai_target_test C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
+add_compile_definitions(VIRTUAL_TEST=virtual)
 
 include(FetchContent)
 
@@ -52,11 +53,16 @@ set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 # add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
-add_subdirectory(generic)
-add_subdirectory(modbus)
-add_subdirectory(pzem_temp)
+add_subdirectory(third_party/generic)
+add_subdirectory(third_party/modbus_master)
+add_subdirectory(third_party/modbus_slave)
+
+add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/common ${CMAKE_BINARY_DIR}/common)
 
 add_subdirectory(flatbuffer)
-add_subdirectory(sunspec_init)
-add_subdirectory(sunspec_set_value)
+add_subdirectory(sunspec_init_writer)
+add_subdirectory(sunspec_set_value_writer)
+add_subdirectory(pzem_temp)

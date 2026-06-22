@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['tojson_0',['tojson',['../dd/df6/classSunspecDeviceWriter.html#a77a4e061ea4a40cbb9512a0f6059969f',1,'SunspecDeviceWriter::toJson()'],['../d7/d75/classSunspecGroupWriter.html#a81686b5cb1505103b58e78e16a3f3ed8',1,'SunspecGroupWriter::toJson()'],['../d4/dbd/classSunspecModelWriter.html#aa312971b8ee132dfd5402b06d1d226bf',1,'SunspecModelWriter::toJson()'],['../d5/def/classSunspecPointWriter.html#a47416621bb123fecc9c8a75211d9ee96',1,'SunspecPointWriter::toJson()'],['../d1/da3/classSunspecDeviceReader.html#a848da1b3e2cc1dde1e256864b10721e4',1,'SunspecDeviceReader::toJson()'],['../d4/def/classSunspecGroupReader.html#a53202591c9935795a9241f763165c1b1',1,'SunspecGroupReader::toJson()'],['../d6/d80/classSunspecModelReader.html#af9b2302aef6145288577d3be0937c774',1,'SunspecModelReader::toJson()'],['../d0/d7a/classSunspecPointReader.html#a2391c40f86d796684133c2f5d2c2344e',1,'SunspecPointReader::toJson()']]],
+  ['toplevelgroup_1',['topLevelGroup',['../d4/dbd/classSunspecModelWriter.html#a46e152359f37046aa69856f59192b4a0',1,'SunspecModelWriter']]],
+  ['toplevelgrouppoint_2',['topLevelGroupPoint',['../d6/d80/classSunspecModelReader.html#ac14f6bcca9f0e87f46f3c0f149526d26',1,'SunspecModelReader']]]
+];

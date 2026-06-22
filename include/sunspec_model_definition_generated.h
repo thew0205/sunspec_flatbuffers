@@ -63,8 +63,8 @@ struct kEui48;
 struct SunspecPointDef;
 struct SunspecPointDefBuilder;
 
-struct SunspecGroupPointDef;
-struct SunspecGroupPointDefBuilder;
+struct SunspecGroupDef;
+struct SunspecGroupDefBuilder;
 
 struct SunspecModelDef;
 struct SunspecModelDefBuilder;
@@ -1204,8 +1204,8 @@ inline ::flatbuffers::Offset<SunspecPointDef> CreateSunspecPointDefDirect(
       label__);
 }
 
-struct SunspecGroupPointDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
-  typedef SunspecGroupPointDefBuilder Builder;
+struct SunspecGroupDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
+  typedef SunspecGroupDefBuilder Builder;
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
     VT_ID = 4,
     VT_TYPE = 6,
@@ -1230,8 +1230,8 @@ struct SunspecGroupPointDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Tab
   const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecPointDef>> *points() const {
     return GetPointer<const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecPointDef>> *>(VT_POINTS);
   }
-  const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupPointDef>> *groups() const {
-    return GetPointer<const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupPointDef>> *>(VT_GROUPS);
+  const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupDef>> *groups() const {
+    return GetPointer<const ::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupDef>> *>(VT_GROUPS);
   }
   const ::flatbuffers::String *label() const {
     return GetPointer<const ::flatbuffers::String *>(VT_LABEL);
@@ -1256,52 +1256,52 @@ struct SunspecGroupPointDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Tab
   }
 };
 
-struct SunspecGroupPointDefBuilder {
-  typedef SunspecGroupPointDef Table;
+struct SunspecGroupDefBuilder {
+  typedef SunspecGroupDef Table;
   ::flatbuffers::FlatBufferBuilder &fbb_;
   ::flatbuffers::uoffset_t start_;
   void add_id(::flatbuffers::Offset<::flatbuffers::String> id) {
-    fbb_.AddOffset(SunspecGroupPointDef::VT_ID, id);
+    fbb_.AddOffset(SunspecGroupDef::VT_ID, id);
   }
   void add_type(SunspecGroupType type) {
-    fbb_.AddElement<uint8_t>(SunspecGroupPointDef::VT_TYPE, static_cast<uint8_t>(type), 0);
+    fbb_.AddElement<uint8_t>(SunspecGroupDef::VT_TYPE, static_cast<uint8_t>(type), 0);
   }
   void add_count(uint16_t count) {
-    fbb_.AddElement<uint16_t>(SunspecGroupPointDef::VT_COUNT, count, 1);
+    fbb_.AddElement<uint16_t>(SunspecGroupDef::VT_COUNT, count, 1);
   }
   void add_count_point_id(::flatbuffers::Offset<::flatbuffers::String> count_point_id) {
-    fbb_.AddOffset(SunspecGroupPointDef::VT_COUNT_POINT_ID, count_point_id);
+    fbb_.AddOffset(SunspecGroupDef::VT_COUNT_POINT_ID, count_point_id);
   }
   void add_points(::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecPointDef>>> points) {
-    fbb_.AddOffset(SunspecGroupPointDef::VT_POINTS, points);
+    fbb_.AddOffset(SunspecGroupDef::VT_POINTS, points);
   }
-  void add_groups(::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupPointDef>>> groups) {
-    fbb_.AddOffset(SunspecGroupPointDef::VT_GROUPS, groups);
+  void add_groups(::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupDef>>> groups) {
+    fbb_.AddOffset(SunspecGroupDef::VT_GROUPS, groups);
   }
   void add_label(::flatbuffers::Offset<::flatbuffers::String> label) {
-    fbb_.AddOffset(SunspecGroupPointDef::VT_LABEL, label);
+    fbb_.AddOffset(SunspecGroupDef::VT_LABEL, label);
   }
-  explicit SunspecGroupPointDefBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
+  explicit SunspecGroupDefBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
         : fbb_(_fbb) {
     start_ = fbb_.StartTable();
   }
-  ::flatbuffers::Offset<SunspecGroupPointDef> Finish() {
+  ::flatbuffers::Offset<SunspecGroupDef> Finish() {
     const auto end = fbb_.EndTable(start_);
-    auto o = ::flatbuffers::Offset<SunspecGroupPointDef>(end);
+    auto o = ::flatbuffers::Offset<SunspecGroupDef>(end);
     return o;
   }
 };
 
-inline ::flatbuffers::Offset<SunspecGroupPointDef> CreateSunspecGroupPointDef(
+inline ::flatbuffers::Offset<SunspecGroupDef> CreateSunspecGroupDef(
     ::flatbuffers::FlatBufferBuilder &_fbb,
     ::flatbuffers::Offset<::flatbuffers::String> id = 0,
     SunspecGroupType type = SunspecGroupType_kGroup,
     uint16_t count = 1,
     ::flatbuffers::Offset<::flatbuffers::String> count_point_id = 0,
     ::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecPointDef>>> points = 0,
-    ::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupPointDef>>> groups = 0,
+    ::flatbuffers::Offset<::flatbuffers::Vector<::flatbuffers::Offset<SunspecGroupDef>>> groups = 0,
     ::flatbuffers::Offset<::flatbuffers::String> label = 0) {
-  SunspecGroupPointDefBuilder builder_(_fbb);
+  SunspecGroupDefBuilder builder_(_fbb);
   builder_.add_label(label);
   builder_.add_groups(groups);
   builder_.add_points(points);
@@ -1312,21 +1312,21 @@ inline ::flatbuffers::Offset<SunspecGroupPointDef> CreateSunspecGroupPointDef(
   return builder_.Finish();
 }
 
-inline ::flatbuffers::Offset<SunspecGroupPointDef> CreateSunspecGroupPointDefDirect(
+inline ::flatbuffers::Offset<SunspecGroupDef> CreateSunspecGroupDefDirect(
     ::flatbuffers::FlatBufferBuilder &_fbb,
     const char *id = nullptr,
     SunspecGroupType type = SunspecGroupType_kGroup,
     uint16_t count = 1,
     const char *count_point_id = nullptr,
     const std::vector<::flatbuffers::Offset<SunspecPointDef>> *points = nullptr,
-    const std::vector<::flatbuffers::Offset<SunspecGroupPointDef>> *groups = nullptr,
+    const std::vector<::flatbuffers::Offset<SunspecGroupDef>> *groups = nullptr,
     const char *label = nullptr) {
   auto id__ = id ? _fbb.CreateString(id) : 0;
   auto count_point_id__ = count_point_id ? _fbb.CreateString(count_point_id) : 0;
   auto points__ = points ? _fbb.CreateVector<::flatbuffers::Offset<SunspecPointDef>>(*points) : 0;
-  auto groups__ = groups ? _fbb.CreateVector<::flatbuffers::Offset<SunspecGroupPointDef>>(*groups) : 0;
+  auto groups__ = groups ? _fbb.CreateVector<::flatbuffers::Offset<SunspecGroupDef>>(*groups) : 0;
   auto label__ = label ? _fbb.CreateString(label) : 0;
-  return CreateSunspecGroupPointDef(
+  return CreateSunspecGroupDef(
       _fbb,
       id__,
       type,
@@ -1346,8 +1346,8 @@ struct SunspecModelDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
   SunspecModelList id() const {
     return static_cast<SunspecModelList>(GetField<uint16_t>(VT_ID, 0));
   }
-  const SunspecGroupPointDef *group() const {
-    return GetPointer<const SunspecGroupPointDef *>(VT_GROUP);
+  const SunspecGroupDef *group() const {
+    return GetPointer<const SunspecGroupDef *>(VT_GROUP);
   }
   bool Verify(::flatbuffers::Verifier &verifier) const {
     return VerifyTableStart(verifier) &&
@@ -1365,7 +1365,7 @@ struct SunspecModelDefBuilder {
   void add_id(SunspecModelList id) {
     fbb_.AddElement<uint16_t>(SunspecModelDef::VT_ID, static_cast<uint16_t>(id), 0);
   }
-  void add_group(::flatbuffers::Offset<SunspecGroupPointDef> group) {
+  void add_group(::flatbuffers::Offset<SunspecGroupDef> group) {
     fbb_.AddOffset(SunspecModelDef::VT_GROUP, group);
   }
   explicit SunspecModelDefBuilder(::flatbuffers::FlatBufferBuilder &_fbb)
@@ -1382,7 +1382,7 @@ struct SunspecModelDefBuilder {
 inline ::flatbuffers::Offset<SunspecModelDef> CreateSunspecModelDef(
     ::flatbuffers::FlatBufferBuilder &_fbb,
     SunspecModelList id = SunspecModelList_KModelInvalid,
-    ::flatbuffers::Offset<SunspecGroupPointDef> group = 0) {
+    ::flatbuffers::Offset<SunspecGroupDef> group = 0) {
   SunspecModelDefBuilder builder_(_fbb);
   builder_.add_group(group);
   builder_.add_id(id);

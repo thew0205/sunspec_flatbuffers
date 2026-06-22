@@ -3,10 +3,6 @@ set(TEST_NAME pzem_temp_test)
 
 set(SUNSPEC_TEST_SRC 
                         test_main.cpp
-                        ModbusADU.cpp
-                        ModbusRTUComm.cpp
-                        ModbusRTUSlave.cpp
-                        ModbusSlaveLogic.cpp
                         PZEM004Tv30.cpp
                         )
 
@@ -20,7 +16,7 @@ target_link_libraries(${TEST_NAME}
         CppUTestExt
         pico_stdlib
         generic_lib
-        modbusmaster_lib
+        modbus_slave_lib
         sunspec
 )
 
