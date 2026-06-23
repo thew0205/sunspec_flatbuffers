@@ -13,59 +13,6 @@ enum SunspecPointMandatoryType: uint8
     kO, /**< Point can be omitted */
 }
 
-// enum SunspecPointDataType : uint8
-// {
-//     kUndefinedType = 0, /**< Undefined type */
-//     kInt16,             /**< Signed 16-bit integer */
-//     kInt32,             /**< Signed 32-bit integer */
-//     kInt64,             /**< Signed 64-bit integer */
-//     kRaw16,             /**< 16-bit raw value */
-//     kUint16,            /**< Unsigned 16-bit integer */
-//     kUint32,            /**< Unsigned 32-bit integer */
-//     kUint64,            /**< Unsigned 64-bit integer */
-//     kAcc16,             /**< Unsigned 16-bit accumulator(deprecated, in favor of uint16) */
-//     KAcc32,             /**< Unsigned 32-bit accumulator (deprecated in favor of uint32) */
-//     kAcc64,             /**< Unsigned 64-bit accumulator (deprecated in favor of uint64) */
-//     kBitField16,        /**< 16-bit bitfield */
-//     kBitField32,        /**< 32-bit bitfield */
-//     kBitField64,        /**< 64-bit bitfield */
-//     kEnum16,            /**< 16-bit enumeration */
-//     kEnum32,            /**< 32-bit enumeration */
-//     kFloat32,           /**< 32-bit floating-point */
-//     kFloat64,           /**< 64-bit floating-point */
-//     kString,            /**< String (UTF-8 encoded) */
-//     kSunsSf,            /**< Scale factor – Signed power of 10 multiplier (+) or divider (-) */
-//     kPad,               /**< 16-bit pad used for alignment */
-//     kIpAddr,            /**< IP Address as an unsigned 32-bit. */
-//     kIpv6Addr,          /**< 16-byte IP V6 address */
-//     kEui48,             /**< 48-bit MAC address */
-// }
-
- // kUndefinedType = 0, 
-   
-
-// const kUint16Unimplemented: uint16 = 0xFFFF;
-// const kUint32Unimplemented: uint32 = 0xFFFF;
-// const kUint64Unimplemented: uint16 = 0xFFFFFFFFFFFFFFFF;
-// const kSint16Unimplemented: int16 = 0x8000;
-// const kSint32Unimplemented: int32 = 0x80000000;
-// const kSint64Unimplemented: int64 = 0x8000000000000000;
-// const kUint16Unimplemented: uint16 = 0xFFFF;
-// const kAcc16Unimplemented: uint16 = 0x0000;
-// const kAcc32Unimplemented: uint32 = 0x00000000;
-// const kAcc64Unimplemented: uint64 = 0x0000000000000000;
-// const kBitField16Unimplemented: uint16 = 0xFFFF;
-// const kBitField32Unimplemented: uint64 = 0xFFFFFFFF;
-// const kBitField64Unimplemented: uint16 = 0xFFFFFFFFFFFFFFFF;
-// const kEnum16Unimplemented: uint16 = 0xFFFF;
-// const kEnum32Unimplemented: uint32 = 0xFFFFFFFF;
-// const kFloat32Unimplemented: uint32 = 0.0;
-// const kFloat64Unimplemented: uint32 = 0.0;
-// const kStringxUnimplemented: uint32 = "";
-// const kSunsSfUnimplemented: uint16 = 0x8000;
-// const kPad16Unimplemented: uint16 = 0x8000;
-// const kSunspecIdentifier: string = "SunS";
-
 struct kSint16
 {
     value : int16;
@@ -203,6 +150,8 @@ struct kEui48
 
 }
 
+// Using a union for the Point type as opposed to an enum due to some points having a default/static value that is not the same as the zero value of the type. 
+
 union SunspecPointData
 {
     // kUndefinedType = 0, /**< Undefined type */
@@ -233,11 +182,11 @@ union SunspecPointData
 table SunspecPointDef{
     id : string;
     data: SunspecPointData;
-    // This is need because it can be specified as a constant in the model definition or in another point.
+    // This is need because it can be specified as a constant in the model definition or as the value of a top level point.
     count:uint16= 1;
     count_point_id : string;
     size: uint16;
-    // This is need because it can be specified as a constant in the model definition or in another point.
+    // This is need because it can be specified as a constant in the model definition or as the value of another top level point.
     sf : int16;
     sf_id : string;
     units : string;
@@ -246,11 +195,11 @@ table SunspecPointDef{
     label : string;
 }
 
-
+// The type of group the group is
 enum SunspecGroupType:uint8
 {
-    kGroup,
-    kSync,
+    kGroup,  /**< A simple group of points */
+    kSync, /**< A group of points that are accessed together */
 }
 
 table SunspecGroupDef{
@@ -268,6 +217,25 @@ enum SunspecModelList : uint16
     KModelInvalid = 0, /**< Invalid Model Id */
 
     kModel1 = 1,     /**< Definition for model1 */
+    kModel2 = 2,     /**< Definition for model2 */
+    kModel3 = 3,     /**< Definition for model3 */
+    kModel4 = 4,     /**< Definition for model4 */
+    kModel5 = 5,     /**< Definition for model5 */
+    kModel6 = 6,     /**< Definition for model6 */
+    kModel7 = 7,     /**< Definition for model7 */
+    kModel8 = 8,     /**< Definition for model8 */
+    kModel9 = 9,     /**< Definition for model9 */
+    kModel10 = 10,   /**< Definition for model10 */
+    kModel11 = 11,   /**< Definition for model11 */
+    kModel12 = 12,   /**< Definition for model12 */
+    kModel13 = 13,   /**< Definition for model13 */
+    kModel14 = 14,   /**< Definition for model14 */
+    kModel15 = 15,   /**< Definition for model15 */
+    kModel16 = 16,   /**< Definition for model16 */
+    kModel17 = 17,   /**< Definition for model17 */
+    kModel18 = 18,   /**< Definition for model18 */
+    kModel19 = 19,   /**< Definition for model19 */
+    
     kModel101 = 101, /**< Definition for model101 */
     kModel102 = 102, /**< Definition for model102 */
     kModel103 = 103, /**< Definition for model103 */
@@ -275,9 +243,92 @@ enum SunspecModelList : uint16
     kModel112 = 112, /**< Definition for model112 */
     kModel113 = 113, /**< Definition for model113 */
     kModel120 = 120, /**< Definition for model120 */
+    kModel121 = 121, /**< Definition for model121 */
+    kModel122 = 122, /**< Definition for model122 */
+    kModel123 = 123, /**< Definition for model123 */
+    kModel124 = 124, /**< Definition for model124 */
+    kModel125 = 125, /**< Definition for model125 */
     kModel126 = 126, /**< Definition for model126 */
+    kModel127 = 127, /**< Definition for model127 */
+    kModel128 = 128, /**< Definition for model128 */
+    kModel129 = 129, /**< Definition for model129 */
+    kModel130 = 130, /**< Definition for model130 */
+    kModel131 = 131, /**< Definition for model131 */
+    kModel132 = 132, /**< Definition for model132 */
+    kModel133 = 133, /**< Definition for model133 */
+    kModel134 = 134, /**< Definition for model134 */
+    kModel135 = 135, /**< Definition for model135 */
+    kModel136 = 136, /**< Definition for model136 */
+    kModel137 = 137, /**< Definition for model137 */
+    kModel138 = 138, /**< Definition for model138 */
+    kModel139 = 139, /**< Definition for model139 */
+    kModel140 = 140, /**< Definition for model140 */
+    kModel141 = 141, /**< Definition for model141 */
+    kModel142 = 142, /**< Definition for model142 */
+    kModel143 = 143, /**< Definition for model143 */
+    kModel144 = 144, /**< Definition for model144 */
+    kModel145 = 145, /**< Definition for model145 */
     kModel160 = 160, /**< Definition for model160 */
-
+    kModel201 = 201, /**< Definition for model201 */
+    kModel202 = 202, /**< Definition for model202 */
+    kModel203 = 203, /**< Definition for model203 */
+    kModel204 = 204, /**< Definition for model204 */
+    kModel211 = 211, /**< Definition for model211 */
+    kModel212 = 212, /**< Definition for model212 */
+    kModel213 = 213, /**< Definition for model213 */
+    kModel214 = 214, /**< Definition for model214 */
+    kModel220 = 220, /**< Definition for model220 */
+    kModel302 = 302, /**< Definition for model302 */
+    kModel303 = 303, /**< Definition for model303 */
+    kModel304 = 304, /**< Definition for model304 */
+    kModel305 = 305, /**< Definition for model305 */
+    kModel306 = 306, /**< Definition for model306 */
+    kModel307 = 307, /**< Definition for model307 */
+    kModel308 = 308, /**< Definition for model308 */
+    kModel401 = 401, /**< Definition for model401 */
+    kModel402 = 402, /**< Definition for model402 */
+    kModel403 = 403, /**< Definition for model403 */
+    kModel404 = 404, /**< Definition for model404 */
+    kModel501 = 501, /**< Definition for model501 */
+    kModel502 = 502, /**< Definition for model502 */
+    kModel601 = 601, /**< Definition for model601 */
+    kModel701 = 701, /**< Definition for model701 */
+    kModel702 = 702, /**< Definition for model702 */
+    kModel703 = 703, /**< Definition for model703 */
+    kModel704 = 704, /**< Definition for model704 */
+    kModel705 = 705, /**< Definition for model705 */
+    kModel706 = 706, /**< Definition for model706 */
+    kModel707 = 707, /**< Definition for model707 */
+    kModel708 = 708, /**< Definition for model708 */
+    kModel709 = 709, /**< Definition for model709 */
+    kModel710 = 710, /**< Definition for model710 */
+    kModel711 = 711, /**< Definition for model711 */
+    kModel712 = 712, /**< Definition for model712 */
+    kModel713 = 713, /**< Definition for model713 */
+    kModel714 = 714, /**< Definition for model714 */
+    kModel715 = 715, /**< Definition for model715 */
+    kModel801 = 801, /**< Definition for model801 */
+    kModel802 = 802, /**< Definition for model802 */
+    kModel803 = 803, /**< Definition for model803 */
+    kModel804 = 804, /**< Definition for model804 */
+    kModel805 = 805, /**< Definition for model805 */
+    kModel806 = 806, /**< Definition for model806 */
+    kModel807 = 807, /**< Definition for model807 */
+    kModel808 = 808, /**< Definition for model808 */
+    kModel809 = 809, /**< Definition for model809 */
+    kModel63001 = 63001, /**< Definition for model63001 */
+    kModel64001 = 64001, /**< Definition for model64001 */
+    kModel64020 = 64020, /**< Definition for model64020 */
+    kModel64101 = 64101, /**< Definition for model64101 */
+    kModel64111 = 64111, /**< Definition for model64111 */
+    kModel64112 = 64112, /**< Definition for model64112 */
+    kModel64410 = 64410, /**< Definition for model64410 */
+    kModel64411 = 64411, /**< Definition for model64411 */
+    kModel64412 = 64412, /**< Definition for model64412 */
+    kModel64413 = 64413, /**< Definition for model64413 */
+    kModel64414 = 64414, /**< Definition for model64414 */
+    kModel64415 = 64415, /**< Definition for model64415 */
+    
     kModelEnd = 0xFFFF, /**< Definition for end model Id */
 
 }

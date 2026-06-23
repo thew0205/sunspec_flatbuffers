@@ -43,13 +43,13 @@
 
 
 
-build
+build/**
 builds
-# .vscode/*
-# .vscode
+.vscode/**
+.vscode
 temp.json
 cpputest
-
+include/generated/*
 
 *copy/
 

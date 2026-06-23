@@ -52,6 +52,17 @@ set(TESTS OFF CACHE BOOL "Disable tests" FORCE)
 
 # add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 
+list(APPEND SUNSPEC_MODELS_TO_INCLUDE
+    "1"
+    "101"
+    "112"
+    "113"
+    "120"
+    "126"
+    "160"
+)
+
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 

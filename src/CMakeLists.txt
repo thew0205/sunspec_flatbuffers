@@ -24,24 +24,30 @@ set(SUNSPEC_FILES_WRITER
         writer/sunspec_model_writer.cpp
         writer/sunspec_device_writer.cpp
 )
-set(MODEL_FILES
-        models/flatbuffer_array_model_1.cpp
-        models/flatbuffer_array_model_101.cpp
-        models/flatbuffer_array_model_101.cpp
-        models/flatbuffer_array_model_112.cpp
-        models/flatbuffer_array_model_113.cpp
-        models/flatbuffer_array_model_120.cpp
-        models/flatbuffer_array_model_126.cpp
-        models/flatbuffer_array_model_160.cpp
-)
+
+
+
+
+foreach(MODEL_ID IN LISTS SUNSPEC_MODELS_TO_INCLUDE)
+    list(APPEND SUNSPEC_MODEL_FILES 
+        "${CMAKE_CURRENT_SOURCE_DIR}/models/flatbuffer_array_model_${MODEL_ID}.cpp"
+    )
+endforeach()
+
+set(MODEL_DEFINITION_GENERATED_HEADER ${SUNSPEC_ROOT_DIR}/include/model_definitions_generated.h)
+
+file(WRITE "${MODEL_DEFINITION_GENERATED_HEADER}" "#pragma once\n")
+
+foreach(MODEL_ID IN LISTS SUNSPEC_MODELS_TO_INCLUDE)
+   file(APPEND "${MODEL_DEFINITION_GENERATED_HEADER}" "#define _INCLUDE_SUNSPEC_MODEL_${MODEL_ID}_\n")
+endforeach()
 
 add_library(${PROJECT_NAME}
         ${SUNSPEC_FILES}
         ${SUNSPEC_FILES_READER}
         ${SUNSPEC_FILES_WRITER}
-        ${MODEL_FILES}
+        ${SUNSPEC_MODEL_FILES}
 )
-
 
 # Add the standard library to the build
 target_link_libraries(${PROJECT_NAME} PRIVATE )

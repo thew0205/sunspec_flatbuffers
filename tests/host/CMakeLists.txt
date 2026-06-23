@@ -25,6 +25,15 @@ FetchContent_MakeAvailable(CppUTest)
 # add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+list(APPEND SUNSPEC_MODELS_TO_INCLUDE
+    "1"
+    "101"
+    "112"
+    "113"
+    "120"
+    "126"
+    "160"
+)
 
 add_subdirectory(${SUNSPEC_ROOT_DIR}/src ${CMAKE_BINARY_DIR}/src)
 add_subdirectory(third_party/generic)
