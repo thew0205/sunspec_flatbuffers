@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
 #include "sunspec.h"
-#include "model_definitions.h"
+
+#include "sunspec.h"
+
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"
@@ -22,19 +23,6 @@ using std::cout;
 using std::endl;
 using std::string;
 
-const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string &id)
-{
-    auto points = group->points();
-    for (unsigned int i = 0; i < points->size(); ++i)
-    {
-        const auto &point = *points->Get(i);
-        if (FlatbufferStringToString(points->Get(i)->id()) == id)
-        {
-            return &point;
-        }
-    }
-    return nullptr;
-}
 
 TEST_GROUP(Sunspec_Group_Reader_Model1)
 {
@@ -42,7 +30,7 @@ TEST_GROUP(Sunspec_Group_Reader_Model1)
 
     void setup()
     {
-        groupDef = GetSunspecModelDef(modelDefinition1)->group();
+        groupDef = getModelDefinition(1)->group();
     }
 
     void teardown()
@@ -98,7 +86,7 @@ TEST_GROUP(Sunspec_Group_Reader_Model160)
     const SunspecGroupDef *groupDef = nullptr;
     void setup()
     {
-        groupDef = GetSunspecModelDef(modelDefinition160)->group();
+        groupDef = getModelDefinition(160)->group();
     }
 
     void teardown()
@@ -109,7 +97,7 @@ TEST_GROUP(Sunspec_Group_Reader_Model160)
 IGNORE_TEST(Sunspec_Group_Reader_Model160, ReadModel1_After_SubLevel_Init)
 {
     CHECK(groupDef != nullptr);
-    SunspecModelReader model{*GetSunspecModelDef(modelDefinition160),
+    SunspecModelReader model{*getModelDefinition(160),
                              nullptr, 0, *(SunspecDeviceReader *)nullptr};
 
     SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)&model};

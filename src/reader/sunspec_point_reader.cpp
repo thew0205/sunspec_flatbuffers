@@ -1,5 +1,8 @@
 #include "reader/sunspec_point_reader.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include <cmath>
 
 #include "sunspec.h"
@@ -37,7 +40,7 @@ SunspecPointReader::SunspecPointReader(const SunspecPointDef &def, const uint16_
 //     case SunspecPointData_kSint32:
 //     case SunspecPointData_kFloat32:
 //     case SunspecPointData_kUint32:
-//     case SunspecPointData_KAcc32:
+//     case SunspecPointData_kAcc32:
 //     case SunspecPointData_kBitfield32:
 //     case SunspecPointData_kEnum32:
 //     case SunspecPointData_kIpAddr:
@@ -118,7 +121,7 @@ SunspecPointReader::SunspecPointReader(const SunspecPointDef &def, const uint16_
 //     case SunspecPointData_kUint32:
 //         ret += (includeSf && !def_.sf_id()->size()) ? to_string(value_.u32 * pow(10, sf_)) : to_string(value_.u32);
 //         break;
-//     case SunspecPointData_KAcc32:
+//     case SunspecPointData_kAcc32:
 //     case SunspecPointData_kBitfield32:
 //     case SunspecPointData_kEnum32:
 //     case SunspecPointData_kIpAddr:
@@ -189,7 +192,7 @@ string SunspecPointReader::getValueAsString() const
         ret += to_string(modbusRegisterFormatToSint32(modbusBuffer_));
         break;
     case SunspecPointData_kUint32:
-    case SunspecPointData_KAcc32:
+    case SunspecPointData_kAcc32:
     case SunspecPointData_kBitfield32:
     case SunspecPointData_kEnum32:
         ret += to_string(modbusRegisterFormatToUint64(modbusBuffer_));

@@ -514,7 +514,7 @@
             },
             {
                 "id": "acc32",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -528,7 +528,7 @@
             },
             {
                 "id": "acc32_u",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

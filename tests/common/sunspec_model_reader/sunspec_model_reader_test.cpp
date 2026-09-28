@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
 #include "sunspec.h"
-#include "model_definitions.h"
+
+#include "sunspec.h"
+
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"
@@ -22,19 +23,6 @@ using std::cout;
 using std::endl;
 using std::string;
 
-const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string &id)
-{
-    auto points = group->points();
-    for (unsigned int i = 0; i < points->size(); ++i)
-    {
-        const auto &point = *points->Get(i);
-        if (FlatbufferStringToString(points->Get(i)->id()) == id)
-        {
-            return &point;
-        }
-    }
-    return nullptr;
-}
 
 TEST_GROUP(Sunspec_Model_Reader_Model1)
 {
@@ -42,7 +30,7 @@ TEST_GROUP(Sunspec_Model_Reader_Model1)
 
     void setup()
     {
-        modelDef = GetSunspecModelDef(modelDefinition1);
+        modelDef = getModelDefinition(1);
     }
 
     void teardown()
@@ -109,7 +97,7 @@ TEST_GROUP(Sunspec_Model_Reader_Model160)
 
     void setup()
     {
-        modelDef = GetSunspecModelDef(modelDefinition160);
+        modelDef = getModelDefinition(160);
     }
 
     void teardown()
@@ -169,7 +157,7 @@ TEST_GROUP(Sunspec_Model1_Reader_Read)
     void setup()
     {
         memset(modelBuffer, 0, sizeof(modelBuffer));
-        modelDef = GetSunspecModelDef(modelDefinition1);
+        modelDef = getModelDefinition(1);
         client.setFakeBuffer(buffer, sizeof(buffer) / sizeof(buffer[0]));
     }
 };
@@ -215,7 +203,7 @@ TEST_GROUP(Sunspec_Model160_Reader_Read)
 
     void setup()
     {
-        modelDef = GetSunspecModelDef(modelDefinition160);
+        modelDef = getModelDefinition(160);
         client.setFakeBuffer(buffer, sizeof(buffer) / sizeof(buffer[0]));
     }
 };

@@ -1,7 +1,9 @@
 #include "writer/sunspec_point_writer.h"
 
-#include <cmath>
+#include <string.h>
+#include <assert.h>
 
+#include <cmath>
 #include <algorithm>
 
 #include "sunspec.h"
@@ -37,7 +39,7 @@ void SunspecPointWriter::setValueToModbusBuffer()
         return;
     }
 
-    string temp{def_.id()->c_str()};
+    // string temp{def_.id()->c_str()};
     switch (def_.data_type())
     {
 
@@ -118,7 +120,7 @@ void SunspecPointWriter::setValueToModbusBuffer()
         break;
     }
 
-    case SunspecPointData_KAcc32:
+    case SunspecPointData_kAcc32:
     {
         const acc32_t valueAcc32 = static_cast<acc32_t>(uint32_tToModbusRegisterFormat(getValueAsAcc32()));
         memcpy(modbusBuffer_, &valueAcc32, sizeof(acc32_t));
@@ -242,7 +244,7 @@ string SunspecPointWriter::toJson(bool includeSf, bool includeUnits) const
     //     break;
 
     // case SunspecPointData_kUint32:
-    // case SunspecPointData_KAcc32:
+    // case SunspecPointData_kAcc32:
     // case SunspecPointData_kBitfield32:
     // case SunspecPointData_kEnum32:
     // case SunspecPointData_kIpAddr:

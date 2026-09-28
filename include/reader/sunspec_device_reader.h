@@ -87,7 +87,7 @@ public:
      * @param supportedModel List of supported models
      * @return Number of models initialized
      */
-    uint16_t initAllModels(const std::initializer_list<SunspecModelList> &supportedModel);
+    uint16_t initAllModels(const std::initializer_list<uint16_t> &supportedModel);
 
     /**
      * @brief Assigns the buffer for Modbus data
@@ -112,7 +112,7 @@ public:
      * @param id Model ID
      * @return Pointer to SunspecModelReader
      */
-    SunspecModelReader *getModel(SunspecModelList id);
+    SunspecModelReader *getModel(uint16_t id);
 
     /**
      * @brief Reads data from the device at a given address into a buffer
@@ -153,12 +153,6 @@ public:
      */
     static constexpr uint32_t kSunspecIdentifier = 0x53756E53;
 
-    /**
-     * @brief Gets the model definition for a given model ID
-     * @param id Model ID
-     * @return Pointer to SunspecModelDef
-     */
-    static const SunspecModelDef *getModelDefinition(SunspecModelList id);
 
 private:
     uint8_t slaveId_{0};                /**< Modbus slave ID */

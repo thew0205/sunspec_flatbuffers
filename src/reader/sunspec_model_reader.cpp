@@ -1,5 +1,8 @@
 #include "reader/sunspec_model_reader.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include "sunspec.h"
 #include "reader/sunspec_device_reader.h"
 

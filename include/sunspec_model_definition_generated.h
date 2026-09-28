@@ -29,7 +29,7 @@ struct kUint64;
 
 struct kAcc16;
 
-struct KAcc32;
+struct kAcc32;
 
 struct kAcc64;
 
@@ -139,7 +139,7 @@ enum SunspecPointData : uint8_t {
   SunspecPointData_kUint32 = 6,
   SunspecPointData_kUint64 = 7,
   SunspecPointData_kAcc16 = 8,
-  SunspecPointData_KAcc32 = 9,
+  SunspecPointData_kAcc32 = 9,
   SunspecPointData_kAcc64 = 10,
   SunspecPointData_kBitfield16 = 11,
   SunspecPointData_kBitfield32 = 12,
@@ -169,7 +169,7 @@ inline const SunspecPointData (&EnumValuesSunspecPointData())[24] {
     SunspecPointData_kUint32,
     SunspecPointData_kUint64,
     SunspecPointData_kAcc16,
-    SunspecPointData_KAcc32,
+    SunspecPointData_kAcc32,
     SunspecPointData_kAcc64,
     SunspecPointData_kBitfield16,
     SunspecPointData_kBitfield32,
@@ -199,7 +199,7 @@ inline const char * const *EnumNamesSunspecPointData() {
     "kUint32",
     "kUint64",
     "kAcc16",
-    "KAcc32",
+    "kAcc32",
     "kAcc64",
     "kBitfield16",
     "kBitfield32",
@@ -261,8 +261,8 @@ template<> struct SunspecPointDataTraits<kAcc16> {
   static const SunspecPointData enum_value = SunspecPointData_kAcc16;
 };
 
-template<> struct SunspecPointDataTraits<KAcc32> {
-  static const SunspecPointData enum_value = SunspecPointData_KAcc32;
+template<> struct SunspecPointDataTraits<kAcc32> {
+  static const SunspecPointData enum_value = SunspecPointData_kAcc32;
 };
 
 template<> struct SunspecPointDataTraits<kAcc64> {
@@ -355,8 +355,26 @@ inline const char *EnumNameSunspecGroupType(SunspecGroupType e) {
 }
 
 enum SunspecModelList : uint16_t {
-  SunspecModelList_KModelInvalid = 0,
+  SunspecModelList_kModelInvalid = 0,
   SunspecModelList_kModel1 = 1,
+  SunspecModelList_kModel2 = 2,
+  SunspecModelList_kModel3 = 3,
+  SunspecModelList_kModel4 = 4,
+  SunspecModelList_kModel5 = 5,
+  SunspecModelList_kModel6 = 6,
+  SunspecModelList_kModel7 = 7,
+  SunspecModelList_kModel8 = 8,
+  SunspecModelList_kModel9 = 9,
+  SunspecModelList_kModel10 = 10,
+  SunspecModelList_kModel11 = 11,
+  SunspecModelList_kModel12 = 12,
+  SunspecModelList_kModel13 = 13,
+  SunspecModelList_kModel14 = 14,
+  SunspecModelList_kModel15 = 15,
+  SunspecModelList_kModel16 = 16,
+  SunspecModelList_kModel17 = 17,
+  SunspecModelList_kModel18 = 18,
+  SunspecModelList_kModel19 = 19,
   SunspecModelList_kModel101 = 101,
   SunspecModelList_kModel102 = 102,
   SunspecModelList_kModel103 = 103,
@@ -364,17 +382,119 @@ enum SunspecModelList : uint16_t {
   SunspecModelList_kModel112 = 112,
   SunspecModelList_kModel113 = 113,
   SunspecModelList_kModel120 = 120,
+  SunspecModelList_kModel121 = 121,
+  SunspecModelList_kModel122 = 122,
+  SunspecModelList_kModel123 = 123,
+  SunspecModelList_kModel124 = 124,
+  SunspecModelList_kModel125 = 125,
   SunspecModelList_kModel126 = 126,
+  SunspecModelList_kModel127 = 127,
+  SunspecModelList_kModel128 = 128,
+  SunspecModelList_kModel129 = 129,
+  SunspecModelList_kModel130 = 130,
+  SunspecModelList_kModel131 = 131,
+  SunspecModelList_kModel132 = 132,
+  SunspecModelList_kModel133 = 133,
+  SunspecModelList_kModel134 = 134,
+  SunspecModelList_kModel135 = 135,
+  SunspecModelList_kModel136 = 136,
+  SunspecModelList_kModel137 = 137,
+  SunspecModelList_kModel138 = 138,
+  SunspecModelList_kModel139 = 139,
+  SunspecModelList_kModel140 = 140,
+  SunspecModelList_kModel141 = 141,
+  SunspecModelList_kModel142 = 142,
+  SunspecModelList_kModel143 = 143,
+  SunspecModelList_kModel144 = 144,
+  SunspecModelList_kModel145 = 145,
   SunspecModelList_kModel160 = 160,
+  SunspecModelList_kModel201 = 201,
+  SunspecModelList_kModel202 = 202,
+  SunspecModelList_kModel203 = 203,
+  SunspecModelList_kModel204 = 204,
+  SunspecModelList_kModel211 = 211,
+  SunspecModelList_kModel212 = 212,
+  SunspecModelList_kModel213 = 213,
+  SunspecModelList_kModel214 = 214,
+  SunspecModelList_kModel220 = 220,
+  SunspecModelList_kModel302 = 302,
+  SunspecModelList_kModel303 = 303,
+  SunspecModelList_kModel304 = 304,
+  SunspecModelList_kModel305 = 305,
+  SunspecModelList_kModel306 = 306,
+  SunspecModelList_kModel307 = 307,
+  SunspecModelList_kModel308 = 308,
+  SunspecModelList_kModel401 = 401,
+  SunspecModelList_kModel402 = 402,
+  SunspecModelList_kModel403 = 403,
+  SunspecModelList_kModel404 = 404,
+  SunspecModelList_kModel501 = 501,
+  SunspecModelList_kModel502 = 502,
+  SunspecModelList_kModel601 = 601,
+  SunspecModelList_kModel701 = 701,
+  SunspecModelList_kModel702 = 702,
+  SunspecModelList_kModel703 = 703,
+  SunspecModelList_kModel704 = 704,
+  SunspecModelList_kModel705 = 705,
+  SunspecModelList_kModel706 = 706,
+  SunspecModelList_kModel707 = 707,
+  SunspecModelList_kModel708 = 708,
+  SunspecModelList_kModel709 = 709,
+  SunspecModelList_kModel710 = 710,
+  SunspecModelList_kModel711 = 711,
+  SunspecModelList_kModel712 = 712,
+  SunspecModelList_kModel713 = 713,
+  SunspecModelList_kModel714 = 714,
+  SunspecModelList_kModel715 = 715,
+  SunspecModelList_kModel801 = 801,
+  SunspecModelList_kModel802 = 802,
+  SunspecModelList_kModel803 = 803,
+  SunspecModelList_kModel804 = 804,
+  SunspecModelList_kModel805 = 805,
+  SunspecModelList_kModel806 = 806,
+  SunspecModelList_kModel807 = 807,
+  SunspecModelList_kModel808 = 808,
+  SunspecModelList_kModel809 = 809,
+  SunspecModelList_kModel63001 = 63001,
+  SunspecModelList_kModel63002 = 63002,
+  SunspecModelList_kModel64001 = 64001,
+  SunspecModelList_kModel64020 = 64020,
+  SunspecModelList_kModel64101 = 64101,
+  SunspecModelList_kModel64111 = 64111,
+  SunspecModelList_kModel64112 = 64112,
+  SunspecModelList_kModel64410 = 64410,
+  SunspecModelList_kModel64411 = 64411,
+  SunspecModelList_kModel64412 = 64412,
+  SunspecModelList_kModel64413 = 64413,
+  SunspecModelList_kModel64414 = 64414,
+  SunspecModelList_kModel64415 = 64415,
   SunspecModelList_kModelEnd = 65535,
-  SunspecModelList_MIN = SunspecModelList_KModelInvalid,
+  SunspecModelList_MIN = SunspecModelList_kModelInvalid,
   SunspecModelList_MAX = SunspecModelList_kModelEnd
 };
 
-inline const SunspecModelList (&EnumValuesSunspecModelList())[12] {
+inline const SunspecModelList (&EnumValuesSunspecModelList())[114] {
   static const SunspecModelList values[] = {
-    SunspecModelList_KModelInvalid,
+    SunspecModelList_kModelInvalid,
     SunspecModelList_kModel1,
+    SunspecModelList_kModel2,
+    SunspecModelList_kModel3,
+    SunspecModelList_kModel4,
+    SunspecModelList_kModel5,
+    SunspecModelList_kModel6,
+    SunspecModelList_kModel7,
+    SunspecModelList_kModel8,
+    SunspecModelList_kModel9,
+    SunspecModelList_kModel10,
+    SunspecModelList_kModel11,
+    SunspecModelList_kModel12,
+    SunspecModelList_kModel13,
+    SunspecModelList_kModel14,
+    SunspecModelList_kModel15,
+    SunspecModelList_kModel16,
+    SunspecModelList_kModel17,
+    SunspecModelList_kModel18,
+    SunspecModelList_kModel19,
     SunspecModelList_kModel101,
     SunspecModelList_kModel102,
     SunspecModelList_kModel103,
@@ -382,8 +502,92 @@ inline const SunspecModelList (&EnumValuesSunspecModelList())[12] {
     SunspecModelList_kModel112,
     SunspecModelList_kModel113,
     SunspecModelList_kModel120,
+    SunspecModelList_kModel121,
+    SunspecModelList_kModel122,
+    SunspecModelList_kModel123,
+    SunspecModelList_kModel124,
+    SunspecModelList_kModel125,
     SunspecModelList_kModel126,
+    SunspecModelList_kModel127,
+    SunspecModelList_kModel128,
+    SunspecModelList_kModel129,
+    SunspecModelList_kModel130,
+    SunspecModelList_kModel131,
+    SunspecModelList_kModel132,
+    SunspecModelList_kModel133,
+    SunspecModelList_kModel134,
+    SunspecModelList_kModel135,
+    SunspecModelList_kModel136,
+    SunspecModelList_kModel137,
+    SunspecModelList_kModel138,
+    SunspecModelList_kModel139,
+    SunspecModelList_kModel140,
+    SunspecModelList_kModel141,
+    SunspecModelList_kModel142,
+    SunspecModelList_kModel143,
+    SunspecModelList_kModel144,
+    SunspecModelList_kModel145,
     SunspecModelList_kModel160,
+    SunspecModelList_kModel201,
+    SunspecModelList_kModel202,
+    SunspecModelList_kModel203,
+    SunspecModelList_kModel204,
+    SunspecModelList_kModel211,
+    SunspecModelList_kModel212,
+    SunspecModelList_kModel213,
+    SunspecModelList_kModel214,
+    SunspecModelList_kModel220,
+    SunspecModelList_kModel302,
+    SunspecModelList_kModel303,
+    SunspecModelList_kModel304,
+    SunspecModelList_kModel305,
+    SunspecModelList_kModel306,
+    SunspecModelList_kModel307,
+    SunspecModelList_kModel308,
+    SunspecModelList_kModel401,
+    SunspecModelList_kModel402,
+    SunspecModelList_kModel403,
+    SunspecModelList_kModel404,
+    SunspecModelList_kModel501,
+    SunspecModelList_kModel502,
+    SunspecModelList_kModel601,
+    SunspecModelList_kModel701,
+    SunspecModelList_kModel702,
+    SunspecModelList_kModel703,
+    SunspecModelList_kModel704,
+    SunspecModelList_kModel705,
+    SunspecModelList_kModel706,
+    SunspecModelList_kModel707,
+    SunspecModelList_kModel708,
+    SunspecModelList_kModel709,
+    SunspecModelList_kModel710,
+    SunspecModelList_kModel711,
+    SunspecModelList_kModel712,
+    SunspecModelList_kModel713,
+    SunspecModelList_kModel714,
+    SunspecModelList_kModel715,
+    SunspecModelList_kModel801,
+    SunspecModelList_kModel802,
+    SunspecModelList_kModel803,
+    SunspecModelList_kModel804,
+    SunspecModelList_kModel805,
+    SunspecModelList_kModel806,
+    SunspecModelList_kModel807,
+    SunspecModelList_kModel808,
+    SunspecModelList_kModel809,
+    SunspecModelList_kModel63001,
+    SunspecModelList_kModel63002,
+    SunspecModelList_kModel64001,
+    SunspecModelList_kModel64020,
+    SunspecModelList_kModel64101,
+    SunspecModelList_kModel64111,
+    SunspecModelList_kModel64112,
+    SunspecModelList_kModel64410,
+    SunspecModelList_kModel64411,
+    SunspecModelList_kModel64412,
+    SunspecModelList_kModel64413,
+    SunspecModelList_kModel64414,
+    SunspecModelList_kModel64415,
     SunspecModelList_kModelEnd
   };
   return values;
@@ -391,8 +595,26 @@ inline const SunspecModelList (&EnumValuesSunspecModelList())[12] {
 
 inline const char *EnumNameSunspecModelList(SunspecModelList e) {
   switch (e) {
-    case SunspecModelList_KModelInvalid: return "KModelInvalid";
+    case SunspecModelList_kModelInvalid: return "kModelInvalid";
     case SunspecModelList_kModel1: return "kModel1";
+    case SunspecModelList_kModel2: return "kModel2";
+    case SunspecModelList_kModel3: return "kModel3";
+    case SunspecModelList_kModel4: return "kModel4";
+    case SunspecModelList_kModel5: return "kModel5";
+    case SunspecModelList_kModel6: return "kModel6";
+    case SunspecModelList_kModel7: return "kModel7";
+    case SunspecModelList_kModel8: return "kModel8";
+    case SunspecModelList_kModel9: return "kModel9";
+    case SunspecModelList_kModel10: return "kModel10";
+    case SunspecModelList_kModel11: return "kModel11";
+    case SunspecModelList_kModel12: return "kModel12";
+    case SunspecModelList_kModel13: return "kModel13";
+    case SunspecModelList_kModel14: return "kModel14";
+    case SunspecModelList_kModel15: return "kModel15";
+    case SunspecModelList_kModel16: return "kModel16";
+    case SunspecModelList_kModel17: return "kModel17";
+    case SunspecModelList_kModel18: return "kModel18";
+    case SunspecModelList_kModel19: return "kModel19";
     case SunspecModelList_kModel101: return "kModel101";
     case SunspecModelList_kModel102: return "kModel102";
     case SunspecModelList_kModel103: return "kModel103";
@@ -400,8 +622,92 @@ inline const char *EnumNameSunspecModelList(SunspecModelList e) {
     case SunspecModelList_kModel112: return "kModel112";
     case SunspecModelList_kModel113: return "kModel113";
     case SunspecModelList_kModel120: return "kModel120";
+    case SunspecModelList_kModel121: return "kModel121";
+    case SunspecModelList_kModel122: return "kModel122";
+    case SunspecModelList_kModel123: return "kModel123";
+    case SunspecModelList_kModel124: return "kModel124";
+    case SunspecModelList_kModel125: return "kModel125";
     case SunspecModelList_kModel126: return "kModel126";
+    case SunspecModelList_kModel127: return "kModel127";
+    case SunspecModelList_kModel128: return "kModel128";
+    case SunspecModelList_kModel129: return "kModel129";
+    case SunspecModelList_kModel130: return "kModel130";
+    case SunspecModelList_kModel131: return "kModel131";
+    case SunspecModelList_kModel132: return "kModel132";
+    case SunspecModelList_kModel133: return "kModel133";
+    case SunspecModelList_kModel134: return "kModel134";
+    case SunspecModelList_kModel135: return "kModel135";
+    case SunspecModelList_kModel136: return "kModel136";
+    case SunspecModelList_kModel137: return "kModel137";
+    case SunspecModelList_kModel138: return "kModel138";
+    case SunspecModelList_kModel139: return "kModel139";
+    case SunspecModelList_kModel140: return "kModel140";
+    case SunspecModelList_kModel141: return "kModel141";
+    case SunspecModelList_kModel142: return "kModel142";
+    case SunspecModelList_kModel143: return "kModel143";
+    case SunspecModelList_kModel144: return "kModel144";
+    case SunspecModelList_kModel145: return "kModel145";
     case SunspecModelList_kModel160: return "kModel160";
+    case SunspecModelList_kModel201: return "kModel201";
+    case SunspecModelList_kModel202: return "kModel202";
+    case SunspecModelList_kModel203: return "kModel203";
+    case SunspecModelList_kModel204: return "kModel204";
+    case SunspecModelList_kModel211: return "kModel211";
+    case SunspecModelList_kModel212: return "kModel212";
+    case SunspecModelList_kModel213: return "kModel213";
+    case SunspecModelList_kModel214: return "kModel214";
+    case SunspecModelList_kModel220: return "kModel220";
+    case SunspecModelList_kModel302: return "kModel302";
+    case SunspecModelList_kModel303: return "kModel303";
+    case SunspecModelList_kModel304: return "kModel304";
+    case SunspecModelList_kModel305: return "kModel305";
+    case SunspecModelList_kModel306: return "kModel306";
+    case SunspecModelList_kModel307: return "kModel307";
+    case SunspecModelList_kModel308: return "kModel308";
+    case SunspecModelList_kModel401: return "kModel401";
+    case SunspecModelList_kModel402: return "kModel402";
+    case SunspecModelList_kModel403: return "kModel403";
+    case SunspecModelList_kModel404: return "kModel404";
+    case SunspecModelList_kModel501: return "kModel501";
+    case SunspecModelList_kModel502: return "kModel502";
+    case SunspecModelList_kModel601: return "kModel601";
+    case SunspecModelList_kModel701: return "kModel701";
+    case SunspecModelList_kModel702: return "kModel702";
+    case SunspecModelList_kModel703: return "kModel703";
+    case SunspecModelList_kModel704: return "kModel704";
+    case SunspecModelList_kModel705: return "kModel705";
+    case SunspecModelList_kModel706: return "kModel706";
+    case SunspecModelList_kModel707: return "kModel707";
+    case SunspecModelList_kModel708: return "kModel708";
+    case SunspecModelList_kModel709: return "kModel709";
+    case SunspecModelList_kModel710: return "kModel710";
+    case SunspecModelList_kModel711: return "kModel711";
+    case SunspecModelList_kModel712: return "kModel712";
+    case SunspecModelList_kModel713: return "kModel713";
+    case SunspecModelList_kModel714: return "kModel714";
+    case SunspecModelList_kModel715: return "kModel715";
+    case SunspecModelList_kModel801: return "kModel801";
+    case SunspecModelList_kModel802: return "kModel802";
+    case SunspecModelList_kModel803: return "kModel803";
+    case SunspecModelList_kModel804: return "kModel804";
+    case SunspecModelList_kModel805: return "kModel805";
+    case SunspecModelList_kModel806: return "kModel806";
+    case SunspecModelList_kModel807: return "kModel807";
+    case SunspecModelList_kModel808: return "kModel808";
+    case SunspecModelList_kModel809: return "kModel809";
+    case SunspecModelList_kModel63001: return "kModel63001";
+    case SunspecModelList_kModel63002: return "kModel63002";
+    case SunspecModelList_kModel64001: return "kModel64001";
+    case SunspecModelList_kModel64020: return "kModel64020";
+    case SunspecModelList_kModel64101: return "kModel64101";
+    case SunspecModelList_kModel64111: return "kModel64111";
+    case SunspecModelList_kModel64112: return "kModel64112";
+    case SunspecModelList_kModel64410: return "kModel64410";
+    case SunspecModelList_kModel64411: return "kModel64411";
+    case SunspecModelList_kModel64412: return "kModel64412";
+    case SunspecModelList_kModel64413: return "kModel64413";
+    case SunspecModelList_kModel64414: return "kModel64414";
+    case SunspecModelList_kModel64415: return "kModel64415";
     case SunspecModelList_kModelEnd: return "kModelEnd";
     default: return "";
   }
@@ -543,22 +849,22 @@ FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(2) kAcc16 FLATBUFFERS_FINAL_CLASS {
 };
 FLATBUFFERS_STRUCT_END(kAcc16, 2);
 
-FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) KAcc32 FLATBUFFERS_FINAL_CLASS {
+FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(4) kAcc32 FLATBUFFERS_FINAL_CLASS {
  private:
   uint32_t value_;
 
  public:
-  KAcc32()
+  kAcc32()
       : value_(0) {
   }
-  KAcc32(uint32_t _value)
+  kAcc32(uint32_t _value)
       : value_(::flatbuffers::EndianScalar(_value)) {
   }
   uint32_t value() const {
     return ::flatbuffers::EndianScalar(value_);
   }
 };
-FLATBUFFERS_STRUCT_END(KAcc32, 4);
+FLATBUFFERS_STRUCT_END(kAcc32, 4);
 
 FLATBUFFERS_MANUALLY_ALIGNED_STRUCT(8) kAcc64 FLATBUFFERS_FINAL_CLASS {
  private:
@@ -900,8 +1206,8 @@ struct SunspecPointDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
   const kAcc16 *data_as_kAcc16() const {
     return data_type() == SunspecPointData_kAcc16 ? static_cast<const kAcc16 *>(data()) : nullptr;
   }
-  const KAcc32 *data_as_KAcc32() const {
-    return data_type() == SunspecPointData_KAcc32 ? static_cast<const KAcc32 *>(data()) : nullptr;
+  const kAcc32 *data_as_kAcc32() const {
+    return data_type() == SunspecPointData_kAcc32 ? static_cast<const kAcc32 *>(data()) : nullptr;
   }
   const kAcc64 *data_as_kAcc64() const {
     return data_type() == SunspecPointData_kAcc64 ? static_cast<const kAcc64 *>(data()) : nullptr;
@@ -1028,8 +1334,8 @@ template<> inline const kAcc16 *SunspecPointDef::data_as<kAcc16>() const {
   return data_as_kAcc16();
 }
 
-template<> inline const KAcc32 *SunspecPointDef::data_as<KAcc32>() const {
-  return data_as_KAcc32();
+template<> inline const kAcc32 *SunspecPointDef::data_as<kAcc32>() const {
+  return data_as_kAcc32();
 }
 
 template<> inline const kAcc64 *SunspecPointDef::data_as<kAcc64>() const {
@@ -1343,8 +1649,8 @@ struct SunspecModelDef FLATBUFFERS_FINAL_CLASS : private ::flatbuffers::Table {
     VT_ID = 4,
     VT_GROUP = 6
   };
-  SunspecModelList id() const {
-    return static_cast<SunspecModelList>(GetField<uint16_t>(VT_ID, 0));
+  uint16_t id() const {
+    return GetField<uint16_t>(VT_ID, 65535);
   }
   const SunspecGroupDef *group() const {
     return GetPointer<const SunspecGroupDef *>(VT_GROUP);
@@ -1362,8 +1668,8 @@ struct SunspecModelDefBuilder {
   typedef SunspecModelDef Table;
   ::flatbuffers::FlatBufferBuilder &fbb_;
   ::flatbuffers::uoffset_t start_;
-  void add_id(SunspecModelList id) {
-    fbb_.AddElement<uint16_t>(SunspecModelDef::VT_ID, static_cast<uint16_t>(id), 0);
+  void add_id(uint16_t id) {
+    fbb_.AddElement<uint16_t>(SunspecModelDef::VT_ID, id, 65535);
   }
   void add_group(::flatbuffers::Offset<SunspecGroupDef> group) {
     fbb_.AddOffset(SunspecModelDef::VT_GROUP, group);
@@ -1381,7 +1687,7 @@ struct SunspecModelDefBuilder {
 
 inline ::flatbuffers::Offset<SunspecModelDef> CreateSunspecModelDef(
     ::flatbuffers::FlatBufferBuilder &_fbb,
-    SunspecModelList id = SunspecModelList_KModelInvalid,
+    uint16_t id = 65535,
     ::flatbuffers::Offset<SunspecGroupDef> group = 0) {
   SunspecModelDefBuilder builder_(_fbb);
   builder_.add_group(group);
@@ -1418,8 +1724,8 @@ inline bool VerifySunspecPointData(::flatbuffers::Verifier &verifier, const void
     case SunspecPointData_kAcc16: {
       return verifier.VerifyField<kAcc16>(static_cast<const uint8_t *>(obj), 0, 2);
     }
-    case SunspecPointData_KAcc32: {
-      return verifier.VerifyField<KAcc32>(static_cast<const uint8_t *>(obj), 0, 4);
+    case SunspecPointData_kAcc32: {
+      return verifier.VerifyField<kAcc32>(static_cast<const uint8_t *>(obj), 0, 4);
     }
     case SunspecPointData_kAcc64: {
       return verifier.VerifyField<kAcc64>(static_cast<const uint8_t *>(obj), 0, 8);

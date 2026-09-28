@@ -1,5 +1,8 @@
 #include "reader/sunspec_group_reader.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include "sunspec.h"
 #include "reader/sunspec_model_reader.h"
 #include "reader/sunspec_device_reader.h"
@@ -39,7 +42,7 @@ SunspecPointReader *SunspecGroupReader::getPoint(const string_view pointId)
 {
     for (auto &point : points_)
     {
-        if (pointId == point.def().id()->c_str())
+        if (pointId == FlatbufferStringToStringView(point.def().id()))
         {
             return &point;
         }
@@ -51,7 +54,7 @@ const SunspecPointReader *SunspecGroupReader::getPoint(const string_view pointId
 {
     for (auto &point : points_)
     {
-        if (pointId == point.def().id()->c_str())
+        if (pointId == FlatbufferStringToStringView(point.def().id()))
         {
             return &point;
         }
@@ -64,7 +67,7 @@ SunspecGroupReader *SunspecGroupReader::getGroup(const string_view &groupId)
 {
     for (auto &groupPoint : groups_)
     {
-        if (groupId == groupPoint.def().id()->c_str())
+        if (groupId == FlatbufferStringToStringView(groupPoint.def().id()))
         {
             return &groupPoint;
         }
@@ -76,7 +79,7 @@ const SunspecGroupReader *SunspecGroupReader::getGroup(const string_view &groupI
 {
     for (auto &groupPoint : groups_)
     {
-        if (groupId == groupPoint.def().id()->c_str())
+        if (groupId == FlatbufferStringToStringView(groupPoint.def().id()))
         {
             return &groupPoint;
         }
@@ -97,14 +100,14 @@ void SunspecGroupReader::initPoints()
 
     for (const auto &pointDef : *def_.points())
     {
-        uint16_t count = pointDef->count();
+        uint16_t count = DEREFERENCE_POINTER_FLATBUFFER(pointDef).count();
         if (0 == count)
         {
             // NOTE Count is always in the top levelgroup
             // NOTE All toplevel points have fixed count
             assert(!isTopLevelGroupPoint());
 
-            SunspecPointReader *countPoint = getModel()->getPoint(pointDef->count_point_id()->c_str());
+            SunspecPointReader *countPoint = getModel()->getPoint(FlatbufferStringToStringView(DEREFERENCE_POINTER_FLATBUFFER(pointDef).count_point_id()));
 
             count = countPoint == nullptr ? 0 : countPoint->valueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -112,7 +115,7 @@ void SunspecGroupReader::initPoints()
 
         totalPointCount += count;
         pointCounts.push_back(count);
-        pointDefs.push_back(pointDef);
+        pointDefs.push_back(REFERENCE_POINTER_FLATBUFFER(pointDef));
     }
     assert(pointCounts.size() == pointDefs.size() /*, "Internal error: pointCounts and pointDefs size mismatch"*/);
 
@@ -144,12 +147,13 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 
     for (const auto &groupDef : *def_.groups())
     {
-        std::string temp{FlatbufferStringToString(groupDef->id())};
-        uint16_t count = groupDef->count();
+        std::string temp{FlatbufferStringToString(DEREFERENCE_POINTER_FLATBUFFER(groupDef).id())};
+        uint16_t count = DEREFERENCE_POINTER_FLATBUFFER(groupDef).count();
         if (0 == count)
         {
-            std::string temp3{groupDef->count_point_id()->c_str()};
-            SunspecPointReader *countPoint = getModel()->getPoint(groupDef->count_point_id()->c_str());
+            // std::string_view temp3{FlatbufferStringToString(DEREFERENCE_POINTER_FLATBUFFER(groupDef).count_point_id())};
+            SunspecPointReader *countPoint = getModel()->getPoint(FlatbufferStringToString(DEREFERENCE_POINTER_FLATBUFFER(groupDef).count_point_id()));
+
 
             count = (countPoint == nullptr) ? 0 : countPoint->valueAsUint16();
             count = (count == kUint16UnimplementedValue) ? 0 : count;
@@ -157,7 +161,7 @@ uint16_t SunspecGroupReader::initGroups(uint16_t maxRegisterLength)
 
         totalGroupCount += count;
         groupCounts.push_back(count);
-        groupDefs.push_back(groupDef);
+        groupDefs.push_back(REFERENCE_POINTER_FLATBUFFER(groupDef));
     }
 
     assert(groupCounts.size() == groupDefs.size() /*, "Internal error: groupCounts and groupDefs size mismatch"*/);

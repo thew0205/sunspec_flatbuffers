@@ -7,13 +7,25 @@
 
 #pragma once
 
-#include <cmath>
 #include <stdint.h>
+#include <string.h>
 
+#include <cmath>
 #include <string>
 #include <string_view>
 
+
+
+#ifdef SUNSPEC_FLATBUFFERS_IMPLEMENTATION
 #include "sunspec_model_definition_generated.h"
+#define DEREFERENCE_POINTER_FLATBUFFER(x) (*x)
+#define REFERENCE_POINTER_FLATBUFFER(x) (x)
+#else
+#define DEREFERENCE_POINTER_FLATBUFFER(x) (x)
+#define REFERENCE_POINTER_FLATBUFFER(x) (&x)
+
+#include "c_model_definition.h"
+#endif
 
 #ifndef VIRTUAL_TEST
 #define VIRTUAL_TEST
@@ -225,14 +237,14 @@ inline uint32_t FlatbufferKUint32toUint32_t(const kUint32 *uint32)
 }
 
 /**
- * @brief Converts a Flatbuffers KAcc32 to a native acc32_t, handling unimplemented values represented as nullptr.
+ * @brief Converts a Flatbuffers kAcc32 to a native acc32_t, handling unimplemented values represented as nullptr.
  *
- * If the input pointer is nullptr, it returns the predefined unimplemented value for acc32_t. Otherwise, it retrieves the value from the KAcc32 structure.
+ * If the input pointer is nullptr, it returns the predefined unimplemented value for acc32_t. Otherwise, it retrieves the value from the kAcc32 structure.
  *
- * @param acc32 Pointer to a Flatbuffers KAcc32 structure.
+ * @param acc32 Pointer to a Flatbuffers kAcc32 structure.
  * @return acc32_t The corresponding native acc32_t value or the unimplemented value if input is nullptr.
  */
-inline acc32_t FlatbufferKAcc32toAcc32_t(const KAcc32 *acc32)
+inline acc32_t FlatbufferKAcc32toAcc32_t(const kAcc32 *acc32)
 {
     return {acc32 == nullptr ? kAcc32UnimplementedValue : acc32->value()};
 }
@@ -247,6 +259,7 @@ inline acc32_t FlatbufferKAcc32toAcc32_t(const KAcc32 *acc32)
  */
 inline bitfield32_t FlatbufferKBit32toBit32_t(const kBitfield32 *bit32)
 {
+    #
     return {bit32 == nullptr ? kBit32UnimplementedValue : bit32->value()};
 }
 
@@ -395,6 +408,7 @@ inline float FlatbufferKFloat32toFloat(const kFloat32 *float32)
     return {float32 == nullptr ? kFloat32UnimplementedValue : float32->value()};
 }
 
+#if SUNSPEC_FLATBUFFERS_IMPLEMENTATION
 /**
  * @brief Converts a Flatbuffers String to a native std::string, handling unimplemented values represented as nullptr.
  *
@@ -406,6 +420,11 @@ inline float FlatbufferKFloat32toFloat(const kFloat32 *float32)
 inline std::string FlatbufferStringToString(const flatbuffers::String *flatbufferSTring)
 {
     return std::string{flatbufferSTring == nullptr ? kStringUnimplementedValue : flatbufferSTring->c_str()};
+}
+
+inline std::string_view FlatbufferStringToStringView(const flatbuffers::String *flatbufferString)
+{
+    return std::string_view{flatbufferString == nullptr ? kStringUnimplementedValue : flatbufferString->string_view().data()};
 }
 
 /**
@@ -421,6 +440,23 @@ inline std::string FlatbufferKStringxToString(const kStringx *stringx)
     return {stringx == nullptr ? "" : FlatbufferStringToString(stringx->value())};
 }
 
+#else 
+inline std::string FlatbufferStringToString(const std::string_view *flatbufferSTring)
+{
+    
+return std::string{flatbufferSTring == nullptr ? kStringUnimplementedValue : flatbufferSTring->data()};
+}
+
+inline std::string_view FlatbufferStringToStringView(const std::string_view *flatbufferString)
+{
+    return std::string_view{flatbufferString == nullptr ? kStringUnimplementedValue : *flatbufferString};
+}
+
+inline std::string FlatbufferKStringxToString(const kStringx *stringx)
+{
+    return std::string{stringx == nullptr ? kStringUnimplementedValue : stringx->value()};
+}
+#endif
 /**
  * @brief Converts a uint16_t value to Modbus register format by swapping the uint16_t bytes order.
  */
@@ -663,6 +699,17 @@ inline std::string operator+(const std::string_view &str1, const std::string &st
 {
     return std::string{str1} + str2;
 }
+
+/**
+ * @brief Retrieves the model definition for a given model ID.
+ * This function looks up the model definition based on the provided model ID.
+ * @param [in] id The ID of the model to look up.
+ * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
+ */
+const SunspecModelDef *getModelDefinition(uint16_t id);
+
+
+const SunspecPointDef *findPointById(const SunspecGroupDef *group, const std::string_view &id);
 
 /**
  * @namespace Sunspec

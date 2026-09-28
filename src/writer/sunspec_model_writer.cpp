@@ -1,5 +1,8 @@
 #include "writer/sunspec_model_writer.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include "sunspec.h"
 #include "writer/sunspec_device_writer.h"
 

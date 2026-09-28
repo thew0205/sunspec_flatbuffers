@@ -1,12 +1,14 @@
 #include "reader/sunspec_device_reader.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include <algorithm>
 
 #include "modbus_master.h"
 #include "reader/sunspec_point_reader.h"
 #include "reader/sunspec_group_reader.h"
 #include "sunspec.h"
-#include <model_definitions.h>
 
 using namespace Sunspec;
 
@@ -39,7 +41,7 @@ SunspecDeviceReader::~SunspecDeviceReader()
     models_.clear();
 }
 
-SunspecModelReader *SunspecDeviceReader::getModel(SunspecModelList id)
+SunspecModelReader *SunspecDeviceReader::getModel(uint16_t id)
 {
     for (auto &model : models_)
     {
@@ -49,7 +51,7 @@ SunspecModelReader *SunspecDeviceReader::getModel(SunspecModelList id)
 
     return nullptr;
 }
-uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecModelList> &supportedModels)
+uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<uint16_t> &supportedModels)
 {
     int count = 0;
     if (kInvalidBaseAddress == baseAddress_ && !(scanforBaseAddress(slaveId_, client_, &baseAddress_)))
@@ -67,7 +69,7 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecM
         std::vector<const SunspecModelDef *> availableModelsDef{};
         while (true)
         {
-            SunspecModelList modelId = static_cast<SunspecModelList>(readUint16Field(address, slaveId_, client_));
+            uint16_t modelId = static_cast<uint16_t>(readUint16Field(address, slaveId_, client_));
             uint16_t len = readUint16Field(address + 1, slaveId_, client_);
 
             if (SunspecModelList_kModelEnd == modelId)
@@ -75,7 +77,7 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<SunspecM
                 break;
             }
 
-            const SunspecModelDef *const modelDef = Sunspec::getModelDefinition(modelId);
+            const SunspecModelDef *const modelDef = getModelDefinition(modelId);
 
             if (nullptr != modelDef && std::find(supportedModels.begin(), supportedModels.end(), modelId) != supportedModels.end())
             {

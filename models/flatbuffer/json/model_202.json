@@ -542,7 +542,7 @@
             },
             {
                 "id": "TotWhExp",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -556,7 +556,7 @@
             },
             {
                 "id": "TotWhExpPhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -570,7 +570,7 @@
             },
             {
                 "id": "TotWhExpPhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -584,7 +584,7 @@
             },
             {
                 "id": "TotWhExpPhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -598,7 +598,7 @@
             },
             {
                 "id": "TotWhImp",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -612,7 +612,7 @@
             },
             {
                 "id": "TotWhImpPhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -626,7 +626,7 @@
             },
             {
                 "id": "TotWhImpPhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -640,7 +640,7 @@
             },
             {
                 "id": "TotWhImpPhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -668,7 +668,7 @@
             },
             {
                 "id": "TotVAhExp",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -682,7 +682,7 @@
             },
             {
                 "id": "TotVAhExpPhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -696,7 +696,7 @@
             },
             {
                 "id": "TotVAhExpPhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -710,7 +710,7 @@
             },
             {
                 "id": "TotVAhExpPhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -724,7 +724,7 @@
             },
             {
                 "id": "TotVAhImp",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -738,7 +738,7 @@
             },
             {
                 "id": "TotVAhImpPhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -752,7 +752,7 @@
             },
             {
                 "id": "TotVAhImpPhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -766,7 +766,7 @@
             },
             {
                 "id": "TotVAhImpPhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -794,7 +794,7 @@
             },
             {
                 "id": "TotVArhImpQ1",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -808,7 +808,7 @@
             },
             {
                 "id": "TotVArhImpQ1PhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -822,7 +822,7 @@
             },
             {
                 "id": "TotVArhImpQ1PhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -836,7 +836,7 @@
             },
             {
                 "id": "TotVArhImpQ1PhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -850,7 +850,7 @@
             },
             {
                 "id": "TotVArhImpQ2",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -864,7 +864,7 @@
             },
             {
                 "id": "TotVArhImpQ2PhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -878,7 +878,7 @@
             },
             {
                 "id": "TotVArhImpQ2PhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -892,7 +892,7 @@
             },
             {
                 "id": "TotVArhImpQ2PhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -906,7 +906,7 @@
             },
             {
                 "id": "TotVArhExpQ3",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -920,7 +920,7 @@
             },
             {
                 "id": "TotVArhExpQ3PhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -934,7 +934,7 @@
             },
             {
                 "id": "TotVArhExpQ3PhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -948,7 +948,7 @@
             },
             {
                 "id": "TotVArhExpQ3PhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -962,7 +962,7 @@
             },
             {
                 "id": "TotVArhExpQ4",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -976,7 +976,7 @@
             },
             {
                 "id": "TotVArhExpQ4PhA",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -990,7 +990,7 @@
             },
             {
                 "id": "TotVArhExpQ4PhB",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,
@@ -1004,7 +1004,7 @@
             },
             {
                 "id": "TotVArhExpQ4PhC",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

@@ -20,7 +20,7 @@ def get_flatbuffer_data_type(type):
         case "acc16" :
             return "kAcc16"
         case "acc32" :
-            return "KAcc32"
+            return "kAcc32"
         case "acc64" :
             return "kAcc64"
         case "bitfield16" :

@@ -11,7 +11,8 @@
 #include <string>
 #include <stdint.h>
 
-#include "sunspec_model_definition_generated.h"
+#include "sunspec.h"
+
 #include "writer/sunspec_group_writer.h"
 
 class SunspecDeviceWriter;

@@ -10,7 +10,8 @@
 #include <string>
 #include <stdint.h>
 
-#include "sunspec_model_definition_generated.h"
+#include "sunspec.h"
+
 #include "reader/sunspec_group_reader.h"
 
 class SunspecDeviceReader;

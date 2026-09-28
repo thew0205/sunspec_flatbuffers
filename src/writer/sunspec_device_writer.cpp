@@ -1,9 +1,12 @@
 #include "writer/sunspec_device_writer.h"
 
+#include <string.h>
+#include <assert.h>
+
 #include <algorithm>
 
 #include "ModbusRTUSlave.h"
-#include "model_definitions.h"
+
 #include "writer/sunspec_point_writer.h"
 #include "writer/sunspec_group_writer.h"
 #include "sunspec.h"
@@ -45,7 +48,7 @@ uint16_t SunspecDeviceWriter::initTopLevel(const std::initializer_list<SunspecMo
     std::vector<const SunspecModelDef *> modelDefList;
     for (const auto &modelId : supportedModels)
     {
-        const SunspecModelDef *const modelDef = Sunspec::getModelDefinition(modelId);
+        const SunspecModelDef *const modelDef = getModelDefinition(modelId);
         // The models not supported will return nullptr.
         if (nullptr != modelDef)
         {

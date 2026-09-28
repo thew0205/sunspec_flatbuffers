@@ -346,7 +346,7 @@
             },
             {
                 "id": "WH",
-                "data_type": "KAcc32",
+                "data_type": "kAcc32",
                 "data": null,
                 "count": 1,
                 "count_point_id": null,

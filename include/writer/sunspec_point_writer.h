@@ -11,7 +11,8 @@
 
 #include <string>
 
-#include "sunspec_model_definition_generated.h"
+#include "sunspec.h"
+
 #include "sunspec.h"
 class SunspecGroupWriter;
 class SunspecDeviceWriter;
@@ -198,7 +199,7 @@ public:
      */
     acc32_t getValueAsAcc32() const
     {
-        return pointFunction_.acc32.function == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_KAcc32()) : pointFunction_.acc32.call();
+        return pointFunction_.acc32.function == nullptr ? FlatbufferKAcc32toAcc32_t(def_.data_as_kAcc32()) : pointFunction_.acc32.call();
     }
 
     /**

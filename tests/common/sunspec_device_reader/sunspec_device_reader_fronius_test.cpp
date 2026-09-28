@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
 #include "sunspec.h"
-#include "model_definitions.h"
+
+#include "sunspec.h"
+
 
 #include "fake_modbus_master.h"
 #include "modbus_master.h"

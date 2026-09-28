@@ -5,9 +5,10 @@
 #include <stdint.h>
 #include <iostream>
 
-#include "sunspec_model_definition_generated.h"
 #include "sunspec.h"
-#include "model_definitions.h"
+
+#include "sunspec.h"
+
 
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"
@@ -19,27 +20,13 @@ using std::cout;
 using std::endl;
 using std::string;
 
-const SunspecPointDef *findPointById(const SunspecGroupDef *group, const string &id)
-{
-    auto points = group->points();
-    for (unsigned int i = 0; i < points->size(); ++i)
-    {
-        const auto &point = *points->Get(i);
-        if (FlatbufferStringToString(points->Get(i)->id()) == id)
-        {
-            return &point;
-        }
-    }
-    return nullptr;
-}
-
 TEST_GROUP(Sunspec_Point_Reader_Model1)
 {
     const SunspecGroupDef *model1;
 
     void setup()
     {
-        model1 = GetSunspecModelDef(modelDefinition1)->group();
+        model1 = getModelDefinition(1)->group();
     }
 
     void teardown()
