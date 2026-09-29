@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef803{
-        SunspecModelList_kModel803,
+SunspecModelDef SunspecModelDef::modelDef803(){
+        return SunspecModelDef{SunspecModelList_kModel803,
         "Lithium-Ion Battery Bank Model",
         {
             "lithium_ion_bank",
@@ -82,3 +82,4 @@ const SunspecModelDef SunspecModelDef::modelDef803{
             },
         },
     };
+}

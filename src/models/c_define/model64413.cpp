@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64413{
-        SunspecModelList_kModel64413,
+SunspecModelDef SunspecModelDef::modelDef64413(){
+        return SunspecModelDef{SunspecModelList_kModel64413,
         "PV Curves",
         {
             "PVSimCurves",
@@ -36,3 +36,4 @@ const SunspecModelDef SunspecModelDef::modelDef64413{
             },
         },
     };
+}

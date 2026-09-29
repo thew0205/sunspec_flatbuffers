@@ -2,6 +2,20 @@
 
 #include <cstring>
 
+const SunspecPointDef *findPointById(const SunspecGroupDef *group, const std::string_view &id)
+{
+    const auto &points = *group->points();
+    for (unsigned int i = 0; i < points.size(); ++i)
+    {
+        const auto &point = REFERENCE_POINTER_FLATBUFFER(points[i]);
+        if (FlatbufferStringToString(point->id()) == id)
+        {
+            return point;
+        }
+    }
+    return nullptr;
+}
+
 namespace Sunspec
 {
     float registersToFloat(uint16_t reg0, uint16_t reg1)

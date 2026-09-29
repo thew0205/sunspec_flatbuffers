@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64412{
-        SunspecModelList_kModel64412,
+SunspecModelDef SunspecModelDef::modelDef64412(){
+        return SunspecModelDef{SunspecModelList_kModel64412,
         "DER Cyber Exploitation",
         {
             "DERExploitation",
@@ -62,3 +62,4 @@ const SunspecModelDef SunspecModelDef::modelDef64412{
             },
         },
     };
+}

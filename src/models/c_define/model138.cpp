@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef138{
-        SunspecModelList_kModel138,
+SunspecModelDef SunspecModelDef::modelDef138(){
+        return SunspecModelDef{SunspecModelList_kModel138,
         "HVRTC",
         {
             "hvrtc",
@@ -83,3 +83,4 @@ const SunspecModelDef SunspecModelDef::modelDef138{
             },
         },
     };
+}

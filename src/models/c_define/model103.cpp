@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef103{
-        SunspecModelList_kModel103,
+SunspecModelDef SunspecModelDef::modelDef103(){
+        return SunspecModelDef{SunspecModelList_kModel103,
         "Inverter (Three Phase)",
         {
             "inverter_three_phase",
@@ -62,3 +62,4 @@ const SunspecModelDef SunspecModelDef::modelDef103{
             },
         },
     };
+}

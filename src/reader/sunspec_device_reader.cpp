@@ -69,7 +69,7 @@ uint16_t SunspecDeviceReader::initAllModels(const std::initializer_list<uint16_t
         std::vector<const SunspecModelDef *> availableModelsDef{};
         while (true)
         {
-            uint16_t modelId = static_cast<uint16_t>(readUint16Field(address, slaveId_, client_));
+            SunspecModelList modelId = static_cast<SunspecModelList>(readUint16Field(address, slaveId_, client_));
             uint16_t len = readUint16Field(address + 1, slaveId_, client_);
 
             if (SunspecModelList_kModelEnd == modelId)

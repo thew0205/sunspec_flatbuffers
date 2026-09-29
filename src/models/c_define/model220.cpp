@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef220{
-        SunspecModelList_kModel220,
+SunspecModelDef SunspecModelDef::modelDef220(){
+        return SunspecModelDef{SunspecModelList_kModel220,
         "Secure AC Meter Selected Readings",
         {
             "ac_meter_secure",
@@ -63,3 +63,4 @@ const SunspecModelDef SunspecModelDef::modelDef220{
             },
         },
     };
+}

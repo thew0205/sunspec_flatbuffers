@@ -2,6 +2,7 @@
 
 #include "sunspec.h"
 
+#include <algorithm>
 #include <charconv>
 #include <cstring>
 #include <utility>
@@ -658,115 +659,257 @@ std::string_view SunspecModelDef::label() const
     return g != nullptr ? g->label() : std::string_view{};
 }
 
-const SunspecModelDef SunspecModelDef::modelDef1(kModelJsonText1);
-const SunspecModelDef SunspecModelDef::modelDef2(kModelJsonText2);
-const SunspecModelDef SunspecModelDef::modelDef3(kModelJsonText3);
-const SunspecModelDef SunspecModelDef::modelDef4(kModelJsonText4);
-const SunspecModelDef SunspecModelDef::modelDef5(kModelJsonText5);
-const SunspecModelDef SunspecModelDef::modelDef6(kModelJsonText6);
-const SunspecModelDef SunspecModelDef::modelDef7(kModelJsonText7);
-const SunspecModelDef SunspecModelDef::modelDef8(kModelJsonText8);
-const SunspecModelDef SunspecModelDef::modelDef9(kModelJsonText9);
-const SunspecModelDef SunspecModelDef::modelDef10(kModelJsonText10);
-const SunspecModelDef SunspecModelDef::modelDef11(kModelJsonText11);
-const SunspecModelDef SunspecModelDef::modelDef12(kModelJsonText12);
-const SunspecModelDef SunspecModelDef::modelDef13(kModelJsonText13);
-const SunspecModelDef SunspecModelDef::modelDef14(kModelJsonText14);
-const SunspecModelDef SunspecModelDef::modelDef15(kModelJsonText15);
-const SunspecModelDef SunspecModelDef::modelDef16(kModelJsonText16);
-const SunspecModelDef SunspecModelDef::modelDef17(kModelJsonText17);
-const SunspecModelDef SunspecModelDef::modelDef18(kModelJsonText18);
-const SunspecModelDef SunspecModelDef::modelDef19(kModelJsonText19);
-const SunspecModelDef SunspecModelDef::modelDef101(kModelJsonText101);
-const SunspecModelDef SunspecModelDef::modelDef102(kModelJsonText102);
-const SunspecModelDef SunspecModelDef::modelDef103(kModelJsonText103);
-const SunspecModelDef SunspecModelDef::modelDef111(kModelJsonText111);
-const SunspecModelDef SunspecModelDef::modelDef112(kModelJsonText112);
-const SunspecModelDef SunspecModelDef::modelDef113(kModelJsonText113);
-const SunspecModelDef SunspecModelDef::modelDef120(kModelJsonText120);
-const SunspecModelDef SunspecModelDef::modelDef121(kModelJsonText121);
-const SunspecModelDef SunspecModelDef::modelDef122(kModelJsonText122);
-const SunspecModelDef SunspecModelDef::modelDef123(kModelJsonText123);
-const SunspecModelDef SunspecModelDef::modelDef124(kModelJsonText124);
-const SunspecModelDef SunspecModelDef::modelDef125(kModelJsonText125);
-const SunspecModelDef SunspecModelDef::modelDef126(kModelJsonText126);
-const SunspecModelDef SunspecModelDef::modelDef127(kModelJsonText127);
-const SunspecModelDef SunspecModelDef::modelDef128(kModelJsonText128);
-const SunspecModelDef SunspecModelDef::modelDef129(kModelJsonText129);
-const SunspecModelDef SunspecModelDef::modelDef130(kModelJsonText130);
-const SunspecModelDef SunspecModelDef::modelDef131(kModelJsonText131);
-const SunspecModelDef SunspecModelDef::modelDef132(kModelJsonText132);
-const SunspecModelDef SunspecModelDef::modelDef133(kModelJsonText133);
-const SunspecModelDef SunspecModelDef::modelDef134(kModelJsonText134);
-const SunspecModelDef SunspecModelDef::modelDef135(kModelJsonText135);
-const SunspecModelDef SunspecModelDef::modelDef136(kModelJsonText136);
-const SunspecModelDef SunspecModelDef::modelDef137(kModelJsonText137);
-const SunspecModelDef SunspecModelDef::modelDef138(kModelJsonText138);
-const SunspecModelDef SunspecModelDef::modelDef139(kModelJsonText139);
-const SunspecModelDef SunspecModelDef::modelDef140(kModelJsonText140);
-const SunspecModelDef SunspecModelDef::modelDef141(kModelJsonText141);
-const SunspecModelDef SunspecModelDef::modelDef142(kModelJsonText142);
-const SunspecModelDef SunspecModelDef::modelDef143(kModelJsonText143);
-const SunspecModelDef SunspecModelDef::modelDef144(kModelJsonText144);
-const SunspecModelDef SunspecModelDef::modelDef145(kModelJsonText145);
-const SunspecModelDef SunspecModelDef::modelDef160(kModelJsonText160);
-const SunspecModelDef SunspecModelDef::modelDef201(kModelJsonText201);
-const SunspecModelDef SunspecModelDef::modelDef202(kModelJsonText202);
-const SunspecModelDef SunspecModelDef::modelDef203(kModelJsonText203);
-const SunspecModelDef SunspecModelDef::modelDef204(kModelJsonText204);
-const SunspecModelDef SunspecModelDef::modelDef211(kModelJsonText211);
-const SunspecModelDef SunspecModelDef::modelDef212(kModelJsonText212);
-const SunspecModelDef SunspecModelDef::modelDef213(kModelJsonText213);
-const SunspecModelDef SunspecModelDef::modelDef214(kModelJsonText214);
-const SunspecModelDef SunspecModelDef::modelDef220(kModelJsonText220);
-const SunspecModelDef SunspecModelDef::modelDef302(kModelJsonText302);
-const SunspecModelDef SunspecModelDef::modelDef303(kModelJsonText303);
-const SunspecModelDef SunspecModelDef::modelDef304(kModelJsonText304);
-const SunspecModelDef SunspecModelDef::modelDef305(kModelJsonText305);
-const SunspecModelDef SunspecModelDef::modelDef306(kModelJsonText306);
-const SunspecModelDef SunspecModelDef::modelDef307(kModelJsonText307);
-const SunspecModelDef SunspecModelDef::modelDef308(kModelJsonText308);
-const SunspecModelDef SunspecModelDef::modelDef401(kModelJsonText401);
-const SunspecModelDef SunspecModelDef::modelDef402(kModelJsonText402);
-const SunspecModelDef SunspecModelDef::modelDef403(kModelJsonText403);
-const SunspecModelDef SunspecModelDef::modelDef404(kModelJsonText404);
-const SunspecModelDef SunspecModelDef::modelDef501(kModelJsonText501);
-const SunspecModelDef SunspecModelDef::modelDef502(kModelJsonText502);
-const SunspecModelDef SunspecModelDef::modelDef601(kModelJsonText601);
-const SunspecModelDef SunspecModelDef::modelDef701(kModelJsonText701);
-const SunspecModelDef SunspecModelDef::modelDef702(kModelJsonText702);
-const SunspecModelDef SunspecModelDef::modelDef703(kModelJsonText703);
-const SunspecModelDef SunspecModelDef::modelDef704(kModelJsonText704);
-const SunspecModelDef SunspecModelDef::modelDef705(kModelJsonText705);
-const SunspecModelDef SunspecModelDef::modelDef706(kModelJsonText706);
-const SunspecModelDef SunspecModelDef::modelDef707(kModelJsonText707);
-const SunspecModelDef SunspecModelDef::modelDef708(kModelJsonText708);
-const SunspecModelDef SunspecModelDef::modelDef709(kModelJsonText709);
-const SunspecModelDef SunspecModelDef::modelDef710(kModelJsonText710);
-const SunspecModelDef SunspecModelDef::modelDef711(kModelJsonText711);
-const SunspecModelDef SunspecModelDef::modelDef712(kModelJsonText712);
-const SunspecModelDef SunspecModelDef::modelDef713(kModelJsonText713);
-const SunspecModelDef SunspecModelDef::modelDef714(kModelJsonText714);
-const SunspecModelDef SunspecModelDef::modelDef715(kModelJsonText715);
-const SunspecModelDef SunspecModelDef::modelDef801(kModelJsonText801);
-const SunspecModelDef SunspecModelDef::modelDef802(kModelJsonText802);
-const SunspecModelDef SunspecModelDef::modelDef803(kModelJsonText803);
-const SunspecModelDef SunspecModelDef::modelDef804(kModelJsonText804);
-const SunspecModelDef SunspecModelDef::modelDef805(kModelJsonText805);
-const SunspecModelDef SunspecModelDef::modelDef806(kModelJsonText806);
-const SunspecModelDef SunspecModelDef::modelDef807(kModelJsonText807);
-const SunspecModelDef SunspecModelDef::modelDef808(kModelJsonText808);
-const SunspecModelDef SunspecModelDef::modelDef809(kModelJsonText809);
-const SunspecModelDef SunspecModelDef::modelDef63001(kModelJsonText63001);
-const SunspecModelDef SunspecModelDef::modelDef63002(kModelJsonText63002);
-const SunspecModelDef SunspecModelDef::modelDef64001(kModelJsonText64001);
-const SunspecModelDef SunspecModelDef::modelDef64020(kModelJsonText64020);
-const SunspecModelDef SunspecModelDef::modelDef64101(kModelJsonText64101);
-const SunspecModelDef SunspecModelDef::modelDef64111(kModelJsonText64111);
-const SunspecModelDef SunspecModelDef::modelDef64112(kModelJsonText64112);
-const SunspecModelDef SunspecModelDef::modelDef64410(kModelJsonText64410);
-const SunspecModelDef SunspecModelDef::modelDef64411(kModelJsonText64411);
-const SunspecModelDef SunspecModelDef::modelDef64412(kModelJsonText64412);
-const SunspecModelDef SunspecModelDef::modelDef64413(kModelJsonText64413);
-const SunspecModelDef SunspecModelDef::modelDef64414(kModelJsonText64414);
-const SunspecModelDef SunspecModelDef::modelDef64415(kModelJsonText64415);
+SunspecModelDef SunspecModelDef::modelDef1() { return SunspecModelDef{kModelJsonText1}; }
+SunspecModelDef SunspecModelDef::modelDef2() { return SunspecModelDef{kModelJsonText2}; }
+SunspecModelDef SunspecModelDef::modelDef3() { return SunspecModelDef{kModelJsonText3}; }
+SunspecModelDef SunspecModelDef::modelDef4() { return SunspecModelDef{kModelJsonText4}; }
+SunspecModelDef SunspecModelDef::modelDef5() { return SunspecModelDef{kModelJsonText5}; }
+SunspecModelDef SunspecModelDef::modelDef6() { return SunspecModelDef{kModelJsonText6}; }
+SunspecModelDef SunspecModelDef::modelDef7() { return SunspecModelDef{kModelJsonText7}; }
+SunspecModelDef SunspecModelDef::modelDef8() { return SunspecModelDef{kModelJsonText8}; }
+SunspecModelDef SunspecModelDef::modelDef9() { return SunspecModelDef{kModelJsonText9}; }
+SunspecModelDef SunspecModelDef::modelDef10() { return SunspecModelDef{kModelJsonText10}; }
+SunspecModelDef SunspecModelDef::modelDef11() { return SunspecModelDef{kModelJsonText11}; }
+SunspecModelDef SunspecModelDef::modelDef12() { return SunspecModelDef{kModelJsonText12}; }
+SunspecModelDef SunspecModelDef::modelDef13() { return SunspecModelDef{kModelJsonText13}; }
+SunspecModelDef SunspecModelDef::modelDef14() { return SunspecModelDef{kModelJsonText14}; }
+SunspecModelDef SunspecModelDef::modelDef15() { return SunspecModelDef{kModelJsonText15}; }
+SunspecModelDef SunspecModelDef::modelDef16() { return SunspecModelDef{kModelJsonText16}; }
+SunspecModelDef SunspecModelDef::modelDef17() { return SunspecModelDef{kModelJsonText17}; }
+SunspecModelDef SunspecModelDef::modelDef18() { return SunspecModelDef{kModelJsonText18}; }
+SunspecModelDef SunspecModelDef::modelDef19() { return SunspecModelDef{kModelJsonText19}; }
+SunspecModelDef SunspecModelDef::modelDef101() { return SunspecModelDef{kModelJsonText101}; }
+SunspecModelDef SunspecModelDef::modelDef102() { return SunspecModelDef{kModelJsonText102}; }
+SunspecModelDef SunspecModelDef::modelDef103() { return SunspecModelDef{kModelJsonText103}; }
+SunspecModelDef SunspecModelDef::modelDef111() { return SunspecModelDef{kModelJsonText111}; }
+SunspecModelDef SunspecModelDef::modelDef112() { return SunspecModelDef{kModelJsonText112}; }
+SunspecModelDef SunspecModelDef::modelDef113() { return SunspecModelDef{kModelJsonText113}; }
+SunspecModelDef SunspecModelDef::modelDef120() { return SunspecModelDef{kModelJsonText120}; }
+SunspecModelDef SunspecModelDef::modelDef121() { return SunspecModelDef{kModelJsonText121}; }
+SunspecModelDef SunspecModelDef::modelDef122() { return SunspecModelDef{kModelJsonText122}; }
+SunspecModelDef SunspecModelDef::modelDef123() { return SunspecModelDef{kModelJsonText123}; }
+SunspecModelDef SunspecModelDef::modelDef124() { return SunspecModelDef{kModelJsonText124}; }
+SunspecModelDef SunspecModelDef::modelDef125() { return SunspecModelDef{kModelJsonText125}; }
+SunspecModelDef SunspecModelDef::modelDef126() { return SunspecModelDef{kModelJsonText126}; }
+SunspecModelDef SunspecModelDef::modelDef127() { return SunspecModelDef{kModelJsonText127}; }
+SunspecModelDef SunspecModelDef::modelDef128() { return SunspecModelDef{kModelJsonText128}; }
+SunspecModelDef SunspecModelDef::modelDef129() { return SunspecModelDef{kModelJsonText129}; }
+SunspecModelDef SunspecModelDef::modelDef130() { return SunspecModelDef{kModelJsonText130}; }
+SunspecModelDef SunspecModelDef::modelDef131() { return SunspecModelDef{kModelJsonText131}; }
+SunspecModelDef SunspecModelDef::modelDef132() { return SunspecModelDef{kModelJsonText132}; }
+SunspecModelDef SunspecModelDef::modelDef133() { return SunspecModelDef{kModelJsonText133}; }
+SunspecModelDef SunspecModelDef::modelDef134() { return SunspecModelDef{kModelJsonText134}; }
+SunspecModelDef SunspecModelDef::modelDef135() { return SunspecModelDef{kModelJsonText135}; }
+SunspecModelDef SunspecModelDef::modelDef136() { return SunspecModelDef{kModelJsonText136}; }
+SunspecModelDef SunspecModelDef::modelDef137() { return SunspecModelDef{kModelJsonText137}; }
+SunspecModelDef SunspecModelDef::modelDef138() { return SunspecModelDef{kModelJsonText138}; }
+SunspecModelDef SunspecModelDef::modelDef139() { return SunspecModelDef{kModelJsonText139}; }
+SunspecModelDef SunspecModelDef::modelDef140() { return SunspecModelDef{kModelJsonText140}; }
+SunspecModelDef SunspecModelDef::modelDef141() { return SunspecModelDef{kModelJsonText141}; }
+SunspecModelDef SunspecModelDef::modelDef142() { return SunspecModelDef{kModelJsonText142}; }
+SunspecModelDef SunspecModelDef::modelDef143() { return SunspecModelDef{kModelJsonText143}; }
+SunspecModelDef SunspecModelDef::modelDef144() { return SunspecModelDef{kModelJsonText144}; }
+SunspecModelDef SunspecModelDef::modelDef145() { return SunspecModelDef{kModelJsonText145}; }
+SunspecModelDef SunspecModelDef::modelDef160() { return SunspecModelDef{kModelJsonText160}; }
+SunspecModelDef SunspecModelDef::modelDef201() { return SunspecModelDef{kModelJsonText201}; }
+SunspecModelDef SunspecModelDef::modelDef202() { return SunspecModelDef{kModelJsonText202}; }
+SunspecModelDef SunspecModelDef::modelDef203() { return SunspecModelDef{kModelJsonText203}; }
+SunspecModelDef SunspecModelDef::modelDef204() { return SunspecModelDef{kModelJsonText204}; }
+SunspecModelDef SunspecModelDef::modelDef211() { return SunspecModelDef{kModelJsonText211}; }
+SunspecModelDef SunspecModelDef::modelDef212() { return SunspecModelDef{kModelJsonText212}; }
+SunspecModelDef SunspecModelDef::modelDef213() { return SunspecModelDef{kModelJsonText213}; }
+SunspecModelDef SunspecModelDef::modelDef214() { return SunspecModelDef{kModelJsonText214}; }
+SunspecModelDef SunspecModelDef::modelDef220() { return SunspecModelDef{kModelJsonText220}; }
+SunspecModelDef SunspecModelDef::modelDef302() { return SunspecModelDef{kModelJsonText302}; }
+SunspecModelDef SunspecModelDef::modelDef303() { return SunspecModelDef{kModelJsonText303}; }
+SunspecModelDef SunspecModelDef::modelDef304() { return SunspecModelDef{kModelJsonText304}; }
+SunspecModelDef SunspecModelDef::modelDef305() { return SunspecModelDef{kModelJsonText305}; }
+SunspecModelDef SunspecModelDef::modelDef306() { return SunspecModelDef{kModelJsonText306}; }
+SunspecModelDef SunspecModelDef::modelDef307() { return SunspecModelDef{kModelJsonText307}; }
+SunspecModelDef SunspecModelDef::modelDef308() { return SunspecModelDef{kModelJsonText308}; }
+SunspecModelDef SunspecModelDef::modelDef401() { return SunspecModelDef{kModelJsonText401}; }
+SunspecModelDef SunspecModelDef::modelDef402() { return SunspecModelDef{kModelJsonText402}; }
+SunspecModelDef SunspecModelDef::modelDef403() { return SunspecModelDef{kModelJsonText403}; }
+SunspecModelDef SunspecModelDef::modelDef404() { return SunspecModelDef{kModelJsonText404}; }
+SunspecModelDef SunspecModelDef::modelDef501() { return SunspecModelDef{kModelJsonText501}; }
+SunspecModelDef SunspecModelDef::modelDef502() { return SunspecModelDef{kModelJsonText502}; }
+SunspecModelDef SunspecModelDef::modelDef601() { return SunspecModelDef{kModelJsonText601}; }
+SunspecModelDef SunspecModelDef::modelDef701() { return SunspecModelDef{kModelJsonText701}; }
+SunspecModelDef SunspecModelDef::modelDef702() { return SunspecModelDef{kModelJsonText702}; }
+SunspecModelDef SunspecModelDef::modelDef703() { return SunspecModelDef{kModelJsonText703}; }
+SunspecModelDef SunspecModelDef::modelDef704() { return SunspecModelDef{kModelJsonText704}; }
+SunspecModelDef SunspecModelDef::modelDef705() { return SunspecModelDef{kModelJsonText705}; }
+SunspecModelDef SunspecModelDef::modelDef706() { return SunspecModelDef{kModelJsonText706}; }
+SunspecModelDef SunspecModelDef::modelDef707() { return SunspecModelDef{kModelJsonText707}; }
+SunspecModelDef SunspecModelDef::modelDef708() { return SunspecModelDef{kModelJsonText708}; }
+SunspecModelDef SunspecModelDef::modelDef709() { return SunspecModelDef{kModelJsonText709}; }
+SunspecModelDef SunspecModelDef::modelDef710() { return SunspecModelDef{kModelJsonText710}; }
+SunspecModelDef SunspecModelDef::modelDef711() { return SunspecModelDef{kModelJsonText711}; }
+SunspecModelDef SunspecModelDef::modelDef712() { return SunspecModelDef{kModelJsonText712}; }
+SunspecModelDef SunspecModelDef::modelDef713() { return SunspecModelDef{kModelJsonText713}; }
+SunspecModelDef SunspecModelDef::modelDef714() { return SunspecModelDef{kModelJsonText714}; }
+SunspecModelDef SunspecModelDef::modelDef715() { return SunspecModelDef{kModelJsonText715}; }
+SunspecModelDef SunspecModelDef::modelDef801() { return SunspecModelDef{kModelJsonText801}; }
+SunspecModelDef SunspecModelDef::modelDef802() { return SunspecModelDef{kModelJsonText802}; }
+SunspecModelDef SunspecModelDef::modelDef803() { return SunspecModelDef{kModelJsonText803}; }
+SunspecModelDef SunspecModelDef::modelDef804() { return SunspecModelDef{kModelJsonText804}; }
+SunspecModelDef SunspecModelDef::modelDef805() { return SunspecModelDef{kModelJsonText805}; }
+SunspecModelDef SunspecModelDef::modelDef806() { return SunspecModelDef{kModelJsonText806}; }
+SunspecModelDef SunspecModelDef::modelDef807() { return SunspecModelDef{kModelJsonText807}; }
+SunspecModelDef SunspecModelDef::modelDef808() { return SunspecModelDef{kModelJsonText808}; }
+SunspecModelDef SunspecModelDef::modelDef809() { return SunspecModelDef{kModelJsonText809}; }
+SunspecModelDef SunspecModelDef::modelDef63001() { return SunspecModelDef{kModelJsonText63001}; }
+SunspecModelDef SunspecModelDef::modelDef63002() { return SunspecModelDef{kModelJsonText63002}; }
+SunspecModelDef SunspecModelDef::modelDef64001() { return SunspecModelDef{kModelJsonText64001}; }
+SunspecModelDef SunspecModelDef::modelDef64020() { return SunspecModelDef{kModelJsonText64020}; }
+SunspecModelDef SunspecModelDef::modelDef64101() { return SunspecModelDef{kModelJsonText64101}; }
+SunspecModelDef SunspecModelDef::modelDef64111() { return SunspecModelDef{kModelJsonText64111}; }
+SunspecModelDef SunspecModelDef::modelDef64112() { return SunspecModelDef{kModelJsonText64112}; }
+SunspecModelDef SunspecModelDef::modelDef64410() { return SunspecModelDef{kModelJsonText64410}; }
+SunspecModelDef SunspecModelDef::modelDef64411() { return SunspecModelDef{kModelJsonText64411}; }
+SunspecModelDef SunspecModelDef::modelDef64412() { return SunspecModelDef{kModelJsonText64412}; }
+SunspecModelDef SunspecModelDef::modelDef64413() { return SunspecModelDef{kModelJsonText64413}; }
+SunspecModelDef SunspecModelDef::modelDef64414() { return SunspecModelDef{kModelJsonText64414}; }
+SunspecModelDef SunspecModelDef::modelDef64415() { return SunspecModelDef{kModelJsonText64415}; }
+
+std::vector<SunspecModelDef> modelDefList{};
+bool hasInitList{false};
+
+void initializeAllModels()
+{
+    if (!hasInitList)
+    {
+        modelDefList.reserve(112);
+
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef1()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef2()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef3()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef4()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef5()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef6()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef7()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef8()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef9()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef10()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef11()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef12()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef13()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef14()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef15()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef16()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef17()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef18()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef19()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef101()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef102()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef103()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef111()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef112()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef113()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef120()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef121()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef122()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef123()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef124()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef125()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef126()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef127()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef128()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef129()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef130()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef131()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef132()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef133()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef134()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef135()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef136()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef137()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef138()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef139()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef140()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef141()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef142()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef143()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef144()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef145()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef160()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef201()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef202()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef203()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef204()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef211()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef212()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef213()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef214()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef220()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef302()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef303()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef304()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef305()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef306()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef307()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef308()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef401()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef402()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef403()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef404()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef501()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef502()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef601()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef701()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef702()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef703()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef704()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef705()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef706()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef707()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef708()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef709()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef710()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef711()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef712()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef713()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef714()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef715()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef801()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef802()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef803()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef804()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef805()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef806()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef807()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef808()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef809()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef63001()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef63002()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64001()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64020()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64101()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64111()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64112()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64410()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64411()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64412()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64413()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64414()));
+        modelDefList.emplace_back(std::move(SunspecModelDef::modelDef64415()));
+
+        hasInitList = true;
+    }
+}
+
+void deinitializeAllModels(){
+    modelDefList.clear();
+    modelDefList.shrink_to_fit(); 
+    hasInitList = false;
+}
+
+const SunspecModelDef *getModelDefinition(SunspecModelList id)
+{
+    initializeAllModels();
+
+    auto modelDefIte = std::find_if(modelDefList.cbegin(), modelDefList.cend(), [id](const SunspecModelDef &modelDef)
+                                     { return modelDef.id() == id; });
+    return modelDefIte == modelDefList.cend() ? nullptr : &(*modelDefIte);
+}
+

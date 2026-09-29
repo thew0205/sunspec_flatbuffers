@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef135{
-        SunspecModelList_kModel135,
+SunspecModelDef SunspecModelDef::modelDef135(){
+        return SunspecModelDef{SunspecModelList_kModel135,
         "LFRT",
         {
             "lfrt",
@@ -83,3 +83,4 @@ const SunspecModelDef SunspecModelDef::modelDef135{
             },
         },
     };
+}

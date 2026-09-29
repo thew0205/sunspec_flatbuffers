@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef303{
-        SunspecModelList_kModel303,
+SunspecModelDef SunspecModelDef::modelDef303(){
+        return SunspecModelDef{SunspecModelList_kModel303,
         "Back of Module Temperature Model",
         {
             "bom_temp",
@@ -31,3 +31,4 @@ const SunspecModelDef SunspecModelDef::modelDef303{
             },
         },
     };
+}

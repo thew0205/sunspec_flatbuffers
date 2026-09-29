@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef16{
-        SunspecModelList_kModel16,
+SunspecModelDef SunspecModelDef::modelDef16(){
+        return SunspecModelDef{SunspecModelList_kModel16,
         "Simple IP Network",
         {
             "model_16",
@@ -30,3 +30,4 @@ const SunspecModelDef SunspecModelDef::modelDef16{
             },
         },
     };
+}

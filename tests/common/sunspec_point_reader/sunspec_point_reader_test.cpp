@@ -26,11 +26,12 @@ TEST_GROUP(Sunspec_Point_Reader_Model1)
 
     void setup()
     {
-        model1 = getModelDefinition(1)->group();
+        model1 = getModelDefinition(SunspecModelList_kModel1)->group();
     }
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 };
 

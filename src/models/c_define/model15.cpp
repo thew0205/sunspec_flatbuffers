@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef15{
-        SunspecModelList_kModel15,
+SunspecModelDef SunspecModelDef::modelDef15(){
+        return SunspecModelDef{SunspecModelList_kModel15,
         "Interface Counters Model",
         {
             "model_15",
@@ -32,3 +32,4 @@ const SunspecModelDef SunspecModelDef::modelDef15{
             },
         },
     };
+}

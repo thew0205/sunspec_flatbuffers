@@ -19,7 +19,7 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/cpputest/cpputest.git
     GIT_TAG v4.0
 )
-
+# set(BACKEND "json")
 FetchContent_MakeAvailable(CppUTest)
 
 # add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/third_party/cpputest ${CMAKE_BINARY_DIR}/third_party/cpputest)
@@ -33,7 +33,7 @@ add_subdirectory(third_party/modbus_slave)
 
 add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/common ${CMAKE_BINARY_DIR}/common)
 
-add_subdirectory(flatbuffer)
+add_subdirectory(backend)
 
 add_subdirectory(sunspec_init_writer)
 add_subdirectory(sunspec_set_value_writer)

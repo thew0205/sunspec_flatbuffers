@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef801{
-        SunspecModelList_kModel801,
+SunspecModelDef SunspecModelDef::modelDef801(){
+        return SunspecModelDef{SunspecModelList_kModel801,
         "Energy Storage Base Model (DEPRECATED)",
         {
             "storage",
@@ -20,3 +20,4 @@ const SunspecModelDef SunspecModelDef::modelDef801{
             },
         },
     };
+}

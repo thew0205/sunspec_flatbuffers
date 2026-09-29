@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64101{
-        SunspecModelList_kModel64101,
+SunspecModelDef SunspecModelDef::modelDef64101(){
+        return SunspecModelDef{SunspecModelList_kModel64101,
         "Eltek Inverter Extension",
         {
             "model_64101",
@@ -26,3 +26,4 @@ const SunspecModelDef SunspecModelDef::modelDef64101{
             },
         },
     };
+}

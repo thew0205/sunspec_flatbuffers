@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef7{
-        SunspecModelList_kModel7,
+SunspecModelDef SunspecModelDef::modelDef7(){
+        return SunspecModelDef{SunspecModelList_kModel7,
         "Secure Write Response Model (DRAFT 1)",
         {
             "model_7",
@@ -40,3 +40,4 @@ const SunspecModelDef SunspecModelDef::modelDef7{
             },
         },
     };
+}

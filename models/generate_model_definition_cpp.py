@@ -131,15 +131,21 @@ def generate_model_cpp(model_id: int, data: dict) -> str:
     model_label = group.get("label", group.get("name", ""))
     group_literal = format_group(group, "        ")
 
+    # Factory-function form (not a static-member direct-init) so
+    # SunspecModelDef::initializeAllModels() can construct each model on
+    # demand and move it into modelDefList, rather than every model being a
+    # separate `static const` global -- see src/models/c_define/model1.cpp,
+    # the hand-corrected file this template was reverse-engineered from.
     return (
         f"{GENERATED_BANNER} from models/json/model_{model_id}.json.\n"
         f"// Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.\n"
         f'#include "adapters/c_define/c_model_definition.h"\n\n'
-        f"const SunspecModelDef SunspecModelDef::modelDef{model_id}{{\n"
-        f"        SunspecModelList_kModel{model_id},\n"
+        f"SunspecModelDef SunspecModelDef::modelDef{model_id}(){{\n"
+        f"        return SunspecModelDef{{SunspecModelList_kModel{model_id},\n"
         f"        {cpp_str(model_label)},\n"
         f"{group_literal},\n"
         f"    }};\n"
+        f"}}\n"
     )
 
 

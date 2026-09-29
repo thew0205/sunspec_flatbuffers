@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef402{
-        SunspecModelList_kModel402,
+SunspecModelDef SunspecModelDef::modelDef402(){
+        return SunspecModelDef{SunspecModelList_kModel402,
         "String Combiner (Advanced)",
         {
             "string_combiner_advanced",
@@ -56,3 +56,4 @@ const SunspecModelDef SunspecModelDef::modelDef402{
             },
         },
     };
+}

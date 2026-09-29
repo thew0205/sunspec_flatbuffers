@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef304{
-        SunspecModelList_kModel304,
+SunspecModelDef SunspecModelDef::modelDef304(){
+        return SunspecModelDef{SunspecModelList_kModel304,
         "Inclinometer Model",
         {
             "inclinometer",
@@ -33,3 +33,4 @@ const SunspecModelDef SunspecModelDef::modelDef304{
             },
         },
     };
+}

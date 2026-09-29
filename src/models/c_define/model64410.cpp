@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64410{
-        SunspecModelList_kModel64410,
+SunspecModelDef SunspecModelDef::modelDef64410(){
+        return SunspecModelDef{SunspecModelList_kModel64410,
         "DC Simulator Control Interface",
         {
             "DCSimInterface",
@@ -82,3 +82,4 @@ const SunspecModelDef SunspecModelDef::modelDef64410{
             },
         },
     };
+}

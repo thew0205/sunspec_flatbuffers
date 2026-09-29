@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef129{
-        SunspecModelList_kModel129,
+SunspecModelDef SunspecModelDef::modelDef129(){
+        return SunspecModelDef{SunspecModelList_kModel129,
         "LVRTD",
         {
             "lvrt",
@@ -83,3 +83,4 @@ const SunspecModelDef SunspecModelDef::modelDef129{
             },
         },
     };
+}

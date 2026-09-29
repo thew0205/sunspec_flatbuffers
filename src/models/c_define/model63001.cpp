@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef63001{
-        SunspecModelList_kModel63001,
+SunspecModelDef SunspecModelDef::modelDef63001(){
+        return SunspecModelDef{SunspecModelList_kModel63001,
         "SunSpec Test Model 1",
         {
             "model_63001",
@@ -100,3 +100,4 @@ const SunspecModelDef SunspecModelDef::modelDef63001{
             },
         },
     };
+}

@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef715{
-        SunspecModelList_kModel715,
+SunspecModelDef SunspecModelDef::modelDef715(){
+        return SunspecModelDef{SunspecModelList_kModel715,
         "DERCtl",
         {
             "DERCtl",
@@ -24,3 +24,4 @@ const SunspecModelDef SunspecModelDef::modelDef715{
             },
         },
     };
+}

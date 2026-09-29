@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef701{
-        SunspecModelList_kModel701,
+SunspecModelDef SunspecModelDef::modelDef701(){
+        return SunspecModelDef{SunspecModelList_kModel701,
         "DER AC Measurement",
         {
             "DERMeasureAC",
@@ -89,3 +89,4 @@ const SunspecModelDef SunspecModelDef::modelDef701{
             },
         },
     };
+}

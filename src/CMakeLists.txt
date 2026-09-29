@@ -6,8 +6,20 @@ if(NOT DEFINED SUNSPEC_ROOT_DIR OR SUNSPEC_ROOT_DIR STREQUAL "" OR NOT EXISTS "$
         message(FATAL_ERROR "SUNSPEC_ROOT_DIR must be defined and must point to the root of the project where src folder and the include folders are located")
 endif()
 
-set(SUNSPEC_FLATBUFFERS_IMPLEMENTATION 0)
-set(SUNSPEC_JSON_IMPLEMENTATION 1)
+message(STATUS "The Backend used for the sunspec definition is : ${BACKEND}")
+
+if(BACKEND STREQUAL "flatbuffers")
+        set(SUNSPEC_FLATBUFFERS_IMPLEMENTATION 1)
+        set(SUNSPEC_JSON_IMPLEMENTATION 0)
+elseif(BACKEND STREQUAL "json")
+        set(SUNSPEC_FLATBUFFERS_IMPLEMENTATION 0)
+        set(SUNSPEC_JSON_IMPLEMENTATION 1)
+elseif(BACKEND STREQUAL "c_define")
+        set(SUNSPEC_FLATBUFFERS_IMPLEMENTATION 0)
+        set(SUNSPEC_JSON_IMPLEMENTATION 0)
+else()
+        message(FATAL_ERROR "Unknown BACKEND '${BACKEND}' -- expected c_define, json, or flatbuffers")
+endif()
 
 if(SUNSPEC_JSON_IMPLEMENTATION AND SUNSPEC_FLATBUFFERS_IMPLEMENTATION)
         message(FATAL_ERROR "SUNSPEC_FLATBUFFERS_IMPLEMENTATION and SUNSPEC_JSON_IMPLEMENTATION are mutually exclusive")
@@ -17,19 +29,19 @@ add_library(${PROJECT_NAME})
 
 set(SUNSPEC_FILES
         sunspec.cpp
-        model_definitions.cpp
-
 )
 
 if(SUNSPEC_FLATBUFFERS_IMPLEMENTATION)
-
+        list(APPEND SUNSPEC_FILES
+                adapters/flatbuffers/sunspec_flatbuffers_definition.cpp
+        )
 elseif(SUNSPEC_JSON_IMPLEMENTATION)
         list(APPEND SUNSPEC_FILES
                 adapters/json/sunspec_json_definition.cpp
         )
 else()
         list(APPEND SUNSPEC_FILES
-                model_definition.cpp
+                adapters/c_define/sunspec_c_define_definition.cpp
         )
         
 endif()
@@ -50,118 +62,118 @@ set(SUNSPEC_FILES_WRITER
 
 if(SUNSPEC_FLATBUFFERS_IMPLEMENTATION)
 set(MODEL_FILES
-        models/flatbuffer/flatbuffer_array_model_1.cpp
-        models/flatbuffer/flatbuffer_array_model_2.cpp
-        models/flatbuffer/flatbuffer_array_model_3.cpp
-        models/flatbuffer/flatbuffer_array_model_4.cpp
-        models/flatbuffer/flatbuffer_array_model_5.cpp
-        models/flatbuffer/flatbuffer_array_model_6.cpp
-        models/flatbuffer/flatbuffer_array_model_7.cpp
-        models/flatbuffer/flatbuffer_array_model_8.cpp
-        models/flatbuffer/flatbuffer_array_model_9.cpp
-        models/flatbuffer/flatbuffer_array_model_10.cpp
-        models/flatbuffer/flatbuffer_array_model_11.cpp
-        models/flatbuffer/flatbuffer_array_model_12.cpp
-        models/flatbuffer/flatbuffer_array_model_13.cpp
-        models/flatbuffer/flatbuffer_array_model_14.cpp
-        models/flatbuffer/flatbuffer_array_model_15.cpp
-        models/flatbuffer/flatbuffer_array_model_16.cpp
-        models/flatbuffer/flatbuffer_array_model_17.cpp
-        models/flatbuffer/flatbuffer_array_model_18.cpp
-        models/flatbuffer/flatbuffer_array_model_19.cpp
-        models/flatbuffer/flatbuffer_array_model_101.cpp
-        models/flatbuffer/flatbuffer_array_model_102.cpp
-        models/flatbuffer/flatbuffer_array_model_103.cpp
-        models/flatbuffer/flatbuffer_array_model_111.cpp
-        models/flatbuffer/flatbuffer_array_model_112.cpp
-        models/flatbuffer/flatbuffer_array_model_113.cpp
-        models/flatbuffer/flatbuffer_array_model_120.cpp
-        models/flatbuffer/flatbuffer_array_model_121.cpp
-        models/flatbuffer/flatbuffer_array_model_122.cpp
-        models/flatbuffer/flatbuffer_array_model_123.cpp
-        models/flatbuffer/flatbuffer_array_model_124.cpp
-        models/flatbuffer/flatbuffer_array_model_125.cpp
-        models/flatbuffer/flatbuffer_array_model_126.cpp
-        models/flatbuffer/flatbuffer_array_model_127.cpp
-        models/flatbuffer/flatbuffer_array_model_128.cpp
-        models/flatbuffer/flatbuffer_array_model_129.cpp
-        models/flatbuffer/flatbuffer_array_model_130.cpp
-        models/flatbuffer/flatbuffer_array_model_131.cpp
-        models/flatbuffer/flatbuffer_array_model_132.cpp
-        models/flatbuffer/flatbuffer_array_model_133.cpp
-        models/flatbuffer/flatbuffer_array_model_134.cpp
-        models/flatbuffer/flatbuffer_array_model_135.cpp
-        models/flatbuffer/flatbuffer_array_model_136.cpp
-        models/flatbuffer/flatbuffer_array_model_137.cpp
-        models/flatbuffer/flatbuffer_array_model_138.cpp
-        models/flatbuffer/flatbuffer_array_model_139.cpp
-        models/flatbuffer/flatbuffer_array_model_140.cpp
-        models/flatbuffer/flatbuffer_array_model_141.cpp
-        models/flatbuffer/flatbuffer_array_model_142.cpp
-        models/flatbuffer/flatbuffer_array_model_143.cpp
-        models/flatbuffer/flatbuffer_array_model_144.cpp
-        models/flatbuffer/flatbuffer_array_model_145.cpp
-        models/flatbuffer/flatbuffer_array_model_160.cpp
-        models/flatbuffer/flatbuffer_array_model_201.cpp
-        models/flatbuffer/flatbuffer_array_model_202.cpp
-        models/flatbuffer/flatbuffer_array_model_203.cpp
-        models/flatbuffer/flatbuffer_array_model_204.cpp
-        models/flatbuffer/flatbuffer_array_model_211.cpp
-        models/flatbuffer/flatbuffer_array_model_212.cpp
-        models/flatbuffer/flatbuffer_array_model_213.cpp
-        models/flatbuffer/flatbuffer_array_model_214.cpp
-        models/flatbuffer/flatbuffer_array_model_220.cpp
-        models/flatbuffer/flatbuffer_array_model_302.cpp
-        models/flatbuffer/flatbuffer_array_model_303.cpp
-        models/flatbuffer/flatbuffer_array_model_304.cpp
-        models/flatbuffer/flatbuffer_array_model_305.cpp
-        models/flatbuffer/flatbuffer_array_model_306.cpp
-        models/flatbuffer/flatbuffer_array_model_307.cpp
-        models/flatbuffer/flatbuffer_array_model_308.cpp
-        models/flatbuffer/flatbuffer_array_model_401.cpp
-        models/flatbuffer/flatbuffer_array_model_402.cpp
-        models/flatbuffer/flatbuffer_array_model_403.cpp
-        models/flatbuffer/flatbuffer_array_model_404.cpp
-        models/flatbuffer/flatbuffer_array_model_501.cpp
-        models/flatbuffer/flatbuffer_array_model_502.cpp
-        models/flatbuffer/flatbuffer_array_model_601.cpp
-        models/flatbuffer/flatbuffer_array_model_701.cpp
-        models/flatbuffer/flatbuffer_array_model_702.cpp
-        models/flatbuffer/flatbuffer_array_model_703.cpp
-        models/flatbuffer/flatbuffer_array_model_704.cpp
-        models/flatbuffer/flatbuffer_array_model_705.cpp
-        models/flatbuffer/flatbuffer_array_model_706.cpp
-        models/flatbuffer/flatbuffer_array_model_707.cpp
-        models/flatbuffer/flatbuffer_array_model_708.cpp
-        models/flatbuffer/flatbuffer_array_model_709.cpp
-        models/flatbuffer/flatbuffer_array_model_710.cpp
-        models/flatbuffer/flatbuffer_array_model_711.cpp
-        models/flatbuffer/flatbuffer_array_model_712.cpp
-        models/flatbuffer/flatbuffer_array_model_713.cpp
-        models/flatbuffer/flatbuffer_array_model_714.cpp
-        models/flatbuffer/flatbuffer_array_model_715.cpp
-        models/flatbuffer/flatbuffer_array_model_801.cpp
-        models/flatbuffer/flatbuffer_array_model_802.cpp
-        models/flatbuffer/flatbuffer_array_model_803.cpp
-        models/flatbuffer/flatbuffer_array_model_804.cpp
-        models/flatbuffer/flatbuffer_array_model_805.cpp
-        models/flatbuffer/flatbuffer_array_model_806.cpp
-        models/flatbuffer/flatbuffer_array_model_807.cpp
-        models/flatbuffer/flatbuffer_array_model_808.cpp
-        models/flatbuffer/flatbuffer_array_model_809.cpp
-        models/flatbuffer/flatbuffer_array_model_63001.cpp
-        models/flatbuffer/flatbuffer_array_model_63002.cpp
-        models/flatbuffer/flatbuffer_array_model_64001.cpp
-        models/flatbuffer/flatbuffer_array_model_64020.cpp
-        models/flatbuffer/flatbuffer_array_model_64101.cpp
-        models/flatbuffer/flatbuffer_array_model_64111.cpp
-        models/flatbuffer/flatbuffer_array_model_64112.cpp
-        models/flatbuffer/flatbuffer_array_model_64410.cpp
-        models/flatbuffer/flatbuffer_array_model_64411.cpp
-        models/flatbuffer/flatbuffer_array_model_64412.cpp
-        models/flatbuffer/flatbuffer_array_model_64413.cpp
-        models/flatbuffer/flatbuffer_array_model_64414.cpp
-        models/flatbuffer/flatbuffer_array_model_64415.cpp
+        models/flatbuffers/flatbuffers_array_model_1.cpp
+        models/flatbuffers/flatbuffers_array_model_2.cpp
+        models/flatbuffers/flatbuffers_array_model_3.cpp
+        models/flatbuffers/flatbuffers_array_model_4.cpp
+        models/flatbuffers/flatbuffers_array_model_5.cpp
+        models/flatbuffers/flatbuffers_array_model_6.cpp
+        models/flatbuffers/flatbuffers_array_model_7.cpp
+        models/flatbuffers/flatbuffers_array_model_8.cpp
+        models/flatbuffers/flatbuffers_array_model_9.cpp
+        models/flatbuffers/flatbuffers_array_model_10.cpp
+        models/flatbuffers/flatbuffers_array_model_11.cpp
+        models/flatbuffers/flatbuffers_array_model_12.cpp
+        models/flatbuffers/flatbuffers_array_model_13.cpp
+        models/flatbuffers/flatbuffers_array_model_14.cpp
+        models/flatbuffers/flatbuffers_array_model_15.cpp
+        models/flatbuffers/flatbuffers_array_model_16.cpp
+        models/flatbuffers/flatbuffers_array_model_17.cpp
+        models/flatbuffers/flatbuffers_array_model_18.cpp
+        models/flatbuffers/flatbuffers_array_model_19.cpp
+        models/flatbuffers/flatbuffers_array_model_101.cpp
+        models/flatbuffers/flatbuffers_array_model_102.cpp
+        models/flatbuffers/flatbuffers_array_model_103.cpp
+        models/flatbuffers/flatbuffers_array_model_111.cpp
+        models/flatbuffers/flatbuffers_array_model_112.cpp
+        models/flatbuffers/flatbuffers_array_model_113.cpp
+        models/flatbuffers/flatbuffers_array_model_120.cpp
+        models/flatbuffers/flatbuffers_array_model_121.cpp
+        models/flatbuffers/flatbuffers_array_model_122.cpp
+        models/flatbuffers/flatbuffers_array_model_123.cpp
+        models/flatbuffers/flatbuffers_array_model_124.cpp
+        models/flatbuffers/flatbuffers_array_model_125.cpp
+        models/flatbuffers/flatbuffers_array_model_126.cpp
+        models/flatbuffers/flatbuffers_array_model_127.cpp
+        models/flatbuffers/flatbuffers_array_model_128.cpp
+        models/flatbuffers/flatbuffers_array_model_129.cpp
+        models/flatbuffers/flatbuffers_array_model_130.cpp
+        models/flatbuffers/flatbuffers_array_model_131.cpp
+        models/flatbuffers/flatbuffers_array_model_132.cpp
+        models/flatbuffers/flatbuffers_array_model_133.cpp
+        models/flatbuffers/flatbuffers_array_model_134.cpp
+        models/flatbuffers/flatbuffers_array_model_135.cpp
+        models/flatbuffers/flatbuffers_array_model_136.cpp
+        models/flatbuffers/flatbuffers_array_model_137.cpp
+        models/flatbuffers/flatbuffers_array_model_138.cpp
+        models/flatbuffers/flatbuffers_array_model_139.cpp
+        models/flatbuffers/flatbuffers_array_model_140.cpp
+        models/flatbuffers/flatbuffers_array_model_141.cpp
+        models/flatbuffers/flatbuffers_array_model_142.cpp
+        models/flatbuffers/flatbuffers_array_model_143.cpp
+        models/flatbuffers/flatbuffers_array_model_144.cpp
+        models/flatbuffers/flatbuffers_array_model_145.cpp
+        models/flatbuffers/flatbuffers_array_model_160.cpp
+        models/flatbuffers/flatbuffers_array_model_201.cpp
+        models/flatbuffers/flatbuffers_array_model_202.cpp
+        models/flatbuffers/flatbuffers_array_model_203.cpp
+        models/flatbuffers/flatbuffers_array_model_204.cpp
+        models/flatbuffers/flatbuffers_array_model_211.cpp
+        models/flatbuffers/flatbuffers_array_model_212.cpp
+        models/flatbuffers/flatbuffers_array_model_213.cpp
+        models/flatbuffers/flatbuffers_array_model_214.cpp
+        models/flatbuffers/flatbuffers_array_model_220.cpp
+        models/flatbuffers/flatbuffers_array_model_302.cpp
+        models/flatbuffers/flatbuffers_array_model_303.cpp
+        models/flatbuffers/flatbuffers_array_model_304.cpp
+        models/flatbuffers/flatbuffers_array_model_305.cpp
+        models/flatbuffers/flatbuffers_array_model_306.cpp
+        models/flatbuffers/flatbuffers_array_model_307.cpp
+        models/flatbuffers/flatbuffers_array_model_308.cpp
+        models/flatbuffers/flatbuffers_array_model_401.cpp
+        models/flatbuffers/flatbuffers_array_model_402.cpp
+        models/flatbuffers/flatbuffers_array_model_403.cpp
+        models/flatbuffers/flatbuffers_array_model_404.cpp
+        models/flatbuffers/flatbuffers_array_model_501.cpp
+        models/flatbuffers/flatbuffers_array_model_502.cpp
+        models/flatbuffers/flatbuffers_array_model_601.cpp
+        models/flatbuffers/flatbuffers_array_model_701.cpp
+        models/flatbuffers/flatbuffers_array_model_702.cpp
+        models/flatbuffers/flatbuffers_array_model_703.cpp
+        models/flatbuffers/flatbuffers_array_model_704.cpp
+        models/flatbuffers/flatbuffers_array_model_705.cpp
+        models/flatbuffers/flatbuffers_array_model_706.cpp
+        models/flatbuffers/flatbuffers_array_model_707.cpp
+        models/flatbuffers/flatbuffers_array_model_708.cpp
+        models/flatbuffers/flatbuffers_array_model_709.cpp
+        models/flatbuffers/flatbuffers_array_model_710.cpp
+        models/flatbuffers/flatbuffers_array_model_711.cpp
+        models/flatbuffers/flatbuffers_array_model_712.cpp
+        models/flatbuffers/flatbuffers_array_model_713.cpp
+        models/flatbuffers/flatbuffers_array_model_714.cpp
+        models/flatbuffers/flatbuffers_array_model_715.cpp
+        models/flatbuffers/flatbuffers_array_model_801.cpp
+        models/flatbuffers/flatbuffers_array_model_802.cpp
+        models/flatbuffers/flatbuffers_array_model_803.cpp
+        models/flatbuffers/flatbuffers_array_model_804.cpp
+        models/flatbuffers/flatbuffers_array_model_805.cpp
+        models/flatbuffers/flatbuffers_array_model_806.cpp
+        models/flatbuffers/flatbuffers_array_model_807.cpp
+        models/flatbuffers/flatbuffers_array_model_808.cpp
+        models/flatbuffers/flatbuffers_array_model_809.cpp
+        models/flatbuffers/flatbuffers_array_model_63001.cpp
+        models/flatbuffers/flatbuffers_array_model_63002.cpp
+        models/flatbuffers/flatbuffers_array_model_64001.cpp
+        models/flatbuffers/flatbuffers_array_model_64020.cpp
+        models/flatbuffers/flatbuffers_array_model_64101.cpp
+        models/flatbuffers/flatbuffers_array_model_64111.cpp
+        models/flatbuffers/flatbuffers_array_model_64112.cpp
+        models/flatbuffers/flatbuffers_array_model_64410.cpp
+        models/flatbuffers/flatbuffers_array_model_64411.cpp
+        models/flatbuffers/flatbuffers_array_model_64412.cpp
+        models/flatbuffers/flatbuffers_array_model_64413.cpp
+        models/flatbuffers/flatbuffers_array_model_64414.cpp
+        models/flatbuffers/flatbuffers_array_model_64415.cpp
 )
 target_compile_definitions(${PROJECT_NAME} PUBLIC SUNSPEC_FLATBUFFERS_IMPLEMENTATION=1)
 

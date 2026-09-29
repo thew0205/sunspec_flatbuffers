@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef202{
-        SunspecModelList_kModel202,
+SunspecModelDef SunspecModelDef::modelDef202(){
+        return SunspecModelDef{SunspecModelList_kModel202,
         "split single phase (ABN) meter",
         {
             "ac_meter_abn",
@@ -91,3 +91,4 @@ const SunspecModelDef SunspecModelDef::modelDef202{
             },
         },
     };
+}

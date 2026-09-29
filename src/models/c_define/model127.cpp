@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef127{
-        SunspecModelList_kModel127,
+SunspecModelDef SunspecModelDef::modelDef127(){
+        return SunspecModelDef{SunspecModelList_kModel127,
         "Freq-Watt Param",
         {
             "freq_watt_param",
@@ -29,3 +29,4 @@ const SunspecModelDef SunspecModelDef::modelDef127{
             },
         },
     };
+}

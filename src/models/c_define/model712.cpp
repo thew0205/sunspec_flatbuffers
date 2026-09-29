@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef712{
-        SunspecModelList_kModel712,
+SunspecModelDef SunspecModelDef::modelDef712(){
+        return SunspecModelDef{SunspecModelList_kModel712,
         "DER Watt-Var",
         {
             "DERWattVar",
@@ -57,3 +57,4 @@ const SunspecModelDef SunspecModelDef::modelDef712{
             },
         },
     };
+}

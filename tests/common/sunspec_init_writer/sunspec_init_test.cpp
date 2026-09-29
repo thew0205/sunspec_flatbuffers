@@ -18,7 +18,7 @@
 using std::cout;
 using std::endl;
 using std::string;
-extern unsigned char modelDefinition1[];
+
 class Stream
 {
 };
@@ -54,6 +54,7 @@ TEST_GROUP(Sunspec_Init)
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 };
 

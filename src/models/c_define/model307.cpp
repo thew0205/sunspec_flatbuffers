@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef307{
-        SunspecModelList_kModel307,
+SunspecModelDef SunspecModelDef::modelDef307(){
+        return SunspecModelDef{SunspecModelList_kModel307,
         "Base Met",
         {
             "base_met",
@@ -30,3 +30,4 @@ const SunspecModelDef SunspecModelDef::modelDef307{
             },
         },
     };
+}

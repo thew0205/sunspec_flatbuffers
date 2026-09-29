@@ -1,5 +1,6 @@
 #include "adapters/c_define/c_model_definition.h"
-const SunspecModelDef SunspecModelDef::modelDef160{
+SunspecModelDef SunspecModelDef::modelDef160(){
+        return SunspecModelDef{
         SunspecModelList_kModel160,
         "Multiple MPPT Inverter Extension Model", // Model label
         {
@@ -47,3 +48,4 @@ const SunspecModelDef SunspecModelDef::modelDef160{
             },
         },
     };
+}

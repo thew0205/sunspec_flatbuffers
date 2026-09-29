@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef19{
-        SunspecModelList_kModel19,
+SunspecModelDef SunspecModelDef::modelDef19(){
+        return SunspecModelDef{SunspecModelList_kModel19,
         "PPP Link",
         {
             "model_19",
@@ -29,3 +29,4 @@ const SunspecModelDef SunspecModelDef::modelDef19{
             },
         },
     };
+}

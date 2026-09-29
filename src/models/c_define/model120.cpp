@@ -1,5 +1,6 @@
 #include "adapters/c_define/c_model_definition.h"
-const SunspecModelDef SunspecModelDef::modelDef120{
+SunspecModelDef SunspecModelDef::modelDef120(){
+        return SunspecModelDef{
         SunspecModelList_kModel120,
         "Nameplate", // Model label from JSON: "label": "Nameplate"
         {
@@ -42,3 +43,4 @@ const SunspecModelDef SunspecModelDef::modelDef120{
             {} // Empty vector for nested groups
         },
     };
+}

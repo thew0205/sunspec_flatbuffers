@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef711{
-        SunspecModelList_kModel711,
+SunspecModelDef SunspecModelDef::modelDef711(){
+        return SunspecModelDef{SunspecModelList_kModel711,
         "DER Frequency Droop",
         {
             "DERFreqDroop",
@@ -47,3 +47,4 @@ const SunspecModelDef SunspecModelDef::modelDef711{
             },
         },
     };
+}

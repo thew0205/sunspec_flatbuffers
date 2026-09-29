@@ -30,11 +30,12 @@ TEST_GROUP(Sunspec_Model_Reader_Model1)
 
     void setup()
     {
-        modelDef = getModelDefinition(1);
+        modelDef = getModelDefinition(SunspecModelList_kModel1);
     }
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 };
 
@@ -97,11 +98,12 @@ TEST_GROUP(Sunspec_Model_Reader_Model160)
 
     void setup()
     {
-        modelDef = getModelDefinition(160);
+        modelDef = getModelDefinition(SunspecModelList_kModel160);
     }
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 };
 
@@ -157,8 +159,13 @@ TEST_GROUP(Sunspec_Model1_Reader_Read)
     void setup()
     {
         memset(modelBuffer, 0, sizeof(modelBuffer));
-        modelDef = getModelDefinition(1);
+        modelDef = getModelDefinition(SunspecModelList_kModel1);
         client.setFakeBuffer(buffer, sizeof(buffer) / sizeof(buffer[0]));
+    }
+
+    void teardown()
+    {
+       deinitializeAllModels();
     }
 };
 
@@ -203,8 +210,12 @@ TEST_GROUP(Sunspec_Model160_Reader_Read)
 
     void setup()
     {
-        modelDef = getModelDefinition(160);
+        modelDef = getModelDefinition(SunspecModelList_kModel160);
         client.setFakeBuffer(buffer, sizeof(buffer) / sizeof(buffer[0]));
+    }
+
+    void teardown(){
+       deinitializeAllModels();
     }
 };
 

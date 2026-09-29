@@ -563,20 +563,11 @@ public:
     SunspecModelList id() const;
     string_view label() const;
 
-    /**
-     * @brief Finds the model definition for `id` among the static
-     * modelDef<id> members below.
-     * @param [in] id The ID of the Sunspec model to retrieve.
-     * @return A pointer to the requested SunspecModelDef, or nullptr if not found.
-     */
-    static const SunspecModelDef *getModelDefinition(SunspecModelList id);
-
 private:
     explicit SunspecModelDef(const char *json);
 
     SunspecModelDef(const SunspecModelDef &model) = delete;
     SunspecModelDef &operator=(const SunspecModelDef &model) = delete;
-    SunspecModelDef(SunspecModelDef &&model) = delete;
     SunspecModelDef &operator=(SunspecModelDef &&model) = delete;
 
     const char *json_;
@@ -584,563 +575,571 @@ private:
     std::vector<SunspecGroupDef> group_cache_; // holds 0 or 1 element; vector purely so it's default-constructible and movable without SunspecGroupDef needing one
 
 public:
-        /**
+
+    SunspecModelDef(SunspecModelDef &&model) = default;
+
+    /**
      * @brief Static definition for Model 1.
      */
-    static const SunspecModelDef modelDef1;
+    static SunspecModelDef modelDef1();
 
     /**
      * @brief Static definition for Model 2.
      */
-    static const SunspecModelDef modelDef2;
+    static SunspecModelDef modelDef2();
 
     /**
      * @brief Static definition for Model 3.
      */
-    static const SunspecModelDef modelDef3;
+    static SunspecModelDef modelDef3();
 
     /**
      * @brief Static definition for Model 4.
      */
-    static const SunspecModelDef modelDef4;
+    static SunspecModelDef modelDef4();
 
     /**
      * @brief Static definition for Model 5.
      */
-    static const SunspecModelDef modelDef5;
+    static SunspecModelDef modelDef5();
 
     /**
      * @brief Static definition for Model 6.
      */
-    static const SunspecModelDef modelDef6;
+    static SunspecModelDef modelDef6();
 
     /**
      * @brief Static definition for Model 7.
      */
-    static const SunspecModelDef modelDef7;
+    static SunspecModelDef modelDef7();
 
     /**
      * @brief Static definition for Model 8.
      */
-    static const SunspecModelDef modelDef8;
+    static SunspecModelDef modelDef8();
 
     /**
      * @brief Static definition for Model 9.
      */
-    static const SunspecModelDef modelDef9;
+    static SunspecModelDef modelDef9();
 
     /**
      * @brief Static definition for Model 10.
      */
-    static const SunspecModelDef modelDef10;
+    static SunspecModelDef modelDef10();
 
     /**
      * @brief Static definition for Model 11.
      */
-    static const SunspecModelDef modelDef11;
+    static SunspecModelDef modelDef11();
 
     /**
      * @brief Static definition for Model 12.
      */
-    static const SunspecModelDef modelDef12;
+    static SunspecModelDef modelDef12();
 
     /**
      * @brief Static definition for Model 13.
      */
-    static const SunspecModelDef modelDef13;
+    static SunspecModelDef modelDef13();
 
     /**
      * @brief Static definition for Model 14.
      */
-    static const SunspecModelDef modelDef14;
+    static SunspecModelDef modelDef14();
 
     /**
      * @brief Static definition for Model 15.
      */
-    static const SunspecModelDef modelDef15;
+    static SunspecModelDef modelDef15();
 
     /**
      * @brief Static definition for Model 16.
      */
-    static const SunspecModelDef modelDef16;
+    static SunspecModelDef modelDef16();
 
     /**
      * @brief Static definition for Model 17.
      */
-    static const SunspecModelDef modelDef17;
+    static SunspecModelDef modelDef17();
 
     /**
      * @brief Static definition for Model 18.
      */
-    static const SunspecModelDef modelDef18;
+    static SunspecModelDef modelDef18();
 
     /**
      * @brief Static definition for Model 19.
      */
-    static const SunspecModelDef modelDef19;
+    static SunspecModelDef modelDef19();
 
     /**
      * @brief Static definition for Model 101.
      */
-    static const SunspecModelDef modelDef101;
+    static SunspecModelDef modelDef101();
 
     /**
      * @brief Static definition for Model 102.
      */
-    static const SunspecModelDef modelDef102;
+    static SunspecModelDef modelDef102();
 
     /**
      * @brief Static definition for Model 103.
      */
-    static const SunspecModelDef modelDef103;
+    static SunspecModelDef modelDef103();
 
     /**
      * @brief Static definition for Model 111.
      */
-    static const SunspecModelDef modelDef111;
+    static SunspecModelDef modelDef111();
 
     /**
      * @brief Static definition for Model 112.
      */
-    static const SunspecModelDef modelDef112;
+    static SunspecModelDef modelDef112();
 
     /**
      * @brief Static definition for Model 113.
      */
-    static const SunspecModelDef modelDef113;
+    static SunspecModelDef modelDef113();
 
     /**
      * @brief Static definition for Model 120.
      */
-    static const SunspecModelDef modelDef120;
+    static SunspecModelDef modelDef120();
 
     /**
      * @brief Static definition for Model 121.
      */
-    static const SunspecModelDef modelDef121;
+    static SunspecModelDef modelDef121();
 
     /**
      * @brief Static definition for Model 122.
      */
-    static const SunspecModelDef modelDef122;
+    static SunspecModelDef modelDef122();
 
     /**
      * @brief Static definition for Model 123.
      */
-    static const SunspecModelDef modelDef123;
+    static SunspecModelDef modelDef123();
 
     /**
      * @brief Static definition for Model 124.
      */
-    static const SunspecModelDef modelDef124;
+    static SunspecModelDef modelDef124();
 
     /**
      * @brief Static definition for Model 125.
      */
-    static const SunspecModelDef modelDef125;
+    static SunspecModelDef modelDef125();
 
     /**
      * @brief Static definition for Model 126.
      */
-    static const SunspecModelDef modelDef126;
+    static SunspecModelDef modelDef126();
 
     /**
      * @brief Static definition for Model 127.
      */
-    static const SunspecModelDef modelDef127;
+    static SunspecModelDef modelDef127();
 
     /**
      * @brief Static definition for Model 128.
      */
-    static const SunspecModelDef modelDef128;
+    static SunspecModelDef modelDef128();
 
     /**
      * @brief Static definition for Model 129.
      */
-    static const SunspecModelDef modelDef129;
+    static SunspecModelDef modelDef129();
 
     /**
      * @brief Static definition for Model 130.
      */
-    static const SunspecModelDef modelDef130;
+    static SunspecModelDef modelDef130();
 
     /**
      * @brief Static definition for Model 131.
      */
-    static const SunspecModelDef modelDef131;
+    static SunspecModelDef modelDef131();
 
     /**
      * @brief Static definition for Model 132.
      */
-    static const SunspecModelDef modelDef132;
+    static SunspecModelDef modelDef132();
 
     /**
      * @brief Static definition for Model 133.
      */
-    static const SunspecModelDef modelDef133;
+    static SunspecModelDef modelDef133();
 
     /**
      * @brief Static definition for Model 134.
      */
-    static const SunspecModelDef modelDef134;
+    static SunspecModelDef modelDef134();
 
     /**
      * @brief Static definition for Model 135.
      */
-    static const SunspecModelDef modelDef135;
+    static SunspecModelDef modelDef135();
 
     /**
      * @brief Static definition for Model 136.
      */
-    static const SunspecModelDef modelDef136;
+    static SunspecModelDef modelDef136();
 
     /**
      * @brief Static definition for Model 137.
      */
-    static const SunspecModelDef modelDef137;
+    static SunspecModelDef modelDef137();
 
     /**
      * @brief Static definition for Model 138.
      */
-    static const SunspecModelDef modelDef138;
+    static SunspecModelDef modelDef138();
 
     /**
      * @brief Static definition for Model 139.
      */
-    static const SunspecModelDef modelDef139;
+    static SunspecModelDef modelDef139();
 
     /**
      * @brief Static definition for Model 140.
      */
-    static const SunspecModelDef modelDef140;
+    static SunspecModelDef modelDef140();
 
     /**
      * @brief Static definition for Model 141.
      */
-    static const SunspecModelDef modelDef141;
+    static SunspecModelDef modelDef141();
 
     /**
      * @brief Static definition for Model 142.
      */
-    static const SunspecModelDef modelDef142;
+    static SunspecModelDef modelDef142();
 
     /**
      * @brief Static definition for Model 143.
      */
-    static const SunspecModelDef modelDef143;
+    static SunspecModelDef modelDef143();
 
     /**
      * @brief Static definition for Model 144.
      */
-    static const SunspecModelDef modelDef144;
+    static SunspecModelDef modelDef144();
 
     /**
      * @brief Static definition for Model 145.
      */
-    static const SunspecModelDef modelDef145;
+    static SunspecModelDef modelDef145();
 
     /**
      * @brief Static definition for Model 160.
      */
-    static const SunspecModelDef modelDef160;
+    static SunspecModelDef modelDef160();
 
     /**
      * @brief Static definition for Model 201.
      */
-    static const SunspecModelDef modelDef201;
+    static SunspecModelDef modelDef201();
 
     /**
      * @brief Static definition for Model 202.
      */
-    static const SunspecModelDef modelDef202;
+    static SunspecModelDef modelDef202();
 
     /**
      * @brief Static definition for Model 203.
      */
-    static const SunspecModelDef modelDef203;
+    static SunspecModelDef modelDef203();
 
     /**
      * @brief Static definition for Model 204.
      */
-    static const SunspecModelDef modelDef204;
+    static SunspecModelDef modelDef204();
 
     /**
      * @brief Static definition for Model 211.
      */
-    static const SunspecModelDef modelDef211;
+    static SunspecModelDef modelDef211();
 
     /**
      * @brief Static definition for Model 212.
      */
-    static const SunspecModelDef modelDef212;
+    static SunspecModelDef modelDef212();
 
     /**
      * @brief Static definition for Model 213.
      */
-    static const SunspecModelDef modelDef213;
+    static SunspecModelDef modelDef213();
 
     /**
      * @brief Static definition for Model 214.
      */
-    static const SunspecModelDef modelDef214;
+    static SunspecModelDef modelDef214();
 
     /**
      * @brief Static definition for Model 220.
      */
-    static const SunspecModelDef modelDef220;
+    static SunspecModelDef modelDef220();
 
     /**
      * @brief Static definition for Model 302.
      */
-    static const SunspecModelDef modelDef302;
+    static SunspecModelDef modelDef302();
 
     /**
      * @brief Static definition for Model 303.
      */
-    static const SunspecModelDef modelDef303;
+    static SunspecModelDef modelDef303();
 
     /**
      * @brief Static definition for Model 304.
      */
-    static const SunspecModelDef modelDef304;
+    static SunspecModelDef modelDef304();
 
     /**
      * @brief Static definition for Model 305.
      */
-    static const SunspecModelDef modelDef305;
+    static SunspecModelDef modelDef305();
 
     /**
      * @brief Static definition for Model 306.
      */
-    static const SunspecModelDef modelDef306;
+    static SunspecModelDef modelDef306();
 
     /**
      * @brief Static definition for Model 307.
      */
-    static const SunspecModelDef modelDef307;
+    static SunspecModelDef modelDef307();
 
     /**
      * @brief Static definition for Model 308.
      */
-    static const SunspecModelDef modelDef308;
+    static SunspecModelDef modelDef308();
 
     /**
      * @brief Static definition for Model 401.
      */
-    static const SunspecModelDef modelDef401;
+    static SunspecModelDef modelDef401();
 
     /**
      * @brief Static definition for Model 402.
      */
-    static const SunspecModelDef modelDef402;
+    static SunspecModelDef modelDef402();
 
     /**
      * @brief Static definition for Model 403.
      */
-    static const SunspecModelDef modelDef403;
+    static SunspecModelDef modelDef403();
 
     /**
      * @brief Static definition for Model 404.
      */
-    static const SunspecModelDef modelDef404;
+    static SunspecModelDef modelDef404();
 
     /**
      * @brief Static definition for Model 501.
      */
-    static const SunspecModelDef modelDef501;
+    static SunspecModelDef modelDef501();
 
     /**
      * @brief Static definition for Model 502.
      */
-    static const SunspecModelDef modelDef502;
+    static SunspecModelDef modelDef502();
 
     /**
      * @brief Static definition for Model 601.
      */
-    static const SunspecModelDef modelDef601;
+    static SunspecModelDef modelDef601();
 
     /**
      * @brief Static definition for Model 701.
      */
-    static const SunspecModelDef modelDef701;
+    static SunspecModelDef modelDef701();
 
     /**
      * @brief Static definition for Model 702.
      */
-    static const SunspecModelDef modelDef702;
+    static SunspecModelDef modelDef702();
 
     /**
      * @brief Static definition for Model 703.
      */
-    static const SunspecModelDef modelDef703;
+    static SunspecModelDef modelDef703();
 
     /**
      * @brief Static definition for Model 704.
      */
-    static const SunspecModelDef modelDef704;
+    static SunspecModelDef modelDef704();
 
     /**
      * @brief Static definition for Model 705.
      */
-    static const SunspecModelDef modelDef705;
+    static SunspecModelDef modelDef705();
 
     /**
      * @brief Static definition for Model 706.
      */
-    static const SunspecModelDef modelDef706;
+    static SunspecModelDef modelDef706();
 
     /**
      * @brief Static definition for Model 707.
      */
-    static const SunspecModelDef modelDef707;
+    static SunspecModelDef modelDef707();
 
     /**
      * @brief Static definition for Model 708.
      */
-    static const SunspecModelDef modelDef708;
+    static SunspecModelDef modelDef708();
 
     /**
      * @brief Static definition for Model 709.
      */
-    static const SunspecModelDef modelDef709;
+    static SunspecModelDef modelDef709();
 
     /**
      * @brief Static definition for Model 710.
      */
-    static const SunspecModelDef modelDef710;
+    static SunspecModelDef modelDef710();
 
     /**
      * @brief Static definition for Model 711.
      */
-    static const SunspecModelDef modelDef711;
+    static SunspecModelDef modelDef711();
 
     /**
      * @brief Static definition for Model 712.
      */
-    static const SunspecModelDef modelDef712;
+    static SunspecModelDef modelDef712();
 
     /**
      * @brief Static definition for Model 713.
      */
-    static const SunspecModelDef modelDef713;
+    static SunspecModelDef modelDef713();
 
     /**
      * @brief Static definition for Model 714.
      */
-    static const SunspecModelDef modelDef714;
+    static SunspecModelDef modelDef714();
 
     /**
      * @brief Static definition for Model 715.
      */
-    static const SunspecModelDef modelDef715;
+    static SunspecModelDef modelDef715();
 
     /**
      * @brief Static definition for Model 801.
      */
-    static const SunspecModelDef modelDef801;
+    static SunspecModelDef modelDef801();
 
     /**
      * @brief Static definition for Model 802.
      */
-    static const SunspecModelDef modelDef802;
+    static SunspecModelDef modelDef802();
 
     /**
      * @brief Static definition for Model 803.
      */
-    static const SunspecModelDef modelDef803;
+    static SunspecModelDef modelDef803();
 
     /**
      * @brief Static definition for Model 804.
      */
-    static const SunspecModelDef modelDef804;
+    static SunspecModelDef modelDef804();
 
     /**
      * @brief Static definition for Model 805.
      */
-    static const SunspecModelDef modelDef805;
+    static SunspecModelDef modelDef805();
 
     /**
      * @brief Static definition for Model 806.
      */
-    static const SunspecModelDef modelDef806;
+    static SunspecModelDef modelDef806();
 
     /**
      * @brief Static definition for Model 807.
      */
-    static const SunspecModelDef modelDef807;
+    static SunspecModelDef modelDef807();
 
     /**
      * @brief Static definition for Model 808.
      */
-    static const SunspecModelDef modelDef808;
+    static SunspecModelDef modelDef808();
 
     /**
      * @brief Static definition for Model 809.
      */
-    static const SunspecModelDef modelDef809;
+    static SunspecModelDef modelDef809();
 
     /**
      * @brief Static definition for Model 63001.
      */
-    static const SunspecModelDef modelDef63001;
+    static SunspecModelDef modelDef63001();
 
     /**
      * @brief Static definition for Model 63002.
      */
-    static const SunspecModelDef modelDef63002;
+    static SunspecModelDef modelDef63002();
 
     /**
      * @brief Static definition for Model 64001.
      */
-    static const SunspecModelDef modelDef64001;
+    static SunspecModelDef modelDef64001();
 
     /**
      * @brief Static definition for Model 64020.
      */
-    static const SunspecModelDef modelDef64020;
+    static SunspecModelDef modelDef64020();
 
     /**
      * @brief Static definition for Model 64101.
      */
-    static const SunspecModelDef modelDef64101;
+    static SunspecModelDef modelDef64101();
 
     /**
      * @brief Static definition for Model 64111.
      */
-    static const SunspecModelDef modelDef64111;
+    static SunspecModelDef modelDef64111();
 
     /**
      * @brief Static definition for Model 64112.
      */
-    static const SunspecModelDef modelDef64112;
+    static SunspecModelDef modelDef64112();
 
     /**
      * @brief Static definition for Model 64410.
      */
-    static const SunspecModelDef modelDef64410;
+    static SunspecModelDef modelDef64410();
 
     /**
      * @brief Static definition for Model 64411.
      */
-    static const SunspecModelDef modelDef64411;
+    static SunspecModelDef modelDef64411();
 
     /**
      * @brief Static definition for Model 64412.
      */
-    static const SunspecModelDef modelDef64412;
+    static SunspecModelDef modelDef64412();
 
     /**
      * @brief Static definition for Model 64413.
      */
-    static const SunspecModelDef modelDef64413;
+    static SunspecModelDef modelDef64413();
 
     /**
      * @brief Static definition for Model 64414.
      */
-    static const SunspecModelDef modelDef64414;
+    static SunspecModelDef modelDef64414();
 
     /**
      * @brief Static definition for Model 64415.
      */
-    static const SunspecModelDef modelDef64415;
+    static SunspecModelDef modelDef64415();
 };
+
+void initializeAllModels();
+void deinitializeAllModels();
+
+

@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef9{
-        SunspecModelList_kModel9,
+SunspecModelDef SunspecModelDef::modelDef9(){
+        return SunspecModelDef{SunspecModelList_kModel9,
         "Set Operator Security Certificate",
         {
             "model_9",
@@ -122,3 +122,4 @@ const SunspecModelDef SunspecModelDef::modelDef9{
             },
         },
     };
+}

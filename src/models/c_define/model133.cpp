@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef133{
-        SunspecModelList_kModel133,
+SunspecModelDef SunspecModelDef::modelDef133(){
+        return SunspecModelDef{SunspecModelList_kModel133,
         "Basic Scheduling",
         {
             "schedule",
@@ -67,3 +67,4 @@ const SunspecModelDef SunspecModelDef::modelDef133{
             },
         },
     };
+}

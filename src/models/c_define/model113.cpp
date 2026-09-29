@@ -1,6 +1,7 @@
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef113{
+SunspecModelDef SunspecModelDef::modelDef113(){
+        return SunspecModelDef{
         SunspecModelList_kModel113,
         "Inverter (Three Phase) FLOAT", // Model label
         {
@@ -46,3 +47,4 @@ const SunspecModelDef SunspecModelDef::modelDef113{
             {} // No nested groups in this model
         },
     };
+}

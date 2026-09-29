@@ -1,8 +1,8 @@
 #include "adapters/c_define/c_model_definition.h"
 
 // Corrected model1 definition
-const SunspecModelDef SunspecModelDef::modelDef1{
-        SunspecModelList_kModel1,
+SunspecModelDef SunspecModelDef::modelDef1(){
+        return SunspecModelDef{SunspecModelList_kModel1,
         "Common",
         // _topLevelGroupPoint
         {
@@ -34,3 +34,4 @@ const SunspecModelDef SunspecModelDef::modelDef1{
             {} // Empty vector for nested groups, as there are none in Model 1
         },
     };
+}

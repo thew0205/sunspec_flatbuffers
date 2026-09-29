@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64111{
-        SunspecModelList_kModel64111,
+SunspecModelDef SunspecModelDef::modelDef64111(){
+        return SunspecModelDef{SunspecModelList_kModel64111,
         "Basic Charge Controller",
         {
             "model_64111",
@@ -42,3 +42,4 @@ const SunspecModelDef SunspecModelDef::modelDef64111{
             },
         },
     };
+}

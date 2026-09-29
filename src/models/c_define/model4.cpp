@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef4{
-        SunspecModelList_kModel4,
+SunspecModelDef SunspecModelDef::modelDef4(){
+        return SunspecModelDef{SunspecModelList_kModel4,
         "Secure Dataset Read Response",
         {
             "model_4",
@@ -90,3 +90,4 @@ const SunspecModelDef SunspecModelDef::modelDef4{
             },
         },
     };
+}

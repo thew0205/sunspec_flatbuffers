@@ -17,7 +17,7 @@
 
 
 #ifdef SUNSPEC_FLATBUFFERS_IMPLEMENTATION
-#include "sunspec_model_definition_generated.h"
+#include "adapters/flatbuffers/sunspec_flatbuffers_definition.h"
 #define DEREFERENCE_POINTER_FLATBUFFER(x) (*x)
 #define REFERENCE_POINTER_FLATBUFFER(x) (x)
 #elif defined(SUNSPEC_JSON_IMPLEMENTATION)
@@ -718,14 +718,6 @@ inline std::string operator+(const std::string_view &str1, const std::string &st
     return std::string{str1} + str2;
 }
 
-/**
- * @brief Retrieves the model definition for a given model ID.
- * This function looks up the model definition based on the provided model ID.
- * @param [in] id The ID of the model to look up.
- * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
- */
-const SunspecModelDef *getModelDefinition(uint16_t id);
-
 
 const SunspecPointDef *findPointById(const SunspecGroupDef *group, const std::string_view &id);
 
@@ -768,3 +760,13 @@ namespace Sunspec
     uint64_t registersToUint64(uint16_t reg0, uint16_t reg1, uint16_t reg2, uint16_t reg3);
 
 }; // namespace Sunspec
+enum SunspecModelList;
+
+/**
+ * @brief Retrieves the model definition for a given model ID.
+ * This function looks up the model definition based on the provided model ID.
+ * @param [in] id The ID of the model to look up.
+ * @return A pointer to the SunspecModelDef if found, or nullptr if not supported.
+ */
+const SunspecModelDef *getModelDefinition(SunspecModelList id);
+

@@ -35,6 +35,7 @@ TEST_GROUP(Sunspec_Device_Reader_Fronius)
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 
     void setBuffer(const uint16_t *buffer, uint16_t bufferSize)

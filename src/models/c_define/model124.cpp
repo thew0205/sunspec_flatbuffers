@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef124{
-        SunspecModelList_kModel124,
+SunspecModelDef SunspecModelDef::modelDef124(){
+        return SunspecModelDef{SunspecModelList_kModel124,
         "Storage",
         {
             "storage_basic",
@@ -43,3 +43,4 @@ const SunspecModelDef SunspecModelDef::modelDef124{
             },
         },
     };
+}

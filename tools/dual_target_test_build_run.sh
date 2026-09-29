@@ -1,21 +1,13 @@
 #!/bin/bash
 set -e
-# ========================================================================
-# test.sh
-# ------------------------------------------------------------------------
-# A script to build and run Sunspec PAI tests for either host or target.
-# Usage:
-#   ./test.sh <TEST_TYPE> [SUNSPEC_PAI_ROOT_DIR]
-#   TEST_TYPE: 'host' or 'target'
-#   SUNSPEC_PAI_ROOT_DIR: optional, root directory of Sunspec PAI project
-# ========================================================================
-
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # ------------------------------------------------------------------------
 # Input arguments
 # ------------------------------------------------------------------------
 TEST_TYPE=$1                   # First argument: which test type to build/run
 SUNSPEC_ROOT_DIR=$2        # Second argument: root directory of the project
-TESTS_TO_RUN=$3
+BACKEND=$3
+TESTS_TO_RUN=$4
 
 # ------------------------------------------------------------------------
 # Derived directories
@@ -54,52 +46,7 @@ function run_test(){
     fi
 }
 
-# ------------------------------------------------------------------------
-# Check if TEST_TYPE is provided
-# ------------------------------------------------------------------------
-if [[ -z $TEST_TYPE ]]; then
-    echo -e "${RED}Error: choose a test type (host or target)!!!${NC}"
-    exit 1
-fi
-
-# ------------------------------------------------------------------------
-# Check if SUNSPEC_PAI_ROOT_DIR is provided, otherwise default to current directory
-# ------------------------------------------------------------------------
-if [[ -z $SUNSPEC_ROOT_DIR ]]; then
-    echo -e "${MAGENTA}SUNSPEC_PAI_ROOT_DIR not specified. Assuming current working directory.${NC}"
-    SUNSPEC_ROOT_DIR=$(pwd)
-fi
-
-# ------------------------------------------------------------------------
-# Determine which tests to enable based on TEST_TYPE
-# ------------------------------------------------------------------------
-if [[ ${TEST_TYPE,,} == "target" ]]; then
-    # Target test selected
-    echo -e "${GREEN}Building TARGET tests${NC}"
-    HOST_TEST=OFF
-    TARGET_TEST=ON
-else
-    # Host test selected
-    echo -e "${GREEN}Building HOST tests${NC}"
-    HOST_TEST=ON
-    TARGET_TEST=OFF
-fi
-
-# Flag to indicate Sunspec PAI test build
-SUNSPEC_TEST=ON
-
-# ------------------------------------------------------------------------
-# Run CMake configuration and build
-# ------------------------------------------------------------------------
-cmake -S$SOURCE_DIR \
-      -B$BUILD_DIR \
-      -GNinja \
-      -DSUNSPEC_ROOT_DIR=$SUNSPEC_ROOT_DIR \
-      -DTESTS=OFF \
-      -DHOST_TEST=$HOST_TEST \
-      -DTARGET_TEST=$TARGET_TEST \
-      -DSUNSPEC_PAI_TEST=$SUNSPEC_TEST
-cmake --build $BUILD_DIR -j$(nproc)
+source $SCRIPT_DIR/dual_target_test_build.sh $1 $2 $3 
 
 if [[ $? -ne 0 ]]; then
     echo -e "${BOLD_RED}Build failed!!! :(${NC}"

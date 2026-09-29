@@ -2,6 +2,17 @@
     "version": "2.0.0",
     "inputs": [
         {
+            "id": "sunspec_backend",
+            "type": "pickString",
+            "description": "The backend use for sunspec model definition",
+            "options": [
+                "c_define",
+                "flatbuffers",
+                "json",   
+            ],
+            "default": "flatbuffers"
+        },
+        {
             "id": "testToRun",
             "type": "pickString",
             "description": "The test to be run",
@@ -11,10 +22,10 @@
                 "sunspec_model_reader",
                 "sunspec_device_reader",
                 "sunspec_init_writer",
-                "flatbuffer",
+                "backend",
                 "sunspec_set_value_writer",
                 "pzem_temp",
-                "flatbuffer sunspec_init_writer sunspec_set_value_writer sunspec_point_reader sunspec_group_reader sunspec_model_reader sunspec_device_reader"
+                "backend sunspec_init_writer sunspec_set_value_writer sunspec_point_reader sunspec_group_reader sunspec_model_reader sunspec_device_reader"
                 
             ],
             "default": "sunspec_group_reader"
@@ -28,6 +39,7 @@
             "args": [
                 "target",
                 "${workspaceFolder}",
+                "${input:sunspec_backend}"
             ],
             "presentation": {
                 "echo": true,
@@ -48,6 +60,7 @@
             "args": [
                 "host",
                 "${workspaceFolder}",
+                "${input:sunspec_backend}"
             ],
             "presentation": {
                 "echo": true,
@@ -68,6 +81,7 @@
             "args": [
                 "target",
                 "${workspaceFolder}",
+                "${input:sunspec_backend}",
                 "${input:testToRun}",
             ],
             "presentation": {
@@ -89,6 +103,7 @@
             "args": [
                 "host",
                 "${workspaceFolder}",
+                "${input:sunspec_backend}",
                 "${input:testToRun}",
             ],
             "presentation": {

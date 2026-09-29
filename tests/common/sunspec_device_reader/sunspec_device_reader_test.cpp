@@ -35,6 +35,7 @@ TEST_GROUP(Sunspec_Device_Reader)
 
     void teardown()
     {
+       deinitializeAllModels();
     }
 
     void setBaseAddress(uint16_t baseAddress)

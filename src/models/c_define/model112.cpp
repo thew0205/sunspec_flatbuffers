@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef112{
-        SunspecModelList_kModel112,
+SunspecModelDef SunspecModelDef::modelDef112(){
+        return SunspecModelDef{SunspecModelList_kModel112,
         "Inverter (Split Phase) FLOAT",
         {
             "inverter_split_phase_float",
@@ -50,3 +50,4 @@ const SunspecModelDef SunspecModelDef::modelDef112{
             },
         },
     };
+}

@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef601{
-        SunspecModelList_kModel601,
+SunspecModelDef SunspecModelDef::modelDef601(){
+        return SunspecModelDef{SunspecModelList_kModel601,
         "Tracker Controller DRAFT 2",
         {
             "tracker_controller",
@@ -50,3 +50,4 @@ const SunspecModelDef SunspecModelDef::modelDef601{
             },
         },
     };
+}

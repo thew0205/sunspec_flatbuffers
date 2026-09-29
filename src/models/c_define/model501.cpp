@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef501{
-        SunspecModelList_kModel501,
+SunspecModelDef SunspecModelDef::modelDef501(){
+        return SunspecModelDef{SunspecModelList_kModel501,
         "Solar Module",
         {
             "solar_module_float",
@@ -36,3 +36,4 @@ const SunspecModelDef SunspecModelDef::modelDef501{
             },
         },
     };
+}

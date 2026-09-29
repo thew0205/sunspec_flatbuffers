@@ -1,5 +1,6 @@
 #include "adapters/c_define/c_model_definition.h"
-const SunspecModelDef SunspecModelDef::modelDef126{
+SunspecModelDef SunspecModelDef::modelDef126(){
+        return SunspecModelDef{
         SunspecModelList_kModel126,
         "Static Volt-VAR", // Model label from JSON: "label": "Static Volt-VAR"
         {
@@ -85,3 +86,4 @@ const SunspecModelDef SunspecModelDef::modelDef126{
             },
         },
     };
+}

@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64001{
-        SunspecModelList_kModel64001,
+SunspecModelDef SunspecModelDef::modelDef64001(){
+        return SunspecModelDef{SunspecModelList_kModel64001,
         "Veris Status and Configuration",
         {
             "model_64001",
@@ -54,3 +54,4 @@ const SunspecModelDef SunspecModelDef::modelDef64001{
             },
         },
     };
+}

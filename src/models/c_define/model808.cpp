@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef808{
-        SunspecModelList_kModel808,
+SunspecModelDef SunspecModelDef::modelDef808(){
+        return SunspecModelDef{SunspecModelList_kModel808,
         "Flow Battery Module Model",
         {
             "flow_battery_module",
@@ -32,3 +32,4 @@ const SunspecModelDef SunspecModelDef::modelDef808{
             },
         },
     };
+}

@@ -15,8 +15,7 @@ set -e
 # ------------------------------------------------------------------------
 TEST_TYPE=$1                   # First argument: which test type to build/run
 SUNSPEC_ROOT_DIR=$2        # Second argument: root directory of the project
-TEST_TO_RUN=$3
-
+BACKEND=$3
 # ------------------------------------------------------------------------
 # Derived directories
 # ------------------------------------------------------------------------
@@ -80,7 +79,8 @@ cmake -S$SOURCE_DIR \
       -DTESTS=OFF \
       -DHOST_TEST=$HOST_TEST \
       -DTARGET_TEST=$TARGET_TEST \
-      -DSUNSPEC_PAI_TEST=$SUNSPEC_TEST
+      -DSUNSPEC_PAI_TEST=$SUNSPEC_TEST \
+      -DBACKEND=$BACKEND
 cmake --build $BUILD_DIR -j$(nproc)
 
 if [[ $? -ne 0 ]]; then

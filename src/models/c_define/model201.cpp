@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef201{
-        SunspecModelList_kModel201,
+SunspecModelDef SunspecModelDef::modelDef201(){
+        return SunspecModelDef{SunspecModelList_kModel201,
         "Meter (Single Phase) single phase (AN or AB) meter",
         {
             "ac_meter_an_or_ab",
@@ -91,3 +91,4 @@ const SunspecModelDef SunspecModelDef::modelDef201{
             },
         },
     };
+}

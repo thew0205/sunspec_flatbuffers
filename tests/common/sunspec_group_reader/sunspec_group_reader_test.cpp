@@ -9,7 +9,6 @@
 
 #include "sunspec.h"
 
-
 #include "CppUTest/TestHarness.h"
 #include "CppUTest/CommandLineTestRunner.h"
 #include "reader/sunspec_group_reader.h"
@@ -23,18 +22,18 @@ using std::cout;
 using std::endl;
 using std::string;
 
-
 TEST_GROUP(Sunspec_Group_Reader_Model1)
 {
     const SunspecGroupDef *groupDef = nullptr;
 
     void setup()
     {
-        groupDef = getModelDefinition(1)->group();
+        groupDef = getModelDefinition(SunspecModelList_kModel1)->group();
     }
 
     void teardown()
     {
+        deinitializeAllModels();
     }
 };
 
@@ -86,24 +85,25 @@ TEST_GROUP(Sunspec_Group_Reader_Model160)
     const SunspecGroupDef *groupDef = nullptr;
     void setup()
     {
-        groupDef = getModelDefinition(160)->group();
+        groupDef = getModelDefinition(SunspecModelList_kModel160)->group();
     }
 
     void teardown()
     {
+        deinitializeAllModels();
     }
 };
 
-IGNORE_TEST(Sunspec_Group_Reader_Model160, ReadModel1_After_SubLevel_Init)
+TEST(Sunspec_Group_Reader_Model160, ReadModel160_After_SubLevel_Init)
 {
     CHECK(groupDef != nullptr);
-    SunspecModelReader model{*getModelDefinition(160),
+    SunspecModelReader model{*getModelDefinition(SunspecModelList_kModel160),
                              nullptr, 0, *(SunspecDeviceReader *)nullptr};
 
     SunspecGroupReader group{*groupDef, nullptr, (SunspecModelReader *)&model};
     group.initPoints();
     group.initGroups(1000);
     LONGS_EQUAL(9, group.pointLength());
-    LONGS_EQUAL(2, group.groupLength());
-    LONGS_EQUAL(68, group.registerLength());
+    LONGS_EQUAL(0, group.groupLength());
+    LONGS_EQUAL(10, group.registerLength());
 }

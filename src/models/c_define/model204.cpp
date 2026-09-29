@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef204{
-        SunspecModelList_kModel204,
+SunspecModelDef SunspecModelDef::modelDef204(){
+        return SunspecModelDef{SunspecModelList_kModel204,
         "delta-connect three phase (abc) meter",
         {
             "ac_meter_abc",
@@ -91,3 +91,4 @@ const SunspecModelDef SunspecModelDef::modelDef204{
             },
         },
     };
+}

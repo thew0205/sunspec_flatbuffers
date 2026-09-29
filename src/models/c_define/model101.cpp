@@ -1,7 +1,8 @@
 #include "adapters/c_define/c_model_definition.h"
 // #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef101{
+SunspecModelDef SunspecModelDef::modelDef101(){
+        return SunspecModelDef{
         SunspecModelList_kModel101,
         "Inverter (Single Phase)", // Model label
         {
@@ -59,3 +60,4 @@ const SunspecModelDef SunspecModelDef::modelDef101{
             {} // No nested groups in this model
         },
     };
+}

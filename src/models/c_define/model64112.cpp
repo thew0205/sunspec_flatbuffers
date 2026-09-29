@@ -2,8 +2,8 @@
 // Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.
 #include "adapters/c_define/c_model_definition.h"
 
-const SunspecModelDef SunspecModelDef::modelDef64112{
-        SunspecModelList_kModel64112,
+SunspecModelDef SunspecModelDef::modelDef64112(){
+        return SunspecModelDef{SunspecModelList_kModel64112,
         "OutBack FM Charge Controller",
         {
             "model_64112",
@@ -83,3 +83,4 @@ const SunspecModelDef SunspecModelDef::modelDef64112{
             },
         },
     };
+}
