@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 #include <iostream>
-// #include "sunspec.h"
 
 #include "sunspec.h"
 
-// #include "c_model_definition.h"
 
-using namespace Sunspec;
 
 int main(int ac, char **av)
 {

@@ -46,7 +46,11 @@ function run_test(){
         ${PICOTOOL_PATH} load -fx ${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test.uf2
     else
     # Host test selected
-        "${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test"
+        if [[ -f "${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test" ]]; then
+            "${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test"
+        else
+            echo -e "${BOLD_RED}Program ${BUILD_DIR}/${TEST_TO_RUN}/${TEST_TO_RUN}_test not found${NC}"
+        fi
     fi
 }
 

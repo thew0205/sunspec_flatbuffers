@@ -33,9 +33,8 @@ add_subdirectory(third_party/modbus_slave)
 
 add_subdirectory(${SUNSPEC_ROOT_DIR}/tests/common ${CMAKE_BINARY_DIR}/common)
 
-if(USER_FLATBUFFERS_IMPLEMENTATION)
-    add_subdirectory(flatbuffer)
-endif()
+add_subdirectory(flatbuffer)
+
 add_subdirectory(sunspec_init_writer)
 add_subdirectory(sunspec_set_value_writer)
 

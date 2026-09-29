@@ -16,14 +16,13 @@
 using std::cout;
 using std::endl;
 using std::string;
-extern unsigned char modelDefinition160[];
 
 TEST_GROUP(Flatbuffer_Model160)
 {
     const SunspecModelDef *model160;
     void setup()
     {
-        model160 = getModelDefinition(modelDefinition160);
+        model160 = getModelDefinition(160);
     }
 
     void teardown()

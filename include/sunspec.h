@@ -20,11 +20,16 @@
 #include "sunspec_model_definition_generated.h"
 #define DEREFERENCE_POINTER_FLATBUFFER(x) (*x)
 #define REFERENCE_POINTER_FLATBUFFER(x) (x)
+#elif defined(SUNSPEC_JSON_IMPLEMENTATION)
+#define DEREFERENCE_POINTER_FLATBUFFER(x) (x)
+#define REFERENCE_POINTER_FLATBUFFER(x) (&x)
+
+#include "adapters/json/sunspec_json_definition.h"
 #else
 #define DEREFERENCE_POINTER_FLATBUFFER(x) (x)
 #define REFERENCE_POINTER_FLATBUFFER(x) (&x)
 
-#include "c_model_definition.h"
+#include "adapters/c_define/c_model_definition.h"
 #endif
 
 #ifndef VIRTUAL_TEST
@@ -440,16 +445,29 @@ inline std::string FlatbufferKStringxToString(const kStringx *stringx)
     return {stringx == nullptr ? "" : FlatbufferStringToString(stringx->value())};
 }
 
-#else 
+#else
 inline std::string FlatbufferStringToString(const std::string_view *flatbufferSTring)
 {
-    
+
 return std::string{flatbufferSTring == nullptr ? kStringUnimplementedValue : flatbufferSTring->data()};
 }
 
-inline std::string_view FlatbufferStringToStringView(const std::string_view *flatbufferString)
+// Overload for adapters (e.g. SUNSPEC_JSON_IMPLEMENTATION) whose accessors
+// return std::string_view by value rather than by pointer -- lets shared
+// reader/writer call sites work unchanged regardless of which adapter is active.
+inline std::string FlatbufferStringToString(std::string_view flatbufferSTring)
 {
-    return std::string_view{flatbufferString == nullptr ? kStringUnimplementedValue : *flatbufferString};
+    return std::string{flatbufferSTring};
+}
+
+// inline std::string_view FlatbufferStringToStringView(const std::string_view *flatbufferString)
+// {
+//     return std::string_view{flatbufferString == nullptr ? kStringUnimplementedValue : *flatbufferString};
+// }
+
+inline std::string_view FlatbufferStringToStringView(std::string_view flatbufferString)
+{
+    return flatbufferString;
 }
 
 inline std::string FlatbufferKStringxToString(const kStringx *stringx)

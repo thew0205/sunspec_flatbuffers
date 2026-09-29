@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 JSON_DIR = ROOT / "models" / "json"
-MODELS_OUT_DIR = ROOT / "src" / "models"
+MODELS_OUT_DIR = ROOT / "src" / "models" / "c_define"
 HEADER_PATH = ROOT / "include" / "c_model_definition.h"
 DEFINITION_CPP_PATH = ROOT / "src" / "model_definition.cpp"
 
@@ -134,7 +134,7 @@ def generate_model_cpp(model_id: int, data: dict) -> str:
     return (
         f"{GENERATED_BANNER} from models/json/model_{model_id}.json.\n"
         f"// Unreviewed -- regenerate rather than hand-edit unless you also fix up the generator.\n"
-        f'#include "c_model_definition.h"\n\n'
+        f'#include "adapters/c_define/c_model_definition.h"\n\n'
         f"const SunspecModelDef SunspecModelDef::modelDef{model_id}{{\n"
         f"        SunspecModelList_kModel{model_id},\n"
         f"        {cpp_str(model_label)},\n"

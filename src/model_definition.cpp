@@ -1,4 +1,4 @@
-#include "c_model_definition.h"
+#include "adapters/c_define/c_model_definition.h"
 #include "sunspec.h"
 
 #include <algorithm>
