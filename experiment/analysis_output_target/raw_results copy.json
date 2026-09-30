@@ -1,0 +1,615 @@
+{
+  "json": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "707644",
+        "data": "0",
+        "bss": "4296",
+        "dec": "711940",
+        "hex": "add04",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 13379957,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13380090,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13379906,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13379522,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13380755,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "707724",
+        "data": "0",
+        "bss": "4316",
+        "dec": "712040",
+        "hex": "add68",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk()": 8,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 13566355,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13565792,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13565724,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13564698,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13565527,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "707864",
+        "data": "0",
+        "bss": "4316",
+        "dec": "712180",
+        "hex": "addf4",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk()": 80,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 14264980,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 14263750,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 14263737,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 14264565,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 14263458,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "708032",
+        "data": "0",
+        "bss": "4316",
+        "dec": "712348",
+        "hex": "ade9c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 120,
+        "void walk()": 16,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    }
+  },
+  "c_define": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 19,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "467456",
+        "data": "0",
+        "bss": "4296",
+        "dec": "471752",
+        "hex": "732c8",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 43302,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43257,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43343,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43333,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43409,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "467536",
+        "data": "0",
+        "bss": "4316",
+        "dec": "471852",
+        "hex": "7332c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk()": 8,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 42734,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 42798,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 42687,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 42700,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 42677,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "467644",
+        "data": "0",
+        "bss": "4316",
+        "dec": "471960",
+        "hex": "73398",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk()": 72,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 43843,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43874,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43786,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43774,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 43909,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "467788",
+        "data": "0",
+        "bss": "4316",
+        "dec": "472104",
+        "hex": "73428",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 112,
+        "void walk()": 16,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    }
+  },
+  "flatbuffers": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 18,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 18,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 18,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 18,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 18,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376000",
+        "data": "0",
+        "bss": "4296",
+        "dec": "380296",
+        "hex": "5cd88",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 2206,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 2210,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 2209,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 2211,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 2224,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376088",
+        "data": "0",
+        "bss": "4316",
+        "dec": "380404",
+        "hex": "5cdf4",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "void walk()": 8,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 4577,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4575,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4574,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4568,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4580,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376444",
+        "data": "0",
+        "bss": "4316",
+        "dec": "380760",
+        "hex": "5cf58",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "T flatbuffers::EndianScalar(T) [with T = long unsigned int]": 0,
+        "std::string_view FlatbufferStringToStringView(const flatbuffers::String*)": 24,
+        "T flatbuffers::ReadScalar(const void*) [with T = long unsigned int]": 8,
+        "T flatbuffers::EndianScalar(T) [with T = long int]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = long int]": 8,
+        "T flatbuffers::EndianScalar(T) [with T = short unsigned int]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = short unsigned int]": 8,
+        "flatbuffers::voffset_t flatbuffers::Table::GetOptionalFieldOffset(flatbuffers::voffset_t) const": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned char]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned char]": 8,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = unsigned char]": 16,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = short unsigned int]": 16,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = long unsigned int]": 16,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::String*; OffsetSize = long unsigned int]": 8,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = long unsigned int]": 8,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const SunspecGroupDef*; OffsetSize = long unsigned int]": 8,
+        "void walk()": 48,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 7558,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 7559,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 7572,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 7560,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 7568,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376652",
+        "data": "0",
+        "bss": "4316",
+        "dec": "380968",
+        "hex": "5d028",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void __static_initialization_and_destruction_0()": 0,
+        "T flatbuffers::EndianScalar(T) [with T = long unsigned int]": 0,
+        "std::string_view FlatbufferStringToStringView(const flatbuffers::String*)": 24,
+        "T flatbuffers::ReadScalar(const void*) [with T = long unsigned int]": 8,
+        "T flatbuffers::EndianScalar(T) [with T = long int]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = long int]": 8,
+        "T flatbuffers::EndianScalar(T) [with T = short unsigned int]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = short unsigned int]": 8,
+        "flatbuffers::voffset_t flatbuffers::Table::GetOptionalFieldOffset(flatbuffers::voffset_t) const": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned char]": 0,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned char]": 8,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = unsigned char]": 16,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = short unsigned int]": 16,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = long unsigned int]": 16,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecGroupDef>; SizeT = long unsigned int]": 16,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::String*; OffsetSize = long unsigned int]": 8,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = long unsigned int]": 8,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecGroupDef> >*; OffsetSize = long unsigned int]": 8,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 72,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const SunspecGroupDef*; OffsetSize = long unsigned int]": 8,
+        "void walk()": 16,
+        "cpp)": 8
+      },
+      "peak_heap_bytes": null
+    }
+  }
+}

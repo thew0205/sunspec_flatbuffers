@@ -297,7 +297,7 @@ void initializeAllModels()
 
 void deinitializeAllModels(){
     modelDefList.clear();
-    modelDefList.shrink_to_fit(); 
+    modelDefList = std::vector<SunspecModelDef>{};
     hasInitList = false;
 }
 

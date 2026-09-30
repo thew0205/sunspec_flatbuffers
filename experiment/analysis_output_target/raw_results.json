@@ -1,0 +1,572 @@
+{
+  "json": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "36688",
+        "data": "0",
+        "bss": "3760",
+        "dec": "40448",
+        "hex": "9e00",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 14,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "731596",
+        "data": "0",
+        "bss": "4280",
+        "dec": "735876",
+        "hex": "b3a84",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void walk()": 8,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 9010076,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9009821,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9009839,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9010116,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9010243,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "731696",
+        "data": "0",
+        "bss": "4280",
+        "dec": "735976",
+        "hex": "b3ae8",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void walk()": 48,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 9526831,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9526281,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9526325,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9526665,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        },
+        {
+          "iteration": 40,
+          "time_taken": 9526629,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 224808
+        }
+      ],
+      "size_results": {
+        "text": "731832",
+        "data": "0",
+        "bss": "4280",
+        "dec": "736112",
+        "hex": "b3b70",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_json/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void walk_group(const SunspecGroupDef&, size_t&)": 64,
+        "void walk()": 16,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    }
+  },
+  "c_define": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "36688",
+        "data": "0",
+        "bss": "3760",
+        "dec": "40448",
+        "hex": "9e00",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 13,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "603352",
+        "data": "0",
+        "bss": "4280",
+        "dec": "607632",
+        "hex": "94590",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void walk()": 8,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 174,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 175,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 177,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 175,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 175,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "603396",
+        "data": "0",
+        "bss": "4280",
+        "dec": "607676",
+        "hex": "945bc",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void walk()": 24,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 310,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 313,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 310,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 315,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        },
+        {
+          "iteration": 40,
+          "time_taken": 313,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 348168
+        }
+      ],
+      "size_results": {
+        "text": "603572",
+        "data": "0",
+        "bss": "4280",
+        "dec": "607852",
+        "hex": "9466c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_c_define/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void walk_group(const SunspecGroupDef&, size_t&)": 24,
+        "void walk()": 24,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    }
+  },
+  "flatbuffers": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 40,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "36688",
+        "data": "0",
+        "bss": "3760",
+        "dec": "40448",
+        "hex": "9e00",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_noop.elf"
+      },
+      "stack_usage": {
+        "void walk()": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 8,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 8,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 8,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 8,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 8,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "375820",
+        "data": "0",
+        "bss": "4264",
+        "dec": "380084",
+        "hex": "5ccb4",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_load_only.elf"
+      },
+      "stack_usage": {
+        "void walk()": 8,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 712,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 714,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 713,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 713,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 717,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376112",
+        "data": "0",
+        "bss": "4264",
+        "dec": "380376",
+        "hex": "5cdd8",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_walk_shallow.elf"
+      },
+      "stack_usage": {
+        "void walk()": 32,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 40,
+          "time_taken": 1650,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 1661,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 1645,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 1662,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        },
+        {
+          "iteration": 40,
+          "time_taken": 1627,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 456
+        }
+      ],
+      "size_results": {
+        "text": "376328",
+        "data": "0",
+        "bss": "4264",
+        "dec": "380592",
+        "hex": "5ceb0",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_target_flatbuffers/experiment_walk_deep.elf"
+      },
+      "stack_usage": {
+        "void walk_group(const SunspecGroupDef&, size_t&)": 48,
+        "void walk()": 16,
+        "cpp)": 0
+      },
+      "peak_heap_bytes": null
+    }
+  }
+}

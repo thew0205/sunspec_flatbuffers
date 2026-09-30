@@ -1,0 +1,13 @@
+backend,variant,time_ns_net,flash_bytes,flash_bytes_net,static_ram_bytes,static_ram_bytes_net,heap_peak_bytes,heap_net_growth_bytes,heap_peak_call_bytes_cheap,stack_bytes_per_call
+json,noop,0.0,36688,0,3760,0,,0,0,0
+json,load_only,230.0,731596,694908,4280,520,,224808,0,8
+json,walk_shallow,225250375.0,731696,695008,4280,520,,224808,0,48
+json,walk_deep,238163555.0,731832,695144,4280,520,,224808,0,64
+c_define,noop,0.0,36688,0,3760,0,,0,0,0
+c_define,load_only,225.0,603352,566664,4280,520,,348168,0,8
+c_define,walk_shallow,4280.0,603396,566708,4280,520,,348168,0,24
+c_define,walk_deep,7705.0,603572,566884,4280,520,,348168,0,24
+flatbuffers,noop,0.0,36688,0,3760,0,,0,0,0
+flatbuffers,load_only,100.0,375820,339132,4264,504,,456,0,8
+flatbuffers,walk_shallow,17745.0,376112,339424,4264,504,,456,0,32
+flatbuffers,walk_deep,41125.0,376328,339640,4264,504,,456,0,48

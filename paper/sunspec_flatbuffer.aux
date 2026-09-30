@@ -1,0 +1,59 @@
+\relax 
+\providecommand\babel@aux[2]{}
+\@nameuse{bbl@beforestart}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Overview}{1}{section.1}\protected@file@percent }
+\newlabel{sec:overview}{{1}{1}{Overview}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Introduction}{1}{section.2}\protected@file@percent }
+\newlabel{sec:introduction}{{2}{1}{Introduction}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Sunspec Alliance}{1}{subsection.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Device Information Model Structure}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:model_def_image}{{1}{2}{Device Information Model Structure}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Google's Flatbuffers}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Serialization Frameworks and their Issues in Embedded Systems}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Sunspec Flatbuffers Implementation}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Sunspec Schema Definition and C++ Code Generation}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{lst:schema}{{1}{3}{Sunspec Flatbuffers Schema Definition}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Sunspec Flatbuffers Schema Definition}{3}{lstlisting.1}\protected@file@percent }
+\newlabel{lst:generated_code}{{2}{4}{Sunspec Flatbuffers Schema Definition}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Sunspec Flatbuffers Schema Definition}{4}{lstlisting.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Generating and Serializing Sunspec Data}{5}{subsection.3.2}\protected@file@percent }
+\newlabel{lst:mode11_bin}{{3}{5}{Generated Binary for Model 1}{lstlisting.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Generated Binary for Model 1}{5}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Integrating with C++ code }{6}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:integrating}{{3.3}{6}{Integrating with C++ code}{subsection.3.3}{}}
+\newlabel{lst:generated_code_group_point}{{4}{6}{Using the generated code and binary to actualize a sunspec GroupPoint}{lstlisting.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Using the generated code and binary to actualize a sunspec GroupPoint}{6}{lstlisting.4}\protected@file@percent }
+\newlabel{lst:modbus_code}{{5}{7}{Access the point value from the inplace modbus buffer}{lstlisting.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Access the point value from the inplace modbus buffer}{7}{lstlisting.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Empirical Evaluation of Model-Definition Backends}{8}{section.4}\protected@file@percent }
+\newlabel{sec:evaluation}{{4}{8}{Empirical Evaluation of Model-Definition Backends}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experimental Setup}{8}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Benchmark Variants}{8}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Measurement Procedure}{9}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:procedure}{{4.3}{9}{Measurement Procedure}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Flash and Static RAM Footprint}{9}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:footprint}{{4.4}{9}{Flash and Static RAM Footprint}{subsection.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Flash and static RAM footprint per backend, in bytes. \textit  {Library} is \textit  {load\_only} minus \textit  {noop}: the complete backend with all 112 models. \textit  {Traversal code} is \textit  {walk\_deep} minus \textit  {load\_only}. \texttt  {.bss} is the same in all three library images of a backend.}}{9}{table.1}\protected@file@percent }
+\newlabel{tab:footprint}{{1}{9}{Flash and static RAM footprint per backend, in bytes. \textit {Library} is \textit {load\_only} minus \textit {noop}: the complete backend with all 112 models. \textit {Traversal code} is \textit {walk\_deep} minus \textit {load\_only}. \texttt {.bss} is the same in all three library images of a backend}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Execution Time}{10}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Mean time per call ($\mu $s), net of the \textit  {noop} baseline; mean of five boots, 40 calls each.}}{10}{table.2}\protected@file@percent }
+\newlabel{tab:timing}{{2}{10}{Mean time per call ($\mu $s), net of the \textit {noop} baseline; mean of five boots, 40 calls each}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Cost per call ($\mu $s) of the lookup and traversal of Model 160, derived from Table~\ref {tab:timing}.}}{10}{table.3}\protected@file@percent }
+\newlabel{tab:decomposition}{{3}{10}{Cost per call ($\mu $s) of the lookup and traversal of Model 160, derived from Table~\ref {tab:timing}}{table.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{FlatBuffers and c\_define.}{10}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{JSON.}{10}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Dynamic Memory}{10}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:heap}{{4.6}{10}{Dynamic Memory}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Heap held by each backend's model list after \texttt  {initializeAllModels()} and 20 calls to \texttt  {walk()}. \textit  {Share of SRAM} is relative to the RP2350's 512\,KB.}}{11}{table.4}\protected@file@percent }
+\newlabel{tab:heap}{{4}{11}{Heap held by each backend's model list after \texttt {initializeAllModels()} and 20 calls to \texttt {walk()}. \textit {Share of SRAM} is relative to the RP2350's 512\,KB}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Stack Usage}{11}{subsection.4.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Own stack frame (bytes) of each function in the variant source files, from \texttt  {-fstack-usage}.}}{11}{table.5}\protected@file@percent }
+\newlabel{tab:stack}{{5}{11}{Own stack frame (bytes) of each function in the variant source files, from \texttt {-fstack-usage}}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Limitations}{11}{subsection.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Summary}{11}{subsection.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}\protected@file@percent }
+\gdef \@abspage@last{12}

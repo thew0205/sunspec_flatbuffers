@@ -1,0 +1,770 @@
+{
+  "json": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 297536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 297536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 297536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 297536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 3,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 297536
+        }
+      ],
+      "size_results": {
+        "text": "749661",
+        "data": "1840",
+        "bss": "80",
+        "dec": "751581",
+        "hex": "b77dd",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_json/experiment_noop"
+      },
+      "stack_usage": {
+        "void walk()": 16
+      },
+      "peak_heap_bytes": 393760
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 8170317,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7639417,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7614848,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7396892,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 8199602,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        }
+      ],
+      "size_results": {
+        "text": "749964",
+        "data": "1872",
+        "bss": "96",
+        "dec": "751932",
+        "hex": "b793c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_json/experiment_load_only"
+      },
+      "stack_usage": {
+        "void walk()": 32,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 395744
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 7051840,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7224336,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 8199129,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7106517,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7080523,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        }
+      ],
+      "size_results": {
+        "text": "751120",
+        "data": "1872",
+        "bss": "96",
+        "dec": "753088",
+        "hex": "b7dc0",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_json/experiment_walk_shallow"
+      },
+      "stack_usage": {
+        "std::string_view FlatbufferStringToStringView(std::string_view)": 16,
+        "void walk()": 128,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 393760
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 7712147,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 8693224,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7590887,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7586579,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 7724108,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 267296
+        }
+      ],
+      "size_results": {
+        "text": "751836",
+        "data": "1872",
+        "bss": "96",
+        "dec": "753804",
+        "hex": "b808c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_json/experiment_walk_deep"
+      },
+      "stack_usage": {
+        "std::string_view FlatbufferStringToStringView(std::string_view)": 16,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 144,
+        "void walk()": 48,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecGroupDef; _Alloc = std::allocator<SunspecGroupDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecGroupDef; _Alloc = std::allocator<SunspecGroupDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 395744
+    }
+  },
+  "c_define": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 5,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 518592
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 518592
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 518592
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 6,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 518592
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 6,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 518592
+        }
+      ],
+      "size_results": {
+        "text": "947310",
+        "data": "928",
+        "bss": "80",
+        "dec": "948318",
+        "hex": "e785e",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_c_define/experiment_noop"
+      },
+      "stack_usage": {
+        "void walk()": 16
+      },
+      "peak_heap_bytes": 587816
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 3205,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 3835,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4916,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4772,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 3792,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        }
+      ],
+      "size_results": {
+        "text": "947619",
+        "data": "960",
+        "bss": "96",
+        "dec": "948675",
+        "hex": "e79c3",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_c_define/experiment_load_only"
+      },
+      "stack_usage": {
+        "void walk()": 32,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 587816
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 3794,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4651,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4969,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4425,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 3883,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        }
+      ],
+      "size_results": {
+        "text": "948736",
+        "data": "960",
+        "bss": "96",
+        "dec": "949792",
+        "hex": "e7e20",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_c_define/experiment_walk_shallow"
+      },
+      "stack_usage": {
+        "const SunspecPointDef::string_view SunspecPointDef::id() const": 16,
+        "const SunspecPointDef::string_view SunspecPointDef::units() const": 16,
+        "const SunspecPointDef::string_view SunspecPointDef::label() const": 16,
+        "uint16_t SunspecPointDef::count() const": 16,
+        "SunspecPointData SunspecPointDef::data_type() const": 32,
+        "SunspecPointAccessType SunspecPointDef::access() const": 16,
+        "SunspecPointMandatoryType SunspecPointDef::mandatory() const": 16,
+        "const std::vector<SunspecPointDef>* SunspecGroupDef::points() const": 16,
+        "const SunspecGroupDef* SunspecModelDef::group() const": 16,
+        "std::string_view FlatbufferStringToStringView(std::string_view)": 16,
+        "void walk()": 128,
+        "constexpr std::size_t std::variant<_Types>::index() const [with _Types = {std::monostate, kSint16, kSint32, kSint64, kRaw16, kUint16, kUint32, kUint64, kAcc16, kAcc32, kAcc64, kBitfield16, kBitfield32, kBitfield64, kEnum16, kEnum32, kFloat32, kFloat64, kStringx, kSunsSf, kPad16, kIpAddr, kIpv6Addr, kEui48}]": 16,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 587816
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 4236,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4719,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4916,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 4558,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 5244,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 493536
+        }
+      ],
+      "size_results": {
+        "text": "949528",
+        "data": "960",
+        "bss": "96",
+        "dec": "950584",
+        "hex": "e8138",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_c_define/experiment_walk_deep"
+      },
+      "stack_usage": {
+        "const SunspecPointDef::string_view SunspecPointDef::id() const": 16,
+        "const SunspecPointDef::string_view SunspecPointDef::units() const": 16,
+        "const SunspecPointDef::string_view SunspecPointDef::label() const": 16,
+        "uint16_t SunspecPointDef::count() const": 16,
+        "SunspecPointData SunspecPointDef::data_type() const": 32,
+        "SunspecPointAccessType SunspecPointDef::access() const": 16,
+        "SunspecPointMandatoryType SunspecPointDef::mandatory() const": 16,
+        "const std::vector<SunspecGroupDef>* SunspecGroupDef::groups() const": 16,
+        "const std::vector<SunspecPointDef>* SunspecGroupDef::points() const": 16,
+        "const SunspecGroupDef::string_view SunspecGroupDef::label() const": 16,
+        "const SunspecGroupDef::string_view SunspecGroupDef::id() const": 16,
+        "uint16_t SunspecGroupDef::count() const": 16,
+        "const SunspecGroupDef* SunspecModelDef::group() const": 16,
+        "std::string_view FlatbufferStringToStringView(std::string_view)": 16,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 144,
+        "void walk()": 48,
+        "constexpr std::size_t std::variant<_Types>::index() const [with _Types = {std::monostate, kSint16, kSint32, kSint64, kRaw16, kUint16, kUint32, kUint64, kAcc16, kAcc32, kAcc64, kBitfield16, kBitfield32, kBitfield64, kEnum16, kEnum32, kFloat32, kFloat64, kStringx, kSunsSf, kPad16, kIpAddr, kIpv6Addr, kEui48}]": 16,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecPointDef; _Alloc = std::allocator<SunspecPointDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::begin() const [with _Tp = SunspecGroupDef; _Alloc = std::allocator<SunspecGroupDef>]": 48,
+        "std::vector<_Tp, _Alloc>::const_iterator std::vector<_Tp, _Alloc>::end() const [with _Tp = SunspecGroupDef; _Alloc = std::allocator<SunspecGroupDef>]": 48,
+        "bool __gnu_cxx::operator!=(const __normal_iterator<_Iterator, _Container>&, const __normal_iterator<_Iterator, _Container>&) [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 48,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::reference __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator*() const [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecPointDef*; _Container = std::vector<SunspecPointDef>]": 16,
+        "__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "const _Iterator& __gnu_cxx::__normal_iterator<_Iterator, _Container>::base() const [with _Iterator = const SunspecGroupDef*; _Container = std::vector<SunspecGroupDef>]": 16,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 587816
+    }
+  },
+  "flatbuffers": {
+    "noop": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 912
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 912
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 912
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 912
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 912
+        }
+      ],
+      "size_results": {
+        "text": "301594",
+        "data": "1208",
+        "bss": "80",
+        "dec": "302882",
+        "hex": "49f22",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_flatbuffers/experiment_noop"
+      },
+      "stack_usage": {
+        "void walk()": 16
+      },
+      "peak_heap_bytes": 78720
+    },
+    "load_only": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 2513,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 2180,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 1901,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 2152,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 2280,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "301916",
+        "data": "1232",
+        "bss": "96",
+        "dec": "303244",
+        "hex": "4a08c",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_flatbuffers/experiment_load_only"
+      },
+      "stack_usage": {
+        "void walk()": 32,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 78720
+    },
+    "walk_shallow": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 4870,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 5306,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 5756,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 5463,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 5368,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "306189",
+        "data": "1240",
+        "bss": "96",
+        "dec": "307525",
+        "hex": "4b145",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_flatbuffers/experiment_walk_shallow"
+      },
+      "stack_usage": {
+        "constexpr bool std::__is_constant_evaluated()": 16,
+        "static constexpr std::size_t std::char_traits<char>::length(const char_type*)": 32,
+        "const char* flatbuffers::String::c_str() const": 32,
+        "flatbuffers::string_view flatbuffers::String::string_view() const": 80,
+        "const uint8_t* flatbuffers::Table::GetVTable() const": 48,
+        "flatbuffers::voffset_t flatbuffers::Table::GetOptionalFieldOffset(flatbuffers::voffset_t) const": 48,
+        "const flatbuffers::String* SunspecPointDef::id() const": 32,
+        "SunspecPointData SunspecPointDef::data_type() const": 32,
+        "uint16_t SunspecPointDef::count() const": 32,
+        "uint16_t SunspecPointDef::size() const": 32,
+        "const flatbuffers::String* SunspecPointDef::units() const": 32,
+        "SunspecPointAccessType SunspecPointDef::access() const": 32,
+        "SunspecPointMandatoryType SunspecPointDef::mandatory() const": 32,
+        "const flatbuffers::String* SunspecPointDef::label() const": 32,
+        "const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >* SunspecGroupDef::points() const": 32,
+        "const SunspecGroupDef* SunspecModelDef::group() const": 32,
+        "constexpr std::basic_string_view<_CharT, _Traits>::basic_string_view(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]": 32,
+        "static constexpr std::size_t __gnu_cxx::char_traits<_CharT>::length(const char_type*) [with _CharT = char]": 64,
+        "static constexpr bool __gnu_cxx::char_traits<_CharT>::eq(const char_type&, const char_type&) [with _CharT = char]": 16,
+        "std::string_view FlatbufferStringToStringView(const flatbuffers::String*)": 80,
+        "void walk()": 128,
+        "constexpr const std::basic_string_view<_CharT, _Traits>::value_type* std::basic_string_view<_CharT, _Traits>::data() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "constexpr std::basic_string_view<_CharT, _Traits>::basic_string_view(const _CharT*, size_type) [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned int]": 16,
+        "const uint8_t* flatbuffers::Vector<T, SizeT>::Data() const [with T = char; SizeT = unsigned int]": 16,
+        "SizeT flatbuffers::Vector<T, SizeT>::size() const [with T = char; SizeT = unsigned int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = short unsigned int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned char]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned int]": 32,
+        "T flatbuffers::EndianScalar(T) [with T = int]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = short unsigned int]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned char]": 16,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const flatbuffers::String*; OffsetSize = unsigned int]": 32,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = unsigned char]": 48,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = short unsigned int]": 48,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const SunspecGroupDef*; OffsetSize = unsigned int]": 32,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::begin() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 32,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 48,
+        "bool flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator!=(const flatbuffers::VectorIterator<T, IT, Data, SizeT>&) const [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>& flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator++() [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "IT flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator*() const [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 32,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::String*; OffsetSize = unsigned int]": 48,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = unsigned int]": 48,
+        "SizeT flatbuffers::Vector<T, SizeT>::size() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const SunspecGroupDef*; OffsetSize = unsigned int]": 48,
+        "const uint8_t* flatbuffers::Vector<T, SizeT>::Data() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>::VectorIterator(Data, SizeT) [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "static const T* flatbuffers::IndirectHelper<OffsetT<T> >::Read(const uint8_t*, offset_type) [with T = SunspecPointDef; OffsetT = flatbuffers::Offset]": 48,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 78720
+    },
+    "walk_deep": {
+      "program_results": [
+        {
+          "iteration": 1000,
+          "time_taken": 8759,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 9006,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 8606,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 9006,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        },
+        {
+          "iteration": 1000,
+          "time_taken": 9003,
+          "heap_peak_call_bytes": 0,
+          "heap_net_growth_bytes": 0
+        }
+      ],
+      "size_results": {
+        "text": "307999",
+        "data": "1240",
+        "bss": "96",
+        "dec": "309335",
+        "hex": "4b857",
+        "filename": "/home/busoye_tm/Documents/matthew/projects/sunspec_flatbuffer/experiment/build_flatbuffers/experiment_walk_deep"
+      },
+      "stack_usage": {
+        "constexpr bool std::__is_constant_evaluated()": 16,
+        "static constexpr std::size_t std::char_traits<char>::length(const char_type*)": 32,
+        "const char* flatbuffers::String::c_str() const": 32,
+        "flatbuffers::string_view flatbuffers::String::string_view() const": 80,
+        "const uint8_t* flatbuffers::Table::GetVTable() const": 48,
+        "flatbuffers::voffset_t flatbuffers::Table::GetOptionalFieldOffset(flatbuffers::voffset_t) const": 48,
+        "const flatbuffers::String* SunspecPointDef::id() const": 32,
+        "SunspecPointData SunspecPointDef::data_type() const": 32,
+        "uint16_t SunspecPointDef::count() const": 32,
+        "uint16_t SunspecPointDef::size() const": 32,
+        "const flatbuffers::String* SunspecPointDef::units() const": 32,
+        "SunspecPointAccessType SunspecPointDef::access() const": 32,
+        "SunspecPointMandatoryType SunspecPointDef::mandatory() const": 32,
+        "const flatbuffers::String* SunspecPointDef::label() const": 32,
+        "const flatbuffers::String* SunspecGroupDef::id() const": 32,
+        "uint16_t SunspecGroupDef::count() const": 32,
+        "const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >* SunspecGroupDef::points() const": 32,
+        "const flatbuffers::Vector<flatbuffers::Offset<SunspecGroupDef> >* SunspecGroupDef::groups() const": 32,
+        "const flatbuffers::String* SunspecGroupDef::label() const": 32,
+        "const SunspecGroupDef* SunspecModelDef::group() const": 32,
+        "constexpr std::basic_string_view<_CharT, _Traits>::basic_string_view(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]": 32,
+        "static constexpr std::size_t __gnu_cxx::char_traits<_CharT>::length(const char_type*) [with _CharT = char]": 64,
+        "static constexpr bool __gnu_cxx::char_traits<_CharT>::eq(const char_type&, const char_type&) [with _CharT = char]": 16,
+        "std::string_view FlatbufferStringToStringView(const flatbuffers::String*)": 80,
+        "void walk_group(const SunspecGroupDef&, size_t&)": 144,
+        "void walk()": 48,
+        "constexpr const std::basic_string_view<_CharT, _Traits>::value_type* std::basic_string_view<_CharT, _Traits>::data() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "constexpr std::basic_string_view<_CharT, _Traits>::basic_string_view(const _CharT*, size_type) [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned int]": 16,
+        "const uint8_t* flatbuffers::Vector<T, SizeT>::Data() const [with T = char; SizeT = unsigned int]": 16,
+        "SizeT flatbuffers::Vector<T, SizeT>::size() const [with T = char; SizeT = unsigned int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = short unsigned int]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned char]": 32,
+        "T flatbuffers::ReadScalar(const void*) [with T = unsigned int]": 32,
+        "T flatbuffers::EndianScalar(T) [with T = int]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = short unsigned int]": 16,
+        "T flatbuffers::EndianScalar(T) [with T = unsigned char]": 16,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const flatbuffers::String*; OffsetSize = unsigned int]": 32,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = unsigned char]": 48,
+        "T flatbuffers::Table::GetField(flatbuffers::voffset_t, T) const [with T = short unsigned int]": 48,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecGroupDef> >*; OffsetSize = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) const [with P = const SunspecGroupDef*; OffsetSize = unsigned int]": 32,
+        "constexpr std::basic_string_view<_CharT, _Traits>::size_type std::basic_string_view<_CharT, _Traits>::size() const [with _CharT = char; _Traits = std::char_traits<char>]": 16,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::begin() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 32,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 48,
+        "bool flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator!=(const flatbuffers::VectorIterator<T, IT, Data, SizeT>&) const [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>& flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator++() [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "IT flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator*() const [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 32,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::begin() const [with T = flatbuffers::Offset<SunspecGroupDef>; SizeT = unsigned int]": 32,
+        "flatbuffers::Vector<T, SizeT>::const_iterator flatbuffers::Vector<T, SizeT>::end() const [with T = flatbuffers::Offset<SunspecGroupDef>; SizeT = unsigned int]": 48,
+        "bool flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator!=(const flatbuffers::VectorIterator<T, IT, Data, SizeT>&) const [with T = flatbuffers::Offset<SunspecGroupDef>; IT = const SunspecGroupDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>& flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator++() [with T = flatbuffers::Offset<SunspecGroupDef>; IT = const SunspecGroupDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "IT flatbuffers::VectorIterator<T, IT, Data, SizeT>::operator*() const [with T = flatbuffers::Offset<SunspecGroupDef>; IT = const SunspecGroupDef*; Data = const unsigned char*; SizeT = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::String*; OffsetSize = unsigned int]": 48,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecPointDef> >*; OffsetSize = unsigned int]": 48,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const flatbuffers::Vector<flatbuffers::Offset<SunspecGroupDef> >*; OffsetSize = unsigned int]": 48,
+        "SizeT flatbuffers::Vector<T, SizeT>::size() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 32,
+        "SizeT flatbuffers::Vector<T, SizeT>::size() const [with T = flatbuffers::Offset<SunspecGroupDef>; SizeT = unsigned int]": 32,
+        "P flatbuffers::Table::GetPointer(flatbuffers::voffset_t) [with P = const SunspecGroupDef*; OffsetSize = unsigned int]": 48,
+        "const uint8_t* flatbuffers::Vector<T, SizeT>::Data() const [with T = flatbuffers::Offset<SunspecPointDef>; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>::VectorIterator(Data, SizeT) [with T = flatbuffers::Offset<SunspecPointDef>; IT = const SunspecPointDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "static const T* flatbuffers::IndirectHelper<OffsetT<T> >::Read(const uint8_t*, offset_type) [with T = SunspecPointDef; OffsetT = flatbuffers::Offset]": 48,
+        "const uint8_t* flatbuffers::Vector<T, SizeT>::Data() const [with T = flatbuffers::Offset<SunspecGroupDef>; SizeT = unsigned int]": 16,
+        "flatbuffers::VectorIterator<T, IT, Data, SizeT>::VectorIterator(Data, SizeT) [with T = flatbuffers::Offset<SunspecGroupDef>; IT = const SunspecGroupDef*; Data = const unsigned char*; SizeT = unsigned int]": 16,
+        "static const T* flatbuffers::IndirectHelper<OffsetT<T> >::Read(const uint8_t*, offset_type) [with T = SunspecGroupDef; OffsetT = flatbuffers::Offset]": 48,
+        "void __static_initialization_and_destruction_0()": 16,
+        "cpp)": 16
+      },
+      "peak_heap_bytes": 78720
+    }
+  }
+}
